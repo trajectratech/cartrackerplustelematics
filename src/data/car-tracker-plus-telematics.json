@@ -1,0 +1,527 @@
+{
+	"brand": {
+		"title": "Car Tracker Plus Telematics | Premium Car Tracker and Fleet Visibility in Nigeria",
+		"businessName": "Car Tracker Plus Telematics",
+		"tagline": "Precision visibility for every vehicle you manage.",
+		"description": "Car Tracker Plus Telematics delivers premium car tracker installation, fleet telematics, dash camera systems, fuel monitoring, and vehicle security support for Nigerian drivers and fleet operators.",
+		"logoImage": "/cartracker-plus-telematics-logo.svg",
+		"url": "https://cartrackerplustelematics.com",
+		"publicDirectory": "",
+		"keywords": [
+			"car tracker",
+			"car tracker nigeria",
+			"car tracker lagos",
+			"gps vehicle tracking nigeria",
+			"fleet telematics nigeria",
+			"vehicle security nigeria",
+			"fleet management lagos",
+			"dash camera installation nigeria",
+			"fuel monitoring system nigeria",
+			"remote engine immobiliser"
+		]
+	},
+	"colors": {
+		"primary": "#0F4C81",
+		"secondary": "#08111F",
+		"accent": "#C9A45C",
+		"background": "#F5F7FA",
+		"text": "#243244",
+		"heading": "#08111F",
+		"link": "#0F4C81",
+		"hover": "#0B3B63",
+		"active": "#072A46",
+		"error": "#B91C1C",
+		"success": "#0F766E",
+		"muted": "#66758B"
+	},
+	"typography": {
+		"fontFamily": "Inter",
+		"fontSizes": {
+			"h1": "36px",
+			"h2": "30px",
+			"h3": "24px",
+			"paragraph": "16px",
+			"caption": "14px"
+		},
+		"fontStyles": {
+			"bold": "bold",
+			"italic": "italic",
+			"underline": "underline"
+		},
+		"fontWeights": {
+			"light": 300,
+			"regular": 400,
+			"medium": 500,
+			"bold": 700,
+			"black": 900
+		}
+	},
+	"imagery": {
+		"logoImage": "/cartracker-plus-telematics-logo.svg",
+		"heroTextColor": "var(--color-background)"
+	},
+	"logo": {
+		"dimensions": {
+			"width": 180,
+			"height": 40
+		},
+		"padding": 8,
+		"margin": 12
+	},
+	"googleBusinessProfileLink": "",
+	"socialMedia": [],
+	"content": {
+		"heroSection": {
+			"heading": "Premium car tracking and telematics built for owners who want clarity, control, and fast support.",
+			"paragraph": "From private vehicles to high-activity fleets, we deploy dependable car tracker systems, live visibility tools, and security-focused upgrades that help you respond faster and operate smarter.",
+			"ctaText": "Talk To An Expert",
+			"ctaUrl": "https://wa.me/2349010544454?text=Hello%20Car%20Tracker%20Plus%20Telematics%2C%20I%20would%20like%20to%20make%20an%20enquiry%20about%20vehicle%20tracking%20and%20installation."
+		},
+		"aboutSection": {
+			"heading": "Vehicle intelligence designed to feel premium from installation to daily use.",
+			"paragraph": "Car Tracker Plus Telematics supports drivers, executive vehicle owners, and fleet teams that need more than a basic tracker. We combine discreet installations, reliable reporting, camera integration, immobilisation options, and responsive after-sales support so your vehicles stay visible, protected, and easier to manage."
+		},
+		"servicesSection": {
+			"heading": "A sharper security and telematics stack for modern vehicles.",
+			"paragraph": "Choose a setup that matches how you drive, deploy, and protect your vehicles.",
+			"listItems": [
+				{
+					"title": "Live Vehicle Tracking",
+					"description": "Monitor current location, route history, parking time, movement status, and critical alerts from a dependable car tracker platform."
+				},
+				{
+					"title": "Fleet Telematics Oversight",
+					"description": "Give operations teams clearer visibility into driver movement, dispatch patterns, route compliance, and fleet productivity."
+				},
+				{
+					"title": "Dash Camera Deployment",
+					"description": "Add on-road footage and incident evidence for executive vehicles, school transport, logistics operations, and commercial fleets."
+				},
+				{
+					"title": "Fuel and Usage Monitoring",
+					"description": "Reduce waste, spot unusual consumption, and build better accountability with integrated fuel monitoring options."
+				},
+				{
+					"title": "Remote Immobilisation",
+					"description": "Respond quickly to theft or unauthorized use with vehicle immobiliser capability configured for security-led intervention."
+				},
+				{
+					"title": "Executive Security Upgrades",
+					"description": "Layer in glass fortification and discreet hardware placement for vehicles that need elevated protection and a cleaner finish."
+				}
+			]
+		},
+		"searchGuideSection": {
+			"heading": "Search guide for the services people look for most.",
+			"paragraph": "Explore focused pages built around the search terms clients already use when they need a car tracker, fleet telematics, or dash camera solution in Nigeria.",
+			"items": [
+				{
+					"title": "Car Tracker In Nigeria",
+					"description": "A focused page for private car owners and businesses comparing dependable car tracker options in Nigeria.",
+					"href": "/car-tracker-nigeria/",
+					"keyword": "car tracker nigeria"
+				},
+				{
+					"title": "Vehicle Tracking In Lagos",
+					"description": "Location-focused guidance for vehicle tracking installations and support in Lagos.",
+					"href": "/vehicle-tracking-lagos/",
+					"keyword": "vehicle tracking lagos"
+				},
+				{
+					"title": "Fleet Management In Nigeria",
+					"description": "A dedicated overview for businesses that need multi-vehicle visibility, reporting, and operations support.",
+					"href": "/fleet-management-nigeria/",
+					"keyword": "fleet management nigeria"
+				},
+				{
+					"title": "Dashcam Installation In Nigeria",
+					"description": "A dedicated page for drivers and businesses looking for premium dash camera deployment in Nigeria.",
+					"href": "/dashcam-installation-nigeria/",
+					"keyword": "dashcam installation nigeria"
+				}
+			]
+		},
+		"faqsSection": {
+			"heading": "Frequently Asked Questions",
+			"faqs": [
+				{
+					"question": "Do I need to visit your office before installation?",
+					"answer": "Not always. We can schedule installation at your office, residence, or another approved location within our coverage area."
+				},
+				{
+					"question": "Can I still find this service when I search for car tracker in Nigeria?",
+					"answer": "Yes. The site is being positioned around car tracker, vehicle tracking, and telematics keywords so people searching for car tracker services can still discover us easily."
+				},
+				{
+					"question": "Will the tracker keep working when the vehicle is turned off?",
+					"answer": "Yes. Our supported devices are designed to continue reporting with backup power support and low-power operation when the engine is off."
+				},
+				{
+					"question": "Can one account monitor multiple vehicles?",
+					"answer": "Yes. Multi-vehicle access is available, which makes the platform suitable for families, company cars, school transport, and fleet supervisors."
+				},
+				{
+					"question": "Do you offer solutions without monthly renewals?",
+					"answer": "Yes. Some packages are available as one-time payment options, while more advanced fleet and telematics deployments may include recurring service costs."
+				},
+				{
+					"question": "Can I disable the vehicle remotely if there is a security issue?",
+					"answer": "Yes. Eligible installations can include remote immobilisation features for faster response during theft or unauthorized movement scenarios."
+				},
+				{
+					"question": "How long does installation usually take?",
+					"answer": "Most standard installations are completed within about one hour, although more advanced multi-device or security packages can take longer."
+				},
+				{
+					"question": "Will the device drain my car battery?",
+					"answer": "No. Properly installed units are built for low power usage and are configured to avoid unnecessary battery drain."
+				},
+				{
+					"question": "Can I track my vehicle from outside Nigeria?",
+					"answer": "Yes. You can access tracking information remotely from your phone or computer as long as the installed device has network coverage."
+				},
+				{
+					"question": "Do you support private car owners and fleets?",
+					"answer": "Yes. We support personal vehicles, executive mobility, logistics fleets, school buses, and business operations that need clearer vehicle visibility."
+				}
+			]
+		},
+		"trustSection": {
+			"heading": "Why clients choose a more disciplined tracking partner.",
+			"trustBadges": [],
+			"guarantees": [
+				"Discreet installation standards",
+				"Fast-response technical support",
+				"Solutions for both private and fleet vehicles"
+			],
+			"stats": [
+				{ "label": "Installation Window", "value": "1 Hour" },
+				{ "label": "Monitoring Availability", "value": "24/7" },
+				{ "label": "Deployment Types", "value": "Private + Fleet" },
+				{ "label": "Support Focus", "value": "Fast Response" }
+			]
+		},
+		"testimonialsSection": {
+			"heading": "What clients say after switching to a more robust setup.",
+			"testimonials": [
+				{
+					"name": "Tunde A.",
+					"position": "Logistics Operations Lead",
+					"comment": "We wanted more structure than a basic car tracker app could offer. The telematics setup gave us cleaner route visibility, better response time, and fewer driver disputes.",
+					"rating": 5
+				},
+				{
+					"name": "Mariam K.",
+					"position": "Private Vehicle Owner",
+					"comment": "The installation felt tidy and professional. I can monitor my car confidently, and the support after setup has been quick whenever I need help.",
+					"rating": 5
+				},
+				{
+					"name": "Chike O.",
+					"position": "School Transport Coordinator",
+					"comment": "We needed better visibility across multiple vehicles without making the dashboard complicated. This rollout gave us something our team can actually use every day.",
+					"rating": 5
+				},
+				{
+					"name": "Efe I.",
+					"position": "Executive Protection Consultant",
+					"comment": "For clients who care about both aesthetics and security, the combination of discreet installation, immobilisation options, and stronger communication makes this easy to recommend.",
+					"rating": 5
+				}
+			]
+		},
+		"howItWorksSection": {
+			"heading": "How deployment works",
+			"steps": [
+				{
+					"title": "Tell us what you drive",
+					"description": "We recommend the right tracking or telematics package based on your vehicle type, usage pattern, and security goals."
+				},
+				{
+					"title": "Choose your installation plan",
+					"description": "We schedule a clean installation at your preferred location and confirm any add-ons such as dash cameras, sensors, or immobilisation."
+				},
+				{
+					"title": "Start monitoring with confidence",
+					"description": "You get access, setup guidance, and support so your team can begin tracking movement, alerts, and reports immediately."
+				}
+			],
+			"url": "https://wa.me/2349010544454?text=Hello%20Car%20Tracker%20Plus%20Telematics%2C%20I%20want%20to%20request%20a%20deployment%20plan.",
+			"urlText": "Request A Deployment Plan"
+		},
+		"ctaSection": {
+			"heading": "Need a car tracker solution that feels enterprise-ready from day one?",
+			"subheading": "Speak with us about private vehicle protection, fleet rollout planning, or a tailored telematics deployment.",
+			"ctaText": "Start Your Enquiry",
+			"ctaUrl": "https://wa.me/2349010544454?text=Hello%20Car%20Tracker%20Plus%20Telematics%2C%20I%20would%20like%20to%20start%20an%20enquiry.",
+			"backgroundColor": "#08111F"
+		}
+	},
+	"pricing": [
+		{
+			"plan": "Essential Tracking",
+			"showPricing": false,
+			"features": [
+				"Core live location tracking",
+				"Movement and parking visibility",
+				"Professional installation",
+				"Mobile access and basic alerts"
+			]
+		},
+		{
+			"plan": "Plus Security",
+			"showPricing": false,
+			"features": [
+				"Everything in Essential Tracking",
+				"Remote immobilisation support",
+				"Route history and geofence tools",
+				"Priority after-sales support"
+			]
+		},
+		{
+			"plan": "Fleet Telematics",
+			"showPricing": false,
+			"features": [
+				"Multi-vehicle oversight",
+				"Operational reporting",
+				"Driver and route visibility",
+				"Scalable support for growing fleets"
+			]
+		},
+		{
+			"plan": "Executive Protection Bundle",
+			"showPricing": false,
+			"features": [
+				"Tracking hardware",
+				"Dash camera integration",
+				"Glass fortification options",
+				"Security-led installation approach"
+			]
+		}
+	],
+	"map": {
+		"embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.410313226224!2d3.5697674089560163!3d6.469595293495082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf75aa1febcbf%3A0xae6df68fd07009e6!2sEpic%20Place!5e0!3m2!1sen!2sng!4v1753311044999!5m2!1sen!2sng"
+	},
+	"contact": {
+		"email": "info@cartrackerplustelematics.com",
+		"phone": "+2349010544454",
+		"whatsapp": "+2349010544454",
+		"address": "Epic Place, Thomas Estate, Ajah, Lagos",
+		"addressLocality": "Lagos",
+		"addressRegion": "Lagos",
+		"addressCountry": "NG",
+		"geoData": {
+			"latitude": 6.483618,
+			"longitude": 3.573857
+		}
+	},
+	"layout": {
+		"sectionOrder": [
+			"heroSection",
+			"servicesSection",
+			"trustSection",
+			"aboutSection",
+			"howItWorksSection",
+			"pricingSection",
+			"testimonialsSection",
+			"faqsSection",
+			"ctaSection",
+			"mapSection",
+			"contactSection"
+		],
+		"sectionPadding": 50,
+		"containerWidth": 1200,
+		"containerPadding": 20
+	},
+	"interactions": {
+		"animationStyles": {
+			"fade": "fadeIn 1s ease-in-out"
+		},
+		"transitionEffects": {
+			"hover": "background-color 0.3s ease-in-out, color 0.3s ease-in-out"
+		}
+	},
+	"components": {
+		"buttonStyles": {
+			"backgroundColor": "#0F4C81",
+			"textColor": "#ffffff",
+			"padding": 12,
+			"borderRadius": 999
+		},
+		"formStyles": {
+			"inputFieldStyles": {
+				"padding": 10,
+				"border": "1px solid #D1D5DB",
+				"borderRadius": 8
+			}
+		}
+	},
+	"responsiveness": {
+		"breakpoints": {
+			"desktop": 1200,
+			"tablet": 768,
+			"mobile": 480
+		}
+	},
+	"seo": {
+		"siteName": "Car Tracker Plus Telematics",
+		"aiSummary": [
+			"Car Tracker Plus Telematics provides premium car tracker installation, fleet telematics, dash camera deployment, and vehicle security support in Nigeria.",
+			"The business serves private drivers, executive vehicle owners, and fleet operators that need stronger visibility, security, and after-sales support."
+		],
+		"serviceAreas": ["Lagos", "Nigeria"],
+		"targetKeywords": [
+			"car tracker nigeria",
+			"vehicle tracking nigeria",
+			"gps car tracker nigeria",
+			"fleet management nigeria",
+			"car security solutions nigeria",
+			"dashcam installation nigeria",
+			"fuel monitoring nigeria"
+		],
+		"defaultOgImage": "/cartracker-plus-telematics-logo.svg",
+		"ogImageAlt": "Car Tracker Plus Telematics logo",
+		"siteLocale": "en_NG",
+		"manifest": {
+			"name": "Car Tracker Plus Telematics",
+			"shortName": "CT Plus",
+			"themeColor": "#08111F",
+			"backgroundColor": "#F5F7FA",
+			"display": "standalone"
+		},
+		"pageTitle": "Car Tracker Plus Telematics | Car Tracker, Fleet Tracking and Vehicle Security in Nigeria",
+		"metaDescription": "Car Tracker Plus Telematics offers premium car tracker installation, fleet telematics, dash camera systems, immobilisation, and vehicle security support in Nigeria.",
+		"landingPages": [
+			{
+				"slug": "car-tracker-nigeria",
+				"pageTitle": "Car Tracker In Nigeria | Premium Tracking Installation And Support",
+				"metaDescription": "Looking for a car tracker in Nigeria? Car Tracker Plus Telematics provides premium tracking installation, live monitoring tools, immobilisation options, and responsive support.",
+				"headline": "Premium car tracker installation for drivers and businesses across Nigeria.",
+				"intro": "If you are searching for a dependable car tracker in Nigeria, this page gives you a clearer route to live tracking, vehicle protection, and cleaner after-sales support.",
+				"serviceType": "Car tracker installation",
+				"location": "Nigeria",
+				"primaryKeyword": "car tracker nigeria",
+				"secondaryKeywords": [
+					"gps car tracker nigeria",
+					"best car tracker in nigeria",
+					"car tracking company nigeria"
+				],
+				"benefits": [
+					"Live location visibility with route history",
+					"Remote immobilisation options for eligible setups",
+					"Clean installation with support after deployment"
+				],
+				"faqs": [
+					{
+						"question": "How much does a car tracker cost in Nigeria?",
+						"answer": "Pricing depends on the tracker type, installation requirements, and whether the setup is for a private vehicle or fleet. Car Tracker Plus Telematics provides quote-based recommendations."
+					},
+					{
+						"question": "Can I track my car from my phone in Nigeria?",
+						"answer": "Yes. Our supported car tracker solutions can be accessed from mobile and web interfaces as long as the device has network connectivity."
+					}
+				]
+			},
+			{
+				"slug": "vehicle-tracking-lagos",
+				"pageTitle": "Vehicle Tracking In Lagos | Real-Time Tracking And Security Support",
+				"metaDescription": "Need vehicle tracking in Lagos? Car Tracker Plus Telematics offers real-time tracking, security-focused installation, and support for private vehicles and fleets.",
+				"headline": "Vehicle tracking in Lagos for owners who need fast visibility and dependable support.",
+				"intro": "Lagos drivers and operators often need more than a basic tracker. This page focuses on vehicle tracking solutions designed for busy urban movement, faster responses, and stronger vehicle oversight.",
+				"serviceType": "Vehicle tracking",
+				"location": "Lagos",
+				"primaryKeyword": "vehicle tracking lagos",
+				"secondaryKeywords": [
+					"gps tracking lagos",
+					"car tracker lagos",
+					"vehicle security lagos"
+				],
+				"benefits": [
+					"Local installation support",
+					"Trip visibility across Lagos",
+					"Security-focused vehicle monitoring"
+				],
+				"faqs": [
+					{
+						"question": "Do you install vehicle trackers in Lagos?",
+						"answer": "Yes. We support vehicle tracking installations in Lagos and can arrange convenient deployment based on location and vehicle type."
+					},
+					{
+						"question": "Is vehicle tracking useful for traffic-heavy cities like Lagos?",
+						"answer": "Yes. Vehicle tracking improves route awareness, location history, operational visibility, and response speed in heavy-traffic environments."
+					}
+				]
+			},
+			{
+				"slug": "fleet-management-nigeria",
+				"pageTitle": "Fleet Management In Nigeria | Telematics For Better Fleet Visibility",
+				"metaDescription": "Need fleet management in Nigeria? Car Tracker Plus Telematics provides tracking, telematics oversight, route visibility, and operational support for growing fleets.",
+				"headline": "Fleet management in Nigeria with better telematics visibility and cleaner operational control.",
+				"intro": "For companies running multiple vehicles, the goal is not only knowing where each unit is. It is also improving accountability, route awareness, and reporting quality.",
+				"serviceType": "Fleet management",
+				"location": "Nigeria",
+				"primaryKeyword": "fleet management nigeria",
+				"secondaryKeywords": [
+					"fleet tracking nigeria",
+					"gps fleet management nigeria",
+					"logistics fleet monitoring nigeria"
+				],
+				"benefits": [
+					"Multi-vehicle visibility",
+					"Driver and route oversight",
+					"Fleet-focused reporting support"
+				],
+				"faqs": [
+					{
+						"question": "Who needs fleet management in Nigeria?",
+						"answer": "Fleet management is useful for logistics teams, delivery businesses, schools, field operations, and any organisation that manages multiple vehicles."
+					},
+					{
+						"question": "Can I monitor multiple vehicles from one account?",
+						"answer": "Yes. Fleet telematics platforms are designed to help managers view and monitor multiple vehicles from one dashboard."
+					}
+				]
+			},
+			{
+				"slug": "dashcam-installation-nigeria",
+				"pageTitle": "Dashcam Installation In Nigeria | Premium Camera Deployment For Vehicles",
+				"metaDescription": "Looking for dashcam installation in Nigeria? Car Tracker Plus Telematics deploys premium dash camera systems for private cars, executive vehicles, and fleets.",
+				"headline": "Dashcam installation in Nigeria for drivers and fleets that need stronger incident visibility.",
+				"intro": "A quality dash camera system adds evidence, accountability, and peace of mind. This page is built for people searching for dashcam installation in Nigeria with a more premium deployment standard.",
+				"serviceType": "Dashcam installation",
+				"location": "Nigeria",
+				"primaryKeyword": "dashcam installation nigeria",
+				"secondaryKeywords": [
+					"car camera installation nigeria",
+					"dashboard camera nigeria",
+					"vehicle dashcam nigeria"
+				],
+				"benefits": [
+					"Incident evidence capture",
+					"Driver behavior visibility",
+					"Professional in-car setup"
+				],
+				"faqs": [
+					{
+						"question": "Why install a dashcam in Nigeria?",
+						"answer": "A dashcam records road activity and provides useful footage for incident review, driver accountability, and general vehicle safety."
+					},
+					{
+						"question": "Can dashcams be installed alongside vehicle tracking?",
+						"answer": "Yes. Dashcams can be installed alongside vehicle tracking solutions to combine footage with location-based monitoring."
+					}
+				]
+			}
+		]
+	},
+	"settings": {
+		"darkMode": true,
+		"showBooking": true,
+		"showPricing": false
+	},
+	"poweredBy": {
+		"title": "Trajectra Technologies",
+		"url": "https://www.trajectra.com",
+		"shouldShow": true
+	}
+}

@@ -1,0 +1,32 @@
+---
+// TargetAudience.astro
+import type { ThemeConfig } from "../types/theme";
+export interface Props {
+	data: ThemeConfig;
+}
+const targetAudience = Astro.props.data.content.targetAudienceSection;
+---
+
+{
+	targetAudience && (
+		<section class="scrolling-section py-20 px-4 text-center bg-[var(--color-background)] text-[var(--color-heading)]">
+			<h2 class="text-3xl md:text-4xl font-bold mb-12">
+				{targetAudience.heading}
+			</h2>
+			<div class="grid gap-10 sm:grid-cols-2 md:grid-cols-3 max-w-5xl mx-auto">
+				{targetAudience.audienceList.map((audience) => (
+					<div class="card p-6 border rounded-xl shadow-sm bg-[var(--color-background)]">
+						{audience.iconUrl && (
+							<img
+								src={audience.iconUrl}
+								alt={audience.title}
+								class="mx-auto w-12 h-12 mb-4"
+							/>
+						)}
+						<h3 class="text-xl font-semibold">{audience.title}</h3>
+					</div>
+				))}
+			</div>
+		</section>
+	)
+}

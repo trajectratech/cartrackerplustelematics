@@ -1,0 +1,83 @@
+---
+import { Icon } from "astro-icon/components";
+import type { ThemeConfig } from "../types/theme";
+
+export interface Props {
+	data: ThemeConfig;
+}
+
+const { servicesSection } = Astro.props.data.content;
+---
+
+{Array.isArray(servicesSection?.listItems) && servicesSection?.listItems?.length > 0 && <section
+	id="services"
+	aria-labelledby="services-heading"
+	class="scrolling-section relative overflow-hidden bg-[var(--color-background)] py-24 text-[var(--color-text)]"
+>
+	<div
+		class="absolute inset-0 opacity-100"
+		style="background:
+			radial-gradient(circle at top right, rgba(15, 76, 129, 0.08), transparent 32%),
+			linear-gradient(180deg, rgba(8, 17, 31, 0), rgba(8, 17, 31, 0.03));"
+		aria-hidden="true"
+	/>
+	<div class="relative z-10 mx-auto max-w-7xl px-6">
+		<div class="mx-auto max-w-3xl text-center">
+			<p class="text-sm font-semibold uppercase tracking-[0.28em] text-[var(--color-primary)]">
+				Core Capabilities
+			</p>
+			<h2
+				id="services-heading"
+				class="mt-4 text-4xl font-extrabold leading-tight text-[var(--color-heading)] sm:text-5xl"
+			>
+				{servicesSection.heading}
+			</h2>
+			{
+				servicesSection.paragraph && (
+					<p class="mt-5 text-base leading-8 text-[var(--color-muted)] sm:text-lg">
+						{servicesSection.paragraph}
+					</p>
+				)
+			}
+		</div>
+
+		<div class="mt-14 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+			{
+				servicesSection?.listItems.map((service, index) => {
+					const serviceId = `service-title-${index}`;
+					return (
+						<article
+							aria-labelledby={serviceId}
+							class="card group rounded-[2rem] border border-[color:rgba(8,17,31,0.08)] bg-white p-7 shadow-[0_20px_50px_rgba(8,17,31,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(8,17,31,0.10)]"
+						>
+							<div class="flex items-center justify-between gap-4">
+								<div
+									class="flex h-14 w-14 items-center justify-center rounded-2xl bg-[color:rgba(15,76,129,0.10)] text-[var(--color-primary)]"
+									role="img"
+									aria-hidden="true"
+								>
+									<Icon name="heroicons-outline:check-circle" class="h-7 w-7" />
+								</div>
+								<span class="text-sm font-semibold text-[color:rgba(8,17,31,0.36)]">
+									0{index + 1}
+								</span>
+							</div>
+							<h3
+								id={serviceId}
+								class="mt-6 text-xl font-semibold text-[var(--color-heading)]"
+							>
+								{service.title}
+							</h3>
+							{service.description && (
+								<p class="mt-3 text-sm leading-7 text-[var(--color-muted)]">
+									{service.description}
+								</p>
+							)}
+						</article>
+					);
+				})
+			}
+		</div>
+	</div>
+</section>
+}

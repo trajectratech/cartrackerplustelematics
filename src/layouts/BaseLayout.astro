@@ -1,0 +1,195 @@
+---
+// src/layouts/BaseLayout.astro
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import FontLoader from "../components/FontLoader.astro";
+
+import type { BaseLayoutProps } from "../types/base-layout.ts";
+
+import "../styles/global.css";
+
+const props = Astro.props as BaseLayoutProps;
+
+const {
+	title,
+	description,
+	url,
+	keywords,
+	businessName,
+	logoImage,
+	publicDirectory,
+} = props.data.brand;
+const colorVars = props.colorVars;
+const metadata = props.metadata;
+const seoTitle = metadata?.title || props.data.seo?.pageTitle || title;
+const seoDescription =
+	metadata?.description || props.data.seo?.metaDescription || description;
+const seoKeywords = metadata?.keywords || keywords;
+const canonicalUrl = metadata?.canonicalUrl || url;
+const siteName = metadata?.siteName || businessName;
+const ogImage = metadata?.ogImage || props.data.imagery?.heroImage || logoImage;
+const ogImageAlt = metadata?.ogImageAlt || `${siteName} logo`;
+const locale = metadata?.locale || "en-NG";
+const twitterHandle = metadata?.twitterHandle;
+const robots = metadata?.robots;
+const structuredDataBlocks = Array.isArray(props.structuredData)
+	? props.structuredData
+	: [
+			props.structuredData,
+			props.webPageSchema,
+			props.breadcrumbSchema,
+			props.ratingSchema,
+			props.faqsSchema,
+			props.organizationSchema,
+		].filter(Boolean);
+---
+
+<html
+	lang="en-NG"
+	style={Object.entries(colorVars)
+		.map(([k, v]) => `${k}: ${v}`)
+		.join("; ")}
+>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<FontLoader fontFamily={props.data.typography?.fontFamily || ""} />
+		<title>{seoTitle}</title>
+		<meta name="description" content={seoDescription} />
+		<meta name="keywords" content={seoKeywords.join(", ")} />
+		{robots && <meta name="robots" content={robots} />}
+		<meta name="theme-color" content={colorVars["--color-primary"]} />
+		<meta name="author" content={businessName} />
+		<meta name="application-name" content={siteName} />
+		<meta name="apple-mobile-web-app-title" content={siteName} />
+		<link rel="canonical" href={canonicalUrl} />
+		<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+		<link rel="manifest" href="/site.webmanifest" />
+
+		<link rel="icon" type="image/svg+xml" href={publicDirectory + "/favicon.svg"} />
+		<link rel="shortcut icon" href={publicDirectory + "/favicon.ico"} />
+
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href={publicDirectory + "/apple-touch-icon.png"}
+		/>
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href={publicDirectory + "/android-chrome-192x192.png"}
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="512x512"
+			href={publicDirectory + "/android-chrome-512x512.png"}
+		/>
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href={publicDirectory + "/favicon-32x32.png"}
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href={publicDirectory + "/favicon-16x16.png"}
+		/>
+
+		<meta property="og:title" content={seoTitle} />
+		<meta property="og:description" content={seoDescription} />
+		<meta property="og:image" content={ogImage} />
+		<meta property="og:image:alt" content={ogImageAlt} />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:site_name" content={siteName} />
+		<meta property="og:locale" content={locale} />
+		<meta property="og:type" content={metadata?.type || "website"} />
+		<meta name="twitter:card" content="summary_large_image" />
+		{twitterHandle && <meta name="twitter:site" content={twitterHandle} />}
+		<meta name="twitter:title" content={seoTitle} />
+		<meta name="twitter:description" content={seoDescription} />
+		<meta name="twitter:image" content={ogImage} />
+
+		<!-- Structured Data -->
+		{
+			structuredDataBlocks.map((schema) => (
+				<script
+					type="application/ld+json"
+					set:html={JSON.stringify(schema)}
+				/>
+			))
+		}
+	</head>
+	<body
+		class="min-h-screen scroll-smooth bg-[var(--color-background)] font-sans leading-relaxed text-[var(--color-text)]"
+	>
+		<main class="flex min-h-screen flex-col">
+			<Navbar data={props.data} mobileNavVariant="slide-down" />
+			<slot />
+			<Footer data={props.data} />
+		</main>
+
+		<button
+			id="back-to-top"
+			class="fixed bottom-6 right-6 z-50 flex cursor-pointer items-center justify-center gap-2 rounded-full bg-[var(--color-primary)] px-5 py-3 text-sm font-semibold text-white shadow-[0_18px_40px_rgba(15,76,129,0.28)] transition-all duration-300 opacity-0 pointer-events-none hover:bg-[var(--color-hover)]"
+			aria-label="Back to top"
+		>
+			<span class="text-lg">⬆</span>
+			<span class="hidden sm:inline">Back to Top</span>
+		</button>
+
+		<script is:inline>
+			const backToTopBtn = document.getElementById("back-to-top");
+			window.addEventListener("scroll", () => {
+				if (window.scrollY > 300) {
+					backToTopBtn.classList.add("opacity-100", "pointer-events-auto");
+					backToTopBtn.classList.remove("opacity-0", "pointer-events-none");
+				} else {
+					backToTopBtn.classList.add("opacity-0", "pointer-events-none");
+					backToTopBtn.classList.remove("opacity-100", "pointer-events-auto");
+				}
+			});
+			backToTopBtn.addEventListener("click", () => {
+				window.scrollTo({ top: 0, behavior: "smooth" });
+			});
+		</script>
+		<script>
+			import { animate, stagger, inView } from "motion";
+			inView(
+				".scrolling-section",
+				(element) => {
+					animate(
+						element,
+						{ opacity: [0, 1], y: [50, 0] },
+						{ ease: [0.39, 0.24, 0.3, 1], duration: 1 },
+					);
+
+					const cards = element.querySelectorAll(".card");
+					if (cards.length > 0) {
+						animate(
+							cards,
+							{ opacity: [0, 1], y: [25, 0] },
+							{ type: "spring", delay: stagger(0.25, { startDelay: 0.25 }) },
+						);
+					}
+				},
+				{ amount: 0.25 },
+			);
+
+			// Wait for DOM to load
+			window.addEventListener("DOMContentLoaded", () => {
+				const btn = document.querySelector("#back-to-top");
+				if (btn) {
+					btn.addEventListener("mouseenter", () => {
+						animate(btn, { x: [0, -5, 5, -5, 5, 0] }, { duration: 0.4 });
+					});
+				}
+			});
+		</script>
+	</body>
+</html>

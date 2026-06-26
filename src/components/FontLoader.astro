@@ -1,0 +1,35 @@
+---
+export interface Props {
+	fontFamily: string;
+}
+import { availableFonts } from "../utils/getFontFamily";
+
+const { fontFamily } = Astro.props;
+const weights = availableFonts[fontFamily] ?? [400];
+const fontParam = `${fontFamily.replace(/\s+/g, "+")}:wght@${weights.join(";")}`;
+const fontHref = `https://fonts.googleapis.com/css2?family=${fontParam}&display=swap`;
+const cssFontFamily = fontFamily.includes(" ") ? `"${fontFamily}"` : fontFamily;
+const fontCSS = `:root { --font-family-base: ${cssFontFamily}, sans-serif; }`;
+---
+
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<!-- Preload for performance -->
+<link rel="preload" as="style" href={fontHref} />
+
+<!-- Non-blocking font load -->
+<link
+	rel="stylesheet"
+	href={fontHref}
+	media="print"
+	onload="this.media='all'"
+/>
+
+<!-- Fallback for older browsers -->
+<noscript>
+	<link rel="stylesheet" href={fontHref} />
+</noscript>
+
+<!-- Apply custom font family -->
+<style is:global set:html={fontCSS}></style>

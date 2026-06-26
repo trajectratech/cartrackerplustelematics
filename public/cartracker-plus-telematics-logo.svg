@@ -1,0 +1,18 @@
+<svg width="640" height="160" viewBox="0 0 640 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Car Tracker Plus Telematics logo</title>
+  <desc id="logoDesc">A premium monogram mark with the Car Tracker Plus Telematics wordmark.</desc>
+  <rect width="640" height="160" rx="28" fill="white"/>
+  <g transform="translate(18 18)">
+    <rect x="0" y="0" width="124" height="124" rx="30" fill="#08111F"/>
+    <path d="M30 77C42 56 56 46 72 46C86 46 97 54 105 68" stroke="#C9A45C" stroke-width="7" stroke-linecap="round"/>
+    <path d="M31 90H65C81 90 93 83 102 67" stroke="#0F4C81" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="31" cy="90" r="9" fill="#0F4C81"/>
+    <circle cx="102" cy="67" r="9" fill="#C9A45C"/>
+    <path d="M63 29V96" stroke="white" stroke-width="7" stroke-linecap="round"/>
+    <path d="M46 46H80" stroke="white" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <g fill="#08111F">
+    <text x="170" y="68" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800" letter-spacing="1.2">CAR TRACKER</text>
+    <text x="170" y="113" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="600" letter-spacing="2.8" fill="#0F4C81">PLUS TELEMATICS</text>
+  </g>
+</svg>

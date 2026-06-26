@@ -1,0 +1,114 @@
+---
+import type { ThemeConfig } from "../types/theme";
+import CallToActionButton from "./CallToActionButton.astro";
+import TrackingCarIllustration from "./TrackingCarIllustration.astro";
+
+export interface Props {
+	data: ThemeConfig;
+}
+
+const { data } = Astro.props;
+const content = data.content.aboutSection;
+const contact = data.contact;
+
+const hasAboutContent =
+	content?.heading?.trim() ||
+	content?.paragraph?.trim() ||
+	content?.imageUrl?.trim();
+---
+
+{
+	hasAboutContent && (
+		<section
+			id="about"
+			aria-labelledby="about-heading"
+			role="region"
+			class="scrolling-section relative isolate bg-[var(--color-background)] px-6 py-24 text-[var(--color-text)]"
+		>
+			<div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.9fr)] lg:items-center">
+				<div class="max-w-2xl">
+					<p class="text-sm font-semibold uppercase tracking-[0.28em] text-[var(--color-primary)]">
+						About The Service
+					</p>
+					<h2
+						id="about-heading"
+						class="mt-4 text-4xl font-bold tracking-tight text-[var(--color-heading)] sm:text-5xl"
+					>
+						{content.heading}
+					</h2>
+
+					<p
+						class="mt-6 text-base leading-8 text-[var(--color-muted)] sm:text-lg"
+					>
+						{content.paragraph}
+					</p>
+
+					<div class="mt-8 grid gap-4 sm:grid-cols-2" role="contentinfo">
+						{contact.email && (
+							<a
+								href={`mailto:${contact.email}`}
+								class="rounded-[1.5rem] border border-[color:rgba(8,17,31,0.08)] bg-white px-5 py-5 text-base font-medium text-[var(--color-heading)] transition hover:border-[color:var(--color-primary)]"
+								aria-label={`Send an email to ${contact.email}`}
+							>
+								<span class="block text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-primary)]">
+									Email
+								</span>
+								<span class="mt-2 block">{contact.email}</span>
+							</a>
+						)}
+
+						{contact.phone && (
+							<a
+								href={`tel:${contact.phone}`}
+								class="rounded-[1.5rem] border border-[color:rgba(8,17,31,0.08)] bg-white px-5 py-5 text-base font-medium text-[var(--color-heading)] transition hover:border-[color:var(--color-primary)]"
+								aria-label={`Call ${contact.phone}`}
+							>
+								<span class="block text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-primary)]">
+									Phone
+								</span>
+								<span class="mt-2 block">{contact.phone}</span>
+							</a>
+						)}
+					</div>
+					{data?.content?.heroSection?.ctaUrl && (
+						<CallToActionButton
+							href={data.content.heroSection.ctaUrl}
+							label={data.content.heroSection.ctaText}
+							className="mt-8"
+						/>
+					)}
+				</div>
+
+				{content.imageUrl && (
+					<div
+						class="w-full overflow-hidden rounded-[2rem] border border-[color:rgba(8,17,31,0.08)] shadow-[0_24px_60px_rgba(8,17,31,0.08)]"
+					>
+						<div class="relative w-full" style="aspect-ratio: 16 / 9;">
+							<div class="relative h-[400px]">
+								<img
+									src={content.imageUrl}
+									alt={content.heading || "About section image"}
+									class="absolute inset-0 w-full h-[400px] object-cover transition duration-500 hover:scale-105"
+									loading="lazy"
+									decoding="async"
+									fetchpriority="low"
+									role="img"
+								/>
+							</div>
+						</div>
+					</div>
+				)}
+
+				{!content?.imageUrl && (
+					<div class="rounded-[2rem] bg-[var(--color-secondary)] p-6 shadow-[0_30px_80px_rgba(8,17,31,0.18)]">
+						<div class="rounded-[1.5rem] border border-[color:rgba(255,255,255,0.08)] bg-[color:rgba(255,255,255,0.03)] p-4">
+							<div class="h-[300px] md:h-[420px]">
+								<TrackingCarIllustration />
+							</div>
+						</div>
+					</div>
+				)}
+			</div>
+		</section>
+	)
+}

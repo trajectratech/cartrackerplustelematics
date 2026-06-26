@@ -1,0 +1,55 @@
+---
+import type { ThemeConfig } from "../types/theme";
+
+export interface Props {
+	data: ThemeConfig;
+}
+
+const { gallery, galleryTitle } = Astro.props.data.imagery;
+---
+
+{
+	gallery && gallery.length > 0 && (
+		<section
+			id="gallery"
+			aria-labelledby="gallery-heading"
+			class="scrolling-section py-24 bg-[var(--color-background)]"
+		>
+			<div class="max-w-6xl mx-auto px-6">
+				{galleryTitle && (
+					<h2
+						id="gallery-heading"
+						class="text-3xl font-bold text-center mb-12 text-[var(--color-primary)]"
+					>
+						{galleryTitle}
+					</h2>
+				)}
+
+				<div
+					class="card grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+					role="list"
+				>
+					{gallery.map((img, index) => (
+						<figure
+							role="listitem"
+							class="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 ease-in-out group"
+						>
+							<img
+								src={img.imageUrl}
+								alt={img?.alt || `gallery ${index + 1}`}
+								class="w-full aspect-[4/3] object-cover rounded-lg shadow-md"
+								loading="lazy"
+								decoding="async"
+							/>
+							{img.caption && (
+								<figcaption class="text-center text-sm mt-2 text-[var(--color-primary)]">
+									{img.caption}
+								</figcaption>
+							)}
+						</figure>
+					))}
+				</div>
+			</div>
+		</section>
+	)
+}

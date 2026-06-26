@@ -1,0 +1,81 @@
+---
+import type { ThemeConfig, SectionKey } from '../types/theme';
+import mainJson from '../data/car-tracker-plus-telematics.json';
+
+import About from '../components/About.astro';
+import Hero from '../components/Hero.astro';
+import Pricing from '../components/Pricing.astro';
+import Services from '../components/Services.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Gallery from '../components/Gallery.astro';
+import Map from '../components/Map.astro';
+import FAQS from '../components/FAQS.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import Products from '../components/Products.astro';
+import TargetAudience from '../components/TargetAudience.astro';
+import DemoShowcase from '../components/DemoShowcase.astro';
+import CTA from '../components/CTA.astro';
+import PromoLiveBanner from '../components/PromoLiveBanner.astro';
+import Trust from '../components/Trust.astro';
+import { getHomePageSeo } from '../utils/seo';
+
+import '../styles/global.css';
+
+const data = mainJson as ThemeConfig;
+const layout: SectionKey[] = data.layout.sectionOrder;
+const seo = getHomePageSeo(data);
+
+const colorVars = {
+	'--color-primary': data.colors.primary,
+	'--color-secondary': data.colors.secondary,
+	'--color-accent': data.colors.accent,
+	'--color-background': data.colors.background,
+	'--color-text': data.colors.text,
+	'--color-heading': data.colors.heading,
+	'--color-link': data.colors.link,
+	'--color-hover': data.colors.hover,
+	'--color-active': data.colors.active,
+	'--color-error': data.colors.error,
+	'--color-success': data.colors.success,
+	'--color-muted': data.colors.muted,
+};
+
+// Section map using component references
+const sectionMap: Partial<Record<SectionKey, any>> = {
+	heroSection: Hero,
+	aboutSection: About,
+	servicesSection: Services,
+	pricingSection: Pricing,
+	testimonialsSection: Testimonials,
+	gallerySection: Gallery,
+	mapSection: Map,
+	productsSection: Products,
+	faqsSection: FAQS,
+	howItWorksSection: HowItWorks,
+	targetAudienceSection: TargetAudience,
+	demoShowcaseSection: DemoShowcase,
+	ctaSection: CTA,
+	promoLiveBanner: PromoLiveBanner,
+	trustSection: Trust,
+};
+
+const props = {
+	data,
+	layout,
+	colorVars,
+	metadata: seo.metadata,
+	structuredData: seo.structuredData,
+	sameAsUrls: seo.sameAsUrls,
+};
+---
+
+<BaseLayout {...props}>
+	{
+		layout.map((section) => {
+			const Component = sectionMap[section];
+			if (!Component) return null;
+			return <Component data={data} />;
+		})
+	}
+</BaseLayout>

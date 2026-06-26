@@ -1,0 +1,62 @@
+---
+// PromoLiveBanner.astro
+import type { ThemeConfig } from "../types/theme";
+export interface Props {
+	data: ThemeConfig;
+}
+
+const promo = Astro.props.data.content.promoBanner;
+const metrics = Astro.props.data.content.liveMetrics;
+
+let isExpired = false;
+if (promo?.expiresAt) {
+	const expiryDate = new Date(promo.expiresAt);
+	isExpired = new Date() > expiryDate;
+}
+---
+
+{
+	!isExpired && promo && (
+		<div class="scrolling-section bg-[var(--color-text)] text-[var(--color-text)] px-6 py-4 text-center relative">
+			<div class="flex flex-col md:flex-row items-center justify-center gap-4">
+				<span class="text-lg font-medium text-[var(--color-background)]">
+					{promo.message}
+				</span>
+				<a
+					target="_blank"
+					rel="noopener noreferrer"
+					href={promo.ctaUrl}
+					class="bg-[var(--color-background)] text-[var(--color-primary)] hover:text-[var(--color-hover)] hover:bg-[var(--color-secondary)] transition-all px-4 py-2 rounded font-semibold text-sm shadow"
+				>
+					{promo.ctaText}
+				</a>
+			</div>
+		</div>
+	)
+}
+
+{
+	metrics && (metrics.showVisitorCount || metrics.showCustomerCount) && (
+		<div class="bg-[var(--color-background)] text-[var(--color-text)] py-6 px-4">
+			<div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 text-center">
+				{metrics.showVisitorCount && (
+					<div>
+						<p class="text-3xl font-bold">👀 5,439+</p>
+						<p class="text-[var(--color-muted)]">Visitors today</p>
+					</div>
+				)}
+				{metrics.showCustomerCount && (
+					<div>
+						<p class="text-3xl font-bold">🎉 1,248+</p>
+						<p class="text-[var(--color-muted)]">Happy customers</p>
+					</div>
+				)}
+			</div>
+			{metrics.lastUpdatedText && (
+				<p class="text-xs text-[var(--color-muted)] text-center mt-4">
+					{metrics.lastUpdatedText}
+				</p>
+			)}
+		</div>
+	)
+}

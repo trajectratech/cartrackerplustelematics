@@ -1,0 +1,27 @@
+---
+// Props
+export interface Props {
+	href: string;
+	label: string;
+	target?: string;
+	rel?: string;
+	className?: string;
+}
+const {
+	href,
+	label,
+	target = "_blank",
+	rel = "noopener noreferrer",
+	className = "",
+} = Astro.props;
+---
+
+<a
+	href={href}
+	target={target}
+	rel={rel}
+	aria-label={label}
+	class={`inline-flex items-center justify-center rounded-full border border-[color:var(--color-primary)] bg-[color:var(--color-primary)] px-6 py-3 text-sm font-semibold tracking-[0.02em] text-white shadow-[0_18px_40px_rgba(15,76,129,0.24)] transition duration-200 hover:-translate-y-0.5 hover:bg-[color:var(--color-hover)] focus:outline-none focus:ring-2 focus:ring-[color:var(--color-primary)] focus:ring-offset-2 ${className}`}
+>
+	{label}
+</a>

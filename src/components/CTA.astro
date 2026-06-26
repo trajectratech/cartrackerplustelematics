@@ -1,0 +1,35 @@
+---
+// Cta.astro
+import type { ThemeConfig } from "../types/theme";
+export interface Props {
+	data: ThemeConfig;
+}
+const cta = Astro.props.data.content.ctaSection;
+---
+
+{
+	cta && (
+		<section
+			class="relative bg-[var(--color-secondary)] px-6 py-24 text-white"
+			style={`background-color: ${cta.backgroundColor || "var(--color-secondary)"}; background-image: url(${cta.backgroundImage || ""}); background-size: cover; background-position: center;`}
+		>
+			<div
+				class="absolute inset-0 opacity-100"
+				style="background:
+					radial-gradient(circle at top left, rgba(15, 76, 129, 0.32), transparent 35%),
+					radial-gradient(circle at bottom right, rgba(201, 164, 92, 0.16), transparent 28%);"
+				aria-hidden="true"
+			/>
+			<div class="relative mx-auto max-w-4xl rounded-[2rem] border border-[color:rgba(255,255,255,0.08)] bg-[color:rgba(255,255,255,0.04)] p-10 text-center shadow-[0_30px_80px_rgba(0,0,0,0.24)]">
+				<h2 class="text-3xl font-bold md:text-4xl">{cta.heading}</h2>
+				{cta.subheading && <p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[color:rgba(255,255,255,0.76)]">{cta.subheading}</p>}
+				<a
+					href={cta.ctaUrl}
+					class="mt-8 inline-flex items-center justify-center rounded-full bg-[var(--color-primary)] px-7 py-3 text-sm font-semibold tracking-[0.02em] text-white shadow-[0_18px_40px_rgba(15,76,129,0.24)] transition hover:-translate-y-0.5 hover:bg-[var(--color-hover)]"
+				>
+					{cta.ctaText}
+				</a>
+			</div>
+		</section>
+	)
+}

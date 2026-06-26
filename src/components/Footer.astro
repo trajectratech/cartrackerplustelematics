@@ -1,0 +1,151 @@
+---
+import { Icon } from "astro-icon/components";
+
+import type { ThemeConfig } from "../types/theme";
+
+export interface Props {
+	data: ThemeConfig;
+}
+
+type SocialKey =
+	| "instagram"
+	| "facebook"
+	| "tiktok"
+	| "x"
+	| "twitter"
+	| "linkedin"
+	| "pinterest"
+	| "youtube";
+
+const { data } = Astro.props;
+const { socialMedia } = data;
+
+const iconMap: Record<SocialKey, string> = {
+	instagram: "mdi:instagram",
+	facebook: "mdi:facebook",
+	tiktok: "simple-icons:tiktok",
+	x: "mdi:alpha-x-box", // Twitter (X)
+	twitter: "mdi:twitter",
+	linkedin: "mdi:linkedin",
+	pinterest: "mdi:pinterest",
+	youtube: "mdi:youtube",
+};
+---
+
+<footer
+	id="contact"
+	aria-label="Footer"
+	class="scrolling-section bg-[var(--color-heading)] px-6 py-14 text-sm text-[var(--color-background)]"
+>
+	<div
+		class="mx-auto grid max-w-7xl gap-10 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] md:items-start"
+	>
+		<div
+			class="flex flex-col gap-5 text-center md:max-w-xl md:text-left"
+		>
+			{
+				data.brand.logoImage && (
+					<img
+						src={data.brand.logoImage}
+						alt={data.brand.businessName ?? "Company Logo"}
+						class="mx-auto h-11 w-auto md:mx-0"
+						loading="lazy"
+					/>
+				)
+			}
+
+			{
+				data.brand.description && (
+					<p class="text-sm leading-7 text-[color:rgba(255,255,255,0.74)]">
+						{data.brand.description}
+					</p>
+				)
+			}
+			<p class="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--color-accent)]">
+				Car tracker and telematics support for private vehicles and fleets.
+			</p>
+		</div>
+
+		<div class="grid gap-4 text-center md:text-left">
+			<h2 class="font-extrabold text-white">Contact Details</h2>
+			<div class="grid gap-4 sm:grid-cols-2">
+				<a
+					href={`mailto:${data.contact.email}`}
+					class="flex items-center justify-center gap-3 rounded-[1.5rem] border border-[color:rgba(255,255,255,0.08)] bg-[color:rgba(255,255,255,0.04)] px-5 py-4 transition-colors hover:text-[var(--color-accent)] md:justify-start"
+					aria-label={`Email ${data.contact.email}`}
+				>
+					<Icon
+						name="heroicons-outline:envelope"
+						class="w-5 h-5"
+						aria-hidden="true"
+					/>
+					<span>{data.contact.email}</span>
+				</a>
+				<a
+					href={`tel:${data.contact.phone}`}
+					class="flex items-center justify-center gap-3 rounded-[1.5rem] border border-[color:rgba(255,255,255,0.08)] bg-[color:rgba(255,255,255,0.04)] px-5 py-4 transition-colors hover:text-[var(--color-accent)] md:justify-start"
+					aria-label={`Call ${data.contact.phone}`}
+				>
+					<Icon
+						name="heroicons-outline:phone"
+						class="w-5 h-5"
+						aria-hidden="true"
+					/>
+					<span>{data.contact.phone}</span>
+				</a>
+			</div>
+			<div class="rounded-[1.5rem] border border-[color:rgba(255,255,255,0.08)] bg-[color:rgba(255,255,255,0.04)] px-5 py-4 text-[color:rgba(255,255,255,0.74)]">
+				<p class="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-accent)]">
+					Address
+				</p>
+				<p class="mt-2 text-sm leading-7">{data.contact.address}</p>
+			</div>
+
+			{
+				Array.isArray(socialMedia) && socialMedia.length > 0 && (
+					<nav aria-label="Social media links">
+						<ul class="flex gap-4 justify-center md:justify-end">
+							{socialMedia.map((item) => {
+								const iconKey = item.name.toLowerCase() as SocialKey;
+								const icon = iconMap[iconKey] ?? "mdi:web";
+								return (
+									<li>
+										<a
+											href={item.url}
+											target="_blank"
+											rel="noopener noreferrer"
+											aria-label={`Visit our ${item.name} page`}
+											class="hover:scale-110 hover:text-[var(--color-accent)] transition-transform duration-200"
+										>
+											<Icon name={icon} class="w-6 h-6" aria-hidden="true" />
+										</a>
+									</li>
+								);
+							})}
+						</ul>
+					</nav>
+				)
+			}
+		</div>
+	</div>
+
+	<hr class="w-full border-t border-[var(--color-background)]/30 my-6 mt-10" />
+
+	<p class="text-center text-xs text-[color:rgba(255,255,255,0.74)]">
+		&copy; {new Date().getFullYear()}
+		{data.brand.businessName}
+		{data.poweredBy.shouldShow && " — Powered by "}
+		{
+			data.poweredBy.shouldShow && (
+				<a
+					href={data.poweredBy.url}
+					class="underline hover:text-[var(--color-accent)]"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					{data.poweredBy.title}
+				</a>
+			)
+		}
+	</p>
+</footer>

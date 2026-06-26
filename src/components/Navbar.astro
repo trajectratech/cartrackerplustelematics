@@ -1,0 +1,179 @@
+---
+import type { ThemeConfig } from "../types/theme";
+import { getNavItemsFromTheme } from "../utils/getNavItems";
+import CallToActionButton from "./CallToActionButton.astro";
+
+export interface Props {
+	data: ThemeConfig;
+	mobileNavVariant?: "slide-down" | "slide-left" | "slide-right" | "fade";
+}
+
+const { data, mobileNavVariant = "slide-left" } = Astro.props;
+const navItems = getNavItemsFromTheme(data);
+const mobileVariantClass = `mobile-${mobileNavVariant}`;
+---
+
+<style>
+	.mobile-menu {
+		transition: all 300ms ease-in-out;
+		opacity: 0;
+		pointer-events: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background-color: rgba(245, 247, 250, 0.98);
+		border-bottom: 1px solid rgba(8, 17, 31, 0.08);
+		z-index: 40;
+	}
+
+	.mobile-menu.open {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	.mobile-slide-down {
+		transform: translateY(-20%);
+	}
+	.mobile-slide-down.open {
+		transform: translateY(0);
+	}
+
+	.mobile-slide-left {
+		transform: translateX(-100%);
+	}
+	.mobile-slide-left.open {
+		transform: translateX(0);
+	}
+
+	.mobile-slide-right {
+		transform: translateX(100%);
+	}
+	.mobile-slide-right.open {
+		transform: translateX(0);
+	}
+
+	.mobile-fade {
+		transform: scale(0.95);
+	}
+	.mobile-fade.open {
+		transform: scale(1);
+	}
+</style>
+
+<nav
+	role="navigation"
+	aria-label="Main navigation"
+	class="sticky top-0 z-50 border-b border-[color:rgba(8,17,31,0.08)] bg-[color:rgba(245,247,250,0.96)] text-[var(--color-text)]"
+>
+	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+		<div class="flex h-20 items-center justify-between gap-6">
+			<a href="/" class="flex min-w-0 items-center gap-3">
+				{
+					data.brand.logoImage && (
+						<img
+							src={data.brand.logoImage}
+							alt={data.brand.businessName}
+							class="h-11 w-auto"
+							width="180"
+							height="45"
+							loading="eager"
+							decoding="async"
+							fetchpriority="high"
+						/>
+					)
+				}
+			</a>
+
+			<div class="hidden items-center gap-2 md:flex">
+				{
+					navItems.map((item) =>
+						item.external ? (
+							<CallToActionButton href={item.href} label={item.label} className="px-5 py-2.5" />
+						) : (
+							<a
+								href={item.href}
+								class="rounded-full px-4 py-2 text-sm font-medium text-[var(--color-text)] transition hover:bg-white hover:text-[var(--color-primary)]"
+							>
+								{item.label}
+							</a>
+						),
+					)
+				}
+			</div>
+
+			<div class="md:hidden">
+				<button
+					id="mobile-menu-toggle"
+					class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[color:rgba(8,17,31,0.12)] bg-white text-xl text-[var(--color-heading)] transition hover:border-[color:var(--color-primary)] hover:text-[var(--color-primary)]"
+					aria-expanded="false"
+					aria-controls="mobile-menu"
+					aria-label="Open navigation menu"
+				>
+					☰
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="mobile-menu" class={`mobile-menu ${mobileVariantClass} pb-5`}>
+		<div class="mx-auto flex max-w-7xl flex-col gap-2 px-4 pt-2">
+		{
+			navItems.map((item) =>
+				item.external ? (
+					<CallToActionButton
+						href={item.href}
+						label={item.label}
+						className="w-full px-5 py-3"
+					/>
+				) : (
+					<a
+						href={item.href}
+						class="block rounded-2xl border border-[color:rgba(8,17,31,0.08)] bg-white px-4 py-3 text-sm font-medium text-[var(--color-heading)] transition hover:border-[color:var(--color-primary)] hover:text-[var(--color-primary)]"
+					>
+						{item.label}
+					</a>
+				),
+			)
+		}
+		</div>
+	</div>
+
+	<script type="module" is:inline>
+		const toggle = document.getElementById("mobile-menu-toggle");
+		const menu = document.getElementById("mobile-menu");
+
+		const openMenu = () => {
+			menu.classList.add("open");
+			toggle.textContent = "✕";
+			toggle.setAttribute("aria-expanded", "true");
+		};
+
+		const closeMenu = () => {
+			menu.classList.remove("open");
+			toggle.textContent = "☰";
+			toggle.setAttribute("aria-expanded", "false");
+		};
+
+		toggle.addEventListener("click", () => {
+			if (menu.classList.contains("open")) {
+				closeMenu();
+			} else {
+				openMenu();
+			}
+		});
+
+		menu.querySelectorAll("a").forEach((link) => {
+			link.addEventListener("click", () => {
+				closeMenu();
+			});
+		});
+
+		const mediaQuery = window.matchMedia("(min-width: 768px)");
+		mediaQuery.addEventListener("change", () => {
+			if (mediaQuery.matches) {
+				closeMenu();
+			}
+		});
+	</script>
+</nav>
