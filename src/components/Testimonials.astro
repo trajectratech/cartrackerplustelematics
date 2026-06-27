@@ -17,26 +17,31 @@ const testimonialsSection = data.content?.testimonialsSection;
 	class="scrolling-section bg-[var(--color-background)] py-24"
 >
 	<div class="mx-auto max-w-7xl px-6">
-		{testimonialsSection?.heading && <h2
-			id="testimonials-heading"
-			class="mx-auto max-w-3xl text-center text-3xl font-bold text-[var(--color-heading)] md:text-4xl"
-		>
-			{testimonialsSection.heading}
-		</h2> }
+		{testimonialsSection?.heading && <div class="mx-auto max-w-3xl text-center">
+			<p class="text-sm font-semibold uppercase tracking-[0.28em] text-[var(--color-primary)]">
+				Client Confidence
+			</p>
+			<h2
+				id="testimonials-heading"
+				class="mt-4 text-3xl font-bold text-[var(--color-heading)] md:text-4xl"
+			>
+				{testimonialsSection.heading}
+			</h2>
+		</div> }
 	
 
 		<div class="mt-14 grid gap-6 lg:grid-cols-2">
 			{Array.isArray(testimonialsSection?.testimonials) && testimonialsSection?.testimonials?.length > 0 &&
 				testimonialsSection?.testimonials.map((t, index) => (
 					<figure
-						class="card rounded-[2rem] border border-[color:rgba(8,17,31,0.08)] bg-white p-7 shadow-[0_20px_50px_rgba(8,17,31,0.06)] transition-transform duration-500 ease-in-out opacity-0 animate-fade-in-up"
-						style={`animation-delay: ${index * 150}ms`}
+						class="card rounded-[2rem] border p-7 transition-transform duration-500 ease-in-out opacity-0 animate-fade-in-up"
+						style={`animation-delay: ${index * 150}ms; border-color: var(--border-soft); background: var(--card-bg-elevated); box-shadow: var(--shadow-soft);`}
 					>
 						<div class="mb-4 flex gap-1">
-							{[...Array(t.rating)].map((_, i) => (
+							{[...Array(t.rating)].map(() => (
 								<Icon
 									name="heroicons-solid:star"
-									class="h-5 w-5 text-[var(--color-accent)]"
+									class="h-5 w-5 text-[var(--color-primary)]"
 									aria-hidden="true"
 								/>
 							))}
@@ -47,14 +52,14 @@ const testimonialsSection = data.content?.testimonialsSection;
 						</blockquote>
 
 						<figcaption class="flex items-center gap-4">
-							<div class="flex h-12 w-12 items-center justify-center rounded-full bg-[color:rgba(15,76,129,0.10)] text-sm font-bold text-[var(--color-primary)]">
+							<div class="flex h-12 w-12 items-center justify-center rounded-full text-sm font-bold text-[var(--color-primary)]" style="background: var(--surface-3);">
 								{t.name.split(" ").map((part) => part[0]).join("").slice(0, 2)}
 							</div>
 							<div>
 								<p class="text-sm font-semibold text-[var(--color-heading)]">
 									{t.name}
 								</p>
-								<p class="text-sm text-[var(--color-muted)]">{t.position}</p>
+								<p class="text-sm" style="color: var(--text-soft);">{t.position}</p>
 							</div>
 						</figcaption>
 					</figure>

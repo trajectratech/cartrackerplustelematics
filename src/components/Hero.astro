@@ -10,6 +10,25 @@ export interface Props {
 const { data } = Astro.props;
 const content = data.content.heroSection;
 const trustStats = data.content.trustSection?.stats?.slice(0, 3) ?? [];
+const headingParts = content.heading.match(/^(.+?[.!?])\s+(.+)$/);
+const primaryHeading = headingParts?.[1] ?? content.heading;
+const secondaryHeading = headingParts?.[2] ?? "";
+const assurancePoints = [
+	"Live location and movement alerts",
+	"Remote response features",
+	"Support for private vehicles and fleets",
+];
+const appHighlights = [
+	{ label: "Live visibility", value: "24/7" },
+	{ label: "Ignition status", value: "Secure" },
+	{ label: "Alert delivery", value: "Instant" },
+];
+const responseSteps = [
+	"Movement alert reaches you immediately",
+	"Location updates stay visible in the app",
+	"Response support starts from one contact point",
+];
+const protectionBands = ["Essential Tracking", "Plus Security", "Fleet Telematics"];
 ---
 
 {
@@ -21,36 +40,66 @@ const trustStats = data.content.trustSection?.stats?.slice(0, 3) ?? [];
 			<div
 				class="absolute inset-0 opacity-100"
 				style="background:
-					radial-gradient(circle at top left, rgba(15, 76, 129, 0.35), transparent 36%),
-					radial-gradient(circle at bottom right, rgba(201, 164, 92, 0.18), transparent 32%),
+					radial-gradient(circle at top left, rgba(181, 18, 27, 0.28), transparent 38%),
+					radial-gradient(circle at bottom right, rgba(227, 76, 86, 0.14), transparent 28%),
 					linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0));"
+				aria-hidden="true"
+			/>
+			<div
+				class="absolute inset-0 opacity-70"
+				style="background-image:
+					linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+					linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+					background-size: 60px 60px;"
 				aria-hidden="true"
 			/>
 			<div class="relative z-10 mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:items-center">
 				<div class="max-w-3xl">
-					<p class="inline-flex rounded-full border border-[color:rgba(255,255,255,0.12)] bg-[color:rgba(255,255,255,0.06)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[color:rgba(255,255,255,0.78)]">
-						{data.brand.tagline}
-					</p>
-					<h1 class="mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-						{content.heading}
+					<div class="flex flex-wrap gap-3">
+						<p class="inline-flex rounded-full border border-[color:rgba(255,255,255,0.12)] bg-[color:rgba(255,255,255,0.04)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[color:rgba(255,255,255,0.82)]">
+							Personal Vehicle Tracking
+						</p>
+						<p class="inline-flex rounded-full border border-[color:rgba(181,18,27,0.32)] bg-[color:rgba(181,18,27,0.14)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[color:rgba(255,255,255,0.92)]">
+							{data.brand.tagline}
+						</p>
+					</div>
+					<h1 class="mt-6 text-4xl tracking-tight text-white sm:text-5xl lg:text-6xl">
+						<span class="block font-extrabold">{primaryHeading}</span>
+						{
+							secondaryHeading && (
+								<span class="mt-3 block text-2xl font-semibold leading-tight text-[color:rgba(255,255,255,0.82)] sm:text-3xl lg:text-4xl">
+									{secondaryHeading}
+								</span>
+							)
+						}
 					</h1>
 					<p class="mt-6 max-w-2xl text-base leading-8 text-[color:rgba(255,255,255,0.78)] sm:text-lg">
 						{content.paragraph}
 					</p>
+					<div class="mt-8 grid gap-3 sm:grid-cols-2">
+						{assurancePoints.map((point) => (
+							<div class="rounded-[1.5rem] border border-[color:rgba(255,255,255,0.08)] bg-[color:rgba(255,255,255,0.04)] px-4 py-4 text-sm text-[color:rgba(255,255,255,0.84)]">
+								{point}
+							</div>
+						))}
+						<div class="rounded-[1.5rem] border border-[color:rgba(181,18,27,0.55)] bg-[color:rgba(181,18,27,0.14)] px-4 py-4 text-sm text-[color:rgba(255,255,255,0.88)]">
+							Designed for private vehicles, executive cars, and business fleets.
+						</div>
+					</div>
 					<div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
 						<CallToActionButton href={content.ctaUrl} label={content.ctaText} />
 						<a
-							href="#services"
-							class="inline-flex items-center justify-center rounded-full border border-[color:rgba(255,255,255,0.16)] px-6 py-3 text-sm font-semibold tracking-[0.02em] text-white transition hover:border-[color:var(--color-accent)] hover:text-[color:var(--color-accent)]"
+							href="#pricing"
+							class="inline-flex items-center justify-center rounded-full border border-[color:rgba(255,255,255,0.16)] px-6 py-3 text-sm font-semibold tracking-[0.02em] text-white transition hover:border-[color:var(--color-primary)] hover:text-[color:var(--color-accent)]"
 						>
-							Explore Services
+							See Protection Plans
 						</a>
 					</div>
 					{
 						trustStats.length > 0 && (
 							<div class="mt-10 grid gap-4 sm:grid-cols-3">
 								{trustStats.map((stat) => (
-									<div class="rounded-3xl border border-[color:rgba(255,255,255,0.08)] bg-[color:rgba(255,255,255,0.04)] px-5 py-5">
+									<div class="rounded-3xl border border-[color:rgba(255,255,255,0.08)] bg-[color:rgba(255,255,255,0.03)] px-5 py-5">
 										<p class="text-2xl font-bold text-white">{stat.value}</p>
 										<p class="mt-1 text-sm text-[color:rgba(255,255,255,0.68)]">{stat.label}</p>
 									</div>
@@ -60,25 +109,112 @@ const trustStats = data.content.trustSection?.stats?.slice(0, 3) ?? [];
 					}
 				</div>
 				<div class="grid gap-5">
-					<div class="rounded-[2rem] border border-[color:rgba(255,255,255,0.08)] bg-[color:rgba(255,255,255,0.04)] p-6 shadow-[0_30px_80px_rgba(0,0,0,0.24)]">
-						<p class="text-sm font-semibold uppercase tracking-[0.22em] text-[color:var(--color-accent)]">
-							Deployment Focus
-						</p>
-						<h2 class="mt-4 text-2xl font-bold text-white">
-							Private vehicles, executive mobility, and fleet operations.
-						</h2>
-						<p class="mt-3 text-sm leading-7 text-[color:rgba(255,255,255,0.72)]">
-							Choose a cleaner rollout path with tracking, telematics, and security add-ons delivered with a disciplined installation process.
-						</p>
-						<div class="mt-6 grid gap-3 text-sm text-[color:rgba(255,255,255,0.76)]">
-							<div class="rounded-2xl bg-[color:rgba(255,255,255,0.04)] px-4 py-3">Email: {data.contact.email}</div>
-							<div class="rounded-2xl bg-[color:rgba(255,255,255,0.04)] px-4 py-3">Call: {data.contact.phone}</div>
-							<div class="rounded-2xl bg-[color:rgba(255,255,255,0.04)] px-4 py-3">Base: {data.contact.address}</div>
+					<div class="rounded-[2rem] border border-[color:rgba(255,255,255,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] p-5 shadow-[0_30px_80px_rgba(0,0,0,0.32)]">
+						<div class="flex items-center justify-between gap-4">
+							<div>
+								<p class="text-sm font-semibold uppercase tracking-[0.22em] text-[color:var(--color-accent)]">
+									Live App View
+								</p>
+								<p class="mt-2 text-sm text-[color:rgba(255,255,255,0.68)]">
+									One login. Full movement visibility.
+								</p>
+							</div>
+							<div class="rounded-full border border-[color:rgba(181,18,27,0.42)] bg-[color:rgba(181,18,27,0.18)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-white">
+								4G Protected
+							</div>
+						</div>
+						<div class="mt-5 rounded-[1.75rem] border border-[color:rgba(255,255,255,0.08)] bg-[color:rgba(6,6,8,0.68)] p-5">
+							<div class="flex items-start justify-between gap-4">
+								<div>
+									<p class="text-xs font-semibold uppercase tracking-[0.18em] text-[color:rgba(255,255,255,0.54)]">
+										Vehicle Status
+									</p>
+									<h2 class="mt-2 text-2xl font-bold text-white">
+										Car secured and reporting live
+									</h2>
+								</div>
+								<div class="rounded-full border border-[color:rgba(255,255,255,0.08)] bg-[color:rgba(255,255,255,0.05)] px-3 py-1 text-xs font-semibold text-[color:rgba(255,255,255,0.82)]">
+									12 sec ago
+								</div>
+							</div>
+							<div class="mt-5 rounded-[1.5rem] border border-[color:rgba(255,255,255,0.06)] bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.01))] p-5">
+								<div class="flex items-center justify-between gap-4">
+									<div>
+										<p class="text-xs font-semibold uppercase tracking-[0.16em] text-[color:rgba(255,255,255,0.54)]">
+											Live Location
+										</p>
+										<p class="mt-2 text-sm font-medium text-[color:rgba(255,255,255,0.88)]">
+											{data.contact.address}
+										</p>
+									</div>
+									<p class="text-xs text-[color:rgba(255,255,255,0.54)]">
+										Engine safe
+									</p>
+								</div>
+								<div class="relative mt-5 h-32 overflow-hidden rounded-[1.25rem] border border-[color:rgba(255,255,255,0.06)] bg-[linear-gradient(180deg,rgba(181,18,27,0.14),rgba(255,255,255,0.02))]">
+									<div
+										class="absolute inset-0 opacity-60"
+										style="background-image:
+											linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+											linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+											background-size: 36px 36px;"
+										aria-hidden="true"
+									/>
+									<div class="absolute left-[14%] top-[62%] h-3 w-3 rounded-full bg-white shadow-[0_0_0_6px_rgba(255,255,255,0.12)]" />
+									<div class="absolute left-[42%] top-[36%] h-3 w-3 rounded-full bg-[var(--color-accent)] shadow-[0_0_0_6px_rgba(243,211,213,0.14)]" />
+									<div class="absolute right-[16%] top-[28%] h-4 w-4 rounded-full bg-[var(--color-primary)] shadow-[0_0_0_7px_rgba(181,18,27,0.22)]" />
+									<div class="absolute left-[16%] top-[64%] h-[2px] w-[58%] -rotate-[19deg] bg-[linear-gradient(90deg,rgba(255,255,255,0.4),rgba(181,18,27,0.9))]" />
+								</div>
+							</div>
+							<div class="mt-5 grid gap-3 sm:grid-cols-3">
+								{appHighlights.map((item) => (
+									<div class="rounded-2xl border border-[color:rgba(255,255,255,0.06)] bg-[color:rgba(255,255,255,0.04)] px-4 py-4">
+										<p class="text-lg font-bold text-white">{item.value}</p>
+										<p class="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-[color:rgba(255,255,255,0.56)]">
+											{item.label}
+										</p>
+									</div>
+								))}
+							</div>
 						</div>
 					</div>
-					<div class="rounded-[2rem] border border-[color:rgba(255,255,255,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] p-4">
-						<div class="h-[250px] sm:h-[320px]">
-							<TrackingCarIllustration />
+					<div class="grid gap-5 md:grid-cols-2">
+						<div class="rounded-[2rem] border border-[color:rgba(255,255,255,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-5">
+							<p class="text-sm font-semibold uppercase tracking-[0.22em] text-[color:var(--color-accent)]">
+								Response Path
+							</p>
+							<div class="mt-5 grid gap-3">
+								{responseSteps.map((step, index) => (
+									<div class="flex items-start gap-3 rounded-2xl border border-[color:rgba(255,255,255,0.06)] bg-[color:rgba(255,255,255,0.03)] px-4 py-4">
+										<span class="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[color:rgba(181,18,27,0.18)] text-xs font-bold text-white">
+											0{index + 1}
+										</span>
+										<p class="text-sm leading-6 text-[color:rgba(255,255,255,0.78)]">{step}</p>
+									</div>
+								))}
+							</div>
+						</div>
+						<div class="rounded-[2rem] border border-[color:rgba(255,255,255,0.08)] bg-[linear-gradient(180deg,rgba(181,18,27,0.14),rgba(255,255,255,0.03))] p-4">
+							<div class="rounded-[1.5rem] border border-[color:rgba(255,255,255,0.08)] bg-[color:rgba(255,255,255,0.03)] p-4">
+								<div class="h-[180px] sm:h-[200px]">
+									<TrackingCarIllustration />
+								</div>
+							</div>
+							<div class="mt-4 rounded-[1.5rem] border border-[color:rgba(255,255,255,0.06)] bg-[color:rgba(6,6,8,0.54)] px-4 py-4 text-sm text-[color:rgba(255,255,255,0.82)]">
+								<p class="text-xs font-semibold uppercase tracking-[0.16em] text-[color:rgba(255,255,255,0.54)]">
+									Protection Bands
+								</p>
+								<div class="mt-3 flex flex-wrap gap-2">
+									{protectionBands.map((band) => (
+										<span class="rounded-full border border-[color:rgba(255,255,255,0.08)] bg-[color:rgba(255,255,255,0.04)] px-3 py-2 text-xs font-semibold tracking-[0.08em] text-white">
+											{band}
+										</span>
+									))}
+								</div>
+								<p class="mt-4 text-sm text-[color:rgba(255,255,255,0.72)]">
+									Quick line: {data.contact.phone}
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>

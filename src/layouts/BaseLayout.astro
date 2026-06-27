@@ -58,7 +58,7 @@ const structuredDataBlocks = Array.isArray(props.structuredData)
 		<meta name="description" content={seoDescription} />
 		<meta name="keywords" content={seoKeywords.join(", ")} />
 		{robots && <meta name="robots" content={robots} />}
-		<meta name="theme-color" content={colorVars["--color-primary"]} />
+		<meta id="theme-color-meta" name="theme-color" content={colorVars["--color-background"]} />
 		<meta name="author" content={businessName} />
 		<meta name="application-name" content={siteName} />
 		<meta name="apple-mobile-web-app-title" content={siteName} />
@@ -136,7 +136,7 @@ const structuredDataBlocks = Array.isArray(props.structuredData)
 
 		<button
 			id="back-to-top"
-			class="fixed bottom-6 right-6 z-50 flex cursor-pointer items-center justify-center gap-2 rounded-full bg-[var(--color-primary)] px-5 py-3 text-sm font-semibold text-white shadow-[0_18px_40px_rgba(15,76,129,0.28)] transition-all duration-300 opacity-0 pointer-events-none hover:bg-[var(--color-hover)]"
+			class="fixed bottom-6 right-6 z-50 flex cursor-pointer items-center justify-center gap-2 rounded-full bg-[var(--color-primary)] px-5 py-3 text-sm font-semibold text-white shadow-[0_18px_40px_rgba(181,18,27,0.28)] transition-all duration-300 opacity-0 pointer-events-none hover:bg-[var(--color-hover)]"
 			aria-label="Back to top"
 		>
 			<span class="text-lg">⬆</span>

@@ -10,13 +10,13 @@ const { data } = Astro.props;
 
 {
 	data?.map?.embedUrl && (
-		<section class="bg-white px-6 pb-16 pt-0" aria-labelledby="map-heading">
-			<div class="mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-[color:rgba(8,17,31,0.08)] bg-[var(--color-background)] shadow-[0_24px_60px_rgba(8,17,31,0.08)]">
-				<div class="border-b border-[color:rgba(8,17,31,0.08)] px-6 py-5">
+		<section class="bg-[var(--color-background)] px-6 pb-16 pt-0" aria-labelledby="map-heading">
+			<div class="mx-auto max-w-7xl overflow-hidden rounded-[2rem] border bg-[var(--card-bg)] shadow-[var(--shadow-soft)]" style="border-color: var(--border-soft);">
+				<div class="border-b px-6 py-5" style="border-color: var(--border-soft);">
 					<h2 id="map-heading" class="text-2xl font-bold text-[var(--color-heading)]">
 						Visit us or schedule an on-site installation
 					</h2>
-					<p class="mt-2 text-sm text-[var(--color-muted)]">
+					<p class="mt-2 text-sm" style="color: var(--text-soft);">
 						{data.contact.address}
 					</p>
 				</div>

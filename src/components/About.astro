@@ -28,7 +28,7 @@ const hasAboutContent =
 			<div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.9fr)] lg:items-center">
 				<div class="max-w-2xl">
 					<p class="text-sm font-semibold uppercase tracking-[0.28em] text-[var(--color-primary)]">
-						About The Service
+						The Game-Changer
 					</p>
 					<h2
 						id="about-heading"
@@ -38,7 +38,8 @@ const hasAboutContent =
 					</h2>
 
 					<p
-						class="mt-6 text-base leading-8 text-[var(--color-muted)] sm:text-lg"
+						class="mt-6 text-base leading-8 sm:text-lg"
+						style="color: var(--text-soft);"
 					>
 						{content.paragraph}
 					</p>
@@ -47,7 +48,8 @@ const hasAboutContent =
 						{contact.email && (
 							<a
 								href={`mailto:${contact.email}`}
-								class="rounded-[1.5rem] border border-[color:rgba(8,17,31,0.08)] bg-white px-5 py-5 text-base font-medium text-[var(--color-heading)] transition hover:border-[color:var(--color-primary)]"
+								class="rounded-[1.5rem] border px-5 py-5 text-base font-medium text-[var(--color-heading)] transition hover:border-[color:var(--color-primary)]"
+								style="border-color: var(--border-soft); background: var(--card-bg); box-shadow: var(--shadow-soft);"
 								aria-label={`Send an email to ${contact.email}`}
 							>
 								<span class="block text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-primary)]">
@@ -60,7 +62,8 @@ const hasAboutContent =
 						{contact.phone && (
 							<a
 								href={`tel:${contact.phone}`}
-								class="rounded-[1.5rem] border border-[color:rgba(8,17,31,0.08)] bg-white px-5 py-5 text-base font-medium text-[var(--color-heading)] transition hover:border-[color:var(--color-primary)]"
+								class="rounded-[1.5rem] border px-5 py-5 text-base font-medium text-[var(--color-heading)] transition hover:border-[color:var(--color-primary)]"
+								style="border-color: var(--border-soft); background: var(--card-bg); box-shadow: var(--shadow-soft);"
 								aria-label={`Call ${contact.phone}`}
 							>
 								<span class="block text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-primary)]">
@@ -100,7 +103,7 @@ const hasAboutContent =
 				)}
 
 				{!content?.imageUrl && (
-					<div class="rounded-[2rem] bg-[var(--color-secondary)] p-6 shadow-[0_30px_80px_rgba(8,17,31,0.18)]">
+					<div class="rounded-[2rem] border border-[color:rgba(255,255,255,0.08)] bg-[linear-gradient(180deg,rgba(181,18,27,0.14),rgba(255,255,255,0.03))] p-6 shadow-[var(--shadow-strong)]" style="background-color: var(--color-secondary);">
 						<div class="rounded-[1.5rem] border border-[color:rgba(255,255,255,0.08)] bg-[color:rgba(255,255,255,0.03)] p-4">
 							<div class="h-[300px] md:h-[420px]">
 								<TrackingCarIllustration />
