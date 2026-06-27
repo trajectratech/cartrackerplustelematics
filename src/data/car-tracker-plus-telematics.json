@@ -4,7 +4,7 @@
     "businessName": "Car Tracker Plus Telematics",
     "tagline": "Precision visibility for every vehicle you manage.",
     "description": "Car Tracker Plus Telematics delivers premium car tracker installation, fleet telematics, dash camera systems, fuel monitoring, and vehicle security support for Nigerian drivers and fleet operators.",
-    "logoImage": "/cartracker-plus-telematics-logo.svg",
+    "logoImage": "/cartracker-plus-telematics-logo.webp",
     "url": "https://cartrackerplustelematics.com",
     "publicDirectory": "",
     "keywords": [
@@ -57,7 +57,7 @@
     }
   },
   "imagery": {
-    "logoImage": "/cartracker-plus-telematics-logo.svg",
+    "logoImage": "/cartracker-plus-telematics-logo.webp",
     "heroTextColor": "var(--color-background)"
   },
   "logo": {
@@ -72,8 +72,8 @@
   "socialMedia": [],
   "content": {
     "heroSection": {
-      "heading": "Never Lose Sight Of Your Vehicle. Real-time GPS tracking. Anytime. Anywhere.",
-      "paragraph": "One professionally installed tracker. One app. Full control of your car, SUV, executive vehicle, or business fleet with live location, instant alerts, and remote response options when movement turns suspicious.",
+      "heading": "Never Lose Sight Of Your Vehicle.",
+      "paragraph": "Real-time GPS tracking. Anytime. Anywhere.",
       "ctaText": "Get Protected Now",
       "ctaUrl": "https://wa.me/2348101117864?text=Hello%20Car%20Tracker%20Plus%20Telematics%2C%20I%20would%20like%20to%20make%20an%20enquiry%20about%20vehicle%20tracking%20and%20installation."
     },
@@ -379,7 +379,7 @@
       "dashcam installation nigeria",
       "fuel monitoring nigeria"
     ],
-    "defaultOgImage": "/cartracker-plus-telematics-logo.svg",
+    "defaultOgImage": "/cartracker-plus-telematics-logo.webp",
     "ogImageAlt": "Car Tracker Plus Telematics logo",
     "siteLocale": "en_NG",
     "manifest": {
