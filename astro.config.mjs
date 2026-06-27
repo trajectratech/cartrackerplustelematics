@@ -13,5 +13,5 @@ export default defineConfig({
     },
     integrations: [icon(), sitemap(), solidJs()],
 
-    site: "https://cartrackerplustelematics.com",
+    site: "https://www.cartrackerplustelematics.com",
 });

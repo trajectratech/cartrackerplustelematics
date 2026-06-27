@@ -1,11 +1,11 @@
 {
   "brand": {
-    "title": "Car Tracker Plus Telematics | Premium Car Tracker and Fleet Visibility in Nigeria",
+    "title": "Vehicle Tracking Nigeria | Car Tracker Plus Telematics",
     "businessName": "Car Tracker Plus Telematics",
     "tagline": "Precision visibility for every vehicle you manage.",
     "description": "Car Tracker Plus Telematics delivers premium car tracker installation, fleet telematics, dash camera systems, fuel monitoring, and vehicle security support for Nigerian drivers and fleet operators.",
     "logoImage": "/cartracker-plus-telematics.svg",
-    "url": "https://cartrackerplustelematics.com",
+    "url": "https://www.cartrackerplustelematics.com",
     "publicDirectory": "",
     "keywords": [
       "car tracker",
@@ -68,7 +68,7 @@
     "padding": 8,
     "margin": 12
   },
-  "googleBusinessProfileLink": "https://www.google.com/maps/place/Car+Tracker+Plus/@6.498293,3.348572,934m/data=!3m2!1e3!4b1!4m6!3m5!1s0x103b8d00178b61f3:0x55c996b35dd04be6!8m2!3d6.498293!4d3.348572!16s%2Fg%2F11mrjmsk37?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D",
+  "googleBusinessProfileLink": "google.com/maps/place/Car+Tracker+Plus+Telematics/data=!4m2!3m1!1s0x0:0xc9a3277f84cc4e35?sa=X&ved=1t:2428&ictx=111",
   "socialMedia": [],
   "content": {
     "heroSection": {
@@ -401,8 +401,8 @@
       "backgroundColor": "#F5F7FA",
       "display": "standalone"
     },
-    "pageTitle": "Car Tracker Plus Telematics | Car Tracker, Fleet Tracking and Vehicle Security in Nigeria",
-    "metaDescription": "Car Tracker Plus Telematics offers premium car tracker installation, fleet telematics, dash camera systems, immobilisation, and vehicle security support in Nigeria.",
+    "pageTitle": "Vehicle Tracking Nigeria | Car Tracker Plus Telematics",
+    "metaDescription": "Never lose sight of your vehicle with real-time GPS tracking, vehicle security support, and professional installation in Nigeria.",
     "landingPages": [
       {
         "slug": "car-tracker-nigeria",
