@@ -69,7 +69,16 @@
     "margin": 12
   },
   "googleBusinessProfileLink": "https://www.google.com/maps/place/Car+Tracker+Plus+Telematics/data=!4m2!3m1!1s0x0:0xc9a3277f84cc4e35?sa=X&ved=1t:2428&ictx=111",
-  "socialMedia": [],
+  "socialMedia": [
+    {
+      "name": "facebook",
+      "url": "https://www.facebook.com/share/1Bv8sVAdAj/?mibextid=wwXIfr"
+    },
+    {
+      "name": "tiktok",
+      "url": "https://www.tiktok.com/@cartrackerplus?_r=1&_t=ZS-97YZslp8wo0"
+    }
+  ],
   "content": {
     "heroSection": {
       "heading": "Never Lose Sight Of Your Vehicle.",
