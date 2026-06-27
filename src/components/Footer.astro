@@ -2,6 +2,7 @@
 import { Icon } from "astro-icon/components";
 
 import type { ThemeConfig } from "../types/theme";
+import { formatPhoneNumber } from "../utils/formatPhoneNumber";
 
 export interface Props {
 	data: ThemeConfig;
@@ -19,6 +20,7 @@ type SocialKey =
 
 const { data } = Astro.props;
 const { socialMedia } = data;
+const formattedPhone = formatPhoneNumber(data.contact.phone);
 
 const iconMap: Record<SocialKey, string> = {
 	instagram: "mdi:instagram",
@@ -48,7 +50,7 @@ const iconMap: Record<SocialKey, string> = {
 					<img
 						src={data.brand.logoImage}
 						alt={data.brand.businessName ?? "Company Logo"}
-						class="mx-auto h-11 w-auto md:mx-0"
+						class="mx-auto h-20 w-20 md:mx-0"
 						loading="lazy"
 					/>
 				)
@@ -84,14 +86,14 @@ const iconMap: Record<SocialKey, string> = {
 				<a
 					href={`tel:${data.contact.phone}`}
 					class="flex items-center justify-center gap-3 rounded-[1.5rem] border border-[color:rgba(255,255,255,0.08)] bg-[color:rgba(255,255,255,0.04)] px-5 py-4 text-[color:rgba(255,255,255,0.88)] transition-colors hover:text-[var(--color-accent)] md:justify-start"
-					aria-label={`Call ${data.contact.phone}`}
+					aria-label={`Call ${formattedPhone}`}
 				>
 					<Icon
 						name="heroicons-outline:phone"
 						class="w-5 h-5"
 						aria-hidden="true"
 					/>
-					<span>{data.contact.phone}</span>
+					<span>{formattedPhone}</span>
 				</a>
 			</div>
 			<div class="rounded-[1.5rem] border border-[color:rgba(255,255,255,0.08)] bg-[color:rgba(255,255,255,0.04)] px-5 py-4 text-[color:rgba(255,255,255,0.74)]">

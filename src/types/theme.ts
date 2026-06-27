@@ -199,6 +199,7 @@ export interface ThemeConfig {
 		plan: string;
 		price?: string;
 		showPricing?: boolean;
+		description?: string;
 		features: string[];
 	}[];
 

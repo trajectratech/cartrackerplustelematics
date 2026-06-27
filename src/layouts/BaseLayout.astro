@@ -177,6 +177,44 @@ const structuredDataBlocks = Array.isArray(props.structuredData)
 							{ type: "spring", delay: stagger(0.25, { startDelay: 0.25 }) },
 						);
 					}
+
+					const counters = element.querySelectorAll("[data-countup]");
+					counters.forEach((counterElement) => {
+						const counter = counterElement instanceof HTMLElement ? counterElement : null;
+						if (!counter) return;
+						if (counter.dataset.counted === "true") return;
+						const originalValue = counter.getAttribute("data-countup") || "";
+						const match = originalValue.match(/^(\d[\d,]*)(.*)$/);
+						if (!match) {
+							counter.dataset.counted = "true";
+							return;
+						}
+
+						const target = Number.parseInt(match[1].replaceAll(",", ""), 10);
+						if (Number.isNaN(target)) {
+							counter.dataset.counted = "true";
+							return;
+						}
+
+						const suffix = match[2] || "";
+						const duration = 1400;
+						const startTime = performance.now();
+
+						const tick = (now: number) => {
+							const progress = Math.min((now - startTime) / duration, 1);
+							const eased = 1 - (1 - progress) * (1 - progress);
+							const currentValue = Math.round(target * eased);
+							counter.textContent = `${currentValue.toLocaleString()}${suffix}`;
+							if (progress < 1) {
+								requestAnimationFrame(tick);
+							} else {
+								counter.dataset.counted = "true";
+							}
+						};
+
+						counter.textContent = "0";
+						requestAnimationFrame(tick);
+					});
 				},
 				{ amount: 0.25 },
 			);

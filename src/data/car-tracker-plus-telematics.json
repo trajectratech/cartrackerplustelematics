@@ -4,7 +4,7 @@
     "businessName": "Car Tracker Plus Telematics",
     "tagline": "Precision visibility for every vehicle you manage.",
     "description": "Car Tracker Plus Telematics delivers premium car tracker installation, fleet telematics, dash camera systems, fuel monitoring, and vehicle security support for Nigerian drivers and fleet operators.",
-    "logoImage": "/cartracker-plus-telematics-logo.webp",
+    "logoImage": "/cartracker-plus-telematics.svg",
     "url": "https://cartrackerplustelematics.com",
     "publicDirectory": "",
     "keywords": [
@@ -57,7 +57,7 @@
     }
   },
   "imagery": {
-    "logoImage": "/cartracker-plus-telematics-logo.webp",
+    "logoImage": "/cartracker-plus-telematics.svg",
     "heroTextColor": "var(--color-background)"
   },
   "logo": {
@@ -195,10 +195,8 @@
         "Fast-response technical support"
       ],
       "stats": [
-        { "label": "Installation Window", "value": "Same Visit" },
-        { "label": "Monitoring Availability", "value": "24/7" },
-        { "label": "Vehicle Types", "value": "Private + Fleet" },
-        { "label": "Response Focus", "value": "Fast Action" }
+        { "label": "Vehicles Tracked", "value": "100,000+" },
+        { "label": "Avg. Setup Time", "value": "1 hr 30mins" }
       ]
     },
     "testimonialsSection": {
@@ -259,43 +257,57 @@
   },
   "pricing": [
     {
-      "plan": "Essential Tracking",
-      "showPricing": false,
+      "plan": "Basic",
+      "price": "N125,000",
+      "showPricing": true,
       "features": [
-        "Core live location tracking",
-        "Movement and parking visibility",
-        "Professional installation",
-        "Mobile access and basic alerts"
+        "You Receive The Following With Our Basic Tracking Plan:",
+        "Tracking Features:",
+        "Real-Time Position Tracking",
+        "History Replay",
+        "Geofence",
+        "Mileage",
+        "Car location using coordinates",
+        "Safety & Security:",
+        "Remotely shut down/On Vehicle",
+        "Convenience:",
+        "Mobile app tracking",
+        "Cloud based app",
+        "Free installation",
+        "Support:",
+        "Dedicated after sales support",
+        "12 months Warranty"
       ]
     },
     {
-      "plan": "Plus Security",
-      "showPricing": false,
+      "plan": "Premium",
+      "price": "N155,000",
+      "showPricing": true,
       "features": [
-        "Everything in Essential Tracking",
-        "Remote immobilisation support",
-        "Route history and geofence tools",
-        "Priority after-sales support"
-      ]
-    },
-    {
-      "plan": "Fleet Telematics",
-      "showPricing": false,
-      "features": [
-        "Multi-vehicle oversight",
-        "Operational reporting",
-        "Driver and route visibility",
-        "Scalable support for growing fleets"
-      ]
-    },
-    {
-      "plan": "Executive Protection Bundle",
-      "showPricing": false,
-      "features": [
-        "Tracking hardware",
-        "Dash camera integration",
-        "Glass fortification options",
-        "Security-led installation approach"
+        "You Receive The Following With Our Premium Tracking Plan:",
+        "Tracking Features:",
+        "Real-Time Position Tracking",
+        "History Replay",
+        "Geofence",
+        "Mileage",
+        "Web Tracking",
+        "Mobile app tracking",
+        "Cloud based app",
+        "Safety & Security:",
+        "Remotely shut down/On Vehicle",
+        "Crash Alert",
+        "Tamper proof",
+        "Car Ignition Alert",
+        "Over Speed Alert",
+        "Convenience:",
+        "Live Conversation",
+        "Free installation",
+        "Park duration",
+        "Support & Recovery:",
+        "Dedicated after sales support",
+        "2 Years Warranty",
+        "Free Recovery",
+        "24/7 Customer Support"
       ]
     }
   ],
@@ -379,7 +391,7 @@
       "dashcam installation nigeria",
       "fuel monitoring nigeria"
     ],
-    "defaultOgImage": "/cartracker-plus-telematics-logo.webp",
+    "defaultOgImage": "/cartracker-plus-telematics.svg",
     "ogImageAlt": "Car Tracker Plus Telematics logo",
     "siteLocale": "en_NG",
     "manifest": {

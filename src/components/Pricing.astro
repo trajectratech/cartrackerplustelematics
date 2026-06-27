@@ -1,5 +1,4 @@
 ---
-import { Icon } from "astro-icon/components";
 import type { ThemeConfig } from "../types/theme";
 
 export interface Props {
@@ -10,46 +9,12 @@ const { data } = Astro.props;
 const featuredPlanIndex = 1;
 const planMeta = [
 	{
-		eyebrow: "ESSENTIAL",
-		audience: "Standard vehicles and everyday private drivers",
-		priceLabel: "Protection band",
-		summary: "Matched after vehicle review",
-		supportLabel: "Core tracking and alert coverage",
+		eyebrow: "BASIC PLAN",
+		audience: "A strong everyday protection plan for drivers who want reliable tracking and shut-down support.",
 	},
 	{
-		eyebrow: "RECOMMENDED",
-		audience: "Higher-value vehicles that need stronger response options",
-		priceLabel: "Priority band",
-		summary: "Most requested setup",
-		supportLabel: "Remote response and priority after-sales support",
-	},
-	{
-		eyebrow: "FLEET",
-		audience: "Business, logistics, and operational vehicle visibility",
-		priceLabel: "Business band",
-		summary: "Scaled around deployment scope",
-		supportLabel: "Dashboard visibility and operational oversight",
-	},
-	{
-		eyebrow: "EXECUTIVE",
-		audience: "Sensitive vehicles that need security-led installation",
-		priceLabel: "Private band",
-		summary: "Quoted by vehicle and concealment needs",
-		supportLabel: "Enhanced discretion, camera options, and support",
-	},
-];
-const protectionEnhancers = [
-	{
-		title: "Dashcam evidence layer",
-		description: "Pair location visibility with incident footage and stronger driver accountability.",
-	},
-	{
-		title: "Fuel and route reporting",
-		description: "Add operational reporting for teams that need more than theft-response tools.",
-	},
-	{
-		title: "Priority support access",
-		description: "Move faster when alerts, troubleshooting, or recovery coordination become urgent.",
+		eyebrow: "PREMIUM PLAN",
+		audience: "A fuller security and recovery package with added alerts, support, and premium monitoring tools.",
 	},
 ];
 ---
@@ -65,45 +30,42 @@ const protectionEnhancers = [
 				<div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-end">
 					<div>
 						<p class="text-sm font-semibold uppercase tracking-[0.28em] text-[var(--color-accent)]">
-							Vehicle Protection Plans
+							We Offer 2 Different Plans
 						</p>
 						<h2
 							id="pricing-heading"
 							class="mt-4 text-4xl font-extrabold text-white"
 						>
-							Protection is matched to the value you are securing, not pushed as one generic tracker.
+							Choose between our Basic and Premium tracking plans.
 						</h2>
 						<p class="mt-5 max-w-3xl text-base leading-8 text-[color:rgba(255,255,255,0.72)]">
-							Each plan is scoped around your vehicle type, response expectations, and how much visibility you need after installation day.
+							Both plans include professional installation, trusted hardware, and support after setup. Premium adds deeper alerts, recovery support, and stronger control features.
 						</p>
 					</div>
 					<div class="rounded-[2rem] border border-[color:rgba(255,255,255,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-6">
 						<p class="text-xs font-semibold uppercase tracking-[0.18em] text-[color:rgba(255,255,255,0.56)]">
-							How We Scope It
+							Plan Snapshot
 						</p>
 						<div class="mt-4 grid gap-3 text-sm text-[color:rgba(255,255,255,0.8)]">
 							<div class="rounded-2xl border border-[color:rgba(255,255,255,0.06)] bg-[color:rgba(255,255,255,0.04)] px-4 py-3">
-								Vehicle value and exposure
+								Basic plan: N125,000
 							</div>
 							<div class="rounded-2xl border border-[color:rgba(255,255,255,0.06)] bg-[color:rgba(255,255,255,0.04)] px-4 py-3">
-								Tracking depth and reporting needs
+								Premium plan: N155,000
 							</div>
 							<div class="rounded-2xl border border-[color:rgba(181,18,27,0.34)] bg-[color:rgba(181,18,27,0.16)] px-4 py-3 text-white">
-								Remote response and support level
+								Pricing is visible and ready to compare
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="mt-14 grid gap-6 xl:grid-cols-4" role="list">
+				<div class="mt-14 grid gap-6 lg:grid-cols-2" role="list">
 					{data.pricing.map((plan, idx) => {
 						const isFeatured = idx === featuredPlanIndex;
 						const meta = planMeta[idx] ?? {
 							eyebrow: `PLAN 0${idx + 1}`,
 							audience: "Protection matched to your vehicle and operating context",
-							priceLabel: "Protection band",
-							summary: "Quoted after review",
-							supportLabel: "Quote-based support level",
 						};
 						return (
 						<article
@@ -133,27 +95,40 @@ const protectionEnhancers = [
 
 							<div class={`mt-6 rounded-[1.5rem] border p-5 ${isFeatured ? "border-[color:rgba(181,18,27,0.5)] bg-[color:rgba(181,18,27,0.16)]" : "border-[color:rgba(255,255,255,0.08)] bg-[color:rgba(255,255,255,0.04)]"}`}>
 								<p class="text-xs font-semibold uppercase tracking-[0.18em] text-[color:rgba(255,255,255,0.56)]">
-									{meta.priceLabel}
+									Plan Price
 								</p>
 								<p class="mt-3 text-2xl font-bold text-white">
-									{plan.price || meta.summary}
-								</p>
-								<p class="mt-2 text-sm text-[color:rgba(255,255,255,0.72)]">
-									{meta.supportLabel}
+									{plan.showPricing && plan.price ? plan.price : "Contact for pricing"}
 								</p>
 							</div>
 
 							<ul class="mt-8 flex-1 space-y-3 text-sm text-[color:rgba(255,255,255,0.82)]">
-								{plan.features.map((f) => (
-									<li class="flex items-start gap-3">
-										<Icon
-											name="heroicons-solid:check"
-											class={`mt-0.5 h-5 w-5 ${isFeatured ? "text-[var(--color-accent)]" : "text-[var(--color-primary)]"}`}
-											aria-hidden="true"
-										/>
-										<span>{f}</span>
-									</li>
-								))}
+								{plan.features.map((feature) => {
+									const isIntro = feature.startsWith("You Receive");
+									const isCategory = feature.endsWith(":");
+									if (isIntro) {
+										return (
+											<li class="rounded-2xl border border-[color:rgba(255,255,255,0.06)] bg-[color:rgba(255,255,255,0.04)] px-4 py-4 text-[color:rgba(255,255,255,0.9)]">
+												{feature}
+											</li>
+										);
+									}
+									if (isCategory) {
+										return (
+											<li class="pt-3 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)]">
+												{feature}
+											</li>
+										);
+									}
+									return (
+										<li class="flex items-start gap-3">
+											<span class={`mt-0.5 h-5 w-5 shrink-0 text-base leading-5 ${isFeatured ? "text-[var(--color-accent)]" : "text-[var(--color-primary)]"}`}>
+												📍
+											</span>
+											<span>{feature}</span>
+										</li>
+									);
+								})}
 							</ul>
 							<a
 								href={data.content.heroSection.ctaUrl}
@@ -163,22 +138,6 @@ const protectionEnhancers = [
 							</a>
 						</article>
 					)})}
-				</div>
-
-				<div class="mt-12 rounded-[2rem] border border-[color:rgba(255,255,255,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.03))] p-8">
-					<p class="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--color-accent)]">
-						Protection Enhancers
-					</p>
-					<div class="mt-6 grid gap-4 md:grid-cols-3">
-						{protectionEnhancers.map((item) => (
-							<div class="rounded-[1.5rem] border border-[color:rgba(255,255,255,0.08)] bg-[color:rgba(255,255,255,0.04)] px-5 py-5">
-								<h3 class="text-lg font-semibold text-white">{item.title}</h3>
-								<p class="mt-3 text-sm leading-7 text-[color:rgba(255,255,255,0.72)]">
-									{item.description}
-								</p>
-							</div>
-						))}
-					</div>
 				</div>
 			</div>
 		</section>

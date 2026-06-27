@@ -2,6 +2,7 @@
 import type { ThemeConfig } from "../types/theme";
 import CallToActionButton from "./CallToActionButton.astro";
 import TrackingCarIllustration from "./TrackingCarIllustration.astro";
+import { formatPhoneNumber } from "../utils/formatPhoneNumber";
 
 export interface Props {
 	data: ThemeConfig;
@@ -10,6 +11,7 @@ export interface Props {
 const { data } = Astro.props;
 const content = data.content.aboutSection;
 const contact = data.contact;
+const formattedPhone = formatPhoneNumber(contact.phone);
 
 const hasAboutContent =
 	content?.heading?.trim() ||
@@ -64,12 +66,12 @@ const hasAboutContent =
 								href={`tel:${contact.phone}`}
 								class="rounded-[1.5rem] border px-5 py-5 text-base font-medium text-[var(--color-heading)] transition hover:border-[color:var(--color-primary)]"
 								style="border-color: var(--border-soft); background: var(--card-bg); box-shadow: var(--shadow-soft);"
-								aria-label={`Call ${contact.phone}`}
+								aria-label={`Call ${formattedPhone}`}
 							>
 								<span class="block text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-primary)]">
 									Phone
 								</span>
-								<span class="mt-2 block">{contact.phone}</span>
+								<span class="mt-2 block">{formattedPhone}</span>
 							</a>
 						)}
 					</div>

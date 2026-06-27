@@ -2,6 +2,7 @@
 import type { ThemeConfig } from "../types/theme";
 import CallToActionButton from "./CallToActionButton.astro";
 import TrackingCarIllustration from "./TrackingCarIllustration.astro";
+import { formatPhoneNumber } from "../utils/formatPhoneNumber";
 
 export interface Props {
 	data: ThemeConfig;
@@ -13,6 +14,7 @@ const trustStats = data.content.trustSection?.stats?.slice(0, 3) ?? [];
 const headingParts = content.heading.match(/^(.+?[.!?])\s+(.+)$/);
 const primaryHeading = headingParts?.[1] ?? content.heading;
 const secondaryHeading = headingParts?.[2] ?? "";
+const formattedPhone = formatPhoneNumber(data.contact.phone);
 const assurancePoints = [
 	"Live location and movement alerts",
 	"Remote response features",
@@ -212,7 +214,7 @@ const protectionBands = ["Essential Tracking", "Plus Security", "Fleet Telematic
 									))}
 								</div>
 								<p class="mt-4 text-sm text-[color:rgba(255,255,255,0.72)]">
-									Quick line: {data.contact.phone}
+									Quick line: {formattedPhone}
 								</p>
 							</div>
 						</div>

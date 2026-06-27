@@ -3,6 +3,7 @@ import type { SeoLandingPage, ThemeConfig } from "../types/theme";
 import mainJson from "../data/car-tracker-plus-telematics.json";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getLandingPageSeo } from "../utils/seo";
+import { formatPhoneNumber } from "../utils/formatPhoneNumber";
 import TrackingCarIllustration from "../components/TrackingCarIllustration.astro";
 
 const data = mainJson as ThemeConfig;
@@ -26,6 +27,7 @@ const relatedPages = (data.seo?.landingPages ?? [])
 	.slice(0, 3);
 const serviceAreas = data.seo?.serviceAreas?.length ? data.seo.serviceAreas : ["Nigeria"];
 const secondaryKeywords = page.secondaryKeywords ?? [];
+const formattedPhone = formatPhoneNumber(data.contact.phone);
 
 const colorVars = {
 	"--color-primary": data.colors.primary,
@@ -205,7 +207,7 @@ const colorVars = {
 				</p>
 				<h2 class="mt-4 text-3xl font-bold">Speak with {data.brand.businessName}</h2>
 				<ul class="mt-6 space-y-4 text-sm leading-7 text-[color:rgba(255,255,255,0.78)]">
-					<li>{data.contact.phone}</li>
+					<li>{formattedPhone}</li>
 					<li>{data.contact.email}</li>
 					<li>{data.contact.address}</li>
 					<li>Coverage: {serviceAreas.join(", ")}</li>
