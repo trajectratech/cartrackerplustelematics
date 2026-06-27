@@ -13,6 +13,10 @@ type PageSeoPayload = {
 	sameAsUrls: string[];
 };
 
+function ensureAbsoluteExternalUrl(value: string) {
+	return /^https?:\/\//i.test(value) ? value : `https://${value.replace(/^\/+/, "")}`;
+}
+
 function getAreaType(name: string) {
 	return name.trim().toLowerCase() === "nigeria" ? "Country" : "City";
 }
@@ -84,7 +88,7 @@ function getBaseSchemas(data: ThemeConfig) {
 	const sameAsUrls = [...(data.socialMedia?.map((item) => item.url) ?? [])];
 
 	if (data.googleBusinessProfileLink) {
-		sameAsUrls.push(data.googleBusinessProfileLink);
+		sameAsUrls.push(ensureAbsoluteExternalUrl(data.googleBusinessProfileLink));
 	}
 
 	const serviceAreas =

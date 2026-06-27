@@ -21,6 +21,11 @@ type SocialKey =
 const { data } = Astro.props;
 const { socialMedia } = data;
 const formattedPhone = formatPhoneNumber(data.contact.phone);
+const googleBusinessProfileUrl = data.googleBusinessProfileLink
+	? /^https?:\/\//i.test(data.googleBusinessProfileLink)
+		? data.googleBusinessProfileLink
+		: `https://${data.googleBusinessProfileLink.replace(/^\/+/, "")}`
+	: "";
 
 const iconMap: Record<SocialKey, string> = {
 	instagram: "mdi:instagram",
@@ -102,9 +107,9 @@ const iconMap: Record<SocialKey, string> = {
 				</p>
 				<p class="mt-2 text-sm leading-7">{data.contact.address}</p>
 				{
-					data.googleBusinessProfileLink && (
+					googleBusinessProfileUrl && (
 						<a
-							href={data.googleBusinessProfileLink}
+							href={googleBusinessProfileUrl}
 							target="_blank"
 							rel="noopener noreferrer"
 							class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-[var(--color-accent)]"
