@@ -5,6 +5,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { getLandingPageSeo } from "../utils/seo";
 import { formatPhoneNumber } from "../utils/formatPhoneNumber";
 import TrackingCarIllustration from "../components/TrackingCarIllustration.astro";
+import QuoteRequestForm from "../components/QuoteRequestForm.astro";
+import { quoteServiceOptions } from "../utils/quote";
 
 const data = mainJson as ThemeConfig;
 
@@ -22,6 +24,8 @@ type Props = {
 
 const { page } = Astro.props as Props;
 const seo = getLandingPageSeo(data, page);
+const quoteService =
+	page.quoteLabel || page.cardTitle || page.serviceType || quoteServiceOptions[0];
 const relatedPages = (data.seo?.landingPages ?? [])
 	.filter((item) => item.slug !== page.slug)
 	.slice(0, 3);
@@ -289,4 +293,62 @@ const colorVars = {
 			</div>
 		</section>
 	) : null}
+
+	<section id="quote-request" class="scrolling-section section-shell" aria-labelledby="quote-heading">
+		<div class="container-shell">
+			<div class="cta-shell p-8 sm:p-10 lg:p-12">
+				<div class="grid items-start gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+					<div>
+						<p class="section-kicker">Get a Quote</p>
+						<h2
+							id="quote-heading"
+							class="mt-7 text-[clamp(2.1rem,3.4vw,3.2rem)] font-bold leading-[1.05] tracking-[-0.04em] text-[var(--color-heading)]"
+						>
+							{page.closing?.title ??
+								`Request ${quoteService.toLowerCase()} pricing and installation support`}
+						</h2>
+
+						{
+							(
+								page.closing?.paragraphs ?? [
+									"Tell us what you want to install, where the vehicle is, and how many vehicles you need covered. You can continue on WhatsApp or submit the form for a structured response.",
+								]
+							).map((paragraph) => (
+								<p class="mt-5 max-w-xl text-base leading-8 text-[var(--color-text-muted)]">
+									{paragraph}
+								</p>
+							))
+						}
+
+						<div class="mt-9 grid gap-4">
+							<a
+								href={data.content.heroSection.ctaUrl}
+								target="_blank"
+								rel="noopener noreferrer"
+								data-button
+								class="primary-button cursor-pointer"
+							>
+								Continue on WhatsApp
+							</a>
+							<div class="step-card p-5">
+								<p class="eyebrow-label">Direct contact</p>
+								<p class="mt-2.5 text-base font-semibold text-[var(--color-heading)]">
+									{formattedPhone}
+								</p>
+								<p class="mt-1 text-sm text-[var(--color-text-muted)]">{data.contact.email}</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="premium-panel p-6 sm:p-8">
+						<QuoteRequestForm
+							formId={`quote-form-${page.slug}`}
+							prefillService={quoteService}
+							sourcePage={`/${page.slug}/`}
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </BaseLayout>

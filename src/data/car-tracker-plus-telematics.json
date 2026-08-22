@@ -204,8 +204,14 @@
         "Fast-response technical support"
       ],
       "stats": [
-        { "label": "Vehicles Tracked", "value": "100,000+" },
-        { "label": "Avg. Setup Time", "value": "1 hr 30mins" }
+        {
+          "label": "Vehicles Tracked",
+          "value": "100,000+"
+        },
+        {
+          "label": "Avg. Setup Time",
+          "value": "1 hr 30mins"
+        }
       ]
     },
     "testimonialsSection": {
@@ -390,7 +396,10 @@
       "Car Tracker Plus Telematics provides premium car tracker installation, fleet telematics, dash camera deployment, and vehicle security support in Nigeria.",
       "The business serves private drivers, executive vehicle owners, and fleet operators that need stronger visibility, security, and after-sales support."
     ],
-    "serviceAreas": ["Lagos", "Nigeria"],
+    "serviceAreas": [
+      "Lagos",
+      "Nigeria"
+    ],
     "targetKeywords": [
       "car tracker nigeria",
       "vehicle tracking nigeria",
@@ -530,6 +539,246 @@
           {
             "question": "Can dashcams be installed alongside vehicle tracking?",
             "answer": "Yes. Dashcams can be installed alongside vehicle tracking solutions to combine footage with location-based monitoring."
+          }
+        ]
+      },
+      {
+        "slug": "car-tracker-asaba",
+        "pageTitle": "Car Tracker In Asaba | Vehicle Tracking Installation And Support",
+        "metaDescription": "Need a car tracker in Asaba? Car Tracker Plus Telematics installs GPS tracking systems for private vehicles, fleet operators, and businesses across Asaba and Delta State.",
+        "headline": "Car tracker installation in Asaba for private vehicles and commercial fleets.",
+        "intro": "Asaba businesses and residents need reliable vehicle visibility that works on inter-state routes, airport runs, and government-area movements. We provide discreet installation and responsive support.",
+        "serviceType": "Vehicle tracking installation",
+        "location": "Asaba",
+        "primaryKeyword": "car tracker asaba",
+        "secondaryKeywords": [
+          "vehicle tracking asaba",
+          "gps tracker asaba",
+          "asaba vehicle security"
+        ],
+        "benefits": [
+          "Airport and inter-state route visibility across Asaba",
+          "Discreet fitting for sedans, SUVs, and commercial vehicles",
+          "Local support with Delta State operation familiarity"
+        ],
+        "faqs": [
+          {
+            "question": "Do you install car trackers in Asaba?",
+            "answer": "Yes. We arrange vehicle tracking installations across Asaba and surrounding Delta State communities based on vehicle type and schedule."
+          },
+          {
+            "question": "Can I monitor my car from Lagos while it is in Asaba?",
+            "answer": "Yes. The tracking platforms we deploy support remote monitoring via web or mobile as long as the tracker has network connectivity."
+          }
+        ]
+      },
+      {
+        "slug": "car-tracker-warri",
+        "pageTitle": "Car Tracker In Warri | Fleet And Vehicle Tracking Installation",
+        "metaDescription": "Searching for a car tracker in Warri? Car Tracker Plus Telematics provides GPS vehicle tracking, fleet telematics, and discreet installation for Warri and Delta State operations.",
+        "headline": "Car tracker in Warri for industrial, petroleum, and commercial fleet operations.",
+        "intro": "Warri's industrial movement, port access, and inter-state haulage create specific vehicle visibility needs. We focus on fleet accountability and equipment oversight.",
+        "serviceType": "Fleet vehicle tracking",
+        "location": "Warri",
+        "primaryKeyword": "car tracker warri",
+        "secondaryKeywords": [
+          "vehicle tracking warri",
+          "fleet tracker warri",
+          "warri haulage tracking"
+        ],
+        "benefits": [
+          "Haulage and industrial fleet visibility for Warri operations",
+          "Port corridor and access-road movement tracking",
+          "Supports diesel cost awareness and route optimisation"
+        ],
+        "faqs": [
+          {
+            "question": "Is fleet tracking available for Warri haulage operations?",
+            "answer": "Yes. Our fleet telematics options support multi-vehicle visibility for Warri-based haulage, petroleum logistics, and delivery fleets."
+          },
+          {
+            "question": "Can I track multiple trucks from one dashboard?",
+            "answer": "Yes. Fleet platforms are designed so managers can view every truck, its route, and its status from a single dashboard."
+          }
+        ]
+      },
+      {
+        "slug": "car-tracker-kano",
+        "pageTitle": "Car Tracker In Kano | Northern Nigeria Vehicle Tracking Services",
+        "metaDescription": "Looking for a car tracker in Kano? Car Tracker Plus Telematics installs GPS vehicle tracking, fleet telematics, and support for businesses and private owners across Kano.",
+        "headline": "Car tracker installation in Kano for northern-Nigeria commerce and private mobility.",
+        "intro": "Kano's inter-regional trade routes, market supply chains, and executive movements require dependable vehicle oversight. We provide long-range route visibility and responsive installation.",
+        "serviceType": "Vehicle tracking installation",
+        "location": "Kano",
+        "primaryKeyword": "car tracker kano",
+        "secondaryKeywords": [
+          "vehicle tracking kano",
+          "gps vehicle tracker kano",
+          "northern nigeria vehicle tracking"
+        ],
+        "benefits": [
+          "Inter-regional route visibility for northern Nigeria corridors",
+          "Market supply-chain and cargo delivery accountability",
+          "Executive and private vehicle discreet installation"
+        ],
+        "faqs": [
+          {
+            "question": "Can vehicle trackers work on long inter-state routes from Kano?",
+            "answer": "Yes. Supported tracker types use GSM/GPS coverage that works across inter-state routes as long as there is network signal along the corridor."
+          },
+          {
+            "question": "Do you serve Kano-based executive and private clients?",
+            "answer": "Yes. We offer discreet and premium installation options for executive mobility and private Kano vehicle owners."
+          }
+        ]
+      },
+      {
+        "slug": "car-tracker-kaduna",
+        "pageTitle": "Car Tracker In Kaduna | Vehicle Tracking And Fleet Support",
+        "metaDescription": "Need a car tracker in Kaduna? Car Tracker Plus Telematics provides GPS tracking, fleet telematics, and local installation support for schools, institutions, and businesses in Kaduna.",
+        "headline": "Vehicle tracking installation in Kaduna for institutions, schools, and commercial fleets.",
+        "intro": "Kaduna hosts educational institutions, corporate offices, and mixed urban-rural operations that need reliable vehicle visibility for parent peace-of-mind and cleaner operations.",
+        "serviceType": "School and institutional vehicle tracking",
+        "location": "Kaduna",
+        "primaryKeyword": "car tracker kaduna",
+        "secondaryKeywords": [
+          "vehicle tracking kaduna",
+          "school bus tracker kaduna",
+          "kaduna institutional fleet"
+        ],
+        "benefits": [
+          "School and staff bus tracking for Kaduna institutions",
+          "Abuja-Kaduna corridor route visibility and alerts",
+          "Installation support for institutional procurement teams"
+        ],
+        "faqs": [
+          {
+            "question": "Can schools in Kaduna install bus tracking for parents?",
+            "answer": "Yes. We support Kaduna schools and institutions with bus-tracking installations that improve parent visibility and transport accountability."
+          },
+          {
+            "question": "Is the Abuja-Kaduna corridor well covered?",
+            "answer": "Yes. Our supported platforms provide route visibility and alerting for the Abuja-Kaduna corridor and related institutional movements."
+          }
+        ]
+      },
+      {
+        "slug": "car-tracker-ilorin",
+        "pageTitle": "Car Tracker In Ilorin | Kwara State Vehicle Tracking Installation",
+        "metaDescription": "Searching for a car tracker in Ilorin? Car Tracker Plus Telematics installs GPS vehicle tracking systems for private owners, businesses, and institutions across Ilorin and Kwara State.",
+        "headline": "Ilorin vehicle tracking installation for campus mobility, commuters, and family vehicles.",
+        "intro": "Ilorin's student campus movements, Lagos-Ibadan-Ilorin commute traffic, and family vehicle oversight benefit from accountable, unobtrusive tracking with fast support.",
+        "serviceType": "Private and campus vehicle tracking",
+        "location": "Ilorin",
+        "primaryKeyword": "car tracker ilorin",
+        "secondaryKeywords": [
+          "vehicle tracking ilorin",
+          "kwara state vehicle tracker",
+          "ilorin student vehicle tracking"
+        ],
+        "benefits": [
+          "Campus and student mobility visibility for Ilorin universities",
+          "Lagos-Ibadan-Ilorin inter-state route tracking",
+          "Family and private vehicle discreet installation"
+        ],
+        "faqs": [
+          {
+            "question": "Can Ilorin-based parents track a student's vehicle on campus?",
+            "answer": "Yes. A discreet vehicle tracker installation allows Ilorin-based parents to view location and route history remotely via web or mobile."
+          },
+          {
+            "question": "How long does a tracker installation take in Ilorin?",
+            "answer": "Most private-vehicle installations can be scheduled within a short appointment window and usually complete in under a day."
+          }
+        ]
+      },
+      {
+        "slug": "car-tracker-owerri",
+        "pageTitle": "Car Tracker In Owerri | Imo State Vehicle Tracking And Telematics",
+        "metaDescription": "Need a car tracker in Owerri? Car Tracker Plus Telematics installs GPS vehicle tracking for private cars, hospitality fleets, and commercial operations across Owerri and Imo State.",
+        "headline": "Owerri vehicle tracking installation for hospitality, real estate, and south-east operations.",
+        "intro": "Owerri's hospitality shuttle, construction-site vehicle, and south-east regional business traffic create diverse vehicle security and telematics needs.",
+        "serviceType": "Hospitality and commercial vehicle tracking",
+        "location": "Owerri",
+        "primaryKeyword": "car tracker owerri",
+        "secondaryKeywords": [
+          "vehicle tracking owerri",
+          "imo state gps tracker",
+          "owerri hospitality fleet"
+        ],
+        "benefits": [
+          "Hospitality shuttle and guest-transfer fleet visibility",
+          "Construction-site and property-developer vehicle oversight",
+          "South-east regional route coverage including Aba, Enugu, Port Harcourt"
+        ],
+        "faqs": [
+          {
+            "question": "Can Owerri hospitality fleets use vehicle tracking for shuttles?",
+            "answer": "Yes. Tracking and telematics work well for Owerri hospitality shuttles, improving guest-transfer accountability and route reliability."
+          },
+          {
+            "question": "Do you serve Imo State real estate and site teams?",
+            "answer": "Yes. We support Imo State construction and property teams with installations that help monitor site vehicles and subcontractor movements."
+          }
+        ]
+      },
+      {
+        "slug": "car-tracker-uyo",
+        "pageTitle": "Car Tracker In Uyo | Akwa Ibom Vehicle Tracking And Fleet Support",
+        "metaDescription": "Looking for a car tracker in Uyo? Car Tracker Plus Telematics provides GPS vehicle tracking, fleet telematics, and installation for oil and gas, government, and private clients across Uyo.",
+        "headline": "Uyo vehicle tracking for oil and gas, government operations, and Akwa Ibom private fleets.",
+        "intro": "Uyo's oil and gas subcontractor movement, government official convoys, and Akwa Ibom coastal routes require high-standard vehicle visibility with discreet deployment.",
+        "serviceType": "Premium fleet and executive tracking",
+        "location": "Uyo",
+        "primaryKeyword": "car tracker uyo",
+        "secondaryKeywords": [
+          "vehicle tracking uyo",
+          "akwa ibom vehicle tracker",
+          "uyo oil and gas fleet"
+        ],
+        "benefits": [
+          "Oil and gas subcontractor fleet visibility for Uyo operations",
+          "Coastal road and airport corridor movement geofences",
+          "Executive and government convoy-grade discreet installation"
+        ],
+        "faqs": [
+          {
+            "question": "Do you support Uyo oil and gas subcontractor fleets?",
+            "answer": "Yes. We support energy-sector teams in Uyo and Akwa Ibom with tracking setups suitable for subcontractor accountability and operational reporting."
+          },
+          {
+            "question": "Is discreet executive installation available in Uyo?",
+            "answer": "Yes. We provide premium, discreet installation options for executive and government-grade convoy vehicles operating from Uyo."
+          }
+        ]
+      },
+      {
+        "slug": "car-tracker-calabar",
+        "pageTitle": "Car Tracker In Calabar | Cross River Vehicle Tracking And Installation",
+        "metaDescription": "Need a car tracker in Calabar? Car Tracker Plus Telematics installs GPS vehicle tracking systems for tourism, port logistics, and private vehicle owners across Calabar and Cross River.",
+        "headline": "Calabar vehicle tracking installation for tourism fleets, port operations, and Cross River mobility.",
+        "intro": "Calabar's port access, tourism shuttles, and Cross River inter-state traffic require accountable vehicle oversight that covers marina, border routes, and event logistics.",
+        "serviceType": "Port and tourism fleet tracking",
+        "location": "Calabar",
+        "primaryKeyword": "car tracker calabar",
+        "secondaryKeywords": [
+          "vehicle tracking calabar",
+          "cross river vehicle tracker",
+          "calabar port logistics tracking"
+        ],
+        "benefits": [
+          "Calabar port and haulage corridor movement visibility",
+          "Tourism shuttle and event fleet accountability",
+          "Cross River border and highway route geofence alerts"
+        ],
+        "faqs": [
+          {
+            "question": "Can Calabar port logistics teams use vehicle tracking?",
+            "answer": "Yes. Port-based haulage and logistics operations in Calabar benefit from route visibility, movement alerts, and cleaner fleet reporting."
+          },
+          {
+            "question": "Is vehicle tracking useful for Cross River tourism fleets?",
+            "answer": "Yes. Tourism shuttle operators in Calabar and Cross River use tracking to improve passenger safety, route reliability, and fleet accountability."
           }
         ]
       }

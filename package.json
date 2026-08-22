@@ -6,6 +6,7 @@
 		"dev": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
+		"verify:mail": "node scripts/verify-mail.mjs",
 		"astro": "astro"
 	},
 	"dependencies": {
@@ -22,13 +23,16 @@
 		"gsap": "^3.13.0",
 		"motion": "^12.23.6",
 		"node-fetch": "^3.3.2",
+		"nodemailer": "^9.0.3",
 		"solid-js": "^1.9.7",
 		"solid-motionone": "^1.0.4",
-		"tailwindcss": "^4.1.11"
+		"tailwindcss": "^4.1.11",
+		"zod": "^4.4.3"
 	},
 	"devDependencies": {
 		"@types/chroma-js": "^3.1.1",
 		"@types/node": "^24.0.15",
+		"@types/nodemailer": "^8.0.1",
 		"typescript": "^5.8.3"
 	}
 }

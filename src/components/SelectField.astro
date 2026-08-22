@@ -1,0 +1,63 @@
+---
+import { Icon } from "astro-icon/components";
+
+export interface Option {
+        value: string;
+        label: string;
+}
+
+export interface Props {
+        id: string;
+        name: string;
+        label: string;
+        placeholder: string;
+        describedBy?: string;
+        required?: boolean;
+        selectedValue?: string;
+        options: Option[];
+}
+
+const {
+        id,
+        name,
+        label,
+        placeholder,
+        describedBy,
+        required = false,
+        selectedValue = "",
+        options,
+} = Astro.props;
+---
+
+<div class="grid gap-2">
+        <label class="text-sm font-semibold text-[var(--color-heading)]" for={id}>
+                {label}
+        </label>
+        <div class="relative">
+                <select
+                        id={id}
+                        name={name}
+                        required={required}
+                        class="min-h-13 w-full appearance-none rounded-[1rem] border px-4 py-3 pr-12 text-sm shadow-[0_1px_0_rgba(255,255,255,0.5)_inset] transition duration-200"
+                        style="border-color: var(--border-subtle); background: color-mix(in srgb, var(--surface-base) 99%, transparent); color: var(--color-heading);"
+                        aria-describedby={describedBy}
+                >
+                        <option value="">{placeholder}</option>
+                        {options.map((option) => (
+                                <option value={option.value} selected={option.value === selectedValue}>
+                                        {option.label}
+                                </option>
+                        ))}
+                </select>
+                <span
+                        class="pointer-events-none absolute inset-y-0 right-4 flex items-center"
+                        aria-hidden="true"
+                >
+                        <Icon
+                                name="heroicons-solid:selector"
+                                class="h-5 w-5 text-[var(--color-text-muted)]"
+                        />
+                </span>
+        </div>
+        <p id={describedBy} data-error-for={name} class="text-sm text-[var(--color-error)]"></p>
+</div>
