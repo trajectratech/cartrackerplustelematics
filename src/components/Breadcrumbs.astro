@@ -1,0 +1,77 @@
+---
+import type { BreadcrumbItem } from "../utils/seo";
+
+export interface Props {
+	items: BreadcrumbItem[];
+}
+
+const { items } = Astro.props;
+const trail = items.filter((item) => item.name?.trim());
+---
+
+{
+	trail.length > 1 && (
+		<nav aria-label="Breadcrumb" class="breadcrumbs">
+			<ol>
+				{trail.map((item, index) => {
+					const isCurrent = index === trail.length - 1;
+					return (
+						<li>
+							{isCurrent ? (
+								<span aria-current="page">{item.name}</span>
+							) : (
+								<a href={item.path}>{item.name}</a>
+							)}
+							{!isCurrent && (
+								<span class="breadcrumbs__separator" aria-hidden="true">
+									/
+								</span>
+							)}
+						</li>
+					);
+				})}
+			</ol>
+		</nav>
+	)
+}
+
+<style>
+	.breadcrumbs ol {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.5rem;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-size: 0.82rem;
+		font-weight: 600;
+		color: var(--color-text-muted);
+	}
+
+	.breadcrumbs li {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		min-width: 0;
+	}
+
+	.breadcrumbs a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	.breadcrumbs a:hover,
+	.breadcrumbs a:focus-visible {
+		color: var(--color-heading);
+		text-decoration: underline;
+	}
+
+	.breadcrumbs [aria-current="page"] {
+		color: var(--color-heading);
+	}
+
+	.breadcrumbs__separator {
+		color: color-mix(in srgb, var(--color-text-muted) 60%, transparent);
+	}
+</style>

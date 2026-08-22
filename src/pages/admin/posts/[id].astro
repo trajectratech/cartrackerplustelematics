@@ -1,0 +1,583 @@
+---
+import AdminLayout from "../../../layouts/AdminLayout.astro";
+import { getAdminClient, getMediaUrl, isAdminConfigured } from "../../../lib/supabase";
+import { CSRF_FIELD, ensureCsrfToken } from "../../../lib/csrf";
+import type { BlogPost } from "../../../lib/posts";
+
+export const prerender = false;
+
+const csrfToken = ensureCsrfToken(Astro.cookies);
+const user = Astro.locals.user;
+const { id } = Astro.params;
+const isNew = id === "new";
+const error = Astro.url.searchParams.get("error");
+const notice = Astro.url.searchParams.get("notice");
+
+let post: Partial<BlogPost> = {
+	title: "",
+	slug: "",
+	excerpt: "",
+	body: "",
+	status: "draft",
+	meta_title: "",
+	meta_description: "",
+};
+let categories: { id: string; name: string }[] = [];
+let authors: { id: string; name: string }[] = [];
+let notFound = false;
+
+if (isAdminConfigured()) {
+	const supabase = getAdminClient()!;
+
+	const [categoryResult, authorResult] = await Promise.all([
+		supabase.from("categories").select("id, name").order("name"),
+		supabase.from("authors").select("id, name").order("name"),
+	]);
+	categories = (categoryResult.data ?? []) as unknown as { id: string; name: string }[];
+	authors = (authorResult.data ?? []) as unknown as { id: string; name: string }[];
+
+	if (!isNew) {
+		const { data } = await supabase.from("posts").select("*").eq("id", id).maybeSingle();
+		if (!data) notFound = true;
+		else post = data as BlogPost;
+	}
+}
+
+function toLocalInput(value: string | null | undefined) {
+	if (!value) return "";
+	const date = new Date(value);
+	const offset = date.getTimezoneOffset() * 60000;
+	return new Date(date.getTime() - offset).toISOString().slice(0, 16);
+}
+
+const featuredUrl = getMediaUrl(post.featured_image_path, { width: 640 });
+---
+
+<AdminLayout title={isNew ? "New post" : "Edit post"} user={user} csrfToken={csrfToken}>
+	{
+		notFound ? (
+			<div>
+				<h1 class="text-3xl font-black tracking-[-0.05em] text-[var(--color-heading)]">
+					Post not found
+				</h1>
+				<a href="/admin/posts/" data-button class="primary-button mt-6 cursor-pointer">
+					Back to posts
+				</a>
+			</div>
+		) : (
+			<div>
+				<div class="flex flex-wrap items-center justify-between gap-4">
+					<h1 class="text-3xl font-black tracking-[-0.05em] text-[var(--color-heading)]">
+						{isNew ? "New post" : "Edit post"}
+					</h1>
+					<a href="/admin/posts/" class="secondary-button cursor-pointer px-4 py-2 text-sm">
+						Back to posts
+					</a>
+				</div>
+
+				{error && (
+					<div
+						role="alert"
+						class="mt-6 rounded-[1.2rem] border px-5 py-3 text-sm leading-7"
+						style="border-color: color-mix(in srgb, var(--color-error) 28%, transparent); background: color-mix(in srgb, var(--color-error) 9%, transparent);"
+					>
+						{error}
+					</div>
+				)}
+				{notice && (
+					<div
+						role="status"
+						class="mt-6 rounded-[1.2rem] border px-5 py-3 text-sm leading-7"
+						style="border-color: color-mix(in srgb, var(--color-success) 30%, transparent); background: color-mix(in srgb, var(--color-success) 10%, transparent);"
+					>
+						{notice}
+					</div>
+				)}
+
+				<form
+					method="post"
+					action="/admin/posts/save/"
+					enctype="multipart/form-data"
+					class="mt-8 grid gap-6 lg:grid-cols-[1.6fr_0.9fr] lg:items-start"
+				>
+					<input type="hidden" name={CSRF_FIELD} value={csrfToken} />
+					<input type="hidden" name="id" value={isNew ? "" : id} />
+
+					<div class="premium-panel grid gap-5 p-6 sm:p-8">
+						<div class="grid gap-2">
+							<label class="text-sm font-semibold text-[var(--color-heading)]" for="title">
+								Title *
+							</label>
+							<input
+								id="title"
+								name="title"
+								type="text"
+								required
+								maxlength="180"
+								value={post.title}
+								class="min-h-13 rounded-[1rem] border px-4 py-3 text-base"
+								style="border-color: var(--border-subtle); background: color-mix(in srgb, var(--surface-base) 98%, transparent);"
+							/>
+						</div>
+
+						<div class="grid gap-2">
+							<label class="text-sm font-semibold text-[var(--color-heading)]" for="slug">
+								Slug
+							</label>
+							<input
+								id="slug"
+								name="slug"
+								type="text"
+								value={post.slug}
+								placeholder="Leave blank to generate from the title"
+								aria-describedby="slug-help"
+								class="min-h-13 rounded-[1rem] border px-4 py-3 text-sm"
+								style="border-color: var(--border-subtle); background: color-mix(in srgb, var(--surface-base) 98%, transparent);"
+							/>
+							<p id="slug-help" class="text-sm text-[var(--color-text-muted)]">
+								The URL will be /blogs/&lt;slug&gt;/. Changing the slug of a published post changes
+								its URL and any existing links to it will break.
+							</p>
+						</div>
+
+						<div class="grid gap-2">
+							<label class="text-sm font-semibold text-[var(--color-heading)]" for="excerpt">
+								Excerpt *
+							</label>
+							<textarea
+								id="excerpt"
+								name="excerpt"
+								required
+								rows="3"
+								maxlength="400"
+								aria-describedby="excerpt-help"
+								class="rounded-[1rem] border px-4 py-3 text-sm"
+								style="border-color: var(--border-subtle); background: color-mix(in srgb, var(--surface-base) 98%, transparent);"
+							>{post.excerpt}</textarea>
+							<p id="excerpt-help" class="text-sm text-[var(--color-text-muted)]">
+								Shown on cards and used as the meta description when none is set below.
+							</p>
+						</div>
+
+						<div class="grid gap-2">
+							<label class="text-sm font-semibold text-[var(--color-heading)]" for="body">
+								Body *
+							</label>
+
+							<div class="editor-toolbar" role="toolbar" aria-label="Formatting" aria-controls="body">
+								<button type="button" data-md="bold" title="Bold (Ctrl+B)"><strong>B</strong></button>
+								<button type="button" data-md="italic" title="Italic (Ctrl+I)"><em>I</em></button>
+								<span class="editor-toolbar__sep" aria-hidden="true"></span>
+								<button type="button" data-md="h2" title="Heading">H2</button>
+								<button type="button" data-md="h3" title="Sub-heading">H3</button>
+								<span class="editor-toolbar__sep" aria-hidden="true"></span>
+								<button type="button" data-md="ul" title="Bullet list">&bull; List</button>
+								<button type="button" data-md="ol" title="Numbered list">1. List</button>
+								<button type="button" data-md="quote" title="Quote">&ldquo; Quote</button>
+								<span class="editor-toolbar__sep" aria-hidden="true"></span>
+								<button type="button" data-md="link" title="Link">Link</button>
+								<button type="button" data-md="image" title="Insert an image into the post body">Image</button>
+								<input type="file" data-body-image accept="image/jpeg,image/png,image/webp,image/avif" hidden />
+								<div class="editor-toolbar__tabs" role="tablist" aria-label="Editor view">
+									<button type="button" role="tab" aria-selected="true" data-view="write">Write</button>
+									<button type="button" role="tab" aria-selected="false" data-view="preview">Preview</button>
+								</div>
+							</div>
+
+							<textarea
+								id="body"
+								name="body"
+								required
+								rows="24"
+								data-editor
+								class="rounded-b-[1rem] border px-4 py-3 font-mono text-sm"
+								style="border-color: var(--border-subtle); background: color-mix(in srgb, var(--surface-base) 98%, transparent);"
+							>{post.body}</textarea>
+
+							<div
+								data-preview
+								hidden
+								aria-live="polite"
+								class="min-h-[20rem] rounded-b-[1rem] border px-5 py-4"
+								style="border-color: var(--border-subtle); background: color-mix(in srgb, var(--surface-base) 98%, transparent);"
+							></div>
+
+							<p class="text-sm text-[var(--color-text-muted)]">
+								Select text and use the buttons above to format it. Reading time is calculated
+								automatically when you save.
+							</p>
+						</div>
+					</div>
+
+					<div class="grid gap-4">
+						<div class="step-card grid gap-4">
+							<h2 class="eyebrow-label">Publishing</h2>
+
+							<div class="grid gap-2">
+								<label class="text-sm font-semibold text-[var(--color-heading)]" for="status">
+									Status
+								</label>
+								<select
+									id="status"
+									name="status"
+									class="min-h-13 rounded-[1rem] border px-4 py-3 text-sm"
+									style="border-color: var(--border-subtle); background: color-mix(in srgb, var(--surface-base) 99%, transparent); color: var(--color-heading);"
+								>
+									{["draft", "published", "archived"].map((value) => (
+										<option value={value} selected={post.status === value}>
+											{value}
+										</option>
+									))}
+								</select>
+							</div>
+
+							<div class="grid gap-2">
+								<label class="text-sm font-semibold text-[var(--color-heading)]" for="published_at">
+									Publish date
+								</label>
+								<input
+									id="published_at"
+									name="published_at"
+									type="datetime-local"
+									value={toLocalInput(post.published_at)}
+									aria-describedby="published-help"
+									class="min-h-13 rounded-[1rem] border px-4 py-3 text-sm"
+									style="border-color: var(--border-subtle); background: color-mix(in srgb, var(--surface-base) 98%, transparent);"
+								/>
+								<p id="published-help" class="text-sm text-[var(--color-text-muted)]">
+									Set a future date to schedule. The post stays hidden until then.
+								</p>
+							</div>
+
+							<label class="flex items-center gap-3 text-sm font-semibold text-[var(--color-heading)]">
+								<input type="checkbox" name="is_pinned" value="1" checked={post.is_pinned} />
+								Feature this post
+							</label>
+
+							<div class="grid gap-2">
+								<label class="text-sm font-semibold text-[var(--color-heading)]" for="pin_order">
+									Feature order
+								</label>
+								<input
+									id="pin_order"
+									name="pin_order"
+									type="number"
+									min="1"
+									value={post.pin_order ?? ""}
+									class="min-h-13 rounded-[1rem] border px-4 py-3 text-sm"
+									style="border-color: var(--border-subtle); background: color-mix(in srgb, var(--surface-base) 98%, transparent);"
+								/>
+								<p class="text-sm text-[var(--color-text-muted)]">Lower numbers appear first.</p>
+							</div>
+						</div>
+
+						<div class="step-card grid gap-4">
+							<h2 class="eyebrow-label">Featured image</h2>
+
+							{featuredUrl && (
+								<img
+									src={featuredUrl}
+									alt={post.featured_image_alt ?? ""}
+									width="640"
+									height="360"
+									class="aspect-[16/9] w-full rounded-[1rem] object-cover"
+								/>
+							)}
+
+							<div class="file-field relative grid gap-2">
+								<input
+									id="featured_image"
+									name="featured_image"
+									type="file"
+									accept="image/jpeg,image/png,image/webp,image/avif"
+									data-file-input
+								/>
+								<label class="file-drop" for="featured_image">
+									<span class="file-drop__title" data-file-name>Choose an image</span>
+									<span class="file-drop__hint">JPEG, PNG, WebP or AVIF · up to 10 MB</span>
+								</label>
+								<img data-file-preview hidden alt="" class="mt-1 aspect-[16/9] w-full rounded-[1rem] object-cover" />
+							</div>
+
+							<div class="grid gap-2">
+								<label
+									class="text-sm font-semibold text-[var(--color-heading)]"
+									for="featured_image_alt"
+								>
+									Alt text {post.featured_image_path ? "*" : ""}
+								</label>
+								<input
+									id="featured_image_alt"
+									name="featured_image_alt"
+									type="text"
+									maxlength="180"
+									value={post.featured_image_alt ?? ""}
+									aria-describedby="alt-help"
+									class="min-h-13 rounded-[1rem] border px-4 py-3 text-sm"
+									style="border-color: var(--border-subtle); background: color-mix(in srgb, var(--surface-base) 98%, transparent);"
+								/>
+								<p id="alt-help" class="text-sm text-[var(--color-text-muted)]">
+									Describe what the image shows. Required whenever an image is set.
+								</p>
+							</div>
+						</div>
+
+						<div class="step-card grid gap-4">
+							<h2 class="eyebrow-label">Organisation</h2>
+
+							<div class="grid gap-2">
+								<label class="text-sm font-semibold text-[var(--color-heading)]" for="category_id">
+									Category
+								</label>
+								<select
+									id="category_id"
+									name="category_id"
+									class="min-h-13 rounded-[1rem] border px-4 py-3 text-sm"
+									style="border-color: var(--border-subtle); background: color-mix(in srgb, var(--surface-base) 99%, transparent); color: var(--color-heading);"
+								>
+									<option value="">No category</option>
+									{categories.map((category) => (
+										<option value={category.id} selected={(post as unknown as { category_id: string | undefined }).category_id === category.id}>
+											{category.name}
+										</option>
+									))}
+								</select>
+							</div>
+
+							<div class="grid gap-2">
+								<label class="text-sm font-semibold text-[var(--color-heading)]" for="author_id">
+									Author
+								</label>
+								<select
+									id="author_id"
+									name="author_id"
+									class="min-h-13 rounded-[1rem] border px-4 py-3 text-sm"
+									style="border-color: var(--border-subtle); background: color-mix(in srgb, var(--surface-base) 99%, transparent); color: var(--color-heading);"
+								>
+									<option value="">No author</option>
+									{authors.map((author) => (
+										<option value={author.id} selected={(post as unknown as { author_id: string | undefined }).author_id === author.id}>
+											{author.name}
+										</option>
+									))}
+								</select>
+							</div>
+						</div>
+
+						<div class="step-card grid gap-4">
+							<h2 class="eyebrow-label">SEO overrides</h2>
+
+							<div class="grid gap-2">
+								<label class="text-sm font-semibold text-[var(--color-heading)]" for="meta_title">
+									Meta title
+								</label>
+								<input
+									id="meta_title"
+									name="meta_title"
+									type="text"
+									maxlength="70"
+									value={(post as unknown as { meta_title: string | null | undefined }).meta_title ?? ""}
+									aria-describedby="meta-title-help"
+									class="min-h-13 rounded-[1rem] border px-4 py-3 text-sm"
+									style="border-color: var(--border-subtle); background: color-mix(in srgb, var(--surface-base) 98%, transparent);"
+								/>
+								<p id="meta-title-help" class="text-sm text-[var(--color-text-muted)]">
+									Defaults to the title. Keep under 60 characters.
+								</p>
+							</div>
+
+							<div class="grid gap-2">
+								<label
+									class="text-sm font-semibold text-[var(--color-heading)]"
+									for="meta_description"
+								>
+									Meta description
+								</label>
+								<textarea
+									id="meta_description"
+									name="meta_description"
+									rows="3"
+									maxlength="200"
+									aria-describedby="meta-desc-help"
+									class="rounded-[1rem] border px-4 py-3 text-sm"
+									style="border-color: var(--border-subtle); background: color-mix(in srgb, var(--surface-base) 98%, transparent);"
+								>{(post as unknown as { meta_description: string | null | undefined }).meta_description ?? ""}</textarea>
+								<p id="meta-desc-help" class="text-sm text-[var(--color-text-muted)]">
+									Defaults to the excerpt. Aim for 150–160 characters.
+								</p>
+							</div>
+						</div>
+
+						<button type="submit" data-button class="primary-button cursor-pointer">
+							{isNew ? "Create post" : "Save changes"}
+						</button>
+					</div>
+				</form>
+
+				{!isNew && (
+					<form
+						method="post"
+						action="/admin/posts/actions/"
+						class="mt-10 border-t pt-6"
+						style="border-color: var(--border-subtle);"
+						onsubmit="return confirm('Delete this post permanently? This cannot be undone.')"
+					>
+						<input type="hidden" name={CSRF_FIELD} value={csrfToken} />
+						<input type="hidden" name="id" value={id} />
+						<input type="hidden" name="action" value="delete" />
+						<h2 class="eyebrow-label">Danger zone</h2>
+						<p class="mt-3 max-w-xl text-sm leading-7 text-[var(--color-text-muted)]">
+							Deleting removes the post and its comments permanently. Archive it instead if you only
+							want it off the site.
+						</p>
+						<button
+							type="submit"
+							class="secondary-button mt-4 cursor-pointer"
+							style="border-color: color-mix(in srgb, var(--color-error) 40%, transparent); color: var(--color-error) !important;"
+						>
+							Delete permanently
+						</button>
+					</form>
+				)}
+			</div>
+		)
+	}
+<script is:inline>
+	const ta = document.querySelector("[data-editor]");
+	const preview = document.querySelector("[data-preview]");
+
+	const wrap = (before, after, placeholder) => {
+		const start = ta.selectionStart;
+		const end = ta.selectionEnd;
+		const selected = ta.value.slice(start, end) || placeholder;
+		ta.setRangeText(before + selected + after, start, end, "select");
+		ta.setSelectionRange(start + before.length, start + before.length + selected.length);
+		ta.focus();
+		ta.dispatchEvent(new Event("input"));
+	};
+
+	const prefixLines = (prefix) => {
+		const start = ta.selectionStart;
+		const end = ta.selectionEnd;
+		const lineStart = ta.value.lastIndexOf("\n", start - 1) + 1;
+		const block = ta.value.slice(lineStart, end) || "Text";
+		const numbered = prefix === "1. ";
+		const out = block
+			.split("\n")
+			.map((line, i) => (numbered ? `${i + 1}. ` : prefix) + line.replace(/^([-*]\s|\d+\.\s|#+\s|>\s)/, ""))
+			.join("\n");
+		ta.setRangeText(out, lineStart, end, "end");
+		ta.focus();
+		ta.dispatchEvent(new Event("input"));
+	};
+
+	const actions = {
+		bold: () => wrap("**", "**", "bold text"),
+		italic: () => wrap("*", "*", "italic text"),
+		h2: () => prefixLines("## "),
+		h3: () => prefixLines("### "),
+		ul: () => prefixLines("- "),
+		ol: () => prefixLines("1. "),
+		quote: () => prefixLines("> "),
+		link: () => {
+			const url = prompt("Link address", "https://");
+			if (url) wrap("[", `](${url})`, "link text");
+		},
+		image: () => document.querySelector("[data-body-image]")?.click(),
+	};
+
+	const imageInput = document.querySelector("[data-body-image]");
+	imageInput?.addEventListener("change", async () => {
+		const file = imageInput.files?.[0];
+		if (!file) return;
+
+		const alt = prompt("Describe this image for screen readers and search engines:", "");
+		if (alt === null) {
+			imageInput.value = "";
+			return;
+		}
+
+		const start = ta.selectionStart;
+		ta.setRangeText("\n\n![uploading…]()\n\n", start, ta.selectionEnd, "end");
+
+		const body = new FormData();
+		body.append("file", file);
+		body.append("_csrf", document.querySelector("input[name=_csrf]")?.value ?? "");
+
+		try {
+			const response = await fetch("/admin/media/upload/", { method: "POST", body });
+			const payload = await response.json();
+			const markdown = payload.ok
+				? `\n\n![${alt}](${payload.url})\n\n`
+				: "\n\n";
+			ta.value = ta.value.replace("\n\n![uploading…]()\n\n", markdown);
+			if (!payload.ok) alert(payload.message || "Upload failed.");
+		} catch {
+			ta.value = ta.value.replace("\n\n![uploading…]()\n\n", "\n\n");
+			alert("Upload failed. Check your connection and try again.");
+		}
+
+		imageInput.value = "";
+		ta.dispatchEvent(new Event("input"));
+	});
+
+	document.querySelectorAll("[data-md]").forEach((button) => {
+		button.addEventListener("click", () => actions[button.dataset.md]?.());
+	});
+
+	ta?.addEventListener("keydown", (event) => {
+		if (!(event.ctrlKey || event.metaKey)) return;
+		const key = event.key.toLowerCase();
+		if (key === "b" || key === "i") {
+			event.preventDefault();
+			actions[key === "b" ? "bold" : "italic"]();
+		}
+	});
+
+	let timer;
+	let lastRendered = null;
+	const refreshPreview = () => {
+		if (preview.hidden || ta.value === lastRendered) return;
+		lastRendered = ta.value;
+		fetch("/admin/posts/preview/", { method: "POST", body: ta.value })
+			.then((response) => (response.ok ? response.text() : Promise.reject()))
+			.then((html) => {
+				preview.innerHTML = html || '<p class="text-sm">Nothing to preview yet.</p>';
+			})
+			.catch(() => {
+				preview.textContent = "Preview unavailable.";
+			});
+	};
+
+	ta?.addEventListener("input", () => {
+		clearTimeout(timer);
+		timer = setTimeout(refreshPreview, 300);
+	});
+
+	document.querySelectorAll("[data-view]").forEach((tab) => {
+		tab.addEventListener("click", () => {
+			const showPreview = tab.dataset.view === "preview";
+			ta.hidden = showPreview;
+			preview.hidden = !showPreview;
+			document.querySelectorAll("[data-view]").forEach((other) => {
+				other.setAttribute("aria-selected", String(other === tab));
+			});
+			if (showPreview) refreshPreview();
+		});
+	});
+</script>
+
+<script is:inline>
+	const input = document.querySelector("[data-file-input]");
+	const nameEl = document.querySelector("[data-file-name]");
+	const imgPreview = document.querySelector("[data-file-preview]");
+	input?.addEventListener("change", () => {
+		const file = input.files?.[0];
+		if (!file) return;
+		nameEl.textContent = file.name;
+		imgPreview.src = URL.createObjectURL(file);
+		imgPreview.hidden = false;
+	});
+</script>
+
+</AdminLayout>

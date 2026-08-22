@@ -1,0 +1,251 @@
+---
+import AdminLayout from "../../../layouts/AdminLayout.astro";
+import { getAdminClient, getMediaUrl, isAdminConfigured } from "../../../lib/supabase";
+import { CSRF_FIELD, ensureCsrfToken } from "../../../lib/csrf";
+import type { BlogPost } from "../../../lib/posts";
+
+export const prerender = false;
+
+const csrfToken = ensureCsrfToken(Astro.cookies);
+const user = Astro.locals.user;
+
+const statusFilter = Astro.url.searchParams.get("status") ?? "";
+const placeholderOnly = Astro.url.searchParams.get("placeholder") === "1";
+const search = (Astro.url.searchParams.get("q") ?? "").trim();
+const notice = Astro.url.searchParams.get("notice");
+
+let posts: BlogPost[] = [];
+let loadError: string | null = null;
+
+if (isAdminConfigured()) {
+	const supabase = getAdminClient()!;
+	let query = supabase
+		.from("posts")
+		.select(
+			"id, slug, title, status, published_at, updated_at, is_pinned, pin_order, featured_image_path, featured_image_alt, featured_image_is_placeholder, categories ( name, slug )",
+		);
+
+	if (statusFilter) query = query.eq("status", statusFilter);
+	if (placeholderOnly) query = query.eq("featured_image_is_placeholder", true);
+	if (search) query = query.ilike("title", `%${search}%`);
+
+	const { data, error } = await query
+		.order("is_pinned", { ascending: false })
+		.order("pin_order", { ascending: true, nullsFirst: false })
+		.order("updated_at", { ascending: false })
+		.limit(100);
+
+	if (error) loadError = error.message;
+	posts = (data ?? []) as unknown as BlogPost[];
+}
+
+const filters = [
+	{ label: "All", value: "" },
+	{ label: "Published", value: "published" },
+	{ label: "Drafts", value: "draft" },
+	{ label: "Archived", value: "archived" },
+];
+
+const statusStyles: Record<string, string> = {
+	published: "background: color-mix(in srgb, var(--color-success) 14%, transparent); color: var(--color-heading);",
+	draft: "background: color-mix(in srgb, var(--color-muted) 60%, transparent); color: var(--color-heading);",
+	archived: "background: color-mix(in srgb, var(--color-error) 12%, transparent); color: var(--color-heading);",
+};
+
+function formatDate(value: string | null | undefined) {
+	if (!value) return "—";
+	return new Date(value).toLocaleDateString("en-NG", {
+		year: "numeric",
+		month: "short",
+		day: "numeric",
+	});
+}
+---
+
+<AdminLayout title="Posts" user={user} csrfToken={csrfToken}>
+	<div class="flex flex-wrap items-center justify-between gap-4">
+		<h1 class="text-3xl font-black tracking-[-0.05em] text-[var(--color-heading)]">Posts</h1>
+		<a href="/admin/posts/new/" data-button class="primary-button cursor-pointer">New post</a>
+	</div>
+
+	{
+		notice && (
+			<div
+				role="status"
+				class="mt-6 rounded-[1.2rem] border px-5 py-3 text-sm leading-7"
+				style="border-color: color-mix(in srgb, var(--color-success) 30%, transparent); background: color-mix(in srgb, var(--color-success) 10%, transparent);"
+			>
+				{notice}
+			</div>
+		)
+	}
+
+	{
+		loadError && (
+			<div
+				role="alert"
+				class="mt-6 rounded-[1.2rem] border px-5 py-3 text-sm leading-7"
+				style="border-color: color-mix(in srgb, var(--color-error) 28%, transparent); background: color-mix(in srgb, var(--color-error) 9%, transparent);"
+			>
+				Could not load posts: {loadError}
+			</div>
+		)
+	}
+
+	<form method="get" class="mt-8 flex flex-wrap items-end gap-3">
+		<div class="grid gap-2">
+			<label class="text-sm font-semibold text-[var(--color-heading)]" for="post-search">
+				Search titles
+			</label>
+			<input
+				id="post-search"
+				name="q"
+				type="search"
+				value={search}
+				class="min-h-13 rounded-[1rem] border px-4 py-3 text-sm"
+				style="border-color: var(--border-subtle); background: color-mix(in srgb, var(--surface-base) 98%, transparent);"
+			/>
+		</div>
+		{statusFilter && <input type="hidden" name="status" value={statusFilter} />}
+		<button type="submit" class="secondary-button cursor-pointer">Search</button>
+	</form>
+
+	<nav aria-label="Filter by status" class="mt-6 flex flex-wrap gap-2">
+		{
+			filters.map((filter) => {
+				const isCurrent = statusFilter === filter.value && !placeholderOnly;
+				const href = filter.value ? `/admin/posts/?status=${filter.value}` : "/admin/posts/";
+				return (
+					<a
+						href={href}
+						aria-current={isCurrent ? "page" : undefined}
+						class="rounded-full px-4 py-2 text-sm font-semibold no-underline"
+						style={
+							isCurrent
+								? "background: color-mix(in srgb, var(--color-primary) 12%, transparent); color: var(--color-primary);"
+								: "border: 1px solid var(--border-subtle); color: var(--color-heading);"
+						}
+					>
+						{filter.label}
+					</a>
+				);
+			})
+		}
+	</nav>
+
+	{
+		posts.length === 0 ? (
+			<p class="mt-10 text-base leading-8 text-[var(--color-text-muted)]">
+				No posts match. <a href="/admin/posts/new/">Write the first one</a>.
+			</p>
+		) : (
+			<ul class="mt-8 grid list-none gap-3 p-0">
+				{posts.map((post) => (
+					<li class="step-card">
+						<div class="flex flex-wrap items-start justify-between gap-4">
+							<div class="min-w-0 flex-1">
+								<div class="flex flex-wrap items-center gap-2">
+									<span
+										class="rounded-full px-3 py-1 text-xs font-bold uppercase tracking-[0.12em]"
+										style={statusStyles[post.status]}
+									>
+										{post.status}
+									</span>
+									{post.is_pinned && (
+										<span
+											class="rounded-full px-3 py-1 text-xs font-bold uppercase tracking-[0.12em]"
+											style="background: color-mix(in srgb, var(--color-accent) 18%, transparent); color: var(--color-heading);"
+										>
+											Pinned{post.pin_order != null ? ` #${post.pin_order}` : ""}
+										</span>
+									)}
+									{post.featured_image_is_placeholder && (
+										<span
+											class="rounded-full px-3 py-1 text-xs font-bold uppercase tracking-[0.12em]"
+											style="background: color-mix(in srgb, var(--color-error) 12%, transparent); color: var(--color-heading);"
+										>
+											Stand-in image
+										</span>
+									)}
+								</div>
+
+								<h2 class="mt-3 text-xl font-bold tracking-[-0.03em] text-[var(--color-heading)]">
+									<a href={`/admin/posts/${post.id}/`} class="no-underline">
+										{post.title}
+									</a>
+								</h2>
+								<p class="mt-2 text-sm text-[var(--color-text-muted)]">
+									/blogs/{post.slug}/ · published {formatDate(post.published_at)} · updated{" "}
+									{formatDate(post.updated_at)}
+								</p>
+							</div>
+
+							<div class="flex flex-wrap items-center gap-2">
+								<a href={`/admin/posts/${post.id}/`} class="secondary-button cursor-pointer px-4 py-2 text-sm">
+									Edit
+								</a>
+								{post.status === "published" && (
+									<a
+										href={`/blogs/${post.slug}/`}
+										target="_blank"
+										rel="noopener"
+										class="secondary-button cursor-pointer px-4 py-2 text-sm"
+									>
+										View<span class="sr-only"> {post.title} on the live site</span>
+									</a>
+								)}
+							</div>
+						</div>
+
+						<div class="mt-4 flex flex-wrap gap-2">
+							{post.status !== "published" && (
+								<form method="post" action="/admin/posts/actions/">
+									<input type="hidden" name={CSRF_FIELD} value={csrfToken} />
+									<input type="hidden" name="id" value={post.id} />
+									<input type="hidden" name="action" value="publish" />
+									<button type="submit" class="secondary-button cursor-pointer px-4 py-2 text-sm">
+										Publish
+									</button>
+								</form>
+							)}
+							{post.status === "published" && (
+								<form method="post" action="/admin/posts/actions/">
+									<input type="hidden" name={CSRF_FIELD} value={csrfToken} />
+									<input type="hidden" name="id" value={post.id} />
+									<input type="hidden" name="action" value="unpublish" />
+									<button type="submit" class="secondary-button cursor-pointer px-4 py-2 text-sm">
+										Unpublish
+									</button>
+								</form>
+							)}
+							<form method="post" action="/admin/posts/actions/">
+								<input type="hidden" name={CSRF_FIELD} value={csrfToken} />
+								<input type="hidden" name="id" value={post.id} />
+								<input type="hidden" name="action" value={post.is_pinned ? "unpin" : "pin"} />
+								<button type="submit" class="secondary-button cursor-pointer px-4 py-2 text-sm">
+									{post.is_pinned ? "Unpin" : "Pin"}
+								</button>
+							</form>
+							<form method="post" action="/admin/posts/actions/">
+								<input type="hidden" name={CSRF_FIELD} value={csrfToken} />
+								<input type="hidden" name="id" value={post.id} />
+								<input type="hidden" name="action" value={post.status === "archived" ? "restore" : "archive"} />
+								<button type="submit" class="secondary-button cursor-pointer px-4 py-2 text-sm">
+									{post.status === "archived" ? "Restore" : "Archive"}
+								</button>
+							</form>
+							<form method="post" action="/admin/posts/actions/" onsubmit="return confirm('Delete this post permanently?');">
+								<input type="hidden" name={CSRF_FIELD} value={csrfToken} />
+								<input type="hidden" name="id" value={post.id} />
+								<input type="hidden" name="action" value="delete" />
+								<button type="submit" class="secondary-button cursor-pointer px-4 py-2 text-sm" style="color: var(--color-error); border-color: color-mix(in srgb, var(--color-error) 40%, transparent);">
+									Delete
+								</button>
+							</form>
+						</div>
+					</li>
+				))}
+			</ul>
+		)
+	}
+</AdminLayout>

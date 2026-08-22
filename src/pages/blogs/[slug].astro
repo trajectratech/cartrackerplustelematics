@@ -1,0 +1,393 @@
+---
+import type { ThemeConfig } from "../../types/theme";
+import mainJson from "../../data/car-tracker-plus-telematics.json";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import ShareLinks from "../../components/blog/ShareLinks.astro";
+import CommentSection from "../../components/blog/CommentSection.astro";
+import { getBlogPostSeo } from "../../utils/seo";
+import { getColorVars } from "../../utils/theme";
+import { getMediaSrcSet, getMediaUrl } from "../../lib/supabase";
+import {
+	getLivePostBySlug,
+	getRelatedPosts,
+	getApprovedComments,
+	formatReadingTime,
+	type BlogPost,
+	type BlogPostResult,
+} from "../../lib/posts";
+import { renderMarkdown } from "../../lib/markdown";
+
+export const prerender = false;
+
+const data = mainJson as ThemeConfig;
+const colorVars = getColorVars(data);
+
+const { slug } = Astro.params;
+if (!slug) return Astro.redirect("/blogs/", 307);
+
+Astro.response.headers.set(
+	"Cache-Control",
+	"public, max-age=0, s-maxage=300, stale-while-revalidate=2592000, stale-if-error=2592000"
+);
+
+const postResult: BlogPostResult = await getLivePostBySlug(slug);
+
+/* =======================================================================
+ * Honest routing:
+ *   unconfigured / error  ->  render a user-facing banner. Do NOT invent
+ *                             a fake static article from articles.ts.
+ *   empty                 ->  the slug does not exist in the published
+ *                             index. Return a real 404, not a ghost page.
+ *   ok                    ->  actual DB row. Render it fully.
+ * ======================================================================= */
+if (postResult.status === "empty") {
+	return new Response(null, { status: 404 });
+}
+
+const post: BlogPost | null = postResult.post;
+const { prev: prevPost, next: nextPost } = postResult.adjacent;
+
+const related: BlogPost[] = postResult.status === "ok" && post
+	? await getRelatedPosts(post.id, post.category_id)
+	: [];
+
+const comments = postResult.status === "ok" && post
+	? await getApprovedComments(post.id)
+	: [];
+
+const relatedCards = related.slice(0, 3);
+
+// SEO / metadata. Fall back to a "blog unavailable" meta title when the DB
+// is offline/unconfigured so search engines do not index an empty shell.
+const seo = postResult.status === "ok" && post
+	? getBlogPostSeo(data, {
+			slug: post.slug,
+			title: post.title,
+			summary: post.excerpt,
+			category: post.categories?.name ?? "Telematics",
+			tags: Array.isArray(post.tags)
+				? (post.tags as { name: string }[]).map((t) => t.name)
+				: [],
+			authorName: post.authors?.full_name ?? post.authors?.name,
+			publishedAt: post.published_at,
+			updatedAt: post.updated_at,
+			readingMinutes: post.reading_minutes,
+			ogImage: post.featured_image_path
+				? getMediaUrl(post.featured_image_path, { width: 1200 })
+				: undefined,
+		})
+	: {
+			metadata: {
+				title:
+					postResult.status === "unconfigured"
+						? "Blog unavailable | Car Tracker Plus Telematics"
+						: postResult.status === "error"
+							? "Blog temporarily unavailable | Car Tracker Plus Telematics"
+							: "Article not found | Car Tracker Plus Telematics",
+				description:
+					postResult.status === "unconfigured"
+						? "The blog CMS is not connected yet. Please configure Supabase credentials and run the blog seed migration."
+						: postResult.errorMessage ??
+							"The requested article could not be loaded at this time.",
+				robots: "noindex, nofollow",
+			},
+			structuredData: undefined,
+			sameAsUrls: [],
+			breadcrumbs: [
+				{ label: "Home", href: "/" },
+				{ label: "Blog", href: "/blogs/" },
+				{ label: "Unavailable", href: `/blogs/${slug}/` },
+			],
+		};
+
+const articleUrl = postResult.status === "ok" && post
+	? `${data.brand.url.replace(/\/$/, "")}/blogs/${post.slug}/`
+	: `${data.brand.url.replace(/\/$/, "")}/blogs/${slug}/`;
+const featuredImageUrl = post?.featured_image_path
+	? getMediaUrl(post.featured_image_path, { width: 1200 })
+	: undefined;
+const featuredSrcSet = post?.featured_image_path
+	? getMediaSrcSet(post.featured_image_path)
+	: undefined;
+
+const publishedFormatted = post?.published_at
+	? new Date(post.published_at).toLocaleDateString("en-NG", {
+			year: "numeric",
+			month: "long",
+			day: "numeric",
+		})
+	: null;
+const updatedFormatted =
+	post?.updated_at && post?.published_at &&
+	new Date(post.updated_at).getTime() - new Date(post.published_at).getTime() > 1000 * 60 * 60 * 24
+		? new Date(post.updated_at).toLocaleDateString("en-NG", {
+				year: "numeric",
+				month: "long",
+				day: "numeric",
+			})
+		: null;
+
+const bodyHtml = post ? renderMarkdown(post.body) : "";
+---
+
+<BaseLayout
+	data={data}
+	layout={[]}
+	colorVars={colorVars}
+	metadata={seo.metadata}
+	structuredData={seo.structuredData}
+	sameAsUrls={seo.sameAsUrls}
+>
+	<article>
+		<header class="section-shell pt-8">
+			<div class="container-shell">
+				<Breadcrumbs items={seo.breadcrumbs} />
+
+				{
+					postResult.status === "unconfigured" && (
+						<div class="mt-10 premium-panel p-9 max-w-3xl">
+							<div class="flex items-start gap-4">
+								<div class="mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full"
+									style="background: color-mix(in srgb, var(--color-primary) 12%, transparent); color: var(--color-primary);">
+									!
+								</div>
+								<div>
+									<h1 class="display-title--compact mt-7 tracking-tight">
+										Blog CMS is not connected yet
+									</h1>
+									<p class="section-copy max-w-2xl mt-5">
+										There are no blog articles available right now because the CMS database connection
+										is not configured on this server. Once <code>SUPABASE_URL</code> and
+										<code>SUPABASE_ANON_KEY</code> are set and the seed migration has run,
+										articles will appear at their canonical URLs.
+									</p>
+								</div>
+							</div>
+						</div>
+					)
+				}
+
+				{
+					postResult.status === "error" && (
+						<div class="mt-10 premium-panel p-9 max-w-3xl">
+							<div class="flex items-start gap-4">
+								<div class="mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full"
+									style="background: color-mix(in srgb, var(--color-error) 18%, transparent); color: var(--color-error);">
+									!
+								</div>
+								<div>
+									<h1 class="display-title--compact mt-7 tracking-tight">
+										This article could not be loaded
+									</h1>
+									<p class="section-copy max-w-2xl mt-5">
+										The blog database could not be reached right now. The issue usually clears in a
+										moment — please try again shortly. The server-side error reported is:
+									</p>
+									<p class="mt-5 rounded-xl border p-4 text-xs font-mono"
+										style="border-color: var(--border-subtle); background: color-mix(in srgb, var(--surface-base) 94%, transparent); color: var(--color-text);">
+										{postResult.errorMessage}
+									</p>
+								</div>
+							</div>
+						</div>
+					)
+				}
+
+				{
+					postResult.status === "ok" && post && (
+						<div class="mt-8 max-w-3xl">
+							{post.categories?.name && (
+								<p class="section-kicker">{post.categories.name}</p>
+							)}
+							<h1 class="display-title--compact mt-7 tracking-tight">
+								{post.title}
+							</h1>
+							<p class="section-copy mt-5 text-lg leading-9">
+								{post.excerpt}
+							</p>
+
+							<div class="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-[var(--color-text-muted)]">
+								{
+									post.authors?.name && (
+										<div class="flex items-center gap-3">
+											{post.authors.avatar_url ? (
+												<img
+													src={post.authors.avatar_url}
+													alt=""
+													class="h-9 w-9 rounded-full object-cover"
+													width={36}
+													height={36}
+												/>
+											) : (
+												<span
+													class="flex h-9 w-9 items-center justify-center rounded-full text-[13px] font-bold"
+													style="background: color-mix(in srgb, var(--color-primary) 14%, transparent); color: var(--color-primary);"
+												>
+													{(post.authors.full_name ?? post.authors.name).slice(0, 1)}
+												</span>
+											)}
+											<span class="font-semibold text-[var(--color-heading)]">
+												{post.authors.full_name ?? post.authors.name}
+											</span>
+										</div>
+									)
+								}
+								<span aria-hidden="true">•</span>
+								{
+									publishedFormatted && (
+										<time datetime={post.published_at!}>Published {publishedFormatted}</time>
+									)
+								}
+								<span aria-hidden="true">•</span>
+								<span>{formatReadingTime(post.reading_minutes)}</span>
+							</div>
+							{
+								updatedFormatted && (
+									<p class="mt-2 text-xs text-[var(--color-text-muted)]">
+										Updated {updatedFormatted}
+									</p>
+								)
+							}
+						</div>
+					)
+				}
+
+				{
+					postResult.status === "ok" && post && featuredImageUrl && (
+						<figure class="mt-10 max-w-6xl overflow-hidden rounded-[2rem]">
+							<img
+								src={featuredImageUrl}
+								srcset={featuredSrcSet}
+								sizes="(min-width: 1280px) 72rem, 92vw"
+								alt={post.featured_image_alt ?? ""}
+								width={post.featured_image_width ?? 1200}
+								height={post.featured_image_height ?? 630}
+								class="aspect-[12/7] h-auto w-full object-cover"
+								loading="eager"
+								decoding="async"
+							/>
+						</figure>
+					)
+				}
+			</div>
+		</header>
+
+		{
+			postResult.status === "ok" && post && (
+				<>
+					<div class="section-shell" data-surface="muted">
+						<div class="container-shell grid max-w-6xl grid-cols-1 gap-10 lg:grid-cols-[1fr_16rem]">
+							<div class="article-body max-w-[66ch]" set:html={bodyHtml}></div>
+							<aside class="lg:sticky lg:top-4 lg:self-start" aria-label="Share this article">
+								<div class="premium-panel p-6">
+									<p class="text-sm font-semibold tracking-[0.12em] uppercase text-[var(--color-heading)]">
+										Share
+									</p>
+									<p class="mt-2 text-sm leading-6 text-[var(--color-text-muted)]">
+										Pass this guide to another fleet operator who may value it.
+									</p>
+									<ShareLinks url={articleUrl} title={post.title} />
+								</div>
+							</aside>
+						</div>
+					</div>
+
+					<section class="scrolling-section section-shell" aria-labelledby="post-nav-heading">
+						<div class="container-shell max-w-6xl">
+							<h2 id="post-nav-heading" class="sr-only">Continue reading</h2>
+							<ul class="grid list-none gap-5 p-0 md:grid-cols-2">
+								{prevPost && (
+									<li>
+										<a href={`/blogs/${prevPost.slug}/`} class="premium-panel block h-full p-6 no-underline">
+											<p class="text-xs font-bold uppercase tracking-[0.14em] text-[var(--color-text-muted)]">
+												Previous article
+											</p>
+											<p class="mt-3 text-lg font-bold leading-7 text-[var(--color-heading)]">
+												{prevPost.title}
+											</p>
+										</a>
+									</li>
+								)}
+								{nextPost && (
+									<li>
+										<a href={`/blogs/${nextPost.slug}/`} class="premium-panel block h-full p-6 no-underline md:text-right">
+											<p class="text-xs font-bold uppercase tracking-[0.14em] text-[var(--color-text-muted)]">
+												Next article
+											</p>
+											<p class="mt-3 text-lg font-bold leading-7 text-[var(--color-heading)]">
+												{nextPost.title}
+											</p>
+										</a>
+									</li>
+								)}
+							</ul>
+						</div>
+					</section>
+
+					{
+						relatedCards.length > 0 && (
+							<section class="scrolling-section section-shell" data-surface="muted" aria-labelledby="related-heading">
+								<div class="container-shell max-w-6xl">
+									<p class="section-kicker">Keep reading</p>
+									<h2 id="related-heading" class="section-title mt-5">Related articles</h2>
+									<ul class="mt-10 grid list-none gap-5 p-0 md:grid-cols-3">
+										{
+											relatedCards.map((relPost) => (
+												<li class="premium-panel">
+													<a href={`/blogs/${relPost.slug}/`} class="block h-full p-6 no-underline">
+														{relPost.categories?.name && (
+															<p class="text-xs font-bold uppercase tracking-[0.14em] text-[var(--color-text-muted)]">
+																{relPost.categories.name}
+															</p>
+														)}
+														<p class="mt-3 text-lg font-bold leading-7 text-[var(--color-heading)]">
+															{relPost.title}
+														</p>
+														<p class="mt-3 text-sm leading-6 text-[var(--color-text-muted)]">
+															{relPost.excerpt}
+														</p>
+													</a>
+												</li>
+											))
+										}
+									</ul>
+								</div>
+							</section>
+						)
+					}
+
+					<CommentSection postId={post.id} postSlug={post.slug} comments={comments} />
+				</>
+			)
+		}
+
+		{
+			/* When the article shell rendered but there's no real post body,
+			 * don't render the CommentSection component. It would display a
+			 * comment form and invite readers to comment on a post that
+			 * doesn't exist in the database.
+			 */
+			postResult.status !== "ok" && (
+				<div class="section-shell" data-surface="muted">
+					<div class="container-shell max-w-4xl">
+						<div class="premium-panel p-9">
+							<h2 class="text-xl font-bold tracking-[-0.03em] text-[var(--color-heading)]">
+								Comments are disabled for this URL
+							</h2>
+							<p class="mt-3 text-sm leading-7 text-[var(--color-text-muted)]">
+								This article URL does not currently correspond to a published post in the
+								database. Once the blog CMS is online and a post exists at this address,
+								readers will be able to comment on it normally.
+							</p>
+							<div class="mt-6 flex flex-wrap gap-3">
+								<a href="/blogs/" class="primary-button cursor-pointer">Back to the blog index</a>
+								<a href="/#contact" class="secondary-button cursor-pointer">Contact support</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			)
+		}
+	</article>
+</BaseLayout>

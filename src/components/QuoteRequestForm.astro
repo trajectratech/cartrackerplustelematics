@@ -1,0 +1,345 @@
+---
+import SelectField from "./SelectField.astro";
+import {
+	quoteServiceOptions,
+	vehicleCountOptions,
+	vehicleTypeOptions,
+} from "../utils/quote";
+
+export interface Props {
+	formId?: string;
+	prefillService?: string;
+	sourcePage?: string;
+}
+
+const formId = Astro.props.formId ?? "quote-request-form";
+const prefillService = Astro.props.prefillService ?? "";
+const sourcePage = Astro.props.sourcePage ?? "website";
+---
+
+<form
+	id={formId}
+	method="post"
+	action="/api/quote/"
+	class="grid gap-5"
+	data-quote-form
+	data-default-service={prefillService}
+	novalidate
+>
+	<input type="hidden" name="sourcePage" value={sourcePage} />
+	<input type="hidden" name="formStartedAt" value="" data-form-started-at />
+	<input type="hidden" name="referralContext" value={prefillService} />
+
+	<div style="position: absolute; left: -9999px;" aria-hidden="true">
+		<label for={`${formId}-website`}>Website</label>
+		<input id={`${formId}-website`} type="text" name="website" tabindex="-1" autocomplete="off" />
+	</div>
+
+	<div
+		data-form-status
+		class="hidden rounded-[1.2rem] border px-4 py-3 text-sm leading-7"
+		role="status"
+		aria-live="polite"
+		tabindex="-1"
+	></div>
+
+	<div class="grid gap-5 sm:grid-cols-2">
+		<div class="grid gap-2">
+			<label class="text-sm font-semibold text-[var(--color-heading)]" for={`${formId}-fullName`}>
+				Full Name *
+			</label>
+			<input
+				id={`${formId}-fullName`}
+				name="fullName"
+				type="text"
+				autocomplete="name"
+				required
+				class="min-h-13 rounded-[1rem] border px-4 py-3 text-sm"
+				style="border-color: var(--border-subtle); background: color-mix(in srgb, var(--surface-base) 98%, transparent);"
+				aria-describedby={`${formId}-fullName-error`}
+			/>
+			<p id={`${formId}-fullName-error`} data-error-for="fullName" class="text-sm text-[var(--color-error)]"></p>
+		</div>
+
+		<div class="grid gap-2">
+			<label class="text-sm font-semibold text-[var(--color-heading)]" for={`${formId}-phoneNumber`}>
+				Phone Number *
+			</label>
+			<input
+				id={`${formId}-phoneNumber`}
+				name="phoneNumber"
+				type="tel"
+				autocomplete="tel"
+				inputmode="tel"
+				required
+				class="min-h-13 rounded-[1rem] border px-4 py-3 text-sm"
+				style="border-color: var(--border-subtle); background: color-mix(in srgb, var(--surface-base) 98%, transparent);"
+				aria-describedby={`${formId}-phoneNumber-error`}
+			/>
+			<p id={`${formId}-phoneNumber-error`} data-error-for="phoneNumber" class="text-sm text-[var(--color-error)]"></p>
+		</div>
+
+		<div class="grid gap-2">
+			<label class="text-sm font-semibold text-[var(--color-heading)]" for={`${formId}-emailAddress`}>
+				Email Address *
+			</label>
+			<input
+				id={`${formId}-emailAddress`}
+				name="emailAddress"
+				type="email"
+				autocomplete="email"
+				required
+				class="min-h-13 rounded-[1rem] border px-4 py-3 text-sm"
+				style="border-color: var(--border-subtle); background: color-mix(in srgb, var(--surface-base) 98%, transparent);"
+				aria-describedby={`${formId}-emailAddress-error`}
+			/>
+			<p id={`${formId}-emailAddress-error`} data-error-for="emailAddress" class="text-sm text-[var(--color-error)]"></p>
+		</div>
+
+		<div class="grid gap-2">
+			<label class="text-sm font-semibold text-[var(--color-heading)]" for={`${formId}-companyName`}>
+				Company Name (Optional)
+			</label>
+			<input
+				id={`${formId}-companyName`}
+				name="companyName"
+				type="text"
+				autocomplete="organization"
+				class="min-h-13 rounded-[1rem] border px-4 py-3 text-sm"
+				style="border-color: var(--border-subtle); background: color-mix(in srgb, var(--surface-base) 98%, transparent);"
+				aria-describedby={`${formId}-companyName-error`}
+			/>
+			<p id={`${formId}-companyName-error`} data-error-for="companyName" class="text-sm text-[var(--color-error)]"></p>
+		</div>
+	</div>
+
+	<div class="grid gap-5 sm:grid-cols-2">
+		<div class="grid gap-2">
+			<label class="text-sm font-semibold text-[var(--color-heading)]" for={`${formId}-location`}>
+				Location (State & City) *
+			</label>
+			<input
+				id={`${formId}-location`}
+				name="location"
+				type="text"
+				autocomplete="address-level2"
+				required
+				class="min-h-13 rounded-[1rem] border px-4 py-3 text-sm"
+				style="border-color: var(--border-subtle); background: color-mix(in srgb, var(--surface-base) 98%, transparent);"
+				aria-describedby={`${formId}-location-error`}
+			/>
+			<p id={`${formId}-location-error`} data-error-for="location" class="text-sm text-[var(--color-error)]"></p>
+		</div>
+
+		<SelectField
+			id={`${formId}-serviceRequired`}
+			name="serviceRequired"
+			label="Service Required *"
+			placeholder="Select a service"
+			describedBy={`${formId}-serviceRequired-error`}
+			required={true}
+			selectedValue={prefillService}
+			options={quoteServiceOptions.map((option) => ({ value: option, label: option }))}
+		/>
+
+		<SelectField
+			id={`${formId}-vehicleType`}
+			name="vehicleType"
+			label="Vehicle Type *"
+			placeholder="Select vehicle type"
+			describedBy={`${formId}-vehicleType-error`}
+			required={true}
+			options={vehicleTypeOptions.map((option) => ({ value: option, label: option }))}
+		/>
+
+		<SelectField
+			id={`${formId}-numberOfVehicles`}
+			name="numberOfVehicles"
+			label="Number of Vehicles *"
+			placeholder="Select a range"
+			describedBy={`${formId}-numberOfVehicles-error`}
+			required={true}
+			options={vehicleCountOptions.map((option) => ({ value: option, label: option }))}
+		/>
+	</div>
+
+	<div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+		<p class="text-sm leading-7 text-[var(--color-text-muted)]">
+			Prefer a faster conversation? You can also continue on WhatsApp after submitting.
+		</p>
+		<button
+			type="submit"
+			data-submit-button
+			data-button
+			class="primary-button cursor-pointer"
+		>
+			Submit Quote Request
+		</button>
+	</div>
+</form>
+
+<script is:inline>
+	(() => {
+		const currentScript = document.currentScript;
+		const form = currentScript?.previousElementSibling;
+		if (!(form instanceof HTMLFormElement)) return;
+
+		const startedAtField = form.querySelector("[data-form-started-at]");
+		const status = form.querySelector("[data-form-status]");
+		const submitButton = form.querySelector("[data-submit-button]");
+		const defaultService = form.dataset.defaultService || "";
+		if (startedAtField instanceof HTMLInputElement) {
+			startedAtField.value = String(Date.now());
+		}
+
+		const errorMap = new Map();
+		form.querySelectorAll("[data-error-for]").forEach((node) => {
+			const field = node.getAttribute("data-error-for");
+			if (field) errorMap.set(field, node);
+		});
+
+		const showStatus = (message, tone, moveFocus) => {
+			if (!(status instanceof HTMLElement)) return;
+			status.textContent = message;
+			status.classList.remove("hidden");
+			if (moveFocus) status.focus();
+			if (tone === "success") {
+				status.style.borderColor = "color-mix(in srgb, var(--color-success) 30%, transparent)";
+				status.style.background = "color-mix(in srgb, var(--color-success) 10%, transparent)";
+				status.style.color = "var(--color-heading)";
+			} else {
+				status.style.borderColor = "color-mix(in srgb, var(--color-error) 28%, transparent)";
+				status.style.background = "color-mix(in srgb, var(--color-error) 9%, transparent)";
+				status.style.color = "var(--color-heading)";
+			}
+		};
+
+		const clearStatus = () => {
+			if (!(status instanceof HTMLElement)) return;
+			status.textContent = "";
+			status.classList.add("hidden");
+		};
+
+		const setFieldError = (name, message) => {
+			const field = form.elements.namedItem(name);
+			const errorNode = errorMap.get(name);
+			if (field instanceof HTMLElement) field.setAttribute("aria-invalid", message ? "true" : "false");
+			if (errorNode instanceof HTMLElement) errorNode.textContent = message || "";
+		};
+
+		const clearErrors = () => {
+			errorMap.forEach((_, key) => setFieldError(key, ""));
+		};
+
+		const validateField = (field) => {
+			if (!(field instanceof HTMLInputElement || field instanceof HTMLSelectElement)) {
+				return "";
+			}
+			if (field.checkValidity()) return "";
+			if (field.validity.valueMissing) return "This field is required.";
+			if (field.validity.typeMismatch) return "Please enter a valid value.";
+			return field.validationMessage || "Please check this field.";
+		};
+
+		const validateForm = () => {
+			let firstInvalid = null;
+			clearErrors();
+			const fields = [
+				"fullName",
+				"phoneNumber",
+				"emailAddress",
+				"companyName",
+				"location",
+				"serviceRequired",
+				"vehicleType",
+				"numberOfVehicles",
+			];
+
+			for (const name of fields) {
+				const field = form.elements.namedItem(name);
+				const message = validateField(field);
+				if (message) {
+					setFieldError(name, message);
+					if (!firstInvalid && field instanceof HTMLElement) {
+						firstInvalid = field;
+					}
+				}
+			}
+
+			if (firstInvalid) {
+				firstInvalid.focus();
+				return false;
+			}
+
+			return true;
+		};
+
+		form.addEventListener("submit", async (event) => {
+			event.preventDefault();
+			clearStatus();
+
+			if (!validateForm()) {
+				showStatus("Please correct the highlighted fields and try again.", "error");
+				return;
+			}
+
+			if (submitButton instanceof HTMLButtonElement) {
+				submitButton.disabled = true;
+				submitButton.textContent = "Sending...";
+			}
+
+			try {
+				const response = await fetch(form.action, {
+					method: "POST",
+					body: new FormData(form),
+					headers: {
+						Accept: "application/json",
+					},
+				});
+
+				const payload = await response.json().catch(() => null);
+
+				if (!response.ok) {
+					const fieldErrors = payload?.errors || {};
+					Object.entries(fieldErrors).forEach(([name, message]) => {
+						setFieldError(name, String(message));
+					});
+					const fallback =
+						"We could not submit your request right now. Please try again, or continue on WhatsApp.";
+					showStatus(payload?.message || fallback, "error", true);
+					return;
+				}
+
+				form.reset();
+				const serviceSelect = form.elements.namedItem("serviceRequired");
+				if (
+					defaultService &&
+					serviceSelect instanceof HTMLSelectElement
+				) {
+					serviceSelect.value = defaultService;
+				}
+				if (startedAtField instanceof HTMLInputElement) {
+					startedAtField.value = String(Date.now());
+				}
+
+				showStatus(
+					payload?.message ||
+						"Thanks, your quote request has been sent. We will be in touch shortly.",
+					"success",
+					true,
+				);
+			} catch (error) {
+				showStatus(
+					"We could not reach our server. Check your connection and try again, or continue on WhatsApp.",
+					"error",
+					true,
+				);
+			} finally {
+				if (submitButton instanceof HTMLButtonElement) {
+					submitButton.disabled = false;
+					submitButton.textContent = "Submit Quote Request";
+				}
+			}
+		});
+	})();
+</script>

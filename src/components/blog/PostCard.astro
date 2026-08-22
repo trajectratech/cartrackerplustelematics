@@ -1,0 +1,73 @@
+---
+import { getMediaSrcSet, getMediaUrl } from "../../lib/supabase";
+import { formatReadingTime, type BlogPost } from "../../lib/posts";
+
+export interface Props {
+	post: BlogPost;
+	eager?: boolean;
+}
+
+const { post, eager = false } = Astro.props;
+
+const imageUrl = getMediaUrl(post.featured_image_path, { width: 640 });
+const srcSet = getMediaSrcSet(post.featured_image_path);
+const publishedLabel = post.published_at
+	? new Date(post.published_at).toLocaleDateString("en-NG", {
+			year: "numeric",
+			month: "short",
+			day: "numeric",
+		})
+	: null;
+---
+
+<li class="premium-panel flex h-full flex-col overflow-hidden">
+	<article class="flex h-full flex-col">
+		{
+			imageUrl && (
+				<img
+					src={imageUrl}
+					srcset={srcSet}
+					sizes="(min-width: 1280px) 24rem, (min-width: 768px) 45vw, 92vw"
+					alt={post.featured_image_alt ?? ""}
+					width={post.featured_image_width ?? 640}
+					height={post.featured_image_height ?? 360}
+					class="aspect-[4/3] w-full object-cover"
+					loading={eager ? "eager" : "lazy"}
+					decoding="async"
+				/>
+			)
+		}
+
+		<div class="flex flex-1 flex-col p-7">
+			<p class="flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-text-muted)]">
+				{post.categories?.name && <span>{post.categories.name}</span>}
+				{post.categories?.name && <span aria-hidden="true">•</span>}
+				<span>{formatReadingTime(post.reading_minutes)}</span>
+				{
+					publishedLabel && (
+						<>
+							<span aria-hidden="true">•</span>
+							<time datetime={post.published_at!}>{publishedLabel}</time>
+						</>
+					)
+				}
+			</p>
+
+			<h2 class="mt-5 text-2xl font-bold tracking-[-0.04em] text-[var(--color-heading)]">
+				<a href={`/blogs/${post.slug}/`} class="no-underline">{post.title}</a>
+			</h2>
+
+			<p class="mt-4 flex-1 text-base leading-8 text-[var(--color-text-muted)]">
+				{post.excerpt}
+			</p>
+
+			<a
+				href={`/blogs/${post.slug}/`}
+				class="mt-6 inline-flex items-center gap-2 text-sm font-semibold no-underline"
+			>
+				Read article<span class="sr-only">: {post.title}</span>
+				<span aria-hidden="true">→</span>
+			</a>
+		</div>
+	</article>
+</li>

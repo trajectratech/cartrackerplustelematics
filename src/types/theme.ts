@@ -9,6 +9,45 @@ export type SectionKey = `${SectionKeyEnum}`;
 export type SocialKey = `${SocialKeyEnum}`;
 export type BusinessKey = `${BusinessKeyEnum}`;
 
+export interface SeoLandingPageImage {
+	src: string;
+	alt: string;
+	width: number;
+	height: number;
+	caption?: string;
+}
+
+export interface SeoLandingPageSection {
+	title: string;
+	paragraphs?: string[];
+	bullets?: string[];
+}
+
+export interface SeoLandingPageFeatureGroup {
+	title: string;
+	items: string[];
+}
+
+export interface SeoLandingPagePackage {
+	name: string;
+	price?: string;
+	summary?: string;
+	features: string[];
+	idealFor?: string[];
+}
+
+export interface SeoLandingPageCallout {
+	title: string;
+	description: string;
+}
+
+export interface SeoLandingPageCalloutGroup {
+	title: string;
+	intro?: string;
+	items: SeoLandingPageCallout[];
+	tone?: "default" | "accent";
+}
+
 export interface SeoLandingPage {
 	slug: string;
 	pageTitle: string;
@@ -21,6 +60,26 @@ export interface SeoLandingPage {
 	secondaryKeywords?: string[];
 	benefits: string[];
 	faqs?: FAQ[];
+	pageCategory?: "location" | "service";
+	cardTitle?: string;
+	cardDescription?: string;
+	eyebrow?: string;
+	ogImage?: string;
+	ogImageAlt?: string;
+	ogImageWidth?: number;
+	ogImageHeight?: number;
+	images?: SeoLandingPageImage[];
+	sections?: SeoLandingPageSection[];
+	featureGroups?: SeoLandingPageFeatureGroup[];
+	packages?: SeoLandingPagePackage[];
+	processSteps?: string[];
+	audiences?: string[];
+	relatedSlugs?: string[];
+	quoteLabel?: string;
+	calloutGroups?: SeoLandingPageCalloutGroup[];
+	bestPractices?: { title: string; intro?: string; items: string[] };
+	relatedServiceNames?: { title: string; intro?: string; items: string[] };
+	closing?: { title: string; paragraphs: string[] };
 }
 
 export interface ThemeConfig {
@@ -274,23 +333,27 @@ export interface ThemeConfig {
 	};
 	seo?: {
 		siteName?: string;
-		aiSummary?: string[];
-		serviceAreas?: string[];
-		targetKeywords?: string[];
-		defaultOgImage?: string;
-		ogImageAlt?: string;
+		siteAlternateName?: string;
 		siteLocale?: string;
+		siteCategory?: string;
+		defaultOgImage?: string;
+		defaultOgImageWidth?: number;
+		defaultOgImageHeight?: number;
+		ogImageAlt?: string;
 		twitterHandle?: string;
 		manifest?: {
 			name?: string;
 			shortName?: string;
-			themeColor?: string;
 			backgroundColor?: string;
-			display?: string;
+			themeColor?: string;
+			display?: "standalone" | "minimal-ui" | "browser" | "fullscreen";
 		};
+		aiSummary?: string[];
+		serviceAreas?: string[];
+		targetKeywords?: string[];
+		landingPages?: SeoLandingPage[];
 		pageTitle?: string;
 		metaDescription?: string;
-		landingPages?: SeoLandingPage[];
 		structuredData?: {
 			type: BusinessKey;
 			schemaJson: any;

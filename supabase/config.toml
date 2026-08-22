@@ -1,0 +1,10 @@
+# Supabase configuration stub.
+# Install the Supabase CLI to use local dev:
+#   brew install supabase/tap/supabase
+#   supabase init   (if you need a project-local config)
+#   supabase link   (to bind to the remote project)
+#   supabase db push (applies migrations in migrations/)
+
+project_id = "ctpt"
+api = { schemas = ["public", "storage"] }
+db = { port = 54322, shadow_port = 54320 }
