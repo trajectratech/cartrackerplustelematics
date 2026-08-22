@@ -10,6 +10,7 @@ import { quoteServiceOptions } from "../utils/quote";
 
 const data = mainJson as ThemeConfig;
 
+export const prerender = true;
 export function getStaticPaths() {
 	const theme = mainJson as ThemeConfig;
 	return (theme.seo?.landingPages ?? []).map((page) => ({
