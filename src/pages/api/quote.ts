@@ -106,10 +106,10 @@ export async function POST({ request, clientAddress }: APIContext) {
 			text: email.text,
 			html: email.html,
 			headers: {
-				"X-CTPT-Lead-Type": "quote-request",
-				"X-CTPT-Service": validation.data.serviceRequired,
-				"X-CTPT-Vehicle-Type": validation.data.vehicleType,
-				"X-CTPT-Source-Page": validation.data.sourcePage,
+				"X-Car Tracker Plus Telematics-Lead-Type": "quote-request",
+				"X-Car Tracker Plus Telematics-Service": validation.data.serviceRequired,
+				"X-Car Tracker Plus Telematics-Vehicle-Type": validation.data.vehicleType,
+				"X-Car Tracker Plus Telematics-Source-Page": validation.data.sourcePage,
 			},
 		});
 

@@ -125,7 +125,7 @@ export function validateQuoteSubmission(
 }
 
 export function getQuoteEmailParts(payload: QuoteSubmission) {
-	const subject = `[CTPT Estimate] ${payload.serviceRequired} • ${payload.fullName} • ${payload.location}`;
+	const subject = `[Car Tracker Plus Telematics Estimate] ${payload.serviceRequired} • ${payload.fullName} • ${payload.location}`;
 	const structuredPayload = JSON.stringify(payload, null, 2);
 
 	const text = [

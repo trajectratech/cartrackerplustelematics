@@ -24,7 +24,7 @@ const RATE_MAX_COMMENTS = 3;
 
 async function hashIp(ip: string | null) {
 	if (!ip) return null;
-	const salt = import.meta.env.COMMENT_IP_SALT || "ctpt-default-salt";
+	const salt = import.meta.env.COMMENT_IP_SALT || "Car Tracker Plus Telematics-default-salt";
 	const bytes = new TextEncoder().encode(`${salt}:${ip}`);
 	const digest = await crypto.subtle.digest("SHA-256", bytes);
 	return [...new Uint8Array(digest)].map((b) => b.toString(16).padStart(2, "0")).join("");

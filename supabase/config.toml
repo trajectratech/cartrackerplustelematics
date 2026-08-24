@@ -5,6 +5,6 @@
 #   supabase link   (to bind to the remote project)
 #   supabase db push (applies migrations in migrations/)
 
-project_id = "ctpt"
+project_id = "Car Tracker Plus Telematics"
 api = { schemas = ["public", "storage"] }
 db = { port = 54322, shadow_port = 54320 }

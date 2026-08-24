@@ -3,7 +3,7 @@ import type { SeoLandingPage } from "../types/theme";
 export const seoPages: SeoLandingPage[] = [
 	{
 		slug: "vehicle-tracking-abuja",
-		pageTitle: "Vehicle Tracking in Abuja | GPS & Fleet Telematics by CTPT",
+		pageTitle: "Vehicle Tracking in Abuja | GPS & Fleet Telematics by Car Tracker Plus Telematics",
 		metaDescription:
 			"Top-tier vehicle tracking and telematics installations across Abuja. Car Tracker Plus Telematics delivers discreet GPS fitting, fleet dashboards, dashcam pairing and on-site setup for private cars, VIP convoys, corporate fleets and logistics operators in the FCT.",
 		headline: "Discreet Vehicle Tracking and Telematics Built for Abuja Roads",
@@ -56,7 +56,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Fleet Pool Supervision for Abuja Organisations",
 				paragraphs: [
 					"Government quarters, foreign missions, corporate headquarters, NGO field offices and multilateral institutions all maintain vehicle pools inside the FCT. For these operators the central challenge is not usually theft — it is traceability: confirming which driver took which unit out, where they paused along the route, how long the stop lasted and whether assigned speed ceilings held for urban streets and intercity highway segments alike.",
-					"CTPT's fleet supervisor console presents the entire pool on a single map pane. Every vehicle displays its present coordinates, ignition status and instantaneous travel speed. Any trip can be replayed across a chosen date window, weekly operational summaries export in spreadsheet-ready format, and custom thresholds govern idle-duration, stop-length and route-drift flags.",
+					"Car Tracker Plus Telematics's fleet supervisor console presents the entire pool on a single map pane. Every vehicle displays its present coordinates, ignition status and instantaneous travel speed. Any trip can be replayed across a chosen date window, weekly operational summaries export in spreadsheet-ready format, and custom thresholds govern idle-duration, stop-length and route-drift flags.",
 				],
 				bullets: [
 					"Pool-wide dashboard for corporate, diplomatic and government vehicle supervisors",
@@ -82,7 +82,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Executive and Principal Vehicle Monitoring",
 				paragraphs: [
 					"Principal transport inside Abuja demands a stricter deployment class than consumer tracking. The hardware must disappear into the vehicle structure — no wiring along the dash, no obvious roof or windscreen antenna, no obvious plug-in device that a driver or passenger might comment on. Access logs, alert routing and historical records must stay within a very small circle of cleared personnel.",
-					"CTPT treats executive security as a distinct deployment category. Hardware selections favour concealability first. Cabling routes behind interior trim panels. Notifications flow to a dedicated desk rather than a shared fleet inbox. The chauffeur executes their normal duties without granular visibility into the monitoring scope, while the principal receives exactly the visibility required.",
+					"Car Tracker Plus Telematics treats executive security as a distinct deployment category. Hardware selections favour concealability first. Cabling routes behind interior trim panels. Notifications flow to a dedicated desk rather than a shared fleet inbox. The chauffeur executes their normal duties without granular visibility into the monitoring scope, while the principal receives exactly the visibility required.",
 				],
 				bullets: [
 					"Fully hidden fitting with zero visible dashboard elements on principal vehicles",
@@ -107,7 +107,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "On-Site Fitting Inside the FCT",
 				paragraphs: [
-					"Every deployment begins with a short discovery conversation: we confirm vehicle category, the monitoring outcomes you are actually trying to achieve, and whether the installation falls under the private, executive-security or fleet umbrella. A CTPT technician then travels to your Abuja address — whether that is a home compound, office car park, school premises, hotel parking or an approved workshop. You are never asked to drop the vehicle off at a remote location.",
+					"Every deployment begins with a short discovery conversation: we confirm vehicle category, the monitoring outcomes you are actually trying to achieve, and whether the installation falls under the private, executive-security or fleet umbrella. A Car Tracker Plus Telematics technician then travels to your Abuja address — whether that is a home compound, office car park, school premises, hotel parking or an approved workshop. You are never asked to drop the vehicle off at a remote location.",
 					"A standard fitting occupies roughly one to one and a half hours per vehicle. Cabling tucks behind trim panels rather than crossing the dashboard. Before departing the site the technician walks you through the mobile app, confirms every alert channel with a live test, and calibrates the first batch of virtual perimeters, notification preferences and any remote-disable eligibility. Afterwards the FCT after-sales desk handles configuration adjustments and troubleshooting enquiries.",
 				],
 				bullets: [
@@ -230,7 +230,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "On-site fitting across the capital districts",
 						description:
-							"CTPT technicians travel directly to Maitama, Wuse, Garki, Asokoro, Gwarinpa, Lugbe and surrounding areas — the vehicle never needs to leave your compound or car park for the fitting.",
+							"Car Tracker Plus Telematics technicians travel directly to Maitama, Wuse, Garki, Asokoro, Gwarinpa, Lugbe and surrounding areas — the vehicle never needs to leave your compound or car park for the fitting.",
 					},
 					{
 						title: "Discretion as a default standard",
@@ -261,7 +261,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "Monitoring only works if the driver helps",
 						description:
-							"Any tracker fitted by CTPT ties directly into the vehicle circuits. Unplugging it or cutting power without authorisation immediately raises a tamper flag on premium and fleet specifications — driver cooperation is not required for the system to operate.",
+							"Any tracker fitted by Car Tracker Plus Telematics ties directly into the vehicle circuits. Unplugging it or cutting power without authorisation immediately raises a tamper flag on premium and fleet specifications — driver cooperation is not required for the system to operate.",
 					},
 					{
 						title: "Every tracker on the market performs the same way",
@@ -306,7 +306,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "What price range should I expect for a professionally fitted tracker in Abuja?",
 				answer:
-					"Entry-level professionally installed live-position setups typically begin around ₦70,000, while advanced telematics, fleet pool management and executive security specifications run into the mid-hundreds of thousands depending on hardware tier, activated features and vehicle count. CTPT issues a fully itemised proposal before any fitting begins so there are no unexpected charges.",
+					"Entry-level professionally installed live-position setups typically begin around ₦70,000, while advanced telematics, fleet pool management and executive security specifications run into the mid-hundreds of thousands depending on hardware tier, activated features and vehicle count. Car Tracker Plus Telematics issues a fully itemised proposal before any fitting begins so there are no unexpected charges.",
 			},
 			{
 				question: "Will a technician come to my home or office compound?",
@@ -331,12 +331,12 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "Do you support fleet operators with multiple vehicles?",
 				answer:
-					"Fleet supervision is a core CTPT capability encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern summaries, idle-time visibility, speed ceilings and optional fuel sensing. We work with corporate pools, logistics operators, school bus teams and staff-transport organisations throughout the FCT.",
+					"Fleet supervision is a core Car Tracker Plus Telematics capability encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern summaries, idle-time visibility, speed ceilings and optional fuel sensing. We work with corporate pools, logistics operators, school bus teams and staff-transport organisations throughout the FCT.",
 			},
 			{
 				question: "Can dashcams be fitted alongside the tracking platform?",
 				answer:
-					"Absolutely. We fit single-lens, dual-lens road-plus-cabin and AI-enabled dashcam systems that bind directly into the CTPT telematics platform. Position data and incident video appear on the same screen, which is particularly valuable for fleet incident review.",
+					"Absolutely. We fit single-lens, dual-lens road-plus-cabin and AI-enabled dashcam systems that bind directly into the Car Tracker Plus Telematics telematics platform. Position data and incident video appear on the same screen, which is particularly valuable for fleet incident review.",
 			},
 			{
 				question: "Is fuel-level monitoring part of the platform?",
@@ -347,7 +347,7 @@ export const seoPages: SeoLandingPage[] = [
 		relatedServiceNames: {
 			title: "Additional Abuja deployments bundled with tracking",
 			intro:
-				"A significant number of CTPT Abuja clients stack tracking alongside complementary vehicle systems. The combinations below are the ones that most rapidly demonstrate a measurable return.",
+				"A significant number of Car Tracker Plus Telematics Abuja clients stack tracking alongside complementary vehicle systems. The combinations below are the ones that most rapidly demonstrate a measurable return.",
 			items: [
 				"AI dashcam professional fitting",
 				"Fuel-level sensing platforms",
@@ -359,7 +359,7 @@ export const seoPages: SeoLandingPage[] = [
 		closing: {
 			title: "Schedule On-Site Vehicle Tracking Installation in Abuja",
 			paragraphs: [
-				"Abuja is a capital of diplomatic compounds, corporate headquarters, government compounds, private estates, school campuses and logistics junctions — and vehicles move through it in a very specific pattern. A tracker ordered generically online has never been calibrated for FCT districts, Abuja-Kaduna corridor travel or the discretion expected around principal and diplomatic transport. CTPT installations are matched to your specific district, vehicle category and FCT operating realities.",
+				"Abuja is a capital of diplomatic compounds, corporate headquarters, government compounds, private estates, school campuses and logistics junctions — and vehicles move through it in a very specific pattern. A tracker ordered generically online has never been calibrated for FCT districts, Abuja-Kaduna corridor travel or the discretion expected around principal and diplomatic transport. Car Tracker Plus Telematics installations are matched to your specific district, vehicle category and FCT operating realities.",
 				"Share with us where your vehicles park overnight, how many units are involved, and whether the deployment serves private use, executive security or a fleet operation. We will propose the right hardware tier and lock in an on-site Abuja installation date that fits your schedule.",
 			],
 		},
@@ -424,7 +424,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Oil-Service Fleet Visibility Across Rivers State",
 				paragraphs: [
 					"Contractors in the Rivers State oil and gas ecosystem operate Hilux pickups, utility vans and staff buses that require auditable proof of site entry, corridor compliance and driver-level accountability. Head office teams, field supervisors and health-safety-environment officers each need visibility tailored to their function rather than a generic one-size screen.",
-					"CTPT oil-service fleet setup binds site-level virtual perimeters, corridor flags and driver-specific reporting together. Every journey between base camp, supply depot and field location becomes replayable with automatic flags for unapproved corridor deviation or stops outside the expected schedule.",
+					"Car Tracker Plus Telematics oil-service fleet setup binds site-level virtual perimeters, corridor flags and driver-specific reporting together. Every journey between base camp, supply depot and field location becomes replayable with automatic flags for unapproved corridor deviation or stops outside the expected schedule.",
 				],
 				bullets: [
 					"Field-site virtual perimeters for flow stations, supply depots and contractor camps",
@@ -462,7 +462,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "On-Site Fitting Procedure in Port Harcourt",
 				paragraphs: [
-					"Every fitting begins with a short discovery conversation to understand vehicle class, deployment purpose and the target districts where the vehicles spend most of their time. A CTPT technician travels to your Trans Amadi office, GRA residence, port-adjacent warehouse or approved workshop — you are never required to move a truck or car to a central fitting location.",
+					"Every fitting begins with a short discovery conversation to understand vehicle class, deployment purpose and the target districts where the vehicles spend most of their time. A Car Tracker Plus Telematics technician travels to your Trans Amadi office, GRA residence, port-adjacent warehouse or approved workshop — you are never required to move a truck or car to a central fitting location.",
 					"Standard fittings run roughly sixty to ninety minutes per vehicle and include on-site alert confirmation and app orientation. Executive and large fleet deployments sometimes begin with a pilot vehicle so the configuration can be validated against operational reality before a phased rollout across the remainder.",
 				],
 				bullets: [
@@ -475,7 +475,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "Port Harcourt Areas Served On-Site",
 				paragraphs: [
-					"CTPT provides on-site vehicle tracking installation, calibration and after-sales support across metropolitan Port Harcourt and the commercial and industrial corridors listed below. For field sites outside the metro area we confirm travel logistics and site-access requirements at the time of booking.",
+					"Car Tracker Plus Telematics provides on-site vehicle tracking installation, calibration and after-sales support across metropolitan Port Harcourt and the commercial and industrial corridors listed below. For field sites outside the metro area we confirm travel logistics and site-access requirements at the time of booking.",
 				],
 				bullets: [
 					"GRA Phase 1 to 5",
@@ -576,12 +576,12 @@ export const seoPages: SeoLandingPage[] = [
 		],
 		calloutGroups: [
 			{
-				title: "Why Rivers State operators rely on CTPT",
+				title: "Why Rivers State operators rely on Car Tracker Plus Telematics",
 				items: [
 					{
 						title: "Trans Amadi and port-corridor reach",
 						description:
-							"CTPT technicians install at industrial premises in Trans Amadi, port access zones, GRA residential estates and sites along Ahoada Road and the East-West Road. There is no need to move a truck to a central workshop for fitting.",
+							"Car Tracker Plus Telematics technicians install at industrial premises in Trans Amadi, port access zones, GRA residential estates and sites along Ahoada Road and the East-West Road. There is no need to move a truck to a central workshop for fitting.",
 					},
 					{
 						title: "Oil-service fleet context built in",
@@ -591,7 +591,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "Journey data survives long-haul gaps",
 						description:
-							"Port Harcourt haulage corridors are long and variable. Supported CTPT hardware stores journey data locally whenever the network drops, then replays the full record once coverage resumes so operations never lose the route history they depend on.",
+							"Port Harcourt haulage corridors are long and variable. Supported Car Tracker Plus Telematics hardware stores journey data locally whenever the network drops, then replays the full record once coverage resumes so operations never lose the route history they depend on.",
 					},
 					{
 						title: "Fleet rollouts that scale cleanly",
@@ -657,17 +657,17 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "What is the typical price range for tracking installations in Port Harcourt?",
 				answer:
-					"Basic private-vehicle live-position installations in PH begin around ₦70,000, while fleet, oil-service and executive security specifications scale into the hundreds of thousands. CTPT finalises pricing transparently once we understand vehicle count, hardware class and the specific features required.",
+					"Basic private-vehicle live-position installations in PH begin around ₦70,000, while fleet, oil-service and executive security specifications scale into the hundreds of thousands. Car Tracker Plus Telematics finalises pricing transparently once we understand vehicle count, hardware class and the specific features required.",
 			},
 			{
 				question: "Can a technician install in Trans Amadi or Old GRA on-site?",
 				answer:
-					"Yes. CTPT technicians travel on-site across metropolitan Port Harcourt including Trans Amadi industrial, Old GRA, GRA Phase 1 through 5, D-Line, Rumuomasi, Rumuigbo and the main access corridors.",
+					"Yes. Car Tracker Plus Telematics technicians travel on-site across metropolitan Port Harcourt including Trans Amadi industrial, Old GRA, GRA Phase 1 through 5, D-Line, Rumuomasi, Rumuigbo and the main access corridors.",
 			},
 			{
 				question: "Do you support oil and gas contractor fleets specifically?",
 				answer:
-					"Absolutely. Contractor Hilux, pickup and utility fleets represent a central Rivers State use case. CTPT configures site-based virtual perimeters, corridor flags and permission-scoped dashboards so security, HSE, logistics and project teams each see only the slice of data relevant to their role.",
+					"Absolutely. Contractor Hilux, pickup and utility fleets represent a central Rivers State use case. Car Tracker Plus Telematics configures site-based virtual perimeters, corridor flags and permission-scoped dashboards so security, HSE, logistics and project teams each see only the slice of data relevant to their role.",
 			},
 			{
 				question: "Is fuel sensing an option for heavy truck fleets?",
@@ -682,7 +682,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "Is remote immobiliser hardware offered in PH installations?",
 				answer:
-					"Remote immobilisation is available on qualifying vehicles and packages that carry the appropriate hardware. CTPT confirms suitability during quotation because it depends on vehicle electrical architecture and the intended operating scenario.",
+					"Remote immobilisation is available on qualifying vehicles and packages that carry the appropriate hardware. Car Tracker Plus Telematics confirms suitability during quotation because it depends on vehicle electrical architecture and the intended operating scenario.",
 			},
 		],
 		relatedServiceNames: {
@@ -700,7 +700,7 @@ export const seoPages: SeoLandingPage[] = [
 		closing: {
 			title: "Schedule Tracking Installation in Port Harcourt",
 			paragraphs: [
-				"Port Harcourt movement is shaped by Trans Amadi industry, port logistics, long haulage corridors and contractor-fleet operations. A generic consumer tracker ordered online has never been set up for Rivers State realities. CTPT deployments are matched to your corridor, your site access pattern and your fleet workflow from day one.",
+				"Port Harcourt movement is shaped by Trans Amadi industry, port logistics, long haulage corridors and contractor-fleet operations. A generic consumer tracker ordered online has never been set up for Rivers State realities. Car Tracker Plus Telematics deployments are matched to your corridor, your site access pattern and your fleet workflow from day one.",
 				"Tell us the number of vehicles involved, whether the deployment serves private, executive, logistics or oil-service contractor use, and the districts or sites where units park and operate. We will propose the appropriate hardware tier and confirm an on-site installation schedule in Port Harcourt that respects your operations.",
 			],
 		},
@@ -752,7 +752,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Private Car Protection for Ibadan Residential Estates",
 				paragraphs: [
 					"Homeowners in Ibadan occupy estates spread across Bodija, Jericho, Kolapo Ishola, Oluyole, Akobo, Ojoo, Monatan, Challenge and the new layouts stretching toward Ido and Ona-Ara. Vehicles parked overnight on compounds or at daytime market locations like Bodija Market, Dugbe or Ring Road face distinct risk profiles that generic one-size trackers fail to address.",
-					"CTPT configures every Ibadan private-vehicle setup with fast-response triggers matched to actual lifestyle patterns. Virtual perimeters enclose each residential compound, office building, market parking area and the Ibadan–Ife and Ibadan–Lagos highway interchange entry points. Any ignition outside approved hours or unexpected boundary crossing generates an instant alert.",
+					"Car Tracker Plus Telematics configures every Ibadan private-vehicle setup with fast-response triggers matched to actual lifestyle patterns. Virtual perimeters enclose each residential compound, office building, market parking area and the Ibadan–Ife and Ibadan–Lagos highway interchange entry points. Any ignition outside approved hours or unexpected boundary crossing generates an instant alert.",
 				],
 				bullets: [
 					"Estate-level virtual perimeters for Bodija, Jericho, Kolapo Ishola, Oluyole, Akobo and Ojoo",
@@ -778,7 +778,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Commercial Fleet and Dispatch Visibility",
 				paragraphs: [
 					"Ibadan's commercial sector spans FMCG distribution, beverage haulage, building-supply logistics, intercity passenger transport and last-mile parcel delivery radiating outward to Oyo, Ogbomoso, Ile-Ife, Oshogbo and Lagos. Dispatch managers need live inventory of every van and truck; accounts teams need auditable proof-of-visit records.",
-					"CTPT logistics configuration adds warehouse, depot, customer-site and motor-park virtual perimeters to the base tracking console. Each delivery captures stop timings automatically, vehicles lingering beyond SLA thresholds raise flags, and route archives provide replayable evidence for any customer enquiry.",
+					"Car Tracker Plus Telematics logistics configuration adds warehouse, depot, customer-site and motor-park virtual perimeters to the base tracking console. Each delivery captures stop timings automatically, vehicles lingering beyond SLA thresholds raise flags, and route archives provide replayable evidence for any customer enquiry.",
 				],
 				bullets: [
 					"Warehouse and depot boundary zones across Challenge, Oluyole Industrial and Ring Road",
@@ -803,7 +803,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "On-Site Fitting Across Ibadan and Oyo State",
 				paragraphs: [
-					"Each engagement starts with a brief discovery call: we confirm vehicle type, the actual outcomes you want from tracking, and whether the deployment falls under private, campus, executive or fleet categories. A CTPT technician then travels directly to your Ibadan address — home compound, office car park, campus premises, hotel parking or approved workshop. You never need to drive the vehicle to a remote fitting centre.",
+					"Each engagement starts with a brief discovery call: we confirm vehicle type, the actual outcomes you want from tracking, and whether the deployment falls under private, campus, executive or fleet categories. A Car Tracker Plus Telematics technician then travels directly to your Ibadan address — home compound, office car park, campus premises, hotel parking or approved workshop. You never need to drive the vehicle to a remote fitting centre.",
 					"Standard installations take roughly sixty to ninety minutes per vehicle. Cabling tucks behind trim panels for a clean finish. Before leaving the site the technician walks every authorised user through the mobile app, confirms alert channels with live test triggers, and calibrates the initial batch of virtual perimeters and notification preferences. Afterwards the Ibadan after-sales desk handles adjustments and troubleshooting.",
 				],
 				bullets: [
@@ -926,7 +926,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "On-site reach across the Ibadan sprawl",
 						description:
-							"CTPT technicians install directly at Bodija, Jericho, Oluyole, Akobo, Ojoo, Challenge, Dugbe and Ring Road locations without requiring a trip to a central workshop — the vehicle stays exactly where it normally parks.",
+							"Car Tracker Plus Telematics technicians install directly at Bodija, Jericho, Oluyole, Akobo, Ojoo, Challenge, Dugbe and Ring Road locations without requiring a trip to a central workshop — the vehicle stays exactly where it normally parks.",
 					},
 					{
 						title: "Campus transport context built in",
@@ -957,7 +957,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "The driver must cooperate for tracking to function",
 						description:
-							"Every CTPT installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver cooperation is irrelevant to operation.",
+							"Every Car Tracker Plus Telematics installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver cooperation is irrelevant to operation.",
 					},
 					{
 						title: "All tracker brands deliver identical performance",
@@ -1002,17 +1002,17 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "What price bracket should I expect for a professionally installed tracker in Ibadan?",
 				answer:
-					"Entry-level live-position professionally fitted installations in Ibadan typically begin around ₦70,000. Advanced telematics, fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware class, activated features and total vehicle count. CTPT provides a fully itemised written proposal before any fitting commences.",
+					"Entry-level live-position professionally fitted installations in Ibadan typically begin around ₦70,000. Advanced telematics, fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware class, activated features and total vehicle count. Car Tracker Plus Telematics provides a fully itemised written proposal before any fitting commences.",
 			},
 			{
-				question: "Does a CTPT technician travel to Bodija or Jericho on-site?",
+				question: "Does a Car Tracker Plus Telematics technician travel to Bodija or Jericho on-site?",
 				answer:
 					"Without exception. We dispatch technicians directly to every Ibadan metro district including Bodija, Jericho, Kolapo Ishola, Oluyole, Akobo, Ojoo, Challenge, Dugbe, Ring Road, Eleyele and Agodi — plus approved Oyo State towns such as Oyo and Ogbomoso. Each vehicle is fitted at its normal parking location.",
 			},
 			{
 				question: "Can I follow the vehicle from my personal smartphone?",
 				answer:
-					"Every supported CTPT tracker ships with a companion mobile application displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use.",
+					"Every supported Car Tracker Plus Telematics tracker ships with a companion mobile application displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use.",
 			},
 			{
 				question: "Does one login support multiple different vehicles?",
@@ -1027,12 +1027,12 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "Do you support commercial fleet operators with many vehicles?",
 				answer:
-					"Fleet supervision is a core CTPT speciality encompassing pool-wide dashboards, perimeter zones, driver-pattern analysis, idle-duration visibility, speed thresholds and optional fuel sensing. We actively serve FMCG distribution fleets, campus bus teams, corporate pools and haulage operators across Ibadan and Oyo State.",
+					"Fleet supervision is a core Car Tracker Plus Telematics speciality encompassing pool-wide dashboards, perimeter zones, driver-pattern analysis, idle-duration visibility, speed thresholds and optional fuel sensing. We actively serve FMCG distribution fleets, campus bus teams, corporate pools and haulage operators across Ibadan and Oyo State.",
 			},
 			{
 				question: "Can dashcams be fitted alongside the telematics platform?",
 				answer:
-					"Certainly. We install single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the CTPT telematics console. Position data, speed readings and incident video all appear on the same screen, particularly valuable for fleet incident review.",
+					"Certainly. We install single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the Car Tracker Plus Telematics telematics console. Position data, speed readings and incident video all appear on the same screen, particularly valuable for fleet incident review.",
 			},
 			{
 				question: "Does the platform include fuel monitoring?",
@@ -1043,7 +1043,7 @@ export const seoPages: SeoLandingPage[] = [
 		relatedServiceNames: {
 			title: "Additional Ibadan systems bundled with tracking",
 			intro:
-				"A meaningful share of CTPT Ibadan accounts pair vehicle tracking with complementary systems that amplify return on investment. The combinations below consistently demonstrate measurable value most rapidly.",
+				"A meaningful share of Car Tracker Plus Telematics Ibadan accounts pair vehicle tracking with complementary systems that amplify return on investment. The combinations below consistently demonstrate measurable value most rapidly.",
 			items: [
 				"AI dashcam professional installation",
 				"Fuel-level sensing platforms",
@@ -1055,7 +1055,7 @@ export const seoPages: SeoLandingPage[] = [
 		closing: {
 			title: "Book On-Site Vehicle Tracking Installation in Ibadan",
 			paragraphs: [
-				"Ibadan is a city of sprawling residential estates, ancient commercial centres, major university campuses and busy intercity transport corridors linking the entire southwest. A generic online tracker has never been calibrated for Bodija market parking, UI campus bus routes, Oluyole industrial depots or the Ibadan–Lagos highway rhythm. CTPT deployments are matched to your exact district, vehicle class and Ibadan operating pattern from the first fitting.",
+				"Ibadan is a city of sprawling residential estates, ancient commercial centres, major university campuses and busy intercity transport corridors linking the entire southwest. A generic online tracker has never been calibrated for Bodija market parking, UI campus bus routes, Oluyole industrial depots or the Ibadan–Lagos highway rhythm. Car Tracker Plus Telematics deployments are matched to your exact district, vehicle class and Ibadan operating pattern from the first fitting.",
 				"Tell us where your vehicles normally park overnight, how many units are involved, and whether the deployment serves private use, campus transport, executive security or commercial fleet operations. We will recommend the correct hardware tier and lock in an on-site Ibadan installation date that works around your schedule.",
 			],
 		},
@@ -1109,7 +1109,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Private Vehicle Security for Benin Residential Estates",
 				paragraphs: [
 					"Benin City homeowners occupy estates scattered across GRA, Ogbeh, Airport Road, Siluko Road, New Benin, Benin-Agbor Road layouts and the new communities expanding toward Okhoro and Ugbowo. Cars parked overnight on family compounds or during daytime at Oba Market, New Benin Market or the various shopping plaza lots carry exposure patterns a generic tracker never anticipates.",
-					"CTPT private-vehicle configuration for Benin centres on rapid-catch alerts calibrated to actual living patterns. Virtual perimeters wrap each residential compound, workplace building, regular market stop and the Benin-Warri and Benin-Asaba highway interchange access points. Any ignition outside agreed hours or unscheduled boundary crossing generates an instant notification.",
+					"Car Tracker Plus Telematics private-vehicle configuration for Benin centres on rapid-catch alerts calibrated to actual living patterns. Virtual perimeters wrap each residential compound, workplace building, regular market stop and the Benin-Warri and Benin-Asaba highway interchange access points. Any ignition outside agreed hours or unscheduled boundary crossing generates an instant notification.",
 				],
 				bullets: [
 					"Compound-based virtual perimeters for GRA, Airport Road, Siluko, New Benin, Ogbeh and Ugbowo",
@@ -1135,7 +1135,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Haulage, Distribution and Logistics Visibility",
 				paragraphs: [
 					"Benin's commercial logistics sector spans petroleum-product haulage, FMCG distribution, building-material trucking, intercity passenger transport and last-mile parcel delivery radiating to Warri, Asaba, Onitsha, Auchi, Agbor and Lagos. Dispatch controllers need a live inventory of every van and truck; commercial teams need auditable proof-of-delivery records.",
-					"CTPT logistics overlay adds warehouse, depot, customer-premise and motor-park virtual perimeters to the standard tracking console. Every scheduled stop captures duration automatically, vehicles lingering beyond SLA parameters raise dispatch-screen flags, and journey archives deliver replayable evidence whenever customer queries arise.",
+					"Car Tracker Plus Telematics logistics overlay adds warehouse, depot, customer-premise and motor-park virtual perimeters to the standard tracking console. Every scheduled stop captures duration automatically, vehicles lingering beyond SLA parameters raise dispatch-screen flags, and journey archives deliver replayable evidence whenever customer queries arise.",
 				],
 				bullets: [
 					"Warehouse and depot boundary zones across industrial Siluko, Airport Road and New Benin layouts",
@@ -1160,7 +1160,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "On-Site Fitting Service Across Benin City",
 				paragraphs: [
-					"Every engagement commences with a short discovery discussion covering vehicle category, the specific monitoring outcomes you are targeting, and whether the deployment falls into the private, campus, executive or fleet category. A CTPT technician then travels directly to your Benin address — whether that is a GRA home compound, office car park, university campus, hotel parking or approved workshop. You are never required to move the vehicle to a remote fitting location.",
+					"Every engagement commences with a short discovery discussion covering vehicle category, the specific monitoring outcomes you are targeting, and whether the deployment falls into the private, campus, executive or fleet category. A Car Tracker Plus Telematics technician then travels directly to your Benin address — whether that is a GRA home compound, office car park, university campus, hotel parking or approved workshop. You are never required to move the vehicle to a remote fitting location.",
 					"A standard installation runs approximately sixty to ninety minutes per vehicle. Cabling tucks behind interior trim for a factory finish. Before departing the site the technician walks every authorised user through the mobile app, confirms alert channels with live test triggers, and calibrates the initial batch of virtual perimeters and notification preferences. The Benin after-sales desk handles subsequent adjustments and troubleshooting.",
 				],
 				bullets: [
@@ -1283,7 +1283,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "On-site reach across the Benin sprawl",
 						description:
-							"CTPT technicians install directly at GRA, Airport Road, Siluko, New Benin, Ugbowo, Ogbeh and Benin-Agbor Road locations without requiring travel to a central workshop — the vehicle stays parked where it normally lives.",
+							"Car Tracker Plus Telematics technicians install directly at GRA, Airport Road, Siluko, New Benin, Ugbowo, Ogbeh and Benin-Agbor Road locations without requiring travel to a central workshop — the vehicle stays parked where it normally lives.",
 					},
 					{
 						title: "Campus and school-bus context built in",
@@ -1314,7 +1314,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "Driver cooperation is required for monitoring",
 						description:
-							"Every CTPT installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver awareness or cooperation is irrelevant to system operation.",
+							"Every Car Tracker Plus Telematics installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver awareness or cooperation is irrelevant to system operation.",
 					},
 					{
 						title: "Every tracker brand performs identically",
@@ -1359,17 +1359,17 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "What price range applies to a professionally fitted tracker in Benin City?",
 				answer:
-					"Entry-level live-position professionally installed setups in Benin typically start around ₦70,000. Advanced telematics, fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware tier, activated features and total vehicle count. CTPT issues a fully itemised written proposal before any fitting commences.",
+					"Entry-level live-position professionally installed setups in Benin typically start around ₦70,000. Advanced telematics, fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware tier, activated features and total vehicle count. Car Tracker Plus Telematics issues a fully itemised written proposal before any fitting commences.",
 			},
 			{
 				question: "Does a technician install on-site at GRA or Airport Road?",
 				answer:
-					"Without exception. CTPT technicians travel on-site to every Benin metro district including GRA, Airport Road, Siluko, New Benin, Ogbeh, Ugbowo, Ekehuan, Ewato and Okhoro — plus approved Edo State towns such as Ekpoma, Auchi, Okada and Agbor. Each vehicle is fitted at its normal parking location.",
+					"Without exception. Car Tracker Plus Telematics technicians travel on-site to every Benin metro district including GRA, Airport Road, Siluko, New Benin, Ogbeh, Ugbowo, Ekehuan, Ewato and Okhoro — plus approved Edo State towns such as Ekpoma, Auchi, Okada and Agbor. Each vehicle is fitted at its normal parking location.",
 			},
 			{
 				question: "Can I monitor the vehicle from my personal smartphone?",
 				answer:
-					"Every supported CTPT tracker ships with a companion mobile app displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use whenever preferred.",
+					"Every supported Car Tracker Plus Telematics tracker ships with a companion mobile app displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use whenever preferred.",
 			},
 			{
 				question: "Does a single login handle multiple vehicles?",
@@ -1384,12 +1384,12 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "Do you support haulage and logistics fleets with many units?",
 				answer:
-					"Fleet supervision is a core CTPT speciality encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern analysis, idle-duration visibility, speed ceilings and optional fuel sensing. We actively serve petroleum haulage, FMCG distribution, campus bus and corporate pool operators across Benin and Edo State.",
+					"Fleet supervision is a core Car Tracker Plus Telematics speciality encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern analysis, idle-duration visibility, speed ceilings and optional fuel sensing. We actively serve petroleum haulage, FMCG distribution, campus bus and corporate pool operators across Benin and Edo State.",
 			},
 			{
 				question: "Can dashcams be integrated with the tracking platform?",
 				answer:
-					"Certainly. We fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the CTPT telematics console. Position data, travel speed and incident video all appear on the same screen, which is particularly valuable for fleet incident review.",
+					"Certainly. We fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the Car Tracker Plus Telematics telematics console. Position data, travel speed and incident video all appear on the same screen, which is particularly valuable for fleet incident review.",
 			},
 			{
 				question: "Does the platform support fuel monitoring?",
@@ -1400,7 +1400,7 @@ export const seoPages: SeoLandingPage[] = [
 		relatedServiceNames: {
 			title: "Additional Benin systems paired with tracking",
 			intro:
-				"A meaningful share of CTPT Benin accounts stack vehicle tracking with complementary systems that amplify measurable return on investment. The combinations below demonstrate value most rapidly.",
+				"A meaningful share of Car Tracker Plus Telematics Benin accounts stack vehicle tracking with complementary systems that amplify measurable return on investment. The combinations below demonstrate value most rapidly.",
 			items: [
 				"AI dashcam professional fitting",
 				"Fuel-level sensing platforms",
@@ -1412,7 +1412,7 @@ export const seoPages: SeoLandingPage[] = [
 		closing: {
 			title: "Schedule On-Site Vehicle Tracking Installation in Benin City",
 			paragraphs: [
-				"Benin City is a midwestern hub of historic royal districts, expanding residential layouts, major university campuses and strategic highway corridors reaching Warri, Asaba, Lagos and the southeast. A generic tracker ordered online has never been calibrated for Oba Market parking patterns, UNIBEN campus bus routes, Siluko industrial depots or the Benin-Warri haulage rhythm. CTPT deployments are matched to your exact district, vehicle category and Benin operating profile from the first fitting.",
+				"Benin City is a midwestern hub of historic royal districts, expanding residential layouts, major university campuses and strategic highway corridors reaching Warri, Asaba, Lagos and the southeast. A generic tracker ordered online has never been calibrated for Oba Market parking patterns, UNIBEN campus bus routes, Siluko industrial depots or the Benin-Warri haulage rhythm. Car Tracker Plus Telematics deployments are matched to your exact district, vehicle category and Benin operating profile from the first fitting.",
 				"Share with us where your vehicles normally park overnight, how many units are involved, and whether the deployment serves private use, campus transport, executive security or commercial fleet operations. We will recommend the correct hardware tier and lock in an on-site Benin City installation date that respects your schedule.",
 			],
 		},
@@ -1466,7 +1466,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Private Vehicle Protection for Abeokuta Estates",
 				paragraphs: [
 					"Abeokuta homeowners occupy layouts clustered around Ibara GRA, Oke-Mosan, Ijeun-Titun, Laderin, Oke-Ilugun, Asero and the new residential corridors extending toward Obafemi Owode. Vehicles parked on family compounds overnight or during daytime at Panseke Market, Itoku Market or shopping plaza lots carry exposure patterns a generic plug-in tracker never anticipates.",
-					"CTPT private-vehicle configuration for Abeokuta centres on rapid-detection triggers calibrated to actual daily routines. Virtual perimeters enclose each residential compound, workplace building, regular market stop and the Abeokuta–Lagos expressway interchange entry points. Any ignition outside agreed hours or unscheduled boundary crossing produces an instant alert.",
+					"Car Tracker Plus Telematics private-vehicle configuration for Abeokuta centres on rapid-detection triggers calibrated to actual daily routines. Virtual perimeters enclose each residential compound, workplace building, regular market stop and the Abeokuta–Lagos expressway interchange entry points. Any ignition outside agreed hours or unscheduled boundary crossing produces an instant alert.",
 				],
 				bullets: [
 					"Estate-level virtual perimeters for Ibara GRA, Oke-Mosan, Ijeun-Titun, Laderin and Asero",
@@ -1492,7 +1492,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Quarry, Haulage and Logistics Visibility",
 				paragraphs: [
 					"Abeokuta's commercial logistics backbone covers granite-quarry haulage, cement-truck movement from Ewekoro and Sagamu, FMCG distribution, intercity passenger transport and last-mile parcel delivery radiating to Lagos, Ibadan, Sagamu, Ijebu-Ode and Abeokuta border posts. Dispatch controllers need live inventory of every truck and van; commercial teams need auditable proof-of-delivery records.",
-					"CTPT logistics overlay adds quarry, cement-plant, warehouse, customer-premise and motor-park virtual perimeters to the standard tracking console. Each scheduled stop captures duration automatically, vehicles lingering beyond SLA thresholds raise dispatch flags, and journey archives deliver replayable evidence whenever customer disputes arise.",
+					"Car Tracker Plus Telematics logistics overlay adds quarry, cement-plant, warehouse, customer-premise and motor-park virtual perimeters to the standard tracking console. Each scheduled stop captures duration automatically, vehicles lingering beyond SLA thresholds raise dispatch flags, and journey archives deliver replayable evidence whenever customer disputes arise.",
 				],
 				bullets: [
 					"Quarry and cement-plant boundary zones at Ewekoro, Sagamu and Abeokuta industrial layouts",
@@ -1517,7 +1517,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "On-Site Fitting Procedure Across Abeokuta",
 				paragraphs: [
-					"Every engagement opens with a short discovery call covering vehicle category, the specific monitoring outcomes being targeted, and whether the deployment falls under private, campus, executive or fleet categories. A CTPT technician then travels directly to your Abeokuta address — whether that is an Ibara GRA home compound, office car park, FUNAAB campus, hotel parking or approved workshop. The vehicle never needs to be taken to a remote fitting location.",
+					"Every engagement opens with a short discovery call covering vehicle category, the specific monitoring outcomes being targeted, and whether the deployment falls under private, campus, executive or fleet categories. A Car Tracker Plus Telematics technician then travels directly to your Abeokuta address — whether that is an Ibara GRA home compound, office car park, FUNAAB campus, hotel parking or approved workshop. The vehicle never needs to be taken to a remote fitting location.",
 					"Standard installations run roughly sixty to ninety minutes per vehicle. Cabling tucks behind interior trim for a factory-grade finish. Before departing the site the technician walks every authorised user through the mobile app, confirms alert channels with live test triggers, and calibrates the initial batch of virtual perimeters and notification preferences. The Abeokuta after-sales desk handles subsequent adjustments and troubleshooting.",
 				],
 				bullets: [
@@ -1640,7 +1640,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "On-site reach across the Abeokuta sprawl",
 						description:
-							"CTPT technicians install directly at Ibara GRA, Oke-Mosan, Ijeun-Titun, Laderin, Asero and Panseke locations without requiring travel to a central workshop — the vehicle stays parked exactly where it normally lives.",
+							"Car Tracker Plus Telematics technicians install directly at Ibara GRA, Oke-Mosan, Ijeun-Titun, Laderin, Asero and Panseke locations without requiring travel to a central workshop — the vehicle stays parked exactly where it normally lives.",
 					},
 					{
 						title: "Quarry and haulage context built in",
@@ -1671,7 +1671,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "Driver awareness is necessary for monitoring",
 						description:
-							"Every CTPT installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver cooperation is irrelevant to system operation.",
+							"Every Car Tracker Plus Telematics installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver cooperation is irrelevant to system operation.",
 					},
 					{
 						title: "Every tracker on the market performs the same",
@@ -1716,17 +1716,17 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "What pricing bracket applies to a professionally fitted tracker in Abeokuta?",
 				answer:
-					"Entry-level live-position professionally installed setups in Abeokuta typically start around ₦70,000. Advanced telematics, fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware tier, activated features and total vehicle count. CTPT issues a fully itemised written proposal before any fitting commences.",
+					"Entry-level live-position professionally installed setups in Abeokuta typically start around ₦70,000. Advanced telematics, fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware tier, activated features and total vehicle count. Car Tracker Plus Telematics issues a fully itemised written proposal before any fitting commences.",
 			},
 			{
 				question: "Does a technician install on-site at Ibara GRA or Oke-Mosan?",
 				answer:
-					"Without exception. CTPT technicians travel on-site to every Abeokuta metro district including Ibara GRA, Oke-Mosan, Ijeun-Titun, Laderin, Asero, Panseke, Itoku and Oke-Ilugun — plus approved Ogun State towns such as Sagamu, Ijebu-Ode, Ota and Ago-Iwoye. Each vehicle is fitted at its normal parking location.",
+					"Without exception. Car Tracker Plus Telematics technicians travel on-site to every Abeokuta metro district including Ibara GRA, Oke-Mosan, Ijeun-Titun, Laderin, Asero, Panseke, Itoku and Oke-Ilugun — plus approved Ogun State towns such as Sagamu, Ijebu-Ode, Ota and Ago-Iwoye. Each vehicle is fitted at its normal parking location.",
 			},
 			{
 				question: "Can I follow the vehicle from my personal smartphone?",
 				answer:
-					"Every supported CTPT tracker ships with a companion mobile app displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use whenever preferred.",
+					"Every supported Car Tracker Plus Telematics tracker ships with a companion mobile app displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use whenever preferred.",
 			},
 			{
 				question: "Does a single login cover multiple vehicles?",
@@ -1741,12 +1741,12 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "Do you support quarry haulage and logistics fleets with many units?",
 				answer:
-					"Fleet supervision is a core CTPT speciality encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern analysis, idle-duration visibility, speed ceilings and optional fuel sensing. We actively serve granite and cement haulage, FMCG distribution, campus bus and corporate pool operators across Abeokuta and Ogun State.",
+					"Fleet supervision is a core Car Tracker Plus Telematics speciality encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern analysis, idle-duration visibility, speed ceilings and optional fuel sensing. We actively serve granite and cement haulage, FMCG distribution, campus bus and corporate pool operators across Abeokuta and Ogun State.",
 			},
 			{
 				question: "Can dashcams be integrated with the tracking platform?",
 				answer:
-					"Certainly. We fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the CTPT telematics console. Position data, travel speed and incident video all appear on the same screen, which is particularly valuable for fleet incident review.",
+					"Certainly. We fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the Car Tracker Plus Telematics telematics console. Position data, travel speed and incident video all appear on the same screen, which is particularly valuable for fleet incident review.",
 			},
 			{
 				question: "Does the platform support fuel monitoring?",
@@ -1757,7 +1757,7 @@ export const seoPages: SeoLandingPage[] = [
 		relatedServiceNames: {
 			title: "Additional Abeokuta systems paired with tracking",
 			intro:
-				"A meaningful share of CTPT Abeokuta accounts stack vehicle tracking with complementary systems that amplify measurable return on investment. The combinations below demonstrate value most rapidly.",
+				"A meaningful share of Car Tracker Plus Telematics Abeokuta accounts stack vehicle tracking with complementary systems that amplify measurable return on investment. The combinations below demonstrate value most rapidly.",
 			items: [
 				"AI dashcam professional fitting",
 				"Fuel-level sensing platforms",
@@ -1769,7 +1769,7 @@ export const seoPages: SeoLandingPage[] = [
 		closing: {
 			title: "Book On-Site Vehicle Tracking Installation in Abeokuta",
 			paragraphs: [
-				"Abeokuta is a southwest border city of historic royal layouts, expanding residential estates, university campuses and strategic highway corridors linking Lagos, Ibadan and the Ogun industrial belt. A generic tracker ordered online has never been calibrated for Panseke Market parking patterns, FUNAAB campus bus routes, Ewekoro quarry depot access or the Abeokuta–Lagos expressway commute rhythm. CTPT deployments are matched to your exact district, vehicle category and Abeokuta operating profile from the first fitting.",
+				"Abeokuta is a southwest border city of historic royal layouts, expanding residential estates, university campuses and strategic highway corridors linking Lagos, Ibadan and the Ogun industrial belt. A generic tracker ordered online has never been calibrated for Panseke Market parking patterns, FUNAAB campus bus routes, Ewekoro quarry depot access or the Abeokuta–Lagos expressway commute rhythm. Car Tracker Plus Telematics deployments are matched to your exact district, vehicle category and Abeokuta operating profile from the first fitting.",
 				"Tell us where your vehicles normally park overnight, how many units are involved, and whether the deployment serves private use, campus transport, executive security or commercial fleet operations. We will recommend the correct hardware tier and lock in an on-site Abeokuta installation date that respects your schedule.",
 			],
 		},
@@ -1823,7 +1823,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Private Vehicle Protection for Enugu Residential Layouts",
 				paragraphs: [
 					"Enugu homeowners occupy layouts clustered around Independence Layout, New Haven, Achara Layout, Trans-Ekulu, Golf Estate, Thinkers Corner, Emene and the new residential corridors extending toward 9th Mile Corner. Vehicles parked on family compounds overnight or during daytime at Ogbete Market, Kenyatta Market or the various shopping plaza lots carry exposure patterns a generic plug-in tracker never anticipates.",
-					"CTPT private-vehicle configuration for Enugu centres on rapid-catch alerts calibrated to actual lifestyle patterns. Virtual perimeters wrap each residential compound, workplace building, regular market stop and the Enugu–Onitsha expressway interchange access points. Any ignition outside agreed hours or unscheduled boundary crossing generates an instant notification.",
+					"Car Tracker Plus Telematics private-vehicle configuration for Enugu centres on rapid-catch alerts calibrated to actual lifestyle patterns. Virtual perimeters wrap each residential compound, workplace building, regular market stop and the Enugu–Onitsha expressway interchange access points. Any ignition outside agreed hours or unscheduled boundary crossing generates an instant notification.",
 				],
 				bullets: [
 					"Layout-level virtual perimeters for Independence Layout, New Haven, Achara, Trans-Ekulu and Golf Estate",
@@ -1849,7 +1849,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Haulage, Distribution and Logistics Supervision",
 				paragraphs: [
 					"Enugu's commercial logistics backbone covers coal-region haulage, FMCG distribution, building-material trucking, intercity passenger transport and last-mile parcel delivery radiating to Onitsha, Awka, Abakaliki, Owerri, Makurdi and the 9th Mile Corner interchange. Dispatch controllers need live inventory of every van and truck; commercial teams need auditable proof-of-delivery records.",
-					"CTPT logistics overlay adds warehouse, depot, customer-premise and motor-park virtual perimeters to the standard tracking console. Each scheduled stop captures duration automatically, vehicles lingering beyond SLA parameters raise dispatch-screen flags, and journey archives deliver replayable evidence whenever customer disputes emerge.",
+					"Car Tracker Plus Telematics logistics overlay adds warehouse, depot, customer-premise and motor-park virtual perimeters to the standard tracking console. Each scheduled stop captures duration automatically, vehicles lingering beyond SLA parameters raise dispatch-screen flags, and journey archives deliver replayable evidence whenever customer disputes emerge.",
 				],
 				bullets: [
 					"Warehouse and depot boundary zones across Emene industrial, 9th Mile and New Market layouts",
@@ -1874,7 +1874,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "On-Site Fitting Across Enugu City",
 				paragraphs: [
-					"Every engagement commences with a short discovery call covering vehicle category, the specific monitoring outcomes being targeted, and whether the deployment falls under private, campus, executive or fleet categories. A CTPT technician then travels directly to your Enugu address — whether that is an Independence Layout home compound, office car park, ESUT campus, hotel parking or approved workshop. The vehicle never needs to be taken to a remote fitting location.",
+					"Every engagement commences with a short discovery call covering vehicle category, the specific monitoring outcomes being targeted, and whether the deployment falls under private, campus, executive or fleet categories. A Car Tracker Plus Telematics technician then travels directly to your Enugu address — whether that is an Independence Layout home compound, office car park, ESUT campus, hotel parking or approved workshop. The vehicle never needs to be taken to a remote fitting location.",
 					"Standard installations run roughly sixty to ninety minutes per vehicle. Cabling tucks behind interior trim for a factory-grade finish. Before departing the site the technician walks every authorised user through the mobile app, confirms alert channels with live test triggers, and calibrates the initial batch of virtual perimeters and notification preferences. The Enugu after-sales desk handles subsequent adjustments and troubleshooting.",
 				],
 				bullets: [
@@ -1997,7 +1997,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "On-site reach across the Enugu sprawl",
 						description:
-							"CTPT technicians install directly at Independence Layout, New Haven, Achara, Trans-Ekulu, Golf, Emene and Thinkers Corner locations without requiring travel to a central workshop — the vehicle stays parked exactly where it normally lives.",
+							"Car Tracker Plus Telematics technicians install directly at Independence Layout, New Haven, Achara, Trans-Ekulu, Golf, Emene and Thinkers Corner locations without requiring travel to a central workshop — the vehicle stays parked exactly where it normally lives.",
 					},
 					{
 						title: "Southeast logistics context built in",
@@ -2028,7 +2028,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "Driver cooperation is required for monitoring",
 						description:
-							"Every CTPT installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver awareness or cooperation is irrelevant to system operation.",
+							"Every Car Tracker Plus Telematics installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver awareness or cooperation is irrelevant to system operation.",
 					},
 					{
 						title: "All tracker brands deliver the same results",
@@ -2073,17 +2073,17 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "What pricing applies to a professionally fitted tracker in Enugu?",
 				answer:
-					"Entry-level live-position professionally installed setups in Enugu typically start around ₦70,000. Advanced telematics, fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware tier, activated features and total vehicle count. CTPT issues a fully itemised written proposal before any fitting commences.",
+					"Entry-level live-position professionally installed setups in Enugu typically start around ₦70,000. Advanced telematics, fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware tier, activated features and total vehicle count. Car Tracker Plus Telematics issues a fully itemised written proposal before any fitting commences.",
 			},
 			{
 				question: "Does a technician install on-site at Independence Layout or New Haven?",
 				answer:
-					"Without exception. CTPT technicians travel on-site to every Enugu metro district including Independence Layout, New Haven, Achara, Trans-Ekulu, Golf Estate, Thinkers Corner, Emene, Uwani and 9th Mile — plus approved Enugu State towns such as Nsukka and Agbani. Each vehicle is fitted at its normal parking location.",
+					"Without exception. Car Tracker Plus Telematics technicians travel on-site to every Enugu metro district including Independence Layout, New Haven, Achara, Trans-Ekulu, Golf Estate, Thinkers Corner, Emene, Uwani and 9th Mile — plus approved Enugu State towns such as Nsukka and Agbani. Each vehicle is fitted at its normal parking location.",
 			},
 			{
 				question: "Can I monitor the vehicle from my personal smartphone?",
 				answer:
-					"Every supported CTPT tracker ships with a companion mobile app displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use whenever preferred.",
+					"Every supported Car Tracker Plus Telematics tracker ships with a companion mobile app displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use whenever preferred.",
 			},
 			{
 				question: "Does a single login support multiple different vehicles?",
@@ -2098,12 +2098,12 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "Do you support haulage and logistics fleets with many units?",
 				answer:
-					"Fleet supervision is a core CTPT speciality encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern analysis, idle-duration visibility, speed ceilings and optional fuel sensing. We actively serve coal-region haulage, FMCG distribution, campus bus and corporate pool operators across Enugu and Enugu State.",
+					"Fleet supervision is a core Car Tracker Plus Telematics speciality encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern analysis, idle-duration visibility, speed ceilings and optional fuel sensing. We actively serve coal-region haulage, FMCG distribution, campus bus and corporate pool operators across Enugu and Enugu State.",
 			},
 			{
 				question: "Can dashcams be integrated with the tracking platform?",
 				answer:
-					"Certainly. We fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the CTPT telematics console. Position data, travel speed and incident video all appear on the same screen, which is particularly valuable for fleet incident review.",
+					"Certainly. We fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the Car Tracker Plus Telematics telematics console. Position data, travel speed and incident video all appear on the same screen, which is particularly valuable for fleet incident review.",
 			},
 			{
 				question: "Does the platform include fuel monitoring?",
@@ -2114,7 +2114,7 @@ export const seoPages: SeoLandingPage[] = [
 		relatedServiceNames: {
 			title: "Additional Enugu systems paired with tracking",
 			intro:
-				"A meaningful share of CTPT Enugu accounts stack vehicle tracking with complementary systems that amplify measurable return on investment. The combinations below demonstrate value most rapidly.",
+				"A meaningful share of Car Tracker Plus Telematics Enugu accounts stack vehicle tracking with complementary systems that amplify measurable return on investment. The combinations below demonstrate value most rapidly.",
 			items: [
 				"AI dashcam professional fitting",
 				"Fuel-level sensing platforms",
@@ -2126,7 +2126,7 @@ export const seoPages: SeoLandingPage[] = [
 		closing: {
 			title: "Book On-Site Vehicle Tracking Installation in Enugu",
 			paragraphs: [
-				"Enugu is a southeast anchor city of historic residential layouts, university campuses, dense market clusters and strategic highway corridors reaching Onitsha, Awka, Owerri and the Middle Belt. A generic tracker ordered online has never been calibrated for Ogbete Market parking patterns, UNN/ESUT campus bus routes, 9th Mile Corner interchange access or the Enugu–Onitsha expressway commute rhythm. CTPT deployments are matched to your exact district, vehicle category and Enugu operating profile from the first fitting.",
+				"Enugu is a southeast anchor city of historic residential layouts, university campuses, dense market clusters and strategic highway corridors reaching Onitsha, Awka, Owerri and the Middle Belt. A generic tracker ordered online has never been calibrated for Ogbete Market parking patterns, UNN/ESUT campus bus routes, 9th Mile Corner interchange access or the Enugu–Onitsha expressway commute rhythm. Car Tracker Plus Telematics deployments are matched to your exact district, vehicle category and Enugu operating profile from the first fitting.",
 				"Tell us where your vehicles normally park overnight, how many units are involved, and whether the deployment serves private use, campus transport, executive security or commercial fleet operations. We will recommend the correct hardware tier and lock in an on-site Enugu installation date that respects your schedule.",
 			],
 		},
@@ -2180,7 +2180,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Private Vehicle Security for Asaba Residential Estates",
 				paragraphs: [
 					"Asaba homeowners occupy layouts clustered around GRA Asaba, Okpanam Road, Summit Road, Nnebisi Road, DLA Road, Inter-Bau Estate, Airport Road and the new residential corridors extending toward Okpanam township and Oko. Vehicles parked on family compounds overnight or during daytime at Ogbogonogo Market, Ogbe-Ogonogo Market or shopping plaza lots carry exposure patterns a generic plug-in tracker never anticipates.",
-					"CTPT private-vehicle configuration for Asaba centres on rapid-catch alerts calibrated to actual daily routines. Virtual perimeters wrap each residential compound, government office, regular market stop and the Niger-Bridge interchange access points. Any ignition outside agreed hours or unscheduled boundary crossing generates an instant alert.",
+					"Car Tracker Plus Telematics private-vehicle configuration for Asaba centres on rapid-catch alerts calibrated to actual daily routines. Virtual perimeters wrap each residential compound, government office, regular market stop and the Niger-Bridge interchange access points. Any ignition outside agreed hours or unscheduled boundary crossing generates an instant alert.",
 				],
 				bullets: [
 					"Estate-level virtual perimeters for GRA, Inter-Bau, Okpanam Road, Summit Road and Nnebisi",
@@ -2206,7 +2206,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Haulage, Distribution and Logistics Supervision",
 				paragraphs: [
 					"Asaba's commercial logistics spine covers Niger-Bridge transit haulage, FMCG distribution, petroleum-product tanker movement, intercity passenger transport and last-mile parcel delivery radiating to Onitsha, Warri, Agbor, Ekwulobia and Awka. Dispatch controllers need live inventory of every van and truck; commercial teams need auditable proof-of-delivery records.",
-					"CTPT logistics overlay adds warehouse, depot, customer-premise and motor-park virtual perimeters to the standard tracking console. Each scheduled stop captures duration automatically, vehicles lingering beyond SLA parameters raise dispatch-screen flags, and journey archives deliver replayable evidence whenever customer disputes emerge.",
+					"Car Tracker Plus Telematics logistics overlay adds warehouse, depot, customer-premise and motor-park virtual perimeters to the standard tracking console. Each scheduled stop captures duration automatically, vehicles lingering beyond SLA parameters raise dispatch-screen flags, and journey archives deliver replayable evidence whenever customer disputes emerge.",
 				],
 				bullets: [
 					"Warehouse and depot boundary zones across Asaba industrial, Airport Road and Okpanam layouts",
@@ -2231,7 +2231,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "On-Site Fitting Procedure Across Asaba",
 				paragraphs: [
-					"Every engagement opens with a short discovery call covering vehicle category, the specific monitoring outcomes being targeted, and whether the deployment falls under private, campus, executive or fleet categories. A CTPT technician then travels directly to your Asaba address — whether that is a GRA home compound, government car park, DELSU campus, hotel parking or approved workshop. The vehicle never needs to be taken to a remote fitting location.",
+					"Every engagement opens with a short discovery call covering vehicle category, the specific monitoring outcomes being targeted, and whether the deployment falls under private, campus, executive or fleet categories. A Car Tracker Plus Telematics technician then travels directly to your Asaba address — whether that is a GRA home compound, government car park, DELSU campus, hotel parking or approved workshop. The vehicle never needs to be taken to a remote fitting location.",
 					"Standard installations run roughly sixty to ninety minutes per vehicle. Cabling tucks behind interior trim for a factory-grade finish. Before departing the site the technician walks every authorised user through the mobile app, confirms alert channels with live test triggers, and calibrates the initial batch of virtual perimeters and notification preferences. The Asaba after-sales desk handles subsequent adjustments and troubleshooting.",
 				],
 				bullets: [
@@ -2354,7 +2354,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "On-site reach across the Asaba sprawl",
 						description:
-							"CTPT technicians install directly at GRA, Okpanam Road, Summit, Nnebisi, Inter-Bau, Airport Road and Ogbe-Ogonogo locations without requiring travel to a central workshop — the vehicle stays parked exactly where it normally lives.",
+							"Car Tracker Plus Telematics technicians install directly at GRA, Okpanam Road, Summit, Nnebisi, Inter-Bau, Airport Road and Ogbe-Ogonogo locations without requiring travel to a central workshop — the vehicle stays parked exactly where it normally lives.",
 					},
 					{
 						title: "Niger-Bridge corridor context built in",
@@ -2385,7 +2385,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "Driver cooperation is required for monitoring",
 						description:
-							"Every CTPT installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver awareness or cooperation is irrelevant to system operation.",
+							"Every Car Tracker Plus Telematics installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver awareness or cooperation is irrelevant to system operation.",
 					},
 					{
 						title: "Every tracker brand performs identically",
@@ -2430,17 +2430,17 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "What pricing bracket applies to a professionally fitted tracker in Asaba?",
 				answer:
-					"Entry-level live-position professionally installed setups in Asaba typically start around ₦70,000. Advanced telematics, fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware tier, activated features and total vehicle count. CTPT issues a fully itemised written proposal before any fitting commences.",
+					"Entry-level live-position professionally installed setups in Asaba typically start around ₦70,000. Advanced telematics, fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware tier, activated features and total vehicle count. Car Tracker Plus Telematics issues a fully itemised written proposal before any fitting commences.",
 			},
 			{
 				question: "Does a technician install on-site at GRA or Okpanam Road?",
 				answer:
-					"Without exception. CTPT technicians travel on-site to every Asaba metro district including GRA, Okpanam Road, Summit Road, Nnebisi, DLA, Inter-Bau, Airport Road, Ogbe-Ogonogo and Koka — plus approved Delta State towns such as Agbor, Ughelli and Okpanam. Each vehicle is fitted at its normal parking location.",
+					"Without exception. Car Tracker Plus Telematics technicians travel on-site to every Asaba metro district including GRA, Okpanam Road, Summit Road, Nnebisi, DLA, Inter-Bau, Airport Road, Ogbe-Ogonogo and Koka — plus approved Delta State towns such as Agbor, Ughelli and Okpanam. Each vehicle is fitted at its normal parking location.",
 			},
 			{
 				question: "Can I follow the vehicle from my personal smartphone?",
 				answer:
-					"Every supported CTPT tracker ships with a companion mobile app displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use whenever preferred.",
+					"Every supported Car Tracker Plus Telematics tracker ships with a companion mobile app displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use whenever preferred.",
 			},
 			{
 				question: "Does a single login handle multiple different vehicles?",
@@ -2455,12 +2455,12 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "Do you support bridge-corridor haulage and logistics fleets with many units?",
 				answer:
-					"Fleet supervision is a core CTPT speciality encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern analysis, idle-duration visibility, speed ceilings and optional fuel sensing. We actively serve Niger-Bridge transit haulage, FMCG distribution, campus bus and corporate pool operators across Asaba and Delta State.",
+					"Fleet supervision is a core Car Tracker Plus Telematics speciality encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern analysis, idle-duration visibility, speed ceilings and optional fuel sensing. We actively serve Niger-Bridge transit haulage, FMCG distribution, campus bus and corporate pool operators across Asaba and Delta State.",
 			},
 			{
 				question: "Can dashcams be integrated with the tracking platform?",
 				answer:
-					"Certainly. We fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the CTPT telematics console. Position data, travel speed and incident video all appear on the same screen, which is particularly valuable for fleet incident review.",
+					"Certainly. We fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the Car Tracker Plus Telematics telematics console. Position data, travel speed and incident video all appear on the same screen, which is particularly valuable for fleet incident review.",
 			},
 			{
 				question: "Does the platform include fuel monitoring?",
@@ -2471,7 +2471,7 @@ export const seoPages: SeoLandingPage[] = [
 		relatedServiceNames: {
 			title: "Additional Asaba systems paired with tracking",
 			intro:
-				"A meaningful share of CTPT Asaba accounts stack vehicle tracking with complementary systems that amplify measurable return on investment. The combinations below demonstrate value most rapidly.",
+				"A meaningful share of Car Tracker Plus Telematics Asaba accounts stack vehicle tracking with complementary systems that amplify measurable return on investment. The combinations below demonstrate value most rapidly.",
 			items: [
 				"AI dashcam professional fitting",
 				"Fuel-level sensing platforms",
@@ -2483,7 +2483,7 @@ export const seoPages: SeoLandingPage[] = [
 		closing: {
 			title: "Book On-Site Vehicle Tracking Installation in Asaba",
 			paragraphs: [
-				"Asaba is a Niger-Bridge gateway capital of government districts, expanding residential estates, university campuses and the strategic highway interchange linking the entire southeast to western Nigeria. A generic tracker ordered online has never been calibrated for Ogbe-Ogonogo Market parking patterns, DELSU campus bus routes, Airport Road depot access or the Asaba–Onitsha dual-carriage commute rhythm. CTPT deployments are matched to your exact district, vehicle category and Asaba operating profile from the first fitting.",
+				"Asaba is a Niger-Bridge gateway capital of government districts, expanding residential estates, university campuses and the strategic highway interchange linking the entire southeast to western Nigeria. A generic tracker ordered online has never been calibrated for Ogbe-Ogonogo Market parking patterns, DELSU campus bus routes, Airport Road depot access or the Asaba–Onitsha dual-carriage commute rhythm. Car Tracker Plus Telematics deployments are matched to your exact district, vehicle category and Asaba operating profile from the first fitting.",
 				"Tell us where your vehicles normally park overnight, how many units are involved, and whether the deployment serves private use, campus transport, executive security or commercial fleet operations. We will recommend the correct hardware tier and lock in an on-site Asaba installation date that respects your schedule.",
 			],
 		},
@@ -2537,7 +2537,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Private Vehicle Protection for Warri Residential Estates",
 				paragraphs: [
 					"Warri homeowners occupy layouts clustered around Effurun GRA, Warri GRA, Airport Road, NPA Expressway, Enerhen Junction, Ubeji, Jakpa and the new residential corridors extending toward Osubi and Ugborikoko. Vehicles parked on oil-company leased compounds or during daytime at Market Road, Warri Main Market or shopping plaza lots carry exposure patterns a generic plug-in tracker never anticipates.",
-					"CTPT private-vehicle configuration for Warri centres on rapid-catch alerts calibrated to actual living patterns. Virtual perimeters wrap each residential compound, workplace building, regular market stop and the Warri–Port Harcourt expressway interchange access points. Any ignition outside agreed hours or unscheduled boundary crossing produces an instant alert.",
+					"Car Tracker Plus Telematics private-vehicle configuration for Warri centres on rapid-catch alerts calibrated to actual living patterns. Virtual perimeters wrap each residential compound, workplace building, regular market stop and the Warri–Port Harcourt expressway interchange access points. Any ignition outside agreed hours or unscheduled boundary crossing produces an instant alert.",
 				],
 				bullets: [
 					"Estate-level virtual perimeters for Effurun GRA, Warri GRA, Airport Road, Enerhen and Ubeji",
@@ -2550,7 +2550,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Petroleum Fleet and Haulage Supervision",
 				paragraphs: [
 					"Warri's commercial fleet backbone covers petroleum-product tanker haulage, oil-service Hilux and utility-truck movement, FMCG distribution, coastal intercity passenger transport and last-mile parcel delivery radiating to Ughelli, Effurun, Sapele, Port Harcourt and Benin. Dispatch controllers need live inventory of every tanker and van; commercial teams need auditable proof-of-delivery records.",
-					"CTPT petroleum-fleet overlay adds flow-station, depot, customer-premise and tanker-terminal virtual perimeters to the standard tracking console. Each scheduled stop captures duration automatically, vehicles lingering beyond SLA parameters raise dispatch-screen flags, and journey archives deliver replayable evidence whenever customer disputes surface.",
+					"Car Tracker Plus Telematics petroleum-fleet overlay adds flow-station, depot, customer-premise and tanker-terminal virtual perimeters to the standard tracking console. Each scheduled stop captures duration automatically, vehicles lingering beyond SLA parameters raise dispatch-screen flags, and journey archives deliver replayable evidence whenever customer disputes surface.",
 				],
 				bullets: [
 					"Depot and terminal boundary zones across Warri industrial, Airport Road and NPA Expressway layouts",
@@ -2588,7 +2588,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "On-Site Fitting Across Warri and Delta South",
 				paragraphs: [
-					"Every engagement opens with a short discovery call covering vehicle category, the specific monitoring outcomes being targeted, and whether the deployment falls under private, campus, executive or fleet categories. A CTPT technician then travels directly to your Warri address — whether that is a Warri GRA home compound, oil-company car park, FUPRE campus, hotel parking or approved workshop. The vehicle never needs to be taken to a remote fitting location.",
+					"Every engagement opens with a short discovery call covering vehicle category, the specific monitoring outcomes being targeted, and whether the deployment falls under private, campus, executive or fleet categories. A Car Tracker Plus Telematics technician then travels directly to your Warri address — whether that is a Warri GRA home compound, oil-company car park, FUPRE campus, hotel parking or approved workshop. The vehicle never needs to be taken to a remote fitting location.",
 					"Standard installations run roughly sixty to ninety minutes per vehicle. Cabling tucks behind interior trim for a factory-grade finish. Before departing the site the technician walks every authorised user through the mobile app, confirms alert channels with live test triggers, and calibrates the initial batch of virtual perimeters and notification preferences. The Warri after-sales desk handles subsequent adjustments and troubleshooting.",
 				],
 				bullets: [
@@ -2711,7 +2711,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "On-site reach across the Warri sprawl",
 						description:
-							"CTPT technicians install directly at Effurun GRA, Warri GRA, Airport Road, Enerhen, NPA Expressway, Ubeji and Jakpa locations without requiring travel to a central workshop — the vehicle stays parked exactly where it normally lives.",
+							"Car Tracker Plus Telematics technicians install directly at Effurun GRA, Warri GRA, Airport Road, Enerhen, NPA Expressway, Ubeji and Jakpa locations without requiring travel to a central workshop — the vehicle stays parked exactly where it normally lives.",
 					},
 					{
 						title: "Petroleum-fleet context built in",
@@ -2742,7 +2742,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "Driver awareness is needed for monitoring",
 						description:
-							"Every CTPT installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver cooperation is irrelevant to system operation.",
+							"Every Car Tracker Plus Telematics installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver cooperation is irrelevant to system operation.",
 					},
 					{
 						title: "All tracker products perform the same",
@@ -2787,17 +2787,17 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "What pricing bracket applies to a professionally fitted tracker in Warri?",
 				answer:
-					"Entry-level live-position professionally installed setups in Warri typically start around ₦70,000. Advanced telematics, petroleum-fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware tier, activated features and total vehicle count. CTPT issues a fully itemised written proposal before any fitting commences.",
+					"Entry-level live-position professionally installed setups in Warri typically start around ₦70,000. Advanced telematics, petroleum-fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware tier, activated features and total vehicle count. Car Tracker Plus Telematics issues a fully itemised written proposal before any fitting commences.",
 			},
 			{
 				question: "Does a technician install on-site at Effurun GRA or Airport Road?",
 				answer:
-					"Without exception. CTPT technicians travel on-site to every Warri metro district including Effurun GRA, Warri GRA, Airport Road, NPA Expressway, Enerhen, Ubeji, Jakpa, Osubi and Ugborikoko — plus approved Delta South towns such as Ughelli, Sapele, Abraka and Oghara. Each vehicle is fitted at its normal parking location.",
+					"Without exception. Car Tracker Plus Telematics technicians travel on-site to every Warri metro district including Effurun GRA, Warri GRA, Airport Road, NPA Expressway, Enerhen, Ubeji, Jakpa, Osubi and Ugborikoko — plus approved Delta South towns such as Ughelli, Sapele, Abraka and Oghara. Each vehicle is fitted at its normal parking location.",
 			},
 			{
 				question: "Can I follow the vehicle from my personal smartphone?",
 				answer:
-					"Every supported CTPT tracker ships with a companion mobile app displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use whenever preferred.",
+					"Every supported Car Tracker Plus Telematics tracker ships with a companion mobile app displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use whenever preferred.",
 			},
 			{
 				question: "Does a single login handle multiple vehicles?",
@@ -2812,12 +2812,12 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "Do you support petroleum-fleet haulage operators with many units?",
 				answer:
-					"Fleet supervision is a core CTPT speciality encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern analysis, idle-duration visibility, speed ceilings and optional fuel sensing. We actively serve petroleum tanker, oil-service Hilux, FMCG distribution, campus bus and corporate pool operators across Warri and Delta South.",
+					"Fleet supervision is a core Car Tracker Plus Telematics speciality encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern analysis, idle-duration visibility, speed ceilings and optional fuel sensing. We actively serve petroleum tanker, oil-service Hilux, FMCG distribution, campus bus and corporate pool operators across Warri and Delta South.",
 			},
 			{
 				question: "Can dashcams be integrated with the tracking platform?",
 				answer:
-					"Certainly. We fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the CTPT telematics console. Position data, travel speed and incident video all appear on the same screen, which is particularly valuable for fleet incident review.",
+					"Certainly. We fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the Car Tracker Plus Telematics telematics console. Position data, travel speed and incident video all appear on the same screen, which is particularly valuable for fleet incident review.",
 			},
 			{
 				question: "Does the platform include fuel monitoring?",
@@ -2828,7 +2828,7 @@ export const seoPages: SeoLandingPage[] = [
 		relatedServiceNames: {
 			title: "Additional Warri systems paired with tracking",
 			intro:
-				"A meaningful share of CTPT Warri accounts stack vehicle tracking with complementary systems that amplify measurable return on investment. The combinations below demonstrate value most rapidly.",
+				"A meaningful share of Car Tracker Plus Telematics Warri accounts stack vehicle tracking with complementary systems that amplify measurable return on investment. The combinations below demonstrate value most rapidly.",
 			items: [
 				"AI dashcam professional fitting",
 				"Fuel-level sensing platforms for tanker fleets",
@@ -2840,7 +2840,7 @@ export const seoPages: SeoLandingPage[] = [
 		closing: {
 			title: "Book On-Site Vehicle Tracking Installation in Warri",
 			paragraphs: [
-				"Warri is a petroleum-coast hub of oil-company compounds, expanding residential estates, university campuses and strategic highway corridors linking the entire western Niger Delta. A generic tracker ordered online has never been calibrated for Warri Main Market parking, FUPRE campus bus routes, NPA Expressway depot access or the Warri–Port Harcourt haulage rhythm. CTPT deployments are matched to your exact district, vehicle category and Warri operating profile from the first fitting.",
+				"Warri is a petroleum-coast hub of oil-company compounds, expanding residential estates, university campuses and strategic highway corridors linking the entire western Niger Delta. A generic tracker ordered online has never been calibrated for Warri Main Market parking, FUPRE campus bus routes, NPA Expressway depot access or the Warri–Port Harcourt haulage rhythm. Car Tracker Plus Telematics deployments are matched to your exact district, vehicle category and Warri operating profile from the first fitting.",
 				"Tell us where your vehicles normally park overnight, how many units are involved, and whether the deployment serves private use, campus transport, executive security or petroleum-fleet haulage. We will recommend the correct hardware tier and lock in an on-site Warri installation date that respects your schedule.",
 			],
 		},
@@ -2894,7 +2894,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Private Vehicle Security for Kano Residential Layouts",
 				paragraphs: [
 					"Kano homeowners occupy layouts clustered around Nasarawa GRA, Bompai, Phase 1–6, Dakibiyu, Tarauni, Dala, Goron Dutse and the new residential corridors extending toward Dawakin Tofa and Gezawa. Vehicles parked on family compounds overnight or during daytime at Kurmi Market, Sabon Gari Market or the various shopping plaza lots carry exposure patterns a generic plug-in tracker never anticipates.",
-					"CTPT private-vehicle configuration for Kano centres on rapid-catch alerts calibrated to actual daily routines. Virtual perimeters wrap each residential compound, workplace building, regular market stop and the Kano–Kaduna and Kano–Abuja highway interchange access points. Any ignition outside agreed hours or unscheduled boundary crossing produces an instant alert.",
+					"Car Tracker Plus Telematics private-vehicle configuration for Kano centres on rapid-catch alerts calibrated to actual daily routines. Virtual perimeters wrap each residential compound, workplace building, regular market stop and the Kano–Kaduna and Kano–Abuja highway interchange access points. Any ignition outside agreed hours or unscheduled boundary crossing produces an instant alert.",
 				],
 				bullets: [
 					"Layout-level virtual perimeters for Nasarawa GRA, Bompai, Phase 1–6, Dakibiyu and Tarauni",
@@ -2907,7 +2907,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Haulage, Distribution and Logistics Supervision",
 				paragraphs: [
 					"Kano's commercial logistics backbone covers interregional long-haul trucking, FMCG distribution, agricultural-commodity haulage, livestock transport, intercity passenger coaches and last-mile parcel delivery radiating to Kaduna, Abuja, Jos, Maiduguri, Sokoto and Katsina. Dispatch controllers need live inventory of every van and truck; commercial teams need auditable proof-of-delivery records.",
-					"CTPT logistics overlay adds warehouse, depot, customer-premise and motor-park virtual perimeters to the standard tracking console. Each scheduled stop captures duration automatically, vehicles lingering beyond SLA parameters raise dispatch-screen flags, and journey archives deliver replayable evidence whenever customer disputes emerge.",
+					"Car Tracker Plus Telematics logistics overlay adds warehouse, depot, customer-premise and motor-park virtual perimeters to the standard tracking console. Each scheduled stop captures duration automatically, vehicles lingering beyond SLA parameters raise dispatch-screen flags, and journey archives deliver replayable evidence whenever customer disputes emerge.",
 				],
 				bullets: [
 					"Warehouse and depot boundary zones across Bompai industrial, Challawa and Dakibiyu layouts",
@@ -2945,7 +2945,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "On-Site Fitting Across Kano Metropolis",
 				paragraphs: [
-					"Every engagement opens with a short discovery call covering vehicle category, the specific monitoring outcomes being targeted, and whether the deployment falls under private, campus, executive or fleet categories. A CTPT technician then travels directly to your Kano address — whether that is a Nasarawa GRA home compound, corporate office car park, BUK campus, hotel parking or approved workshop. The vehicle never needs to be taken to a remote fitting location.",
+					"Every engagement opens with a short discovery call covering vehicle category, the specific monitoring outcomes being targeted, and whether the deployment falls under private, campus, executive or fleet categories. A Car Tracker Plus Telematics technician then travels directly to your Kano address — whether that is a Nasarawa GRA home compound, corporate office car park, BUK campus, hotel parking or approved workshop. The vehicle never needs to be taken to a remote fitting location.",
 					"Standard installations run roughly sixty to ninety minutes per vehicle. Cabling tucks behind interior trim for a factory-grade finish. Before departing the site the technician walks every authorised user through the mobile app, confirms alert channels with live test triggers, and calibrates the initial batch of virtual perimeters and notification preferences. The Kano after-sales desk handles subsequent adjustments and troubleshooting.",
 				],
 				bullets: [
@@ -3068,7 +3068,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "On-site reach across the Kano sprawl",
 						description:
-							"CTPT technicians install directly at Nasarawa GRA, Bompai, Phase 1–6, Dakibiyu, Tarauni, Dala, Goron Dutse and Challawa locations without requiring travel to a central workshop — the vehicle stays parked exactly where it normally lives.",
+							"Car Tracker Plus Telematics technicians install directly at Nasarawa GRA, Bompai, Phase 1–6, Dakibiyu, Tarauni, Dala, Goron Dutse and Challawa locations without requiring travel to a central workshop — the vehicle stays parked exactly where it normally lives.",
 					},
 					{
 						title: "Northern haulage context built in",
@@ -3099,7 +3099,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "Driver awareness is necessary for monitoring",
 						description:
-							"Every CTPT installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver cooperation is irrelevant to system operation.",
+							"Every Car Tracker Plus Telematics installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver cooperation is irrelevant to system operation.",
 					},
 					{
 						title: "Every tracker brand delivers identical results",
@@ -3144,17 +3144,17 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "What pricing applies to a professionally fitted tracker in Kano?",
 				answer:
-					"Entry-level live-position professionally installed setups in Kano typically start around ₦70,000. Advanced telematics, fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware tier, activated features and total vehicle count. CTPT issues a fully itemised written proposal before any fitting commences.",
+					"Entry-level live-position professionally installed setups in Kano typically start around ₦70,000. Advanced telematics, fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware tier, activated features and total vehicle count. Car Tracker Plus Telematics issues a fully itemised written proposal before any fitting commences.",
 			},
 			{
 				question: "Does a technician install on-site at Nasarawa GRA or Bompai?",
 				answer:
-					"Without exception. CTPT technicians travel on-site to every Kano metro district including Nasarawa GRA, Bompai, Phase 1–6, Dakibiyu, Tarauni, Dala, Goron Dutse, Challawa and Sabon Gari — plus approved Kano State towns such as Wudil, Dawakin Tofa and Gezawa. Each vehicle is fitted at its normal parking location.",
+					"Without exception. Car Tracker Plus Telematics technicians travel on-site to every Kano metro district including Nasarawa GRA, Bompai, Phase 1–6, Dakibiyu, Tarauni, Dala, Goron Dutse, Challawa and Sabon Gari — plus approved Kano State towns such as Wudil, Dawakin Tofa and Gezawa. Each vehicle is fitted at its normal parking location.",
 			},
 			{
 				question: "Can I monitor the vehicle from my personal smartphone?",
 				answer:
-					"Every supported CTPT tracker ships with a companion mobile app displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use whenever preferred.",
+					"Every supported Car Tracker Plus Telematics tracker ships with a companion mobile app displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use whenever preferred.",
 			},
 			{
 				question: "Does a single login handle multiple different vehicles?",
@@ -3169,12 +3169,12 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "Do you support interregional haulage fleets with many units?",
 				answer:
-					"Fleet supervision is a core CTPT speciality encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern analysis, idle-duration visibility, speed ceilings and optional fuel sensing. We actively serve interregional haulage, FMCG distribution, campus bus and corporate pool operators across Kano and the northwest.",
+					"Fleet supervision is a core Car Tracker Plus Telematics speciality encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern analysis, idle-duration visibility, speed ceilings and optional fuel sensing. We actively serve interregional haulage, FMCG distribution, campus bus and corporate pool operators across Kano and the northwest.",
 			},
 			{
 				question: "Can dashcams be integrated with the tracking platform?",
 				answer:
-					"Certainly. We fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the CTPT telematics console. Position data, travel speed and incident video all appear on the same screen, which is particularly valuable for fleet incident review on long intercity routes.",
+					"Certainly. We fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the Car Tracker Plus Telematics telematics console. Position data, travel speed and incident video all appear on the same screen, which is particularly valuable for fleet incident review on long intercity routes.",
 			},
 			{
 				question: "Does the platform include fuel monitoring?",
@@ -3185,7 +3185,7 @@ export const seoPages: SeoLandingPage[] = [
 		relatedServiceNames: {
 			title: "Additional Kano systems paired with tracking",
 			intro:
-				"A meaningful share of CTPT Kano accounts stack vehicle tracking with complementary systems that amplify measurable return on investment. The combinations below demonstrate value most rapidly.",
+				"A meaningful share of Car Tracker Plus Telematics Kano accounts stack vehicle tracking with complementary systems that amplify measurable return on investment. The combinations below demonstrate value most rapidly.",
 			items: [
 				"AI dashcam professional fitting",
 				"Fuel-level sensing platforms for long-haul fleets",
@@ -3197,7 +3197,7 @@ export const seoPages: SeoLandingPage[] = [
 		closing: {
 			title: "Book On-Site Vehicle Tracking Installation in Kano",
 			paragraphs: [
-				"Kano is a northwest commercial anchor of historic royal districts, expanding residential layouts, university campuses and strategic highway corridors linking the entire northern half of the country. A generic tracker ordered online has never been calibrated for Kurmi Market parking patterns, BUK campus bus routes, Challawa industrial depot access or the Kano–Kaduna–Abuja haulage rhythm. CTPT deployments are matched to your exact district, vehicle category and Kano operating profile from the first fitting.",
+				"Kano is a northwest commercial anchor of historic royal districts, expanding residential layouts, university campuses and strategic highway corridors linking the entire northern half of the country. A generic tracker ordered online has never been calibrated for Kurmi Market parking patterns, BUK campus bus routes, Challawa industrial depot access or the Kano–Kaduna–Abuja haulage rhythm. Car Tracker Plus Telematics deployments are matched to your exact district, vehicle category and Kano operating profile from the first fitting.",
 				"Tell us where your vehicles normally park overnight, how many units are involved, and whether the deployment serves private use, campus transport, executive security or interregional haulage. We will recommend the correct hardware tier and lock in an on-site Kano installation date that respects your schedule.",
 			],
 		},
@@ -3251,7 +3251,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Private Vehicle Protection for Kaduna Residential Estates",
 				paragraphs: [
 					"Kaduna homeowners occupy layouts clustered around Barnawa, Ungwan Rimi, Narayi, Malali, Sabon Tasha, Kakuri, Barnawa Extension and the new residential corridors extending toward Kachia Road and the southern axis. Vehicles parked on family compounds overnight or during daytime at Kaduna Central Market, major shopping complexes or the Kawo motor-park interchange carry exposure patterns a generic plug-in tracker never anticipates.",
-					"CTPT private-vehicle configuration for Kaduna centres on rapid-catch alerts calibrated to actual daily routines. Virtual perimeters wrap each residential compound, workplace building, regular market stop and the Kano–Kaduna–Abuja highway interchange access points. Any ignition outside agreed hours or unscheduled boundary crossing produces an instant alert.",
+					"Car Tracker Plus Telematics private-vehicle configuration for Kaduna centres on rapid-catch alerts calibrated to actual daily routines. Virtual perimeters wrap each residential compound, workplace building, regular market stop and the Kano–Kaduna–Abuja highway interchange access points. Any ignition outside agreed hours or unscheduled boundary crossing produces an instant alert.",
 				],
 				bullets: [
 					"Estate-level virtual perimeters for Barnawa, Ungwan Rimi, Narayi, Malali and Sabon Tasha",
@@ -3264,7 +3264,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Haulage, Government and Logistics Supervision",
 				paragraphs: [
 					"Kaduna's commercial fleet backbone covers interregional long-haul trucking, government-agency vehicle pools, military logistics movement, FMCG distribution, agricultural-commodity haulage, intercity passenger coaches and last-mile parcel delivery radiating to Abuja, Kano, Jos, Birnin Kebbi and Zaria. Dispatch controllers need live inventory of every van and truck; transport officers need auditable trip records.",
-					"CTPT logistics overlay adds depot, government-agency gate, motor-park and customer-premise virtual perimeters to the standard tracking console. Each scheduled stop captures duration automatically, vehicles lingering beyond SLA parameters raise dispatch-screen flags, and journey archives deliver replayable evidence whenever customer or audit disputes emerge.",
+					"Car Tracker Plus Telematics logistics overlay adds depot, government-agency gate, motor-park and customer-premise virtual perimeters to the standard tracking console. Each scheduled stop captures duration automatically, vehicles lingering beyond SLA parameters raise dispatch-screen flags, and journey archives deliver replayable evidence whenever customer or audit disputes emerge.",
 				],
 				bullets: [
 					"Depot, barracks and agency boundary zones across Kakuri, Kachia Road and Kawo layouts",
@@ -3302,7 +3302,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "On-Site Fitting Across Kaduna Metropolis",
 				paragraphs: [
-					"Every engagement opens with a short discovery call covering vehicle category, the specific monitoring outcomes being targeted, and whether the deployment falls under private, campus, executive or fleet categories. A CTPT technician then travels directly to your Kaduna address — whether that is a Barnawa home compound, government-agency car park, NDA campus, hotel parking or approved workshop. The vehicle never needs to be taken to a remote fitting location.",
+					"Every engagement opens with a short discovery call covering vehicle category, the specific monitoring outcomes being targeted, and whether the deployment falls under private, campus, executive or fleet categories. A Car Tracker Plus Telematics technician then travels directly to your Kaduna address — whether that is a Barnawa home compound, government-agency car park, NDA campus, hotel parking or approved workshop. The vehicle never needs to be taken to a remote fitting location.",
 					"Standard installations run roughly sixty to ninety minutes per vehicle. Cabling tucks behind interior trim for a factory-grade finish. Before departing the site the technician walks every authorised user through the mobile app, confirms alert channels with live test triggers, and calibrates the initial batch of virtual perimeters and notification preferences. The Kaduna after-sales desk handles subsequent adjustments and troubleshooting.",
 				],
 				bullets: [
@@ -3425,7 +3425,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "On-site reach across the Kaduna sprawl",
 						description:
-							"CTPT technicians install directly at Barnawa, Ungwan Rimi, Narayi, Malali, Sabon Tasha, Kakuri and Kawo locations without requiring travel to a central workshop — the vehicle stays parked exactly where it normally lives.",
+							"Car Tracker Plus Telematics technicians install directly at Barnawa, Ungwan Rimi, Narayi, Malali, Sabon Tasha, Kakuri and Kawo locations without requiring travel to a central workshop — the vehicle stays parked exactly where it normally lives.",
 					},
 					{
 						title: "Government and base context built in",
@@ -3456,7 +3456,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "Driver awareness is necessary for monitoring",
 						description:
-							"Every CTPT installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver cooperation is irrelevant to system operation.",
+							"Every Car Tracker Plus Telematics installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver cooperation is irrelevant to system operation.",
 					},
 					{
 						title: "Every tracker brand delivers identical results",
@@ -3501,17 +3501,17 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "What pricing applies to a professionally fitted tracker in Kaduna?",
 				answer:
-					"Entry-level live-position professionally installed setups in Kaduna typically start around ₦70,000. Advanced telematics, fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware tier, activated features and total vehicle count. CTPT issues a fully itemised written proposal before any fitting commences.",
+					"Entry-level live-position professionally installed setups in Kaduna typically start around ₦70,000. Advanced telematics, fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware tier, activated features and total vehicle count. Car Tracker Plus Telematics issues a fully itemised written proposal before any fitting commences.",
 			},
 			{
 				question: "Does a technician install on-site at Barnawa or Malali?",
 				answer:
-					"Without exception. CTPT technicians travel on-site to every Kaduna metro district including Barnawa, Ungwan Rimi, Narayi, Malali, Sabon Tasha, Kakuri, Kawo and Barnawa Extension — plus approved Kaduna State towns such as Zaria and Kachia. Each vehicle is fitted at its normal parking location.",
+					"Without exception. Car Tracker Plus Telematics technicians travel on-site to every Kaduna metro district including Barnawa, Ungwan Rimi, Narayi, Malali, Sabon Tasha, Kakuri, Kawo and Barnawa Extension — plus approved Kaduna State towns such as Zaria and Kachia. Each vehicle is fitted at its normal parking location.",
 			},
 			{
 				question: "Can I monitor the vehicle from my personal smartphone?",
 				answer:
-					"Every supported CTPT tracker ships with a companion mobile app displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use whenever preferred.",
+					"Every supported Car Tracker Plus Telematics tracker ships with a companion mobile app displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use whenever preferred.",
 			},
 			{
 				question: "Does a single login handle multiple different vehicles?",
@@ -3526,12 +3526,12 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "Do you support government and agency fleets with many units?",
 				answer:
-					"Fleet supervision is a core CTPT speciality encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern analysis, idle-duration visibility, speed ceilings and optional fuel sensing. We actively serve interregional haulage, FMCG distribution, campus bus and government-agency pool operators across Kaduna and the north-central corridor.",
+					"Fleet supervision is a core Car Tracker Plus Telematics speciality encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern analysis, idle-duration visibility, speed ceilings and optional fuel sensing. We actively serve interregional haulage, FMCG distribution, campus bus and government-agency pool operators across Kaduna and the north-central corridor.",
 			},
 			{
 				question: "Can dashcams be integrated with the tracking platform?",
 				answer:
-					"Certainly. We fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the CTPT telematics console. Position data, travel speed and incident video all appear on the same screen, which is particularly valuable for fleet incident review on long highway routes.",
+					"Certainly. We fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the Car Tracker Plus Telematics telematics console. Position data, travel speed and incident video all appear on the same screen, which is particularly valuable for fleet incident review on long highway routes.",
 			},
 			{
 				question: "Does the platform include fuel monitoring?",
@@ -3542,7 +3542,7 @@ export const seoPages: SeoLandingPage[] = [
 		relatedServiceNames: {
 			title: "Additional Kaduna systems paired with tracking",
 			intro:
-				"A meaningful share of CTPT Kaduna accounts stack vehicle tracking with complementary systems that amplify measurable return on investment. The combinations below demonstrate value most rapidly.",
+				"A meaningful share of Car Tracker Plus Telematics Kaduna accounts stack vehicle tracking with complementary systems that amplify measurable return on investment. The combinations below demonstrate value most rapidly.",
 			items: [
 				"AI dashcam professional fitting",
 				"Fuel-level sensing platforms for intercity fleets",
@@ -3554,7 +3554,7 @@ export const seoPages: SeoLandingPage[] = [
 		closing: {
 			title: "Book On-Site Vehicle Tracking Installation in Kaduna",
 			paragraphs: [
-				"Kaduna is a north-central gateway of military installations, government-agency headquarters, expanding residential estates, university campuses and the strategic highway interchange linking every major northern city to Abuja and the south. A generic tracker ordered online has never been calibrated for Kaduna Central Market parking patterns, NDA campus bus routes, Kakuri industrial depot access or the Abuja–Kaduna–Kano haulage rhythm. CTPT deployments are matched to your exact district, vehicle category and Kaduna operating profile from the first fitting.",
+				"Kaduna is a north-central gateway of military installations, government-agency headquarters, expanding residential estates, university campuses and the strategic highway interchange linking every major northern city to Abuja and the south. A generic tracker ordered online has never been calibrated for Kaduna Central Market parking patterns, NDA campus bus routes, Kakuri industrial depot access or the Abuja–Kaduna–Kano haulage rhythm. Car Tracker Plus Telematics deployments are matched to your exact district, vehicle category and Kaduna operating profile from the first fitting.",
 				"Tell us where your vehicles normally park overnight, how many units are involved, and whether the deployment serves private use, campus transport, executive security or interregional haulage. We will recommend the correct hardware tier and lock in an on-site Kaduna installation date that respects your schedule.",
 			],
 		},
@@ -3608,7 +3608,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Private Vehicle Security for Ilorin Residential Layouts",
 				paragraphs: [
 					"Ilorin homeowners occupy layouts clustered around Government Reservation Area (GRA) Ilorin, Ilorin East, Tanke, Fate-Basin, Sobi, Mandate Area, Ilorin West and the new residential corridors extending along University of Ilorin Road and the Omu-Aran axis. Vehicles parked on family compounds overnight or during daytime at Ilorin Central Market, post office or Mandate shopping lots carry exposure patterns a generic plug-in tracker never anticipates.",
-					"CTPT private-vehicle configuration for Ilorin centres on rapid-catch alerts calibrated to actual daily routines. Virtual perimeters wrap each residential compound, workplace building, regular market stop and the Ilorin–Abuja and Ilorin–Ibadan highway interchange access points. Any ignition outside agreed hours or unscheduled boundary crossing produces an instant alert.",
+					"Car Tracker Plus Telematics private-vehicle configuration for Ilorin centres on rapid-catch alerts calibrated to actual daily routines. Virtual perimeters wrap each residential compound, workplace building, regular market stop and the Ilorin–Abuja and Ilorin–Ibadan highway interchange access points. Any ignition outside agreed hours or unscheduled boundary crossing produces an instant alert.",
 				],
 				bullets: [
 					"Layout-level virtual perimeters for Ilorin GRA, Tanke, Fate-Basin, Sobi and Mandate",
@@ -3621,7 +3621,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Agricultural Haulage and Logistics Supervision",
 				paragraphs: [
 					"Ilorin's commercial fleet backbone covers agricultural-commodity haulage, market trucking, FMCG distribution, intercity passenger coaches, last-mile parcel delivery and farm-to-market logistics radiating to Offa, Omu-Aran, Lokoja, Abuja, Ibadan and Mokwa. Dispatch controllers need live inventory of every van and truck; commercial teams need auditable proof-of-delivery records.",
-					"CTPT logistics overlay adds farm-gate, warehouse, depot, market-premise and motor-park virtual perimeters to the standard tracking console. Each scheduled stop captures duration automatically, vehicles lingering beyond SLA parameters raise dispatch-screen flags, and journey archives deliver replayable evidence whenever customer disputes emerge.",
+					"Car Tracker Plus Telematics logistics overlay adds farm-gate, warehouse, depot, market-premise and motor-park virtual perimeters to the standard tracking console. Each scheduled stop captures duration automatically, vehicles lingering beyond SLA parameters raise dispatch-screen flags, and journey archives deliver replayable evidence whenever customer disputes emerge.",
 				],
 				bullets: [
 					"Farm-gate, warehouse and depot boundary zones across Ilorin industrial layouts",
@@ -3659,7 +3659,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "On-Site Fitting Across Ilorin Metropolis",
 				paragraphs: [
-					"Every engagement opens with a short discovery call covering vehicle category, the specific monitoring outcomes being targeted, and whether the deployment falls under private, campus, executive or fleet categories. A CTPT technician then travels directly to your Ilorin address — whether that is an Ilorin GRA home compound, government-agency car park, UNILORIN campus, hotel parking or approved workshop. The vehicle never needs to be taken to a remote fitting location.",
+					"Every engagement opens with a short discovery call covering vehicle category, the specific monitoring outcomes being targeted, and whether the deployment falls under private, campus, executive or fleet categories. A Car Tracker Plus Telematics technician then travels directly to your Ilorin address — whether that is an Ilorin GRA home compound, government-agency car park, UNILORIN campus, hotel parking or approved workshop. The vehicle never needs to be taken to a remote fitting location.",
 					"Standard installations run roughly sixty to ninety minutes per vehicle. Cabling tucks behind interior trim for a factory-grade finish. Before departing the site the technician walks every authorised user through the mobile app, confirms alert channels with live test triggers, and calibrates the initial batch of virtual perimeters and notification preferences. The Ilorin after-sales desk handles subsequent adjustments and troubleshooting.",
 				],
 				bullets: [
@@ -3782,7 +3782,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "On-site reach across the Ilorin sprawl",
 						description:
-							"CTPT technicians install directly at Ilorin GRA, Tanke, Fate-Basin, Sobi, Mandate Area, Ilorin East and Ilorin West locations without requiring travel to a central workshop — the vehicle stays parked exactly where it normally lives.",
+							"Car Tracker Plus Telematics technicians install directly at Ilorin GRA, Tanke, Fate-Basin, Sobi, Mandate Area, Ilorin East and Ilorin West locations without requiring travel to a central workshop — the vehicle stays parked exactly where it normally lives.",
 					},
 					{
 						title: "Agricultural-haulage context built in",
@@ -3813,7 +3813,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "Driver awareness is required for monitoring",
 						description:
-							"Every CTPT installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver cooperation is irrelevant to system operation.",
+							"Every Car Tracker Plus Telematics installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver cooperation is irrelevant to system operation.",
 					},
 					{
 						title: "Every tracker product delivers the same outcomes",
@@ -3858,17 +3858,17 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "What pricing applies to a professionally fitted tracker in Ilorin?",
 				answer:
-					"Entry-level live-position professionally installed setups in Ilorin typically start around ₦70,000. Advanced telematics, agricultural-fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware tier, activated features and total vehicle count. CTPT issues a fully itemised written proposal before any fitting commences.",
+					"Entry-level live-position professionally installed setups in Ilorin typically start around ₦70,000. Advanced telematics, agricultural-fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware tier, activated features and total vehicle count. Car Tracker Plus Telematics issues a fully itemised written proposal before any fitting commences.",
 			},
 			{
 				question: "Does a technician install on-site at Ilorin GRA or Tanke?",
 				answer:
-					"Without exception. CTPT technicians travel on-site to every Ilorin metro district including Ilorin GRA, Tanke, Fate-Basin, Sobi, Mandate Area, Ilorin East and Ilorin West — plus approved Kwara State towns such as Offa, Omu-Aran and Malete. Each vehicle is fitted at its normal parking location.",
+					"Without exception. Car Tracker Plus Telematics technicians travel on-site to every Ilorin metro district including Ilorin GRA, Tanke, Fate-Basin, Sobi, Mandate Area, Ilorin East and Ilorin West — plus approved Kwara State towns such as Offa, Omu-Aran and Malete. Each vehicle is fitted at its normal parking location.",
 			},
 			{
 				question: "Can I monitor the vehicle from my personal smartphone?",
 				answer:
-					"Every supported CTPT tracker ships with a companion mobile app displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use whenever preferred.",
+					"Every supported Car Tracker Plus Telematics tracker ships with a companion mobile app displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use whenever preferred.",
 			},
 			{
 				question: "Does a single login handle multiple different vehicles?",
@@ -3883,12 +3883,12 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "Do you support agricultural haulage fleets with many units?",
 				answer:
-					"Fleet supervision is a core CTPT speciality encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern analysis, idle-duration visibility, speed ceilings and optional fuel sensing. We actively serve farm-to-market, FMCG distribution, campus bus and corporate pool operators across Ilorin and Kwara State.",
+					"Fleet supervision is a core Car Tracker Plus Telematics speciality encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern analysis, idle-duration visibility, speed ceilings and optional fuel sensing. We actively serve farm-to-market, FMCG distribution, campus bus and corporate pool operators across Ilorin and Kwara State.",
 			},
 			{
 				question: "Can dashcams be integrated with the tracking platform?",
 				answer:
-					"Certainly. We fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the CTPT telematics console. Position data, travel speed and incident video all appear on the same screen, which is particularly valuable for farm-to-market and long highway routes.",
+					"Certainly. We fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the Car Tracker Plus Telematics telematics console. Position data, travel speed and incident video all appear on the same screen, which is particularly valuable for farm-to-market and long highway routes.",
 			},
 			{
 				question: "Does the platform include fuel monitoring?",
@@ -3899,7 +3899,7 @@ export const seoPages: SeoLandingPage[] = [
 		relatedServiceNames: {
 			title: "Additional Ilorin systems paired with tracking",
 			intro:
-				"A meaningful share of CTPT Ilorin accounts stack vehicle tracking with complementary systems that amplify measurable return on investment. The combinations below demonstrate value most rapidly.",
+				"A meaningful share of Car Tracker Plus Telematics Ilorin accounts stack vehicle tracking with complementary systems that amplify measurable return on investment. The combinations below demonstrate value most rapidly.",
 			items: [
 				"AI dashcam professional fitting",
 				"Fuel-level sensing platforms for agricultural fleets",
@@ -3911,7 +3911,7 @@ export const seoPages: SeoLandingPage[] = [
 		closing: {
 			title: "Book On-Site Vehicle Tracking Installation in Ilorin",
 			paragraphs: [
-				"Ilorin is a north-central agricultural anchor of emirate districts, expanding residential layouts, university campuses and the strategic highway interchange linking Abuja to Ibadan and southwest Nigeria. A generic tracker ordered online has never been calibrated for Ilorin Central Market parking patterns, UNILORIN campus bus routes, GRA compound access or the Ilorin–Abuja–Ibadan haulage rhythm. CTPT deployments are matched to your exact district, vehicle category and Ilorin operating profile from the first fitting.",
+				"Ilorin is a north-central agricultural anchor of emirate districts, expanding residential layouts, university campuses and the strategic highway interchange linking Abuja to Ibadan and southwest Nigeria. A generic tracker ordered online has never been calibrated for Ilorin Central Market parking patterns, UNILORIN campus bus routes, GRA compound access or the Ilorin–Abuja–Ibadan haulage rhythm. Car Tracker Plus Telematics deployments are matched to your exact district, vehicle category and Ilorin operating profile from the first fitting.",
 				"Tell us where your vehicles normally park overnight, how many units are involved, and whether the deployment serves private use, campus transport, executive security or agricultural-haulage. We will recommend the correct hardware tier and lock in an on-site Ilorin installation date that respects your schedule.",
 			],
 		},
@@ -3965,7 +3965,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Private Vehicle Security for Owerri Residential Estates",
 				paragraphs: [
 					"Owerri homeowners occupy layouts clustered around New Owerri Layouts, Irete, New Haven, World Bank Housing Estate, Obinze, Egbu Road, Imo State University Layout and the new residential corridors extending along the Port Harcourt Road axis. Vehicles parked on family compounds overnight or during daytime at Owerri Main Market, Relief Market or the various shopping plaza lots carry exposure patterns a generic plug-in tracker never anticipates.",
-					"CTPT private-vehicle configuration for Owerri centres on rapid-catch alerts calibrated to actual daily routines. Virtual perimeters wrap each residential compound, workplace building, regular market stop and the Onitsha–Owerri–Port Harcourt highway interchange access points. Any ignition outside agreed hours or unscheduled boundary crossing produces an instant alert.",
+					"Car Tracker Plus Telematics private-vehicle configuration for Owerri centres on rapid-catch alerts calibrated to actual daily routines. Virtual perimeters wrap each residential compound, workplace building, regular market stop and the Onitsha–Owerri–Port Harcourt highway interchange access points. Any ignition outside agreed hours or unscheduled boundary crossing produces an instant alert.",
 				],
 				bullets: [
 					"Estate-level virtual perimeters for New Owerri, Irete, New Haven, World Bank and Obinze",
@@ -3978,7 +3978,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Haulage, Market and Industrial Supervision",
 				paragraphs: [
 					"Owerri's commercial fleet backbone covers industrial-district manufacturing logistics, FMCG distribution, market-truck haulage, petroleum tanker movements, intercity passenger coaches and last-mile parcel delivery radiating to Aba, Port Harcourt, Enugu, Onitsha and Umuahia. Dispatch controllers need live inventory of every van and truck; commercial teams need auditable proof-of-delivery records.",
-					"CTPT logistics overlay adds warehouse, depot, market-premise, factory-gate and motor-park virtual perimeters to the standard tracking console. Each scheduled stop captures duration automatically, vehicles lingering beyond SLA parameters raise dispatch-screen flags, and journey archives deliver replayable evidence whenever customer disputes emerge.",
+					"Car Tracker Plus Telematics logistics overlay adds warehouse, depot, market-premise, factory-gate and motor-park virtual perimeters to the standard tracking console. Each scheduled stop captures duration automatically, vehicles lingering beyond SLA parameters raise dispatch-screen flags, and journey archives deliver replayable evidence whenever customer disputes emerge.",
 				],
 				bullets: [
 					"Warehouse, factory and depot boundary zones across Owerri industrial layouts",
@@ -4016,7 +4016,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "On-Site Fitting Across Owerri Metropolis",
 				paragraphs: [
-					"Every engagement opens with a short discovery call covering vehicle category, the specific monitoring outcomes being targeted, and whether the deployment falls under private, campus, executive or fleet categories. A CTPT technician then travels directly to your Owerri address — whether that is a New Owerri home compound, corporate office car park, FUTO campus, hotel parking or approved workshop. The vehicle never needs to be taken to a remote fitting location.",
+					"Every engagement opens with a short discovery call covering vehicle category, the specific monitoring outcomes being targeted, and whether the deployment falls under private, campus, executive or fleet categories. A Car Tracker Plus Telematics technician then travels directly to your Owerri address — whether that is a New Owerri home compound, corporate office car park, FUTO campus, hotel parking or approved workshop. The vehicle never needs to be taken to a remote fitting location.",
 					"Standard installations run roughly sixty to ninety minutes per vehicle. Cabling tucks behind interior trim for a factory-grade finish. Before departing the site the technician walks every authorised user through the mobile app, confirms alert channels with live test triggers, and calibrates the initial batch of virtual perimeters and notification preferences. The Owerri after-sales desk handles subsequent adjustments and troubleshooting.",
 				],
 				bullets: [
@@ -4139,7 +4139,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "On-site reach across the Owerri sprawl",
 						description:
-							"CTPT technicians install directly at New Owerri, Irete, New Haven, World Bank Estate, Obinze, Egbu Road and Port Harcourt Road locations without requiring travel to a central workshop — the vehicle stays parked exactly where it normally lives.",
+							"Car Tracker Plus Telematics technicians install directly at New Owerri, Irete, New Haven, World Bank Estate, Obinze, Egbu Road and Port Harcourt Road locations without requiring travel to a central workshop — the vehicle stays parked exactly where it normally lives.",
 					},
 					{
 						title: "Industrial-district context built in",
@@ -4170,7 +4170,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "Driver awareness is required for monitoring",
 						description:
-							"Every CTPT installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver cooperation is irrelevant to system operation.",
+							"Every Car Tracker Plus Telematics installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver cooperation is irrelevant to system operation.",
 					},
 					{
 						title: "Every tracker brand delivers identical results",
@@ -4215,17 +4215,17 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "What pricing applies to a professionally fitted tracker in Owerri?",
 				answer:
-					"Entry-level live-position professionally installed setups in Owerri typically start around ₦70,000. Advanced telematics, industrial-district fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware tier, activated features and total vehicle count. CTPT issues a fully itemised written proposal before any fitting commences.",
+					"Entry-level live-position professionally installed setups in Owerri typically start around ₦70,000. Advanced telematics, industrial-district fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware tier, activated features and total vehicle count. Car Tracker Plus Telematics issues a fully itemised written proposal before any fitting commences.",
 			},
 			{
 				question: "Does a technician install on-site at New Owerri or Obinze?",
 				answer:
-					"Without exception. CTPT technicians travel on-site to every Owerri metro district including New Owerri, Irete, New Haven, World Bank Estate, Obinze, Egbu Road, Port Harcourt Road and IMSU Layout — plus approved Imo State towns such as Orlu and Okigwe. Each vehicle is fitted at its normal parking location.",
+					"Without exception. Car Tracker Plus Telematics technicians travel on-site to every Owerri metro district including New Owerri, Irete, New Haven, World Bank Estate, Obinze, Egbu Road, Port Harcourt Road and IMSU Layout — plus approved Imo State towns such as Orlu and Okigwe. Each vehicle is fitted at its normal parking location.",
 			},
 			{
 				question: "Can I monitor the vehicle from my personal smartphone?",
 				answer:
-					"Every supported CTPT tracker ships with a companion mobile app displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use whenever preferred.",
+					"Every supported Car Tracker Plus Telematics tracker ships with a companion mobile app displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use whenever preferred.",
 			},
 			{
 				question: "Does a single login handle multiple different vehicles?",
@@ -4240,12 +4240,12 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "Do you support market-haulage and industrial fleets with many units?",
 				answer:
-					"Fleet supervision is a core CTPT speciality encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern analysis, idle-duration visibility, speed ceilings and optional fuel sensing. We actively serve industrial-district manufacturing, FMCG distribution, campus bus and corporate pool operators across Owerri and Imo State.",
+					"Fleet supervision is a core Car Tracker Plus Telematics speciality encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern analysis, idle-duration visibility, speed ceilings and optional fuel sensing. We actively serve industrial-district manufacturing, FMCG distribution, campus bus and corporate pool operators across Owerri and Imo State.",
 			},
 			{
 				question: "Can dashcams be integrated with the tracking platform?",
 				answer:
-					"Certainly. We fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the CTPT telematics console. Position data, travel speed and incident video all appear on the same screen, which is particularly valuable for fleet incident review on long intercity routes.",
+					"Certainly. We fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the Car Tracker Plus Telematics telematics console. Position data, travel speed and incident video all appear on the same screen, which is particularly valuable for fleet incident review on long intercity routes.",
 			},
 			{
 				question: "Does the platform include fuel monitoring?",
@@ -4256,7 +4256,7 @@ export const seoPages: SeoLandingPage[] = [
 		relatedServiceNames: {
 			title: "Additional Owerri systems paired with tracking",
 			intro:
-				"A meaningful share of CTPT Owerri accounts stack vehicle tracking with complementary systems that amplify measurable return on investment. The combinations below demonstrate value most rapidly.",
+				"A meaningful share of Car Tracker Plus Telematics Owerri accounts stack vehicle tracking with complementary systems that amplify measurable return on investment. The combinations below demonstrate value most rapidly.",
 			items: [
 				"AI dashcam professional fitting",
 				"Fuel-level sensing platforms for industrial fleets",
@@ -4268,7 +4268,7 @@ export const seoPages: SeoLandingPage[] = [
 		closing: {
 			title: "Book On-Site Vehicle Tracking Installation in Owerri",
 			paragraphs: [
-				"Owerri is a southeast industrial anchor of traditional communities, expanding residential estates, university campuses and the strategic highway interchange linking Port Harcourt, Enugu and Onitsha. A generic tracker ordered online has never been calibrated for Owerri Main Market parking patterns, FUTO campus bus routes, Works Layout depot access or the Onitsha–Owerri–Port Harcourt haulage rhythm. CTPT deployments are matched to your exact district, vehicle category and Owerri operating profile from the first fitting.",
+				"Owerri is a southeast industrial anchor of traditional communities, expanding residential estates, university campuses and the strategic highway interchange linking Port Harcourt, Enugu and Onitsha. A generic tracker ordered online has never been calibrated for Owerri Main Market parking patterns, FUTO campus bus routes, Works Layout depot access or the Onitsha–Owerri–Port Harcourt haulage rhythm. Car Tracker Plus Telematics deployments are matched to your exact district, vehicle category and Owerri operating profile from the first fitting.",
 				"Tell us where your vehicles normally park overnight, how many units are involved, and whether the deployment serves private use, campus transport, executive security or industrial haulage. We will recommend the correct hardware tier and lock in an on-site Owerri installation date that respects your schedule.",
 			],
 		},
@@ -4322,7 +4322,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Private Vehicle Security for Uyo Residential Estates",
 				paragraphs: [
 					"Uyo homeowners occupy layouts clustered around Ewet Housing Estate, Osongama Estate, Shelter Afrique Estate, Nwaniba Road, Akpan Andem, Ikot Ekpene Road, Abak Road and the new residential corridors extending toward Itu, Ibesikpo and Nsit Ubium. Vehicles parked on family compounds overnight or during daytime at Akpan Andem Market, Oron Road shopping lots carry exposure patterns a generic plug-in tracker never anticipates.",
-					"CTPT private-vehicle configuration for Uyo centres on rapid-catch alerts calibrated to actual daily routines. Virtual perimeters wrap each residential compound, workplace building, regular market stop and the Uyo–Port Harcourt and Uyo–Calabar highway interchange access points. Any ignition outside agreed hours or unscheduled boundary crossing produces an instant alert.",
+					"Car Tracker Plus Telematics private-vehicle configuration for Uyo centres on rapid-catch alerts calibrated to actual daily routines. Virtual perimeters wrap each residential compound, workplace building, regular market stop and the Uyo–Port Harcourt and Uyo–Calabar highway interchange access points. Any ignition outside agreed hours or unscheduled boundary crossing produces an instant alert.",
 				],
 				bullets: [
 					"Estate-level virtual perimeters for Ewet Housing, Osongama, Shelter Afrique, Nwaniba and Akpan Andem",
@@ -4335,7 +4335,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Oil-Service Fleet and Haulage Supervision",
 				paragraphs: [
 					"Uyo's commercial fleet backbone covers oil-service utility and Hilux movement, FMCG distribution, intercity passenger coaches, petroleum-product tanker haulage, last-mile parcel delivery and port-access logistics radiating to Eket, Ikot Abasi, Abak, Itu, Calabar, Oron and Port Harcourt. Dispatch controllers need live inventory of every van and truck; commercial teams need auditable proof-of-delivery records.",
-					"CTPT logistics overlay adds oil-base, depot, customer-premise and motor-park virtual perimeters to the standard tracking console. Each scheduled stop captures duration automatically, vehicles lingering beyond SLA parameters raise dispatch-screen flags, and journey archives deliver replayable evidence whenever customer disputes emerge.",
+					"Car Tracker Plus Telematics logistics overlay adds oil-base, depot, customer-premise and motor-park virtual perimeters to the standard tracking console. Each scheduled stop captures duration automatically, vehicles lingering beyond SLA parameters raise dispatch-screen flags, and journey archives deliver replayable evidence whenever customer disputes emerge.",
 				],
 				bullets: [
 					"Oil-base, depot and port boundary zones across Uyo industrial and Nwaniba Road layouts",
@@ -4373,7 +4373,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "On-Site Fitting Across Uyo Metropolis",
 				paragraphs: [
-					"Every engagement opens with a short discovery call covering vehicle category, the specific monitoring outcomes being targeted, and whether the deployment falls under private, campus, executive or fleet categories. A CTPT technician then travels directly to your Uyo address — whether that is an Ewet Housing Estate home compound, corporate office car park, UNIUYO campus, hotel parking or approved workshop. The vehicle never needs to be taken to a remote fitting location.",
+					"Every engagement opens with a short discovery call covering vehicle category, the specific monitoring outcomes being targeted, and whether the deployment falls under private, campus, executive or fleet categories. A Car Tracker Plus Telematics technician then travels directly to your Uyo address — whether that is an Ewet Housing Estate home compound, corporate office car park, UNIUYO campus, hotel parking or approved workshop. The vehicle never needs to be taken to a remote fitting location.",
 					"Standard installations run roughly sixty to ninety minutes per vehicle. Cabling tucks behind interior trim for a factory-grade finish. Before departing the site the technician walks every authorised user through the mobile app, confirms alert channels with live test triggers, and calibrates the initial batch of virtual perimeters and notification preferences. The Uyo after-sales desk handles subsequent adjustments and troubleshooting.",
 				],
 				bullets: [
@@ -4496,7 +4496,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "On-site reach across the Uyo sprawl",
 						description:
-							"CTPT technicians install directly at Ewet Housing, Osongama, Shelter Afrique, Nwaniba, Akpan Andem, Ikot Ekpene Road and Abak Road locations without requiring travel to a central workshop — the vehicle stays parked exactly where it normally lives.",
+							"Car Tracker Plus Telematics technicians install directly at Ewet Housing, Osongama, Shelter Afrique, Nwaniba, Akpan Andem, Ikot Ekpene Road and Abak Road locations without requiring travel to a central workshop — the vehicle stays parked exactly where it normally lives.",
 					},
 					{
 						title: "Oil-service fleet context built in",
@@ -4527,7 +4527,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "Driver awareness is required for monitoring",
 						description:
-							"Every CTPT installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver cooperation is irrelevant to system operation.",
+							"Every Car Tracker Plus Telematics installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver cooperation is irrelevant to system operation.",
 					},
 					{
 						title: "Every tracker product delivers the same outcomes",
@@ -4572,17 +4572,17 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "What pricing applies to a professionally fitted tracker in Uyo?",
 				answer:
-					"Entry-level live-position professionally installed setups in Uyo typically start around ₦70,000. Advanced telematics, oil-service fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware tier, activated features and total vehicle count. CTPT issues a fully itemised written proposal before any fitting commences.",
+					"Entry-level live-position professionally installed setups in Uyo typically start around ₦70,000. Advanced telematics, oil-service fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware tier, activated features and total vehicle count. Car Tracker Plus Telematics issues a fully itemised written proposal before any fitting commences.",
 			},
 			{
 				question: "Does a technician install on-site at Ewet Housing or Shelter Afrique?",
 				answer:
-					"Without exception. CTPT technicians travel on-site to every Uyo metro district including Ewet Housing Estate, Osongama, Shelter Afrique, Nwaniba Road, Akpan Andem, Ikot Ekpene Road and Abak Road — plus approved Akwa Ibom towns such as Eket and Abak. Each vehicle is fitted at its normal parking location.",
+					"Without exception. Car Tracker Plus Telematics technicians travel on-site to every Uyo metro district including Ewet Housing Estate, Osongama, Shelter Afrique, Nwaniba Road, Akpan Andem, Ikot Ekpene Road and Abak Road — plus approved Akwa Ibom towns such as Eket and Abak. Each vehicle is fitted at its normal parking location.",
 			},
 			{
 				question: "Can I monitor the vehicle from my personal smartphone?",
 				answer:
-					"Every supported CTPT tracker ships with a companion mobile app displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use whenever preferred.",
+					"Every supported Car Tracker Plus Telematics tracker ships with a companion mobile app displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use whenever preferred.",
 			},
 			{
 				question: "Does a single login handle multiple different vehicles?",
@@ -4597,12 +4597,12 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "Do you support oil-service fleets with many units?",
 				answer:
-					"Fleet supervision is a core CTPT speciality encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern analysis, idle-duration visibility, speed ceilings and optional fuel sensing. We actively serve oil-service Hilux, FMCG distribution, petroleum tanker, campus bus and corporate pool operators across Uyo and Akwa Ibom.",
+					"Fleet supervision is a core Car Tracker Plus Telematics speciality encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern analysis, idle-duration visibility, speed ceilings and optional fuel sensing. We actively serve oil-service Hilux, FMCG distribution, petroleum tanker, campus bus and corporate pool operators across Uyo and Akwa Ibom.",
 			},
 			{
 				question: "Can dashcams be integrated with the tracking platform?",
 				answer:
-					"Certainly. We fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the CTPT telematics console. Position data, travel speed and incident video all appear on the same screen, which is particularly valuable for oil-fleet incident review.",
+					"Certainly. We fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the Car Tracker Plus Telematics telematics console. Position data, travel speed and incident video all appear on the same screen, which is particularly valuable for oil-fleet incident review.",
 			},
 			{
 				question: "Does the platform include fuel monitoring?",
@@ -4613,7 +4613,7 @@ export const seoPages: SeoLandingPage[] = [
 		relatedServiceNames: {
 			title: "Additional Uyo systems paired with tracking",
 			intro:
-				"A meaningful share of CTPT Uyo accounts stack vehicle tracking with complementary systems that amplify measurable return on investment. The combinations below demonstrate value most rapidly.",
+				"A meaningful share of Car Tracker Plus Telematics Uyo accounts stack vehicle tracking with complementary systems that amplify measurable return on investment. The combinations below demonstrate value most rapidly.",
 			items: [
 				"AI dashcam professional fitting",
 				"Fuel-level sensing platforms for petroleum tanker fleets",
@@ -4625,7 +4625,7 @@ export const seoPages: SeoLandingPage[] = [
 		closing: {
 			title: "Book On-Site Vehicle Tracking Installation in Uyo",
 			paragraphs: [
-				"Uyo is a south-south coastal anchor of traditional communities, expanding residential estates, university campuses and the strategic highway interchange linking Port Harcourt, Calabar and the eastern Niger Delta. A generic tracker ordered online has never been calibrated for Akpan Andem Market parking patterns, UNIUYO campus bus routes, Nwaniba Road depot access or the Uyo–Port Harcourt–Calabar haulage rhythm. CTPT deployments are matched to your exact district, vehicle category and Uyo operating profile from the first fitting.",
+				"Uyo is a south-south coastal anchor of traditional communities, expanding residential estates, university campuses and the strategic highway interchange linking Port Harcourt, Calabar and the eastern Niger Delta. A generic tracker ordered online has never been calibrated for Akpan Andem Market parking patterns, UNIUYO campus bus routes, Nwaniba Road depot access or the Uyo–Port Harcourt–Calabar haulage rhythm. Car Tracker Plus Telematics deployments are matched to your exact district, vehicle category and Uyo operating profile from the first fitting.",
 				"Tell us where your vehicles normally park overnight, how many units are involved, and whether the deployment serves private use, campus transport, executive security or oil-service haulage. We will recommend the correct hardware tier and lock in an on-site Uyo installation date that respects your schedule.",
 			],
 		},
@@ -4679,7 +4679,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Private Vehicle Security for Calabar Residential Estates",
 				paragraphs: [
 					"Calabar homeowners occupy layouts clustered around State Housing Estate, Calabar South, Ikot Ekpene Road, Ekpo Abasi, Old GRA, New GRA, Marian Road and the new residential corridors extending toward Mbakoba, Airport Road and the Tinapa–Freedom Way axis. Vehicles parked on family compounds overnight or during daytime at Watt Market, Marian Market or the numerous tourist-centre parking lots carry exposure patterns a generic plug-in tracker never anticipates.",
-					"CTPT private-vehicle configuration for Calabar centres on rapid-catch alerts calibrated to actual daily routines. Virtual perimeters wrap each residential compound, workplace building, regular market stop and the Calabar–Uyo and Calabar–Aba highway interchange access points. Any ignition outside agreed hours or unscheduled boundary crossing produces an instant alert.",
+					"Car Tracker Plus Telematics private-vehicle configuration for Calabar centres on rapid-catch alerts calibrated to actual daily routines. Virtual perimeters wrap each residential compound, workplace building, regular market stop and the Calabar–Uyo and Calabar–Aba highway interchange access points. Any ignition outside agreed hours or unscheduled boundary crossing produces an instant alert.",
 				],
 				bullets: [
 					"Estate-level virtual perimeters for Old GRA, New GRA, State Housing, Marian Road and Ikot Ekpene Road",
@@ -4692,7 +4692,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Port-Logistics Fleet and Haulage Supervision",
 				paragraphs: [
 					"Calabar's commercial fleet backbone covers port-clearing and container haulage, FMCG distribution, tourism-coach movement, intercity passenger vehicles, petroleum-product tanker deliveries and last-mile parcel delivery radiating to Uyo, Aba, Port Harcourt, Ogoja and Ikom. Dispatch controllers need live inventory of every van and truck; commercial teams need auditable proof-of-delivery records.",
-					"CTPT logistics overlay adds port-gate, container-yard, warehouse, depot, customer-premise and motor-park virtual perimeters to the standard tracking console. Each scheduled stop captures duration automatically, vehicles lingering beyond SLA parameters raise dispatch-screen flags, and journey archives deliver replayable evidence whenever customer disputes emerge.",
+					"Car Tracker Plus Telematics logistics overlay adds port-gate, container-yard, warehouse, depot, customer-premise and motor-park virtual perimeters to the standard tracking console. Each scheduled stop captures duration automatically, vehicles lingering beyond SLA parameters raise dispatch-screen flags, and journey archives deliver replayable evidence whenever customer disputes emerge.",
 				],
 				bullets: [
 					"Port, container-yard and depot boundary zones across Calabar Free Trade Zone and Tinapa layouts",
@@ -4730,7 +4730,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "On-Site Fitting Across Calabar Metropolis",
 				paragraphs: [
-					"Every engagement opens with a short discovery call covering vehicle category, the specific monitoring outcomes being targeted, and whether the deployment falls under private, campus, executive or fleet categories. A CTPT technician then travels directly to your Calabar address — whether that is a New GRA home compound, port-side corporate car park, UNICAL campus, hotel parking or approved workshop. The vehicle never needs to be taken to a remote fitting location.",
+					"Every engagement opens with a short discovery call covering vehicle category, the specific monitoring outcomes being targeted, and whether the deployment falls under private, campus, executive or fleet categories. A Car Tracker Plus Telematics technician then travels directly to your Calabar address — whether that is a New GRA home compound, port-side corporate car park, UNICAL campus, hotel parking or approved workshop. The vehicle never needs to be taken to a remote fitting location.",
 					"Standard installations run roughly sixty to ninety minutes per vehicle. Cabling tucks behind interior trim for a factory-grade finish. Before departing the site the technician walks every authorised user through the mobile app, confirms alert channels with live test triggers, and calibrates the initial batch of virtual perimeters and notification preferences. The Calabar after-sales desk handles subsequent adjustments and troubleshooting.",
 				],
 				bullets: [
@@ -4853,7 +4853,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "On-site reach across the Calabar sprawl",
 						description:
-							"CTPT technicians install directly at Old GRA, New GRA, State Housing, Marian Road, Ikot Ekpene Road, Ekpo Abasi and Calabar South locations without requiring travel to a central workshop — the vehicle stays parked exactly where it normally lives.",
+							"Car Tracker Plus Telematics technicians install directly at Old GRA, New GRA, State Housing, Marian Road, Ikot Ekpene Road, Ekpo Abasi and Calabar South locations without requiring travel to a central workshop — the vehicle stays parked exactly where it normally lives.",
 					},
 					{
 						title: "Port-logistics context built in",
@@ -4884,7 +4884,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "Driver awareness is necessary for monitoring",
 						description:
-							"Every CTPT installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver cooperation is irrelevant to system operation.",
+							"Every Car Tracker Plus Telematics installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver cooperation is irrelevant to system operation.",
 					},
 					{
 						title: "Every tracker brand delivers identical results",
@@ -4929,17 +4929,17 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "What pricing applies to a professionally fitted tracker in Calabar?",
 				answer:
-					"Entry-level live-position professionally installed setups in Calabar typically start around ₦70,000. Advanced telematics, port-logistics fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware tier, activated features and total vehicle count. CTPT issues a fully itemised written proposal before any fitting commences.",
+					"Entry-level live-position professionally installed setups in Calabar typically start around ₦70,000. Advanced telematics, port-logistics fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware tier, activated features and total vehicle count. Car Tracker Plus Telematics issues a fully itemised written proposal before any fitting commences.",
 			},
 			{
 				question: "Does a technician install on-site at New GRA or Marian Road?",
 				answer:
-					"Without exception. CTPT technicians travel on-site to every Calabar metro district including Old GRA, New GRA, State Housing, Marian Road, Ikot Ekpene Road, Ekpo Abasi and Calabar South — plus approved Cross River towns such as Ikom and Ogoja. Each vehicle is fitted at its normal parking location.",
+					"Without exception. Car Tracker Plus Telematics technicians travel on-site to every Calabar metro district including Old GRA, New GRA, State Housing, Marian Road, Ikot Ekpene Road, Ekpo Abasi and Calabar South — plus approved Cross River towns such as Ikom and Ogoja. Each vehicle is fitted at its normal parking location.",
 			},
 			{
 				question: "Can I monitor the vehicle from my personal smartphone?",
 				answer:
-					"Every supported CTPT tracker ships with a companion mobile app displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use whenever preferred.",
+					"Every supported Car Tracker Plus Telematics tracker ships with a companion mobile app displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use whenever preferred.",
 			},
 			{
 				question: "Does a single login handle multiple different vehicles?",
@@ -4954,12 +4954,12 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "Do you support port-clearing and container fleets with many units?",
 				answer:
-					"Fleet supervision is a core CTPT speciality encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern analysis, idle-duration visibility, speed ceilings and optional fuel sensing. We actively serve port-clearing haulage, FMCG distribution, campus bus and corporate pool operators across Calabar and Cross River.",
+					"Fleet supervision is a core Car Tracker Plus Telematics speciality encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern analysis, idle-duration visibility, speed ceilings and optional fuel sensing. We actively serve port-clearing haulage, FMCG distribution, campus bus and corporate pool operators across Calabar and Cross River.",
 			},
 			{
 				question: "Can dashcams be integrated with the tracking platform?",
 				answer:
-					"Certainly. We fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the CTPT telematics console. Position data, travel speed and incident video all appear on the same screen, which is particularly valuable for port logistics and tourism-coach incident review.",
+					"Certainly. We fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the Car Tracker Plus Telematics telematics console. Position data, travel speed and incident video all appear on the same screen, which is particularly valuable for port logistics and tourism-coach incident review.",
 			},
 			{
 				question: "Does the platform include fuel monitoring?",
@@ -4970,7 +4970,7 @@ export const seoPages: SeoLandingPage[] = [
 		relatedServiceNames: {
 			title: "Additional Calabar systems paired with tracking",
 			intro:
-				"A meaningful share of CTPT Calabar accounts stack vehicle tracking with complementary systems that amplify measurable return on investment. The combinations below demonstrate value most rapidly.",
+				"A meaningful share of Car Tracker Plus Telematics Calabar accounts stack vehicle tracking with complementary systems that amplify measurable return on investment. The combinations below demonstrate value most rapidly.",
 			items: [
 				"AI dashcam professional fitting",
 				"Fuel-level sensing platforms for port tanker fleets",
@@ -4982,7 +4982,7 @@ export const seoPages: SeoLandingPage[] = [
 		closing: {
 			title: "Book On-Site Vehicle Tracking Installation in Calabar",
 			paragraphs: [
-				"Calabar is an eastern seaboard anchor of historic royal districts, expanding residential estates, university campuses and the strategic port-and-highway interchange linking the Cross River corridor to Uyo, Aba and Port Harcourt. A generic tracker ordered online has never been calibrated for Watt Market parking patterns, UNICAL campus bus routes, Calabar Port depot access or the Calabar–Uyo–Port Harcourt haulage rhythm. CTPT deployments are matched to your exact district, vehicle category and Calabar operating profile from the first fitting.",
+				"Calabar is an eastern seaboard anchor of historic royal districts, expanding residential estates, university campuses and the strategic port-and-highway interchange linking the Cross River corridor to Uyo, Aba and Port Harcourt. A generic tracker ordered online has never been calibrated for Watt Market parking patterns, UNICAL campus bus routes, Calabar Port depot access or the Calabar–Uyo–Port Harcourt haulage rhythm. Car Tracker Plus Telematics deployments are matched to your exact district, vehicle category and Calabar operating profile from the first fitting.",
 				"Tell us where your vehicles normally park overnight, how many units are involved, and whether the deployment serves private use, campus transport, executive security or port-clearing logistics. We will recommend the correct hardware tier and lock in an on-site Calabar installation date that respects your schedule.",
 			],
 		},
@@ -5036,7 +5036,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Private Vehicle Security for Lagos Island and Mainland Estates",
 				paragraphs: [
 					"Lagos homeowners and private-car operators occupy a vast, fragmented geography spanning Victoria Island, Lekki, Ikoyi, Ikeja GRA, Magodo, Maryland, Surulere, Festac Town, Anthony Village and the satellite residential corridors extending toward Ajah, Sangotedo, Ikorodu and the Badagry axis. Vehicles parked on gated-plot compounds overnight or during daytime at Idumota, Balogun, Computer Village or the many mall and waterfront parking lots carry exposure patterns a generic plug-in tracker never anticipates.",
-					"CTPT private-vehicle configuration for Lagos centres on rapid-catch alerts calibrated to actual daily routines. Virtual perimeters wrap each residential compound, workplace tower, regular market stop and the major mainland-to-island interchange access points across Third Mainland Bridge, Eko Bridge, Lekki–Epe Expressway and Lagos–Ibadan Expressway. Any ignition outside agreed hours or unscheduled boundary crossing produces an instant alert.",
+					"Car Tracker Plus Telematics private-vehicle configuration for Lagos centres on rapid-catch alerts calibrated to actual daily routines. Virtual perimeters wrap each residential compound, workplace tower, regular market stop and the major mainland-to-island interchange access points across Third Mainland Bridge, Eko Bridge, Lekki–Epe Expressway and Lagos–Ibadan Expressway. Any ignition outside agreed hours or unscheduled boundary crossing produces an instant alert.",
 				],
 				bullets: [
 					"Estate-level virtual perimeters for VI, Lekki, Ikoyi, Ikeja GRA, Magodo, Maryland and Festac",
@@ -5049,7 +5049,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Apapa Port-Logistics Fleet and Haulage Supervision",
 				paragraphs: [
 					"Lagos's commercial fleet backbone covers Apapa and Tin Can Island container haulage, Kirikiri and Ikorodu industrial logistics, bank cash-in-transit, FMCG distribution, petroleum tanker movement, intercity passenger coaches, airport transfer, e-commerce delivery and last-mile parcel services radiating to Ogun State, Ibadan, Abeokuta and the entire southwest. Dispatch controllers need live inventory of every van and truck; commercial teams need auditable proof-of-delivery records.",
-					"CTPT logistics overlay adds port-gate, container-yard, bonded-warehouse, depot, customer-premise and motor-park virtual perimeters to the standard tracking console. Each scheduled stop captures duration automatically, vehicles lingering beyond SLA parameters raise dispatch-screen flags, and journey archives deliver replayable evidence whenever customer disputes emerge.",
+					"Car Tracker Plus Telematics logistics overlay adds port-gate, container-yard, bonded-warehouse, depot, customer-premise and motor-park virtual perimeters to the standard tracking console. Each scheduled stop captures duration automatically, vehicles lingering beyond SLA parameters raise dispatch-screen flags, and journey archives deliver replayable evidence whenever customer disputes emerge.",
 				],
 				bullets: [
 					"Port, container-yard and depot boundary zones across Apapa, Tin Can Island, Kirikiri and Ikorodu industrial",
@@ -5087,7 +5087,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "On-Site Fitting Across Lagos Island and Mainland",
 				paragraphs: [
-					"Every engagement opens with a short discovery call covering vehicle category, the specific monitoring outcomes being targeted, and whether the deployment falls under private, campus, executive or fleet categories. A CTPT technician then travels directly to your Lagos address — whether that is a Victoria Island residential plot, Apapa corporate port car park, UNILAG campus, airport hotel parking or approved workshop. The vehicle never needs to be taken to a remote fitting location.",
+					"Every engagement opens with a short discovery call covering vehicle category, the specific monitoring outcomes being targeted, and whether the deployment falls under private, campus, executive or fleet categories. A Car Tracker Plus Telematics technician then travels directly to your Lagos address — whether that is a Victoria Island residential plot, Apapa corporate port car park, UNILAG campus, airport hotel parking or approved workshop. The vehicle never needs to be taken to a remote fitting location.",
 					"Standard installations run roughly sixty to ninety minutes per vehicle. Cabling tucks behind interior trim for a factory-grade finish. Before departing the site the technician walks every authorised user through the mobile app, confirms alert channels with live test triggers, and calibrates the initial batch of virtual perimeters and notification preferences. The Lagos after-sales desk handles subsequent adjustments and troubleshooting.",
 				],
 				bullets: [
@@ -5210,7 +5210,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "On-site reach across Lagos island and mainland",
 						description:
-							"CTPT technicians install directly at VI, Lekki, Ikoyi, Ikeja GRA, Magodo, Maryland, Surulere and Festac locations without requiring travel to a central workshop — the vehicle stays parked exactly where it normally lives.",
+							"Car Tracker Plus Telematics technicians install directly at VI, Lekki, Ikoyi, Ikeja GRA, Magodo, Maryland, Surulere and Festac locations without requiring travel to a central workshop — the vehicle stays parked exactly where it normally lives.",
 					},
 					{
 						title: "Port-logistics context built in",
@@ -5241,7 +5241,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "Driver awareness is required for monitoring",
 						description:
-							"Every CTPT installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver cooperation is irrelevant to system operation.",
+							"Every Car Tracker Plus Telematics installation ties directly into vehicle electrical circuits. Unauthorised unplugging or power interruption raises an immediate tamper flag on premium and fleet specifications — driver cooperation is irrelevant to system operation.",
 					},
 					{
 						title: "Every tracker brand delivers identical results",
@@ -5286,17 +5286,17 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "What pricing applies to a professionally fitted tracker in Lagos?",
 				answer:
-					"Entry-level live-position professionally installed setups in Lagos typically start around ₦70,000. Advanced telematics, port-logistics fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware tier, activated features and total vehicle count. CTPT issues a fully itemised written proposal before any fitting commences.",
+					"Entry-level live-position professionally installed setups in Lagos typically start around ₦70,000. Advanced telematics, port-logistics fleet supervision and executive security specifications range into the mid-hundreds of thousands depending on hardware tier, activated features and total vehicle count. Car Tracker Plus Telematics issues a fully itemised written proposal before any fitting commences.",
 			},
 			{
 				question: "Does a technician install on-site at VI, Lekki or Ikeja GRA?",
 				answer:
-					"Without exception. CTPT technicians travel on-site to every Lagos district including Victoria Island, Lekki, Ikoyi, Ikeja GRA, Magodo, Maryland, Surulere, Festac, Ajah and Ikorodu — plus approved Ogun State towns such as Sagamu and Mowe. Each vehicle is fitted at its normal parking location.",
+					"Without exception. Car Tracker Plus Telematics technicians travel on-site to every Lagos district including Victoria Island, Lekki, Ikoyi, Ikeja GRA, Magodo, Maryland, Surulere, Festac, Ajah and Ikorodu — plus approved Ogun State towns such as Sagamu and Mowe. Each vehicle is fitted at its normal parking location.",
 			},
 			{
 				question: "Can I monitor the vehicle from my personal smartphone?",
 				answer:
-					"Every supported CTPT tracker ships with a companion mobile app displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use whenever preferred.",
+					"Every supported Car Tracker Plus Telematics tracker ships with a companion mobile app displaying current position, past routes, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based dashboard is also available for laptop or desktop use whenever preferred.",
 			},
 			{
 				question: "Does a single login handle multiple different vehicles?",
@@ -5311,12 +5311,12 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "Do you support Apapa port-logistics and container fleets with many units?",
 				answer:
-					"Fleet supervision is a core CTPT speciality encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern analysis, idle-duration visibility, speed ceilings and optional fuel sensing. We actively serve Apapa/Tin Can container haulage, FMCG distribution, e-commerce delivery, campus bus and corporate pool operators across Lagos.",
+					"Fleet supervision is a core Car Tracker Plus Telematics speciality encompassing pool-wide dashboards, virtual perimeter zones, driver-pattern analysis, idle-duration visibility, speed ceilings and optional fuel sensing. We actively serve Apapa/Tin Can container haulage, FMCG distribution, e-commerce delivery, campus bus and corporate pool operators across Lagos.",
 			},
 			{
 				question: "Can dashcams be integrated with the tracking platform?",
 				answer:
-					"Certainly. We fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the CTPT telematics console. Position data, travel speed and incident video all appear on the same screen, which is particularly valuable for Apapa port-logistics and megacity traffic incident review.",
+					"Certainly. We fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the Car Tracker Plus Telematics telematics console. Position data, travel speed and incident video all appear on the same screen, which is particularly valuable for Apapa port-logistics and megacity traffic incident review.",
 			},
 			{
 				question: "Does the platform include fuel monitoring?",
@@ -5327,7 +5327,7 @@ export const seoPages: SeoLandingPage[] = [
 		relatedServiceNames: {
 			title: "Additional Lagos systems paired with tracking",
 			intro:
-				"A meaningful share of CTPT Lagos accounts stack vehicle tracking with complementary systems that amplify measurable return on investment. The combinations below demonstrate value most rapidly.",
+				"A meaningful share of Car Tracker Plus Telematics Lagos accounts stack vehicle tracking with complementary systems that amplify measurable return on investment. The combinations below demonstrate value most rapidly.",
 			items: [
 				"AI dashcam professional fitting",
 				"Fuel-level sensing platforms for port tanker fleets",
@@ -5339,7 +5339,7 @@ export const seoPages: SeoLandingPage[] = [
 		closing: {
 			title: "Book On-Site Vehicle Tracking Installation in Lagos",
 			paragraphs: [
-				"Lagos is a southwest megacity anchor of island financial districts, sprawling mainland estates, university campuses and the strategic Apapa/Tin Can port gateway connecting the entire national economy. A generic tracker ordered online has never been calibrated for Balogun Market parking patterns, UNILAG campus bus routes, Apapa port depot access or the Third Mainland Bridge and Lekki–Epe megacity commute rhythm. CTPT deployments are matched to your exact district, vehicle category and Lagos operating profile from the first fitting.",
+				"Lagos is a southwest megacity anchor of island financial districts, sprawling mainland estates, university campuses and the strategic Apapa/Tin Can port gateway connecting the entire national economy. A generic tracker ordered online has never been calibrated for Balogun Market parking patterns, UNILAG campus bus routes, Apapa port depot access or the Third Mainland Bridge and Lekki–Epe megacity commute rhythm. Car Tracker Plus Telematics deployments are matched to your exact district, vehicle category and Lagos operating profile from the first fitting.",
 				"Tell us where your vehicles normally park overnight, how many units are involved, and whether the deployment serves private use, campus transport, executive security or Apapa port-logistics haulage. We will recommend the correct hardware tier and lock in an on-site Lagos installation date that respects your schedule.",
 			],
 		},
@@ -5353,12 +5353,12 @@ export const seoPages: SeoLandingPage[] = [
 	},
 	{
 		slug: "car-tracker-nigeria",
-		pageTitle: "Car Tracker Nigeria | Nationwide GPS Vehicle Tracking by CTPT",
+		pageTitle: "Car Tracker Nigeria | Nationwide GPS Vehicle Tracking by Car Tracker Plus Telematics",
 		metaDescription:
 			"Car Tracker Plus Telematics delivers nationwide car tracker installation across Nigeria. Discreet GPS fitting, immobilisation, app monitoring, fleet supervision and dashcam integration available in every major city from Lagos to Abuja, Kano, Port Harcourt and beyond.",
 		headline: "Car Tracker Nigeria — Nationwide GPS Fitting and Telematics Coverage for Every Vehicle Category",
 		intro:
-			"Car Tracker Plus Telematics operates a nationwide car tracker installation network spanning every geopolitical zone of Nigeria — from the Apapa port precincts of Lagos through the FCT Abuja and its ministerial districts to the northern commercial hubs of Kano and Kaduna, the eastern manufacturing corridors around Onitsha and Aba, and the petroleum-coastal cities of Port Harcourt, Warri and Calabar. Whether you operate a single family sedan or a mixed national pool of hundreds of cars, vans, trucks and buses, CTPT delivers a tracker specification, fitting service and ongoing after-sales support calibrated to Nigerian road and operational realities rather than generic overseas defaults.",
+			"Car Tracker Plus Telematics operates a nationwide car tracker installation network spanning every geopolitical zone of Nigeria — from the Apapa port precincts of Lagos through the FCT Abuja and its ministerial districts to the northern commercial hubs of Kano and Kaduna, the eastern manufacturing corridors around Onitsha and Aba, and the petroleum-coastal cities of Port Harcourt, Warri and Calabar. Whether you operate a single family sedan or a mixed national pool of hundreds of cars, vans, trucks and buses, Car Tracker Plus Telematics delivers a tracker specification, fitting service and ongoing after-sales support calibrated to Nigerian road and operational realities rather than generic overseas defaults.",
 		serviceType: "Car Tracker",
 		location: "Nationwide Nigeria",
 		primaryKeyword: "car tracker Nigeria",
@@ -5386,14 +5386,14 @@ export const seoPages: SeoLandingPage[] = [
 		],
 		pageCategory: "service",
 		cardTitle: "Car Tracker Nationwide Nigeria",
-		eyebrow: "CTPT National Coverage",
+		eyebrow: "Car Tracker Plus Telematics National Coverage",
 		quoteLabel: "Car Tracker Nigeria",
 		ogImage: "/dashcam/dashcam_02.jpeg",
 		sections: [
 			{
 				title: "Nationwide Private-Car and SUV Tracker Deployment",
 				paragraphs: [
-					"CTPT private-car tracker installations span every residential context observable across Nigeria — from gated estates on Lagos Island and Victoria Island through Abuja ministerial districts, Kano traditional layouts, Port Harcourt petroleum compounds, Ibadan university corridors, Enugu coal-regional estates and the newer planned cities springing up along the major intercity expressways. Every deployment opens with a short discovery call to understand parking habits, commuting patterns, frequency of intercity travel and any specific security concerns — then the hardware, cabling and alert rules are configured against exactly that profile.",
+					"Car Tracker Plus Telematics private-car tracker installations span every residential context observable across Nigeria — from gated estates on Lagos Island and Victoria Island through Abuja ministerial districts, Kano traditional layouts, Port Harcourt petroleum compounds, Ibadan university corridors, Enugu coal-regional estates and the newer planned cities springing up along the major intercity expressways. Every deployment opens with a short discovery call to understand parking habits, commuting patterns, frequency of intercity travel and any specific security concerns — then the hardware, cabling and alert rules are configured against exactly that profile.",
 					"Tracker hardware sits behind passenger cabin trim wherever physically possible rather than attached to the dashboard. Mobile app credentials reach only pre-approved household contacts. Virtual perimeters wrap each home, workplace, school and family-visit address — so any unscheduled stop or boundary deviation raises an alert within seconds rather than surfacing only at the end of a journey.",
 				],
 				bullets: [
@@ -5406,7 +5406,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "Commercial Pool and SME Car Tracker Deployment",
 				paragraphs: [
-					"Small and medium enterprises running multi-vehicle operations in Lagos, Abuja, Onitsha, Aba, Kano, Ibadan, Port Harcourt and elsewhere rely on CTPT car tracker deployments to build operating confidence when supervisors cannot ride along. Whether you run a dozen sales-rep cars from an Ikeja office, delivery vans serving Abuja satellite towns, executive pool vehicles for a Port Harcourt oil-service firm or a micro-fleet of campus buses in Enugu, the same single-parent-login console surfaces every live position and every historical journey.",
+					"Small and medium enterprises running multi-vehicle operations in Lagos, Abuja, Onitsha, Aba, Kano, Ibadan, Port Harcourt and elsewhere rely on Car Tracker Plus Telematics car tracker deployments to build operating confidence when supervisors cannot ride along. Whether you run a dozen sales-rep cars from an Ikeja office, delivery vans serving Abuja satellite towns, executive pool vehicles for a Port Harcourt oil-service firm or a micro-fleet of campus buses in Enugu, the same single-parent-login console surfaces every live position and every historical journey.",
 					"Commercial-pool tracker specifications extend beyond private-car defaults with role-scoped sub-credentials, weekly and monthly digest reporting cadence, optional driver-behaviour scoring, fuel-level flagging where hardware permits, and stop-duration alerts calibrated to the SLA windows your commercial team reports against.",
 				],
 				bullets: [
@@ -5420,7 +5420,7 @@ export const seoPages: SeoLandingPage[] = [
 				title: "Executive, Principal and Government Car Tracker Deployment",
 				paragraphs: [
 					"Bank executives, corporate principal figures, state and federal government pools, traditional rulers, university vice chancellors, faith organisations and senior political figures operating across Nigeria require car tracker deployments characterised above all by discretion. Visible dash hardware is rejected outright; cabling routes follow paths invisible to chauffeurs and administrative staff; alert contacts are restricted to the smallest possible cleared circle; and in some cases a 24/7 watch-desk monitors feeds rather than a mobile app on a principal's personal phone.",
-					"CTPT executive car tracker pathway addresses every one of those requirements. Low-observability hardware is selected first, fully concealed cabling plan is agreed before any tool touches the car, alert routing is finalised with the pre-authorised contact alone, and optional watch-desk escalation sequences are documented in writing rather than left to convention.",
+					"Car Tracker Plus Telematics executive car tracker pathway addresses every one of those requirements. Low-observability hardware is selected first, fully concealed cabling plan is agreed before any tool touches the car, alert routing is finalised with the pre-authorised contact alone, and optional watch-desk escalation sequences are documented in writing rather than left to convention.",
 				],
 				bullets: [
 					"Zero-passenger-visibility hardware mount as standard on executive tier",
@@ -5432,7 +5432,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "On-Site Installation Workflow Across Nigeria",
 				paragraphs: [
-					"Every CTPT car tracker engagement begins with a short structured discovery conversation covering vehicle category, monitoring priority outcomes, operating geography and any specific executive or security considerations. A written itemised proposal follows, covering hardware tier, feature activation, subscription cadence if applicable and on-site fitting date. A CTPT technician then travels directly to the agreed location — residential compound, office car park, hotel, campus, port or approved workshop — within the specified arrival window.",
+					"Every Car Tracker Plus Telematics car tracker engagement begins with a short structured discovery conversation covering vehicle category, monitoring priority outcomes, operating geography and any specific executive or security considerations. A written itemised proposal follows, covering hardware tier, feature activation, subscription cadence if applicable and on-site fitting date. A Car Tracker Plus Telematics technician then travels directly to the agreed location — residential compound, office car park, hotel, campus, port or approved workshop — within the specified arrival window.",
 					"Fitting times average sixty to ninety minutes per standard car; executive or multi-vehicle deployments run according to a pre-agreed schedule. Cabling tucks behind trim panels for a factory-grade finish. Before departure the technician walks every authorised user through the mobile app, tests alert channels with live triggers, configures the first batch of virtual perimeters and summarises after-sales support contacts. Ongoing support thereafter runs through a named desk rather than a generic hotline.",
 				],
 				bullets: [
@@ -5544,12 +5544,12 @@ export const seoPages: SeoLandingPage[] = [
 		],
 		calloutGroups: [
 			{
-				title: "Why national operators choose CTPT car tracker installations",
+				title: "Why national operators choose Car Tracker Plus Telematics car tracker installations",
 				items: [
 					{
 						title: "Truly nationwide on-site reach",
 						description:
-							"A single CTPT commercial engagement can fit trackers simultaneously in Lagos Apapa, Abuja Wuse, Kano Bompai, Port Harcourt GRA, Warri Effurun and Enugu Trans-Ekulu without requiring each site to engage separate vendors or coordinate multiple schedules.",
+							"A single Car Tracker Plus Telematics commercial engagement can fit trackers simultaneously in Lagos Apapa, Abuja Wuse, Kano Bompai, Port Harcourt GRA, Warri Effurun and Enugu Trans-Ekulu without requiring each site to engage separate vendors or coordinate multiple schedules.",
 					},
 					{
 						title: "Configured for Nigerian operating realities",
@@ -5580,7 +5580,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "Driver notice is required for tracker operation",
 						description:
-							"CTPT devices integrate with vehicle electrical circuits; tamper, power-interrupt and antenna-cover events raise immediate alerts. Premium and fleet specifications operate independently of driver awareness entirely.",
+							"Car Tracker Plus Telematics devices integrate with vehicle electrical circuits; tamper, power-interrupt and antenna-cover events raise immediate alerts. Premium and fleet specifications operate independently of driver awareness entirely.",
 					},
 					{
 						title: "Every imported tracker is functionally identical",
@@ -5611,7 +5611,7 @@ export const seoPages: SeoLandingPage[] = [
 		bestPractices: {
 			title: "Maximising long-term value from a national car tracker deployment",
 			intro:
-				"The highest-return CTPT car tracker deployments nationwide share six recurring operational habits — none of them complex, but all of them frequently overlooked during the excitement of the first live feed.",
+				"The highest-return Car Tracker Plus Telematics car tracker deployments nationwide share six recurring operational habits — none of them complex, but all of them frequently overlooked during the excitement of the first live feed.",
 			items: [
 				"Fit trackers proactively during a calm period instead of after a theft or incident has already occurred",
 				"Finalise home, office, campus, port and intercity perimeters during the onboarding visit rather than later",
@@ -5623,19 +5623,19 @@ export const seoPages: SeoLandingPage[] = [
 		},
 		faqs: [
 			{
-				question: "What is the typical cost range for a CTPT car tracker nationwide in Nigeria?",
+				question: "What is the typical cost range for a Car Tracker Plus Telematics car tracker nationwide in Nigeria?",
 				answer:
-					"Entry-level private-car professionally fitted tracker setups typically begin around ₦70,000 per vehicle including on-site installation. SME pool and national fleet specifications with immobilisation, fuel sensing and reporting range into the mid-hundreds of thousands per vehicle depending on activated features and overall pool size. Executive Security Tier is quoted individually due to concealment and watch-desk variables. CTPT always delivers a fully itemised written proposal before any fitting commences.",
+					"Entry-level private-car professionally fitted tracker setups typically begin around ₦70,000 per vehicle including on-site installation. SME pool and national fleet specifications with immobilisation, fuel sensing and reporting range into the mid-hundreds of thousands per vehicle depending on activated features and overall pool size. Executive Security Tier is quoted individually due to concealment and watch-desk variables. Car Tracker Plus Telematics always delivers a fully itemised written proposal before any fitting commences.",
 			},
 			{
-				question: "Does CTPT dispatch technicians to any state capital in Nigeria?",
+				question: "Does Car Tracker Plus Telematics dispatch technicians to any state capital in Nigeria?",
 				answer:
 					"On-site fitting is available on a standard basis to every listed major Nigerian city including Lagos, Abuja, Kano, Kaduna, Port Harcourt, Ibadan, Enugu, Benin City, Warri, Abeokuta, Asaba, Owerri, Uyo, Calabar and Ilorin. Secondary towns, rural operational sites, university campuses and petroleum installations are confirmed for travel logistics at quotation stage.",
 			},
 			{
 				question: "Can I monitor a nationwide car pool from my personal mobile phone?",
 				answer:
-					"Every CTPT tracker ships with a companion mobile app that displays live positions, historical journey replays, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based supervision console is also available for dispatch managers and logistics heads who prefer laptops or desktop screens.",
+					"Every Car Tracker Plus Telematics tracker ships with a companion mobile app that displays live positions, historical journey replays, triggered alerts and — on eligible plans — ignition status, travel speed and fuel readings. A browser-based supervision console is also available for dispatch managers and logistics heads who prefer laptops or desktop screens.",
 			},
 			{
 				question: "Does one login support hundreds of vehicles across multiple cities?",
@@ -5650,12 +5650,12 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "Do you support very large commercial and government national fleets?",
 				answer:
-					"National fleet supervision is one of CTPT's core service pillars encompassing pool-wide dashboards, zonal virtual perimeters, driver-behaviour scoring, idle-duration visibility, speed ceilings and optional fuel-level sensing. We actively serve petroleum tanker, port-clearing, FMCG, campus bus, e-commerce, cash-in-transit and federal/state vehicle-pool operators spanning multiple geopolitical zones.",
+					"National fleet supervision is one of Car Tracker Plus Telematics's core service pillars encompassing pool-wide dashboards, zonal virtual perimeters, driver-behaviour scoring, idle-duration visibility, speed ceilings and optional fuel-level sensing. We actively serve petroleum tanker, port-clearing, FMCG, campus bus, e-commerce, cash-in-transit and federal/state vehicle-pool operators spanning multiple geopolitical zones.",
 			},
 			{
-				question: "Can CTPT dashcams integrate with the national car tracker console?",
+				question: "Can Car Tracker Plus Telematics dashcams integrate with the national car tracker console?",
 				answer:
-					"Certainly. We professionally fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the CTPT car tracker telematics console. Position, travel speed and incident video all render on the same screen, which dramatically streamlines incident review for national fleet managers.",
+					"Certainly. We professionally fit single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the Car Tracker Plus Telematics car tracker telematics console. Position, travel speed and incident video all render on the same screen, which dramatically streamlines incident review for national fleet managers.",
 			},
 			{
 				question: "Does the car tracker package include fuel consumption monitoring?",
@@ -5664,9 +5664,9 @@ export const seoPages: SeoLandingPage[] = [
 			},
 		],
 		relatedServiceNames: {
-			title: "Additional CTPT systems commonly paired with nationwide car tracking",
+			title: "Additional Car Tracker Plus Telematics systems commonly paired with nationwide car tracking",
 			intro:
-				"Many CTPT accounts stack national car tracker deployment with one or more complementary systems. The five combinations below surface measurable return on investment most quickly across Nigerian commercial, government and petroleum contexts.",
+				"Many Car Tracker Plus Telematics accounts stack national car tracker deployment with one or more complementary systems. The five combinations below surface measurable return on investment most quickly across Nigerian commercial, government and petroleum contexts.",
 			items: [
 				"AI dashcam nationwide professional fitting",
 				"Fuel-level sensing platforms for national fleet tiers",
@@ -5676,10 +5676,10 @@ export const seoPages: SeoLandingPage[] = [
 			],
 		},
 		closing: {
-			title: "Request Nationwide Car Tracker Installation Proposal from CTPT",
+			title: "Request Nationwide Car Tracker Installation Proposal from Car Tracker Plus Telematics",
 			paragraphs: [
-				"Car tracker products ordered online and shipped to Nigeria without an on-site fitting relationship, national after-sales desk or Nigerian-operational alert templates perform consistently worse than deployments engineered locally from scratch. CTPT delivers the full lifecycle — discovery conversation, written proposal, concealed on-site fitment in any city, app walkthrough, alert calibration and ongoing regional support — so your investment continues delivering value long after the first live coordinate appears on a map.",
-				"Tell us how many vehicles are involved, which cities or geopolitical zones they operate across, and whether the deployment serves private owners, SMEs, national commercial fleets or executive security principals. We will recommend the correct CTPT hardware tier, feature set and fitting schedule, then lock in dates that respect your operational calendar.",
+				"Car tracker products ordered online and shipped to Nigeria without an on-site fitting relationship, national after-sales desk or Nigerian-operational alert templates perform consistently worse than deployments engineered locally from scratch. Car Tracker Plus Telematics delivers the full lifecycle — discovery conversation, written proposal, concealed on-site fitment in any city, app walkthrough, alert calibration and ongoing regional support — so your investment continues delivering value long after the first live coordinate appears on a map.",
+				"Tell us how many vehicles are involved, which cities or geopolitical zones they operate across, and whether the deployment serves private owners, SMEs, national commercial fleets or executive security principals. We will recommend the correct Car Tracker Plus Telematics hardware tier, feature set and fitting schedule, then lock in dates that respect your operational calendar.",
 			],
 		},
 		relatedSlugs: [
@@ -5694,12 +5694,12 @@ export const seoPages: SeoLandingPage[] = [
 	},
 	{
 		slug: "fleet-management-nigeria",
-		pageTitle: "Fleet Management Nigeria | CTPT Nationwide Fleet Supervision",
+		pageTitle: "Fleet Management Nigeria | Car Tracker Plus Telematics Nationwide Fleet Supervision",
 		metaDescription:
 			"Car Tracker Plus Telematics delivers nationwide fleet management across Nigeria. Pool visibility, driver behaviour, fuel sensing, stop-SLA capture, dashcam binding and on-site installation in Lagos, Abuja, PH, Kano, Enugu, Warri and every major city.",
 		headline: "Fleet Management Nigeria — Nationwide Multi-City Pool Visibility for Haulage, Petroleum, FMCG and Government Operations",
 		intro:
-			"Car Tracker Plus Telematics operates a nationwide fleet management network built for Nigerian operational realities rather than imported overseas manuals. A typical CTPT commercial account may operate petroleum tankers from Port Harcourt, container trucks from Apapa Lagos, university buses in Enugu, petroleum Hilux utilities in Warri and government-agency vehicles in Abuja — all under a single parent login with role-scoped sub-credentials per city, department or transport supervisor. Whether your fleet numbers six commercial vans in a single city or six hundred vehicles spread across the six geopolitical zones, CTPT delivers a console specification, fitting workflow, alert template and reporting cadence drawn from thousands of hours of Nigerian haulage, petroleum, port, education and government on-site experience.",
+			"Car Tracker Plus Telematics operates a nationwide fleet management network built for Nigerian operational realities rather than imported overseas manuals. A typical Car Tracker Plus Telematics commercial account may operate petroleum tankers from Port Harcourt, container trucks from Apapa Lagos, university buses in Enugu, petroleum Hilux utilities in Warri and government-agency vehicles in Abuja — all under a single parent login with role-scoped sub-credentials per city, department or transport supervisor. Whether your fleet numbers six commercial vans in a single city or six hundred vehicles spread across the six geopolitical zones, Car Tracker Plus Telematics delivers a console specification, fitting workflow, alert template and reporting cadence drawn from thousands of hours of Nigerian haulage, petroleum, port, education and government on-site experience.",
 		serviceType: "Fleet Management",
 		location: "Nationwide Nigeria",
 		primaryKeyword: "fleet management Nigeria",
@@ -5727,14 +5727,14 @@ export const seoPages: SeoLandingPage[] = [
 		],
 		pageCategory: "service",
 		cardTitle: "Fleet Management Nationwide Nigeria",
-		eyebrow: "CTPT National Fleet Network",
+		eyebrow: "Car Tracker Plus Telematics National Fleet Network",
 		quoteLabel: "Fleet Management Nigeria",
 		ogImage: "/dashcam/dashcam_02.jpeg",
 		sections: [
 			{
 				title: "Haulage, Petroleum and Distribution Fleet Supervision",
 				paragraphs: [
-					"Nigerian commercial fleet operations are characterised by extreme operational diversity: a typical haulage account moves containerised goods from Apapa to Onitsha while a sister division runs petroleum products from Warri to Makurdi and a third supplies FMCG stock across the entire southwest from a single Lagos warehouse. CTPT fleet management console unifies every division under one parent login while preserving departmental or city-level autonomy through role-scoped credentials and custom digest cadence.",
+					"Nigerian commercial fleet operations are characterised by extreme operational diversity: a typical haulage account moves containerised goods from Apapa to Onitsha while a sister division runs petroleum products from Warri to Makurdi and a third supplies FMCG stock across the entire southwest from a single Lagos warehouse. Car Tracker Plus Telematics fleet management console unifies every division under one parent login while preserving departmental or city-level autonomy through role-scoped credentials and custom digest cadence.",
 					"Every commercial fleet account begins with a structured discovery workshop mapping depot addresses, customer delivery sites, SLA windows for dwell time at each stop and the specific escalation contacts for each driver or route group. Virtual perimeter zones are then configured against that map rather than a generic template — so a tanker lingering too long outside an authorised flow station, a delivery van dwelling beyond its warehouse window and a container truck diverting off its pre-cleared expressway route all surface as independent flag types on the same supervisor console.",
 				],
 				bullets: [
@@ -5747,7 +5747,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "Campus Bus, Government and Agency Vehicle Pools",
 				paragraphs: [
-					"University, polytechnic and secondary-school bus fleets operating in Lagos, Ibadan, Enugu, Kaduna, Abuja and every other educational centre share very specific requirements with state and federal government agency vehicle pools: route-adherence evidence, driver-conduct visibility, parent or stakeholder reporting cadence and role-based access that strictly separates the transport office view from the parent or public view. CTPT fleet management tier has been repeatedly refined against exactly those requirements.",
+					"University, polytechnic and secondary-school bus fleets operating in Lagos, Ibadan, Enugu, Kaduna, Abuja and every other educational centre share very specific requirements with state and federal government agency vehicle pools: route-adherence evidence, driver-conduct visibility, parent or stakeholder reporting cadence and role-based access that strictly separates the transport office view from the parent or public view. Car Tracker Plus Telematics fleet management tier has been repeatedly refined against exactly those requirements.",
 					"Campus and agency fleet accounts select from a range of predefined reporting templates: per-week route-compliance summaries for school transport coordinators, per-month per-vehicle utilisation statements for government asset-registry teams, parent-facing mobile access restricted strictly to the morning and afternoon journey segments of a specific child's bus, and role-scoped agency credentials that hide sensitive executive locations from routine transport office staff.",
 				],
 				bullets: [
@@ -5760,7 +5760,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "Driver Behaviour and Fuel Intelligence Module",
 				paragraphs: [
-					"Two of the largest controllable cost sources in any Nigerian commercial fleet operation are driver conduct (speeding, harsh braking, unplanned stops, idling) and fuel irregularities (drops at unauthorised points, mismatch between odometer distance and fuel purchased, inconsistent refuel volumes). CTPT fleet management tier surfaces both cost sources automatically so they can be addressed systematically rather than discovered only at month-end reconciliation.",
+					"Two of the largest controllable cost sources in any Nigerian commercial fleet operation are driver conduct (speeding, harsh braking, unplanned stops, idling) and fuel irregularities (drops at unauthorised points, mismatch between odometer distance and fuel purchased, inconsistent refuel volumes). Car Tracker Plus Telematics fleet management tier surfaces both cost sources automatically so they can be addressed systematically rather than discovered only at month-end reconciliation.",
 					"Driver behaviour scores are calculated weekly against a weighted template agreed during onboarding and compared across peer groups (same route, same vehicle category, same shift) rather than against a single arbitrary number. Fuel-level sensing on qualifying commercial vehicles compares refuel events, tank drops and odometer progress against expected consumption curves — surfacing unexpected drops or unusual consumption within hours rather than weeks.",
 				],
 				bullets: [
@@ -5773,7 +5773,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "Fleet-On-Site Installation and Rollout Workflow",
 				paragraphs: [
-					"Larger CTPT fleet engagements follow a structured multi-phase rollout. Phase one maps depots, stops, routes and SLA windows and selects hardware tier per vehicle category. Phase two runs a pilot installation on a small representative group across the fleet's operating cities and calibrates alert sensitivity and digest cadence against live feedback. Phase three is the staggered full-rollout conducted in batches to minimise operational downtime — with technicians dispatched simultaneously to Lagos, Abuja, PH, Kano, Enugu, Warri and any other operating centre as the project plan dictates.",
+					"Larger Car Tracker Plus Telematics fleet engagements follow a structured multi-phase rollout. Phase one maps depots, stops, routes and SLA windows and selects hardware tier per vehicle category. Phase two runs a pilot installation on a small representative group across the fleet's operating cities and calibrates alert sensitivity and digest cadence against live feedback. Phase three is the staggered full-rollout conducted in batches to minimise operational downtime — with technicians dispatched simultaneously to Lagos, Abuja, PH, Kano, Enugu, Warri and any other operating centre as the project plan dictates.",
 					"Each on-site vehicle installation averages sixty to ninety minutes depending on vehicle category. Cabling tucks behind cabin trim and utilises commercial-grade routing for truck, tanker and bus categories. Before signing off each vehicle the technician runs a live alert test with the assigned supervisor contact, calibrates the depot perimeter zones for that vehicle and confirms digest delivery channels. Ongoing support thereafter runs through a named account team plus regional after-sales desks rather than a generic hotline.",
 				],
 				bullets: [
@@ -5786,7 +5786,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "Fleet Management Coverage Across Geopolitical Zones",
 				paragraphs: [
-					"CTPT fleet management on-site installation, calibration and after-sales support reach covers every one of Nigeria's six geopolitical zones. Major standard-service cities are listed below; rural operational bases, field depots, university satellite campuses and petroleum installations are confirmed at quotation stage with a travel logistics plan.",
+					"Car Tracker Plus Telematics fleet management on-site installation, calibration and after-sales support reach covers every one of Nigeria's six geopolitical zones. Major standard-service cities are listed below; rural operational bases, field depots, university satellite campuses and petroleum installations are confirmed at quotation stage with a travel logistics plan.",
 				],
 				bullets: [
 					"Southwest: Lagos (Apapa, Lekki, Ikeja, Festac), Ibadan, Abeokuta, Akure, Osogbo",
@@ -5887,12 +5887,12 @@ export const seoPages: SeoLandingPage[] = [
 		],
 		calloutGroups: [
 			{
-				title: "Why national fleet operators rely on CTPT fleet management",
+				title: "Why national fleet operators rely on Car Tracker Plus Telematics fleet management",
 				items: [
 					{
 						title: "Consistent nationwide rollout execution",
 						description:
-							"A single CTPT commercial team can simultaneously fit and calibrate petroleum tankers in Warri, container trucks in Lagos Apapa, university buses in Enugu and agency sedans in Abuja without the customer engaging four separate regional vendors with four different consoles.",
+							"A single Car Tracker Plus Telematics commercial team can simultaneously fit and calibrate petroleum tankers in Warri, container trucks in Lagos Apapa, university buses in Enugu and agency sedans in Abuja without the customer engaging four separate regional vendors with four different consoles.",
 					},
 					{
 						title: "Templates drawn from Nigerian operations",
@@ -5923,7 +5923,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "Fleet management systems require driver cooperation",
 						description:
-							"CTPT fleet devices integrate into vehicle electrical circuits; power interrupt, tamper and antenna events raise immediate flags. Commercial specifications operate independently of driver awareness; the driver's smartphone is never part of the core telematics data path.",
+							"Car Tracker Plus Telematics fleet devices integrate into vehicle electrical circuits; power interrupt, tamper and antenna events raise immediate flags. Commercial specifications operate independently of driver awareness; the driver's smartphone is never part of the core telematics data path.",
 					},
 					{
 						title: "Any telematics dashboard will work the same in Nigeria",
@@ -5954,26 +5954,26 @@ export const seoPages: SeoLandingPage[] = [
 		bestPractices: {
 			title: "Maximising long-term value from nationwide fleet management",
 			intro:
-				"The highest-return CTPT fleet management accounts nationwide share six recurring operational habits drawn from thousands of vehicle-years of Nigerian commercial, petroleum and government pool observation.",
+				"The highest-return Car Tracker Plus Telematics fleet management accounts nationwide share six recurring operational habits drawn from thousands of vehicle-years of Nigerian commercial, petroleum and government pool observation.",
 			items: [
 				"Invest in the discovery and pilot-calibration phase before committing to full rollout",
 				"Finalise every depot, customer and flow-station perimeter zone during pilot rather than iterating live",
 				"Work with weekly digests and monthly peer-group reports instead of monitoring live feeds continuously",
 				"Issue role-scoped credentials only; never share a single login across different responsibility levels",
-				"Assign one internal champion per city or department as the primary CTPT after-sales contact",
+				"Assign one internal champion per city or department as the primary Car Tracker Plus Telematics after-sales contact",
 				"Conduct a quarterly calibration review with the named account team to adjust SLA windows",
 			],
 		},
 		faqs: [
 			{
-				question: "What is the typical cost structure for CTPT fleet management in Nigeria?",
+				question: "What is the typical cost structure for Car Tracker Plus Telematics fleet management in Nigeria?",
 				answer:
 					"Fleet Starter tier engagements typically begin around ₦75,000–₦90,000 per vehicle including on-site installation. Fleet Professional tier with role-scoped credentials and SLA stop capture scales from approximately ₦120,000 per vehicle. Fleet Enterprise tier with immobilisation, fuel sensing and driver scoring is quoted per engagement based on vehicle categories, city spread and custom report requirements. Fleet Executive Security tier is priced individually due to concealment, redaction and watch-desk variables. A fully itemised written proposal is always delivered before any vehicle is touched.",
 			},
 			{
-				question: "Does CTPT support rollouts spanning multiple geopolitical zones?",
+				question: "Does Car Tracker Plus Telematics support rollouts spanning multiple geopolitical zones?",
 				answer:
-					"Absolutely. Multi-city, multi-zone rollouts are a core CTPT speciality. Our structured engagement model runs discovery and pilot phases first, then schedules staggered batches with simultaneous technician dispatch to Lagos, Abuja, Port Harcourt, Kano, Enugu, Warri and any other operating centre — so a single account team oversees the entire national rollout rather than handing customers over to disconnected regional vendors.",
+					"Absolutely. Multi-city, multi-zone rollouts are a core Car Tracker Plus Telematics speciality. Our structured engagement model runs discovery and pilot phases first, then schedules staggered batches with simultaneous technician dispatch to Lagos, Abuja, Port Harcourt, Kano, Enugu, Warri and any other operating centre — so a single account team oversees the entire national rollout rather than handing customers over to disconnected regional vendors.",
 			},
 			{
 				question: "Can different supervisor roles see different subsets of the fleet?",
@@ -5998,7 +5998,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "Can AI dashcams bind into the fleet management console?",
 				answer:
-					"Certainly. CTPT professionally fits single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the fleet telematics console. Position, travel speed and incident video all render on the same screen, streamlining incident review and driver coaching conversations.",
+					"Certainly. Car Tracker Plus Telematics professionally fits single-lens, dual road-plus-cabin and AI-enabled dashcam systems that bind directly into the fleet telematics console. Position, travel speed and incident video all render on the same screen, streamlining incident review and driver coaching conversations.",
 			},
 			{
 				question: "What reporting cadences are available for accounts and audit teams?",
@@ -6007,9 +6007,9 @@ export const seoPages: SeoLandingPage[] = [
 			},
 		],
 		relatedServiceNames: {
-			title: "Additional CTPT systems commonly paired with nationwide fleet management",
+			title: "Additional Car Tracker Plus Telematics systems commonly paired with nationwide fleet management",
 			intro:
-				"Most national CTPT fleet accounts combine the core supervision console with one or more complementary systems. The five combinations below surface measurable cost visibility or operational improvements most quickly across Nigerian commercial, petroleum and government fleets.",
+				"Most national Car Tracker Plus Telematics fleet accounts combine the core supervision console with one or more complementary systems. The five combinations below surface measurable cost visibility or operational improvements most quickly across Nigerian commercial, petroleum and government fleets.",
 			items: [
 				"AI dashcam nationwide professional fitting",
 				"Fuel-level sensing platforms for tanker and haulage vehicles",
@@ -6019,10 +6019,10 @@ export const seoPages: SeoLandingPage[] = [
 			],
 		},
 		closing: {
-			title: "Request a CTPT Nationwide Fleet Management Scoping Proposal",
+			title: "Request a Car Tracker Plus Telematics Nationwide Fleet Management Scoping Proposal",
 			paragraphs: [
-				"Generic telematics platforms imported from overseas markets and applied to Nigerian fleets consistently under-deliver because their speed ceilings, stop windows, driver behaviour benchmarks and on-site support geography were never designed for Lagos Apapa congestion, petroleum-flow-station dwell times, Abuja agency route patterns or intercity highway conditions. CTPT delivers the complete lifecycle — discovery workshop, pilot calibration, staggered multi-city rollout, ongoing calibration reviews and a named account team — so the platform continues driving operational value month after month rather than degrading into an unused map.",
-				"Tell us how many vehicles are in scope, which cities or geopolitical zones they operate across, which fleet category they fall under (haulage, petroleum, FMCG, campus, government, executive) and any existing reporting templates your teams already work with. We will recommend the correct CTPT fleet tier, hardware per vehicle category and rollout timeline, then deliver a fully itemised written proposal for your review.",
+				"Generic telematics platforms imported from overseas markets and applied to Nigerian fleets consistently under-deliver because their speed ceilings, stop windows, driver behaviour benchmarks and on-site support geography were never designed for Lagos Apapa congestion, petroleum-flow-station dwell times, Abuja agency route patterns or intercity highway conditions. Car Tracker Plus Telematics delivers the complete lifecycle — discovery workshop, pilot calibration, staggered multi-city rollout, ongoing calibration reviews and a named account team — so the platform continues driving operational value month after month rather than degrading into an unused map.",
+				"Tell us how many vehicles are in scope, which cities or geopolitical zones they operate across, which fleet category they fall under (haulage, petroleum, FMCG, campus, government, executive) and any existing reporting templates your teams already work with. We will recommend the correct Car Tracker Plus Telematics fleet tier, hardware per vehicle category and rollout timeline, then deliver a fully itemised written proposal for your review.",
 			],
 		},
 		relatedSlugs: [
@@ -6041,13 +6041,13 @@ export const seoPages: SeoLandingPage[] = [
 		pageCategory: "service",
 		slug: "dashcam-installation-nigeria",
 		pageTitle:
-			"AI Dashcam Installation Nigeria | CTPT Professional On-Site Fitting Nationwide",
+			"AI Dashcam Installation Nigeria | Car Tracker Plus Telematics Professional On-Site Fitting Nationwide",
 		metaDescription:
-			"CTPT dashcam installation Nigeria services. Professional on-site fitting of single-lens, dual road-plus-cabin and AI-enabled ADAS dashcams for private cars, commercial fleets, petroleum haulage and executive vehicles across every geopolitical zone.",
+			"Car Tracker Plus Telematics dashcam installation Nigeria services. Professional on-site fitting of single-lens, dual road-plus-cabin and AI-enabled ADAS dashcams for private cars, commercial fleets, petroleum haulage and executive vehicles across every geopolitical zone.",
 		headline:
 			"AI Dashcam Installation Across Nigeria — Professionally Fitted, Telematics-Bound, Covering Every Geopolitical Zone",
 		intro:
-			"Consumer dashcams bought from marketplace listings and self-installed with suction cups, loose power leads and unformatted cards rarely survive three months of Nigerian road conditions — heat damage, loose wiring, SD-card failures and theft are the norm rather than exception. CTPT dashcam installation Nigeria is a professional, hardware-grade service: we fit single-lens, dual road-plus-cabin and AI-enabled ADAS dashcam systems with concealed cable routing, secured SD compartments, vehicle-grade power conditioning and direct binding into the CTPT telematics console — covering Lagos, Abuja, Port Harcourt, Kano, Enugu, Warri, Kaduna, Ibadan, Benin City, Uyo, Calabar, Asaba, Abeokuta, Owerri, Ilorin and every regional installation point between them.",
+			"Consumer dashcams bought from marketplace listings and self-installed with suction cups, loose power leads and unformatted cards rarely survive three months of Nigerian road conditions — heat damage, loose wiring, SD-card failures and theft are the norm rather than exception. Car Tracker Plus Telematics dashcam installation Nigeria is a professional, hardware-grade service: we fit single-lens, dual road-plus-cabin and AI-enabled ADAS dashcam systems with concealed cable routing, secured SD compartments, vehicle-grade power conditioning and direct binding into the Car Tracker Plus Telematics telematics console — covering Lagos, Abuja, Port Harcourt, Kano, Enugu, Warri, Kaduna, Ibadan, Benin City, Uyo, Calabar, Asaba, Abeokuta, Owerri, Ilorin and every regional installation point between them.",
 		serviceType: "Dashcam Installation",
 		location: "Nationwide Nigeria",
 		primaryKeyword: "dashcam installation Nigeria",
@@ -6073,15 +6073,15 @@ export const seoPages: SeoLandingPage[] = [
 			"Multi-vehicle fleet accounts centralise clip review, driver coaching and audit export",
 		],
 		cardTitle: "Dashcam Installation Nigeria",
-		eyebrow: "CTPT National Dashcam Network",
+		eyebrow: "Car Tracker Plus Telematics National Dashcam Network",
 		quoteLabel: "Dashcam Installation Nigeria",
 		sections: [
 			{
 				title:
 					"Private Car and Light-Commercial Dashcam Fitting — Lagos, Abuja, Port Harcourt and Urban Centres",
 				paragraphs: [
-					"Private owners, ride-hailing drivers, small business delivery vehicles and light-commercial vans make up the largest segment of CTPT dashcam installations in Nigeria. Most owners come to CTPT after a marketplace dashcam failed mid-incident, captured corrupted footage, or had its cables left visible enough to invite a dashboard smash-and-grab. CTPT fitting plans for private and light-commercial vehicles cover single-lens front recording, dual road-plus-cabin monitoring and basic GPS tagging of every clip.",
-					"CTPT installation engineers arrive at a customer's home, office or parking bay in Lagos Lekki, Abuja Maitama, Port Harcourt GRA, Kano Fagge, Ibadan Bodija, Enugu Independence Layout or any of our covered urban centres. Fitting takes two to three hours per vehicle and includes concealed A-pillar and glove-box routing, voltage-regulated hardwire connection, Class-10 SD card format and validation, plus a one-to-one walkthrough of clip export and live-view modes. No drilling, no dashboard marring, no visible wires left exposed to passing traffic.",
+					"Private owners, ride-hailing drivers, small business delivery vehicles and light-commercial vans make up the largest segment of Car Tracker Plus Telematics dashcam installations in Nigeria. Most owners come to Car Tracker Plus Telematics after a marketplace dashcam failed mid-incident, captured corrupted footage, or had its cables left visible enough to invite a dashboard smash-and-grab. Car Tracker Plus Telematics fitting plans for private and light-commercial vehicles cover single-lens front recording, dual road-plus-cabin monitoring and basic GPS tagging of every clip.",
+					"Car Tracker Plus Telematics installation engineers arrive at a customer's home, office or parking bay in Lagos Lekki, Abuja Maitama, Port Harcourt GRA, Kano Fagge, Ibadan Bodija, Enugu Independence Layout or any of our covered urban centres. Fitting takes two to three hours per vehicle and includes concealed A-pillar and glove-box routing, voltage-regulated hardwire connection, Class-10 SD card format and validation, plus a one-to-one walkthrough of clip export and live-view modes. No drilling, no dashboard marring, no visible wires left exposed to passing traffic.",
 				],
 				bullets: [
 					"Single-lens 1080P front-recording for private saloons and SUVs",
@@ -6089,15 +6089,15 @@ export const seoPages: SeoLandingPage[] = [
 					"Concealed hardwire kit with voltage-cutoff to avoid drained batteries",
 					"Class-10 or U1 SD cards format-validated before handover",
 					"Clip-export walkthrough via Wi-Fi direct or USB media transfer",
-					"Direct binding into CTPT car-tracker console for speed-and-clip linkage",
+					"Direct binding into Car Tracker Plus Telematics car-tracker console for speed-and-clip linkage",
 				],
 			},
 			{
 				title:
 					"Heavy Fleet, Petroleum Haulage and Campus Dashcam Integration Across Nigeria",
 				paragraphs: [
-					"Dashcam deployments for heavy fleet, petroleum-tanker, FMCG distribution, campus shuttle and government agency vehicles are not glorified private installations — they require anti-tamper housings, multi-camera paths, fuel-sensor correlation, fuel-yard dwell-time logging and audit-grade clip retention policies. CTPT fits heavy-fleet dashcam systems on a nationwide basis, including dual-plus-side and multi-angle configurations for tanker and haulage vehicles operating from Apapa ports, Port Harcourt tank farms, Warri petroleum depots and Kano haulage terminals.",
-					"Every CTPT heavy-fleet dashcam rollout begins with a discovery workshop to map incident types: rear shunts on Okene-Lokoja highway, side swipes around Lagos Oshodi interchanges, loading-yard scrapes at Apapa Tin Can, passenger altercations on campus shuttles, or fuel-yard idling anomalies. CTPT selects camera positioning, cable paths, anti-tamper housings and retention rules to match those risks, then ties every clip event to a CTPT fleet-management console entry so operations managers see position, speed, ignition state and video side-by-side rather than chasing separate logins across unconnected platforms.",
+					"Dashcam deployments for heavy fleet, petroleum-tanker, FMCG distribution, campus shuttle and government agency vehicles are not glorified private installations — they require anti-tamper housings, multi-camera paths, fuel-sensor correlation, fuel-yard dwell-time logging and audit-grade clip retention policies. Car Tracker Plus Telematics fits heavy-fleet dashcam systems on a nationwide basis, including dual-plus-side and multi-angle configurations for tanker and haulage vehicles operating from Apapa ports, Port Harcourt tank farms, Warri petroleum depots and Kano haulage terminals.",
+					"Every Car Tracker Plus Telematics heavy-fleet dashcam rollout begins with a discovery workshop to map incident types: rear shunts on Okene-Lokoja highway, side swipes around Lagos Oshodi interchanges, loading-yard scrapes at Apapa Tin Can, passenger altercations on campus shuttles, or fuel-yard idling anomalies. Car Tracker Plus Telematics selects camera positioning, cable paths, anti-tamper housings and retention rules to match those risks, then ties every clip event to a Car Tracker Plus Telematics fleet-management console entry so operations managers see position, speed, ignition state and video side-by-side rather than chasing separate logins across unconnected platforms.",
 				],
 				bullets: [
 					"Anti-tamper housings and sealed SD compartments for tanker and haulage",
@@ -6112,8 +6112,8 @@ export const seoPages: SeoLandingPage[] = [
 				title:
 					"AI Event and ADAS Intelligence Layer — Lane-Departure, Drowsiness, Forward Collision Tuned for Nigeria",
 				paragraphs: [
-					"Generic AI dashcams imported from Europe or Southeast Asia flag false events constantly on Nigerian roads — they mistake okadas and commercial buses for forward-collision hazards, beep lane-departure alerts during normal Lagos inner-city weaving, and calibrate drowsiness thresholds around 40-minute office commutes instead of twelve-hour Warri-Lagos haulage runs. CTPT AI dashcam installations use condition-tuned models, with thresholds recalibrated against Nigerian road geometry, driver behaviour baselines and vehicle duty cycles.",
-					"AI events captured by CTPT-fitted units land in the telematics console with metadata tags so fleet or safety reviewers can filter, coach and export in minutes. Lane-departure events on expressway segments, drowsiness alerts after five hours of continuous driving, forward-collision warnings near port loading yards, and phone-usage or smoking detection (cabin cameras) all surface with clip thumbnails, positional data and driver assignment. CTPT can also configure escalation rules so high-severity events reach a named safety officer within a defined window, not three days later in a batch CSV.",
+					"Generic AI dashcams imported from Europe or Southeast Asia flag false events constantly on Nigerian roads — they mistake okadas and commercial buses for forward-collision hazards, beep lane-departure alerts during normal Lagos inner-city weaving, and calibrate drowsiness thresholds around 40-minute office commutes instead of twelve-hour Warri-Lagos haulage runs. Car Tracker Plus Telematics AI dashcam installations use condition-tuned models, with thresholds recalibrated against Nigerian road geometry, driver behaviour baselines and vehicle duty cycles.",
+					"AI events captured by Car Tracker Plus Telematics-fitted units land in the telematics console with metadata tags so fleet or safety reviewers can filter, coach and export in minutes. Lane-departure events on expressway segments, drowsiness alerts after five hours of continuous driving, forward-collision warnings near port loading yards, and phone-usage or smoking detection (cabin cameras) all surface with clip thumbnails, positional data and driver assignment. Car Tracker Plus Telematics can also configure escalation rules so high-severity events reach a named safety officer within a defined window, not three days later in a batch CSV.",
 				],
 				bullets: [
 					"Lane-departure tuning per road class — urban weave excluded, expressways monitored",
@@ -6128,8 +6128,8 @@ export const seoPages: SeoLandingPage[] = [
 				title:
 					"On-Site Dashcam Installation Workflow — From Quotation to Handover and Firmware Care",
 				paragraphs: [
-					"CTPT dashcam installation Nigeria service follows a consistent four-stage workflow so private owners and national fleet accounts both receive predictable outcomes. First, a short scoping call captures vehicle count, vehicle types, installation geography, desired camera configuration (single, dual, AI) and any existing telematics the dashcams must bind to. Second, CTPT issues an itemised written quotation naming hardware model per vehicle category, fitting cost per site, cable path notes and, for accounts, a staggered rollout timeline.",
-					"Third, CTPT installation engineers arrive on-site with calibrated hardware, pre-formatted SD cards, hardwire kits, panel tools and cable concealers. Each vehicle takes between two and five hours depending on camera count and anti-tamper requirements. Fourth, every fitted unit undergoes a full functional validation: recording start-on-ignition, loop-overwrite health, power-cutoff behaviour, live-view pairing and, if bound, telematics console clip ingest. Accounts also receive a calibration review 30 days post-install to tune AI thresholds, adjust clip retention windows and confirm reviewer workflow cadence.",
+					"Car Tracker Plus Telematics dashcam installation Nigeria service follows a consistent four-stage workflow so private owners and national fleet accounts both receive predictable outcomes. First, a short scoping call captures vehicle count, vehicle types, installation geography, desired camera configuration (single, dual, AI) and any existing telematics the dashcams must bind to. Second, Car Tracker Plus Telematics issues an itemised written quotation naming hardware model per vehicle category, fitting cost per site, cable path notes and, for accounts, a staggered rollout timeline.",
+					"Third, Car Tracker Plus Telematics installation engineers arrive on-site with calibrated hardware, pre-formatted SD cards, hardwire kits, panel tools and cable concealers. Each vehicle takes between two and five hours depending on camera count and anti-tamper requirements. Fourth, every fitted unit undergoes a full functional validation: recording start-on-ignition, loop-overwrite health, power-cutoff behaviour, live-view pairing and, if bound, telematics console clip ingest. Accounts also receive a calibration review 30 days post-install to tune AI thresholds, adjust clip retention windows and confirm reviewer workflow cadence.",
 				],
 				bullets: [
 					"Scoping call captures vehicles, geography, camera tier and telematics binding",
@@ -6144,7 +6144,7 @@ export const seoPages: SeoLandingPage[] = [
 				title:
 					"Nationwide Dashcam Installation Coverage Zones by Geopolitical Region",
 				paragraphs: [
-					"CTPT dashcam installation Nigeria service covers all six geopolitical zones. Southwest installations cluster around Lagos (Apapa, Ikeja, Lekki, Victoria Island, Surulere, Yaba, Oshodi, Festac, Agege, Badagry), Ogun State Abeokuta and Oyo State Ibadan with rolling coverage of smaller towns along the Lagos-Ibadan Expressway. North-Central installations cover Abuja FCT (Maitama, Asokoro, Wuse, Garki, Gwarinpa, Kubwa, Lugbe), Nasarawa, Plateau, Niger State, Kogi State and Benue State, with heavy emphasis on government agency, staff shuttle and intercity haulage vehicles.",
+					"Car Tracker Plus Telematics dashcam installation Nigeria service covers all six geopolitical zones. Southwest installations cluster around Lagos (Apapa, Ikeja, Lekki, Victoria Island, Surulere, Yaba, Oshodi, Festac, Agege, Badagry), Ogun State Abeokuta and Oyo State Ibadan with rolling coverage of smaller towns along the Lagos-Ibadan Expressway. North-Central installations cover Abuja FCT (Maitama, Asokoro, Wuse, Garki, Gwarinpa, Kubwa, Lugbe), Nasarawa, Plateau, Niger State, Kogi State and Benue State, with heavy emphasis on government agency, staff shuttle and intercity haulage vehicles.",
 					"Northwest coverage centres on Kano State (Fagge, Nassarawa GRA, Bompai, Tarauni, Dala), Kaduna State (Zaria, Kaduna South, Barnawa) and extended coverage of Sokoto, Kebbi, Katsina, Jigawa and Zamfara for intercity haulage and agri-logistics. Northeast deployments cover Borno, Yobe, Adamawa, Bauchi, Gombe and Taraba, primarily for humanitarian-logistics and government-supply vehicles. Southeast installations focus on Enugu, Anambra, Abia, Imo (Owerri) and Ebonyi, covering market-hub haulage and commercial distribution fleets. South-South coverage includes Rivers Port Harcourt, Delta Warri and Asaba, Bayelsa, Edo Benin City, Cross River Calabar and Akwa Ibom Uyo with deep specialisation in petroleum-service, port-logistics and tanker fleets.",
 				],
 				bullets: [
@@ -6268,12 +6268,12 @@ export const seoPages: SeoLandingPage[] = [
 		],
 		calloutGroups: [
 			{
-				title: "Why national operators select CTPT for professional dashcam installation",
+				title: "Why national operators select Car Tracker Plus Telematics for professional dashcam installation",
 				items: [
 					{
 						title: "Use-case mapping before hardware selection",
 						description:
-							"Every CTPT dashcam installation begins with mapping incident types, road classes, review cadence and any existing telematics binding — rather than upselling a generic camera box off a price list.",
+							"Every Car Tracker Plus Telematics dashcam installation begins with mapping incident types, road classes, review cadence and any existing telematics binding — rather than upselling a generic camera box off a price list.",
 					},
 					{
 						title: "Concealed craftsmanship and validated storage",
@@ -6309,12 +6309,12 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "'Any SD card works fine in a dashcam'",
 						description:
-							"Standard consumer SD cards corrupt silently under continuous loop recording and the 55°C+ cabin temperatures common in Nigerian parked vehicles. CTPT specifies Class-10 U1/U3 cards validated per duty cycle before handover.",
+							"Standard consumer SD cards corrupt silently under continuous loop recording and the 55°C+ cabin temperatures common in Nigerian parked vehicles. Car Tracker Plus Telematics specifies Class-10 U1/U3 cards validated per duty cycle before handover.",
 					},
 					{
 						title: "'AI ADAS features work identically anywhere in the world'",
 						description:
-							"Factory-default dashcam AI calibrates around European motorway conditions — it flags okadas as collision hazards, beeps during normal Lagos weaving and ignores 12-hour haulage drowsiness cycles. CTPT tunes thresholds locally post-install.",
+							"Factory-default dashcam AI calibrates around European motorway conditions — it flags okadas as collision hazards, beeps during normal Lagos weaving and ignores 12-hour haulage drowsiness cycles. Car Tracker Plus Telematics tunes thresholds locally post-install.",
 					},
 				],
 			},
@@ -6338,9 +6338,9 @@ export const seoPages: SeoLandingPage[] = [
 			"30-day calibration review for AI thresholds, retention windows and reviewer workflow",
 		],
 		bestPractices: {
-			title: "Maximising long-term value from CTPT dashcam installations",
+			title: "Maximising long-term value from Car Tracker Plus Telematics dashcam installations",
 			intro:
-				"The highest-return CTPT dashcam deployments across Nigeria share six recurring operational habits drawn from thousands of vehicle-years of private, commercial, petroleum and executive installation experience.",
+				"The highest-return Car Tracker Plus Telematics dashcam deployments across Nigeria share six recurring operational habits drawn from thousands of vehicle-years of private, commercial, petroleum and executive installation experience.",
 			items: [
 				"Specify Class-10 U1 or U3 SD cards matched to recording resolution and duty cycle",
 				"Validate format and overwrite behaviour at handover, not after the first incident",
@@ -6352,29 +6352,29 @@ export const seoPages: SeoLandingPage[] = [
 		},
 		faqs: [
 			{
-				question: "How much does CTPT dashcam installation cost per vehicle?",
+				question: "How much does Car Tracker Plus Telematics dashcam installation cost per vehicle?",
 				answer:
-					"CTPT dashcam installation Nigeria pricing begins at ₦85,000 for the Basic Single-Lens tier, rises to ₦155,000 for the Dual Road + Cabin tier, starts at ₦295,000 for the AI-Enabled ADAS tier and opens at ₦525,000 for Executive Protection specification. Every quotation itemises hardware model, SD card class, fitting location and warranty terms so there are no hidden line items.",
+					"Car Tracker Plus Telematics dashcam installation Nigeria pricing begins at ₦85,000 for the Basic Single-Lens tier, rises to ₦155,000 for the Dual Road + Cabin tier, starts at ₦295,000 for the AI-Enabled ADAS tier and opens at ₦525,000 for Executive Protection specification. Every quotation itemises hardware model, SD card class, fitting location and warranty terms so there are no hidden line items.",
 			},
 			{
 				question: "Which cities do you offer on-site dashcam fitting in?",
 				answer:
-					"CTPT dispatches installation engineers on-site to Lagos, Abuja, Port Harcourt, Kano, Kaduna, Ibadan, Enugu, Benin City, Warri, Asaba, Abeokuta, Owerri, Uyo, Calabar and Ilorin — plus scheduled regional installation days for satellite towns in every geopolitical zone. Accounts with ten or more vehicles qualify for dedicated installation pop-up days in any Nigerian city.",
+					"Car Tracker Plus Telematics dispatches installation engineers on-site to Lagos, Abuja, Port Harcourt, Kano, Kaduna, Ibadan, Enugu, Benin City, Warri, Asaba, Abeokuta, Owerri, Uyo, Calabar and Ilorin — plus scheduled regional installation days for satellite towns in every geopolitical zone. Accounts with ten or more vehicles qualify for dedicated installation pop-up days in any Nigerian city.",
 			},
 			{
 				question: "Can I manage multiple dashcams under one fleet login?",
 				answer:
-					"Yes. Dual, AI and Executive tiers all bind into a single CTPT telematics console where fleet reviewers can filter clips by vehicle, driver, incident type, date and severity. Role-based access ensures location managers only see vehicles assigned to their geography, while national safety teams see cross-country aggregate trends.",
+					"Yes. Dual, AI and Executive tiers all bind into a single Car Tracker Plus Telematics telematics console where fleet reviewers can filter clips by vehicle, driver, incident type, date and severity. Role-based access ensures location managers only see vehicles assigned to their geography, while national safety teams see cross-country aggregate trends.",
 			},
 			{
 				question: "What AI features come with the ADAS dashcam tier?",
 				answer:
-					"AI-Enabled ADAS tier includes lane-departure detection (tuned per road class), forward-collision warning (adjusted for okada, bus and port-yard traffic), drowsiness sensing (calibrated to vehicle duty cycle) and, on request, cabin AI modules for phone usage, smoking and seatbelt compliance. CTPT runs a 30-day calibration review post-install to tune thresholding.",
+					"AI-Enabled ADAS tier includes lane-departure detection (tuned per road class), forward-collision warning (adjusted for okada, bus and port-yard traffic), drowsiness sensing (calibrated to vehicle duty cycle) and, on request, cabin AI modules for phone usage, smoking and seatbelt compliance. Car Tracker Plus Telematics runs a 30-day calibration review post-install to tune thresholding.",
 			},
 			{
-				question: "Can CTPT dashcams integrate with an existing car tracker or fleet system?",
+				question: "Can Car Tracker Plus Telematics dashcams integrate with an existing car tracker or fleet system?",
 				answer:
-					"They can. CTPT installation engineers bind dashcam systems to the CTPT telematics console, unifying position, travel speed, ignition state and incident clips on one timeline. Accounts migrating from a third-party tracker should share their telemetry output format during scoping so CTPT confirms compatibility before quotation.",
+					"They can. Car Tracker Plus Telematics installation engineers bind dashcam systems to the Car Tracker Plus Telematics telematics console, unifying position, travel speed, ignition state and incident clips on one timeline. Accounts migrating from a third-party tracker should share their telemetry output format during scoping so Car Tracker Plus Telematics confirms compatibility before quotation.",
 			},
 			{
 				question: "Do you use SD card storage, cloud storage, or both?",
@@ -6384,18 +6384,18 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				question: "What warranty and maintenance support do you provide?",
 				answer:
-					"Every CTPT dashcam installation includes a 90-day workmanship warranty covering routing, connection and fitment issues plus a 12-month hardware warranty. AI tier accounts receive calibration reviews at 30, 90 and 180 days. All tiers are covered by a published firmware-update cadence so performance drifts are addressed proactively rather than reactively.",
+					"Every Car Tracker Plus Telematics dashcam installation includes a 90-day workmanship warranty covering routing, connection and fitment issues plus a 12-month hardware warranty. AI tier accounts receive calibration reviews at 30, 90 and 180 days. All tiers are covered by a published firmware-update cadence so performance drifts are addressed proactively rather than reactively.",
 			},
 			{
 				question: "Do lane-departure and drowsiness alerts work on Nigerian expressways?",
 				answer:
-					"Yes — but only because CTPT thresholds are not left at factory defaults. Generic imported dashcams beep constantly on Nigerian roads because they mistake okadas and normal inner-city lane-weaving for hazards. CTPT calibrates lane-departure to fire only on expressway-class roads, drowsiness detection to duty cycle (not 40-minute commutes) and forward-collision thresholds around the vehicle categories most common on each route.",
+					"Yes — but only because Car Tracker Plus Telematics thresholds are not left at factory defaults. Generic imported dashcams beep constantly on Nigerian roads because they mistake okadas and normal inner-city lane-weaving for hazards. Car Tracker Plus Telematics calibrates lane-departure to fire only on expressway-class roads, drowsiness detection to duty cycle (not 40-minute commutes) and forward-collision thresholds around the vehicle categories most common on each route.",
 			},
 		],
 		relatedServiceNames: {
-			title: "Additional CTPT systems commonly paired with dashcam installations",
+			title: "Additional Car Tracker Plus Telematics systems commonly paired with dashcam installations",
 			intro:
-				"Most CTPT dashcam accounts combine the camera system with complementary CTPT modules so operations and safety reviewers get a complete operational picture. The five combinations below surface measurable safety or compliance value most quickly for Nigerian private, commercial and executive deployments.",
+				"Most Car Tracker Plus Telematics dashcam accounts combine the camera system with complementary Car Tracker Plus Telematics modules so operations and safety reviewers get a complete operational picture. The five combinations below surface measurable safety or compliance value most quickly for Nigerian private, commercial and executive deployments.",
 			items: [
 				"Car tracker nationwide hardware and console binding",
 				"Nationwide fleet management supervision and driver scoring",
@@ -6405,10 +6405,10 @@ export const seoPages: SeoLandingPage[] = [
 			],
 		},
 		closing: {
-			title: "Request a CTPT Dashcam Installation Scoping and Written Quotation",
+			title: "Request a Car Tracker Plus Telematics Dashcam Installation Scoping and Written Quotation",
 			paragraphs: [
-				"Suction-cup dashcams, fake SD cards, exposed wiring and factory-default AI thresholds deliver negligible protection when a Nigerian incident actually occurs. CTPT dashcam installation Nigeria is a professional-grade service: we scope the real incident types your vehicles face, select matching camera hardware, install with concealed craftsmanship and bind every clip to the CTPT telematics console so footage, position and speed sit together on a timeline. The platform stays operational — and genuinely useful — long after installation day.",
-				"Tell us how many vehicles are in scope, which categories they fall under (private, ride-hailing, haulage, petroleum, campus, executive), which cities or geopolitical zones they operate across and whether you are pairing the dashcams with an existing CTPT tracker or fleet module. We will recommend the correct CTPT dashcam tier, confirm installation geography and deliver a fully itemised written quotation for your review.",
+				"Suction-cup dashcams, fake SD cards, exposed wiring and factory-default AI thresholds deliver negligible protection when a Nigerian incident actually occurs. Car Tracker Plus Telematics dashcam installation Nigeria is a professional-grade service: we scope the real incident types your vehicles face, select matching camera hardware, install with concealed craftsmanship and bind every clip to the Car Tracker Plus Telematics telematics console so footage, position and speed sit together on a timeline. The platform stays operational — and genuinely useful — long after installation day.",
+				"Tell us how many vehicles are in scope, which categories they fall under (private, ride-hailing, haulage, petroleum, campus, executive), which cities or geopolitical zones they operate across and whether you are pairing the dashcams with an existing Car Tracker Plus Telematics tracker or fleet module. We will recommend the correct Car Tracker Plus Telematics dashcam tier, confirm installation geography and deliver a fully itemised written quotation for your review.",
 			],
 		},
 		relatedSlugs: [
@@ -6425,13 +6425,13 @@ export const seoPages: SeoLandingPage[] = [
 	{
 		slug: "locations",
 		pageTitle:
-			"All Locations | CTPT Vehicle Tracking and Dashcam Installation Coverage Across Nigeria",
+			"All Locations | Car Tracker Plus Telematics Vehicle Tracking and Dashcam Installation Coverage Across Nigeria",
 		metaDescription:
-			"CTPT vehicle tracking and dashcam installation locations across all six Nigerian geopolitical zones. Find installation coverage in Lagos, Abuja, Port Harcourt, Kano, Enugu, Warri, Ibadan, Kaduna, Benin City and every regional city served by Car Tracker Plus Telematics.",
+			"Car Tracker Plus Telematics vehicle tracking and dashcam installation locations across all six Nigerian geopolitical zones. Find installation coverage in Lagos, Abuja, Port Harcourt, Kano, Enugu, Warri, Ibadan, Kaduna, Benin City and every regional city served by Car Tracker Plus Telematics.",
 		headline:
-			"CTPT Coverage Locations — Vehicle Tracking, Fleet Management and Dashcam Installation Across All Six Geopolitical Zones of Nigeria",
+			"Car Tracker Plus Telematics Coverage Locations — Vehicle Tracking, Fleet Management and Dashcam Installation Across All Six Geopolitical Zones of Nigeria",
 		intro:
-			"Car Tracker Plus Telematics delivers vehicle tracking, fleet supervision and dashcam installation services across every geopolitical zone of Nigeria. This locations index lists every city, regional hub and installation corridor CTPT covers — from the Southwest megacity of Lagos through the FCT in Abuja, the Northwest commercial centres of Kano and Kaduna, the Southeast hubs of Enugu and Owerri, and the petroleum-coast South-South cities of Port Harcourt, Warri, Uyo and Calabar. Every location entry links through to a dedicated page with local deployment patterns, district-level on-site installation coverage, hardware packages tuned for the region and frequently asked questions specific to that city.",
+			"Car Tracker Plus Telematics delivers vehicle tracking, fleet supervision and dashcam installation services across every geopolitical zone of Nigeria. This locations index lists every city, regional hub and installation corridor Car Tracker Plus Telematics covers — from the Southwest megacity of Lagos through the FCT in Abuja, the Northwest commercial centres of Kano and Kaduna, the Southeast hubs of Enugu and Owerri, and the petroleum-coast South-South cities of Port Harcourt, Warri, Uyo and Calabar. Every location entry links through to a dedicated page with local deployment patterns, district-level on-site installation coverage, hardware packages tuned for the region and frequently asked questions specific to that city.",
 		serviceType: "Locations Coverage",
 		location: "Nationwide Nigeria",
 		primaryKeyword: "vehicle tracking locations Nigeria",
@@ -6442,7 +6442,7 @@ export const seoPages: SeoLandingPage[] = [
 			"dashcam installation cities Nigeria",
 			"vehicle tracking company Nigeria",
 			"nationwide vehicle tracking Nigeria",
-			"CTPT office locations Nigeria",
+			"Car Tracker Plus Telematics office locations Nigeria",
 			"GPS vehicle tracking coverage Nigeria",
 		],
 		benefits: [
@@ -6456,15 +6456,15 @@ export const seoPages: SeoLandingPage[] = [
 			"Regional sales desks for on-premises discovery workshops",
 			"Emergency security-response escalation covering all zones",
 		],
-		cardTitle: "All CTPT Installation Locations",
-		eyebrow: "CTPT National Coverage Index",
-		quoteLabel: "CTPT Locations Index",
+		cardTitle: "All Car Tracker Plus Telematics Installation Locations",
+		eyebrow: "Car Tracker Plus Telematics National Coverage Index",
+		quoteLabel: "Car Tracker Plus Telematics Locations Index",
 		sections: [
 			{
 				title: "Southwest Zone — Lagos, Ibadan, Abeokuta and Southwest Corridors",
 				paragraphs: [
-					"The Southwest zone forms CTPT's densest installation and support footprint, anchored by Lagos — the largest commercial port city in West Africa and home to the majority of Nigeria's corporate fleet, executive vehicle and port-logistics deployments. CTPT Southwest coverage spans Lagos State, Oyo State, Ogun State, Ondo State, Osun State and Ekiti State, with dedicated installation capacity along the Lagos-Ibadan Expressway, Abeokuta-Sagamu interchange and the Ondo-Osun commercial corridors. Private-car and SME tracker installations are the highest-volume segment, followed by Apapa and Tin Can port-logistics fleet, ride-hailing dispatch pools and executive vehicle protection programmes.",
-					"CTPT Southwest installation engineers offer on-site fitting at residential estates, office parks, port loading yards, haulage terminals, market-hub car parks and commercial vehicle depots. Lagos coverage includes every major district and mainland corridor; Ibadan coverage clusters around the city's commercial, government and campus corridors; Abeokuta coverage prioritises quarry-haulage and border-town commercial vehicles along the Ogun State corridors. All Southwest location pages detail district-by-district installation coverage, local vehicle categories, package variants tuned for the region and FAQs with pricing, on-site availability and city-specific details.",
+					"The Southwest zone forms Car Tracker Plus Telematics's densest installation and support footprint, anchored by Lagos — the largest commercial port city in West Africa and home to the majority of Nigeria's corporate fleet, executive vehicle and port-logistics deployments. Car Tracker Plus Telematics Southwest coverage spans Lagos State, Oyo State, Ogun State, Ondo State, Osun State and Ekiti State, with dedicated installation capacity along the Lagos-Ibadan Expressway, Abeokuta-Sagamu interchange and the Ondo-Osun commercial corridors. Private-car and SME tracker installations are the highest-volume segment, followed by Apapa and Tin Can port-logistics fleet, ride-hailing dispatch pools and executive vehicle protection programmes.",
+					"Car Tracker Plus Telematics Southwest installation engineers offer on-site fitting at residential estates, office parks, port loading yards, haulage terminals, market-hub car parks and commercial vehicle depots. Lagos coverage includes every major district and mainland corridor; Ibadan coverage clusters around the city's commercial, government and campus corridors; Abeokuta coverage prioritises quarry-haulage and border-town commercial vehicles along the Ogun State corridors. All Southwest location pages detail district-by-district installation coverage, local vehicle categories, package variants tuned for the region and FAQs with pricing, on-site availability and city-specific details.",
 				],
 				bullets: [
 					"Lagos — commercial port-logistics, executive, private car and ride-hailing deployments",
@@ -6478,8 +6478,8 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "North-Central Zone — Abuja FCT, Nasarawa, Plateau, Niger, Kogi and Benue",
 				paragraphs: [
-					"North-Central zone is CTPT's government and intercity haulage heartland, anchored by the Federal Capital Territory of Abuja. CTPT North-Central coverage includes the FCT plus Nasarawa State, Plateau State, Niger State, Kogi State and Benue State, with emphasis on Abuja agency and executive vehicles, intercity haulage running the Okene-Lokoja-Abuja corridor, campus shuttle fleets, staff buses and humanitarian-supply vehicles covering Benue, Nasarawa and Plateau. Abuja installations also support the largest concentration of CTPT Executive Security tier deployments anywhere in the country.",
-					"On-site installation coverage across the North-Central extends into Abuja district layouts and satellite towns, government agency premises, university campuses, intercity haulage parks and supply-fleet loading yards. CTPT installation engineers cover Abuja Maitama, Asokoro, Wuse, Garki, Gwarinpa, Kubwa, Lugbe, Karu, Nyanya, Jikwoyi and Kuje districts, plus scheduled installation days for Minna (Niger), Lafia (Nasarawa), Jos (Plateau), Makurdi (Benue) and Okene-Lokoja (Kogi) on a published cadence.",
+					"North-Central zone is Car Tracker Plus Telematics's government and intercity haulage heartland, anchored by the Federal Capital Territory of Abuja. Car Tracker Plus Telematics North-Central coverage includes the FCT plus Nasarawa State, Plateau State, Niger State, Kogi State and Benue State, with emphasis on Abuja agency and executive vehicles, intercity haulage running the Okene-Lokoja-Abuja corridor, campus shuttle fleets, staff buses and humanitarian-supply vehicles covering Benue, Nasarawa and Plateau. Abuja installations also support the largest concentration of Car Tracker Plus Telematics Executive Security tier deployments anywhere in the country.",
+					"On-site installation coverage across the North-Central extends into Abuja district layouts and satellite towns, government agency premises, university campuses, intercity haulage parks and supply-fleet loading yards. Car Tracker Plus Telematics installation engineers cover Abuja Maitama, Asokoro, Wuse, Garki, Gwarinpa, Kubwa, Lugbe, Karu, Nyanya, Jikwoyi and Kuje districts, plus scheduled installation days for Minna (Niger), Lafia (Nasarawa), Jos (Plateau), Makurdi (Benue) and Okene-Lokoja (Kogi) on a published cadence.",
 				],
 				bullets: [
 					"Abuja FCT — government agency, executive and staff-bus deployments",
@@ -6493,8 +6493,8 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "Northwest Zone — Kano, Kaduna and Northwest Haulage Corridors",
 				paragraphs: [
-					"The Northwest zone is Nigeria's largest market-hub and intercity haulage region, anchored by Kano and Kaduna. CTPT Northwest coverage spans Kano State, Kaduna State, Jigawa State, Katsina State, Kebbi State, Sokoto State and Zamfara State with specialisation in commercial haulage, market-hub distribution, agri-logistics, livestock haulage, government agency fleet and executive vehicles. Kano installations focus on Kurmi Market, Sabon Gari, Bompai industrial corridor, Fagge and Nassarawa GRA; Kaduna installations cover Zaria, Barnawa, Kaduna South, the NDA barracks district and the Kaduna-Abuja haulage corridor.",
-					"On-site installation across the Northwest extends to market loading bays, haulage terminals, industrial estates, barracks premises, government agency vehicle compounds and commercial-district offices. CTPT regularly runs dedicated installation pop-up days in Sokoto, Katsina, Gusau, Dutse and Birnin Kebbi for qualifying multi-vehicle accounts. Northwest location pages detail district-level on-site coverage, haulage and agri-logistics package variants and city-specific FAQs.",
+					"The Northwest zone is Nigeria's largest market-hub and intercity haulage region, anchored by Kano and Kaduna. Car Tracker Plus Telematics Northwest coverage spans Kano State, Kaduna State, Jigawa State, Katsina State, Kebbi State, Sokoto State and Zamfara State with specialisation in commercial haulage, market-hub distribution, agri-logistics, livestock haulage, government agency fleet and executive vehicles. Kano installations focus on Kurmi Market, Sabon Gari, Bompai industrial corridor, Fagge and Nassarawa GRA; Kaduna installations cover Zaria, Barnawa, Kaduna South, the NDA barracks district and the Kaduna-Abuja haulage corridor.",
+					"On-site installation across the Northwest extends to market loading bays, haulage terminals, industrial estates, barracks premises, government agency vehicle compounds and commercial-district offices. Car Tracker Plus Telematics regularly runs dedicated installation pop-up days in Sokoto, Katsina, Gusau, Dutse and Birnin Kebbi for qualifying multi-vehicle accounts. Northwest location pages detail district-level on-site coverage, haulage and agri-logistics package variants and city-specific FAQs.",
 				],
 				bullets: [
 					"Kano — market-hub, haulage and commercial logistics coverage",
@@ -6508,8 +6508,8 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "Northeast Zone — Borno, Yobe, Adamawa, Bauchi, Gombe and Taraba",
 				paragraphs: [
-					"The Northeast zone is a specialised CTPT footprint focused on humanitarian-logistics, government-supply fleets, agricultural haulage and agency vehicles operating across Borno State, Yobe State, Adamawa State, Bauchi State, Gombe State and Taraba State. CTPT Northeast deployments frequently pair vehicle supervision with AI dashcam installation and fuel-level anomaly sensing for high-value supply runs. Security-response SLAs for executive and CSO vehicles in the Northeast are tuned accordingly.",
-					"On-site installation across the Northeast is delivered via scheduled regional rollouts and dedicated account installation days, with Maiduguri (Borno), Damaturu (Yobe), Yola (Adamawa), Bauchi (Bauchi), Gombe (Gombe) and Jalingo (Taraba) as the six primary installation hubs. Northeast deployments often include anti-tamper hardware specifications, longer retention windows and classified archival options for government and humanitarian accounts. CTPT regional account managers work with each Northeast customer to tailor rollout cadence and support windows around local operating conditions.",
+					"The Northeast zone is a specialised Car Tracker Plus Telematics footprint focused on humanitarian-logistics, government-supply fleets, agricultural haulage and agency vehicles operating across Borno State, Yobe State, Adamawa State, Bauchi State, Gombe State and Taraba State. Car Tracker Plus Telematics Northeast deployments frequently pair vehicle supervision with AI dashcam installation and fuel-level anomaly sensing for high-value supply runs. Security-response SLAs for executive and CSO vehicles in the Northeast are tuned accordingly.",
+					"On-site installation across the Northeast is delivered via scheduled regional rollouts and dedicated account installation days, with Maiduguri (Borno), Damaturu (Yobe), Yola (Adamawa), Bauchi (Bauchi), Gombe (Gombe) and Jalingo (Taraba) as the six primary installation hubs. Northeast deployments often include anti-tamper hardware specifications, longer retention windows and classified archival options for government and humanitarian accounts. Car Tracker Plus Telematics regional account managers work with each Northeast customer to tailor rollout cadence and support windows around local operating conditions.",
 				],
 				bullets: [
 					"Borno and Yobe — humanitarian and government supply fleet specialisation",
@@ -6523,7 +6523,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "Southeast Zone — Enugu, Owerri, Asaba, Onitsha and Market-Hub Corridors",
 				paragraphs: [
-					"The Southeast zone is CTPT's market-hub haulage and commercial distribution stronghold, covering Enugu State, Imo State, Abia State, Anambra State and Ebonyi State — plus Asaba (Delta State, Niger-Bridge gateway) by operational proximity given its close commercial linkage to Onitsha and Southeast haulage. CTPT Southeast installations specialise in market-hub distribution (Onitsha, Aba, Nnewi, Owerri), intercity haulage, FMCG delivery fleets, campus shuttles, staff buses and executive vehicle programmes. Enugu anchors the zone, with Owerri as the industrial-hub secondary centre and Asaba as the Niger-Bridge gateway for cross-river freight.",
+					"The Southeast zone is Car Tracker Plus Telematics's market-hub haulage and commercial distribution stronghold, covering Enugu State, Imo State, Abia State, Anambra State and Ebonyi State — plus Asaba (Delta State, Niger-Bridge gateway) by operational proximity given its close commercial linkage to Onitsha and Southeast haulage. Car Tracker Plus Telematics Southeast installations specialise in market-hub distribution (Onitsha, Aba, Nnewi, Owerri), intercity haulage, FMCG delivery fleets, campus shuttles, staff buses and executive vehicle programmes. Enugu anchors the zone, with Owerri as the industrial-hub secondary centre and Asaba as the Niger-Bridge gateway for cross-river freight.",
 					"On-site installation coverage across the Southeast includes market loading bays, commercial distribution warehouses, industrial estates, government compounds, university campuses and residential layouts. Enugu coverage spans Independence Layout, New Haven, Trans Ekulu, Emene, Thinkers Corner, Achara Layout, Uwani and Abakpa Nike districts; Owerri coverage includes Imo State's capital and industrial corridor; Asaba covers the Delta State capital and the Niger-Bridge approach; and rolling installation cadences cover Aba, Onitsha, Nnewi, Abakaliki and Umuahia for qualifying accounts.",
 				],
 				bullets: [
@@ -6538,7 +6538,7 @@ export const seoPages: SeoLandingPage[] = [
 			{
 				title: "South-South Zone — Port Harcourt, Warri, Uyo, Calabar, Benin City and Petroleum Coast",
 				paragraphs: [
-					"The South-South zone is CTPT's petroleum-coast and port-logistics heartland, covering Rivers State, Delta State, Bayelsa State, Edo State, Cross River State and Akwa Ibom State. CTPT South-South installations specialise in petroleum-service fleets, oil-field vehicles, tanker haulage, port-logistics and clearing-agent fleets, tourist coaches, intercity haulage and executive vehicles operating from Port Harcourt, Warri, Benin City, Calabar, Uyo and Yenagoa. Package variants across the zone include the petroleum-hardened hardware specifications and longer retention windows required for petroleum, port and tanker deployments.",
+					"The South-South zone is Car Tracker Plus Telematics's petroleum-coast and port-logistics heartland, covering Rivers State, Delta State, Bayelsa State, Edo State, Cross River State and Akwa Ibom State. Car Tracker Plus Telematics South-South installations specialise in petroleum-service fleets, oil-field vehicles, tanker haulage, port-logistics and clearing-agent fleets, tourist coaches, intercity haulage and executive vehicles operating from Port Harcourt, Warri, Benin City, Calabar, Uyo and Yenagoa. Package variants across the zone include the petroleum-hardened hardware specifications and longer retention windows required for petroleum, port and tanker deployments.",
 					"On-site installation coverage across the South-South extends into tank farms, petroleum depots, port yards, oil-service company premises, haulage terminals, tourist-bus parks, government compounds and executive estates. Port Harcourt coverage spans its GRA, oil-service and port corridors; Warri coverage centres on the petroleum-coast terminals; Benin City covers the Midwest commercial and distribution hub; Calabar anchors the Eastern Seaboard port and tourist-coach corridor; Uyo covers Akwa Ibom's capital and oil-service installations. Rolling installation days cover Yenagoa (Bayelsa) and the smaller South-South towns for qualifying accounts.",
 				],
 				bullets: [
@@ -6550,27 +6550,27 @@ export const seoPages: SeoLandingPage[] = [
 					"Bayelsa and South-South satellite towns — rolling installation cadence",
 				],
 			},
-			{
-				title: "Request CTPT Installation or a Scoping Visit in Any Listed Location",
-				paragraphs: [
-					"Every location listed in this CTPT index links through to a dedicated page with district-level on-site installation details, local vehicle categories, hardware package variants tuned for the region and a city-specific FAQ. Regional customers can request a scoping visit, pilot installation or quotation for a single city, a cross-zone multi-city rollout or a national deployment spanning all six geopolitical zones. CTPT account managers work with each operator to select the correct tier, rollout cadence and SLA structure for their geography and fleet category.",
-					"Private owners and single-vehicle operators should open the dedicated city page and follow the call-to-action for that location. Fleet accounts, government agencies, petroleum operators, campus shuttle managers and multi-city commercial operators can use this locations index to confirm coverage zones, then contact CTPT for a combined multi-city quotation covering every vehicle under a single nationwide console login. Cross-zone SLAs, staggered rollout plans and pilot-on-pilot calibration programmes are all available on account-level scopes.",
-				],
-				bullets: [
-					"Open any dedicated city page for district-level coverage details and local FAQs",
-					"Request single-location fitting or multi-city national rollout scoping",
-					"Private and SME operators — use city-page callouts for direct quotations",
-					"Account-level customers — contact for combined multi-city nationwide pricing",
-					"Cross-zone support, staggered rollouts and pilot calibrations available",
-					"All locations use identical CTPT hardware, console and workmanship standards",
-				],
-			},
+			// {
+			// 	title: "Request Car Tracker Plus Telematics Installation or a Scoping Visit in Any Listed Location",
+			// 	paragraphs: [
+			// 		"Every location listed in this Car Tracker Plus Telematics index links through to a dedicated page with district-level on-site installation details, local vehicle categories, hardware package variants tuned for the region and a city-specific FAQ. Regional customers can request a scoping visit, pilot installation or quotation for a single city, a cross-zone multi-city rollout or a national deployment spanning all six geopolitical zones. Car Tracker Plus Telematics account managers work with each operator to select the correct tier, rollout cadence and SLA structure for their geography and fleet category.",
+			// 		"Private owners and single-vehicle operators should open the dedicated city page and follow the call-to-action for that location. Fleet accounts, government agencies, petroleum operators, campus shuttle managers and multi-city commercial operators can use this locations index to confirm coverage zones, then contact Car Tracker Plus Telematics for a combined multi-city quotation covering every vehicle under a single nationwide console login. Cross-zone SLAs, staggered rollout plans and pilot-on-pilot calibration programmes are all available on account-level scopes.",
+			// 	],
+			// 	bullets: [
+			// 		"Open any dedicated city page for district-level coverage details and local FAQs",
+			// 		"Request single-location fitting or multi-city national rollout scoping",
+			// 		"Private and SME operators — use city-page callouts for direct quotations",
+			// 		"Account-level customers — contact for combined multi-city nationwide pricing",
+			// 		"Cross-zone support, staggered rollouts and pilot calibrations available",
+			// 		"All locations use identical Car Tracker Plus Telematics hardware, console and workmanship standards",
+			// 	],
+			// },
 		],
 		featureGroups: [
 			{
 				title: "Standardised Coverage Capabilities Across All Listed Locations",
 				items: [
-					"Identical CTPT hardware specification and pricing nationwide",
+					"Identical Car Tracker Plus Telematics hardware specification and pricing nationwide",
 					"Single telematics console login for cross-city and cross-zone fleets",
 					"Concealed cable routing, validated SD cards and 90-day workmanship on installs",
 					"District-level on-site fitting coverage at homes, offices, yards and ports",
@@ -6606,12 +6606,12 @@ export const seoPages: SeoLandingPage[] = [
 				name: "Single-Location Tracker Installation",
 				price: "from ₦75,000 per vehicle at any listed location",
 				idealFor: [
-					"Private car and SUV owners at any individual CTPT city",
+					"Private car and SUV owners at any individual Car Tracker Plus Telematics city",
 					"SME operators with one to three vehicles in a single city",
 					"Ride-hailing and dispatch drivers operating locally",
 				],
 				features: [
-					"CTPT Entry Vehicle Tracking hardware",
+					"Car Tracker Plus Telematics Entry Vehicle Tracking hardware",
 					"On-site fitting within the selected city's covered districts",
 					"12-month hardware + 90-day workmanship warranty",
 					"Basic telematics console login for single-vehicle view",
@@ -6629,7 +6629,7 @@ export const seoPages: SeoLandingPage[] = [
 				],
 				features: [
 					"Advanced or Fleet Operations Suite hardware per vehicle",
-					"Staggered rollout across any subset of listed CTPT locations",
+					"Staggered rollout across any subset of listed Car Tracker Plus Telematics locations",
 					"Unified regional telematics console with zone-level reporting",
 					"Pilot phase in 2 cities, calibration review, then phased expansion",
 					"Named regional account manager and zone-level SLA sheet",
@@ -6655,7 +6655,7 @@ export const seoPages: SeoLandingPage[] = [
 			},
 			{
 				name: "Executive and Security Specification (Any Location)",
-				price: "from ₦650,000 per vehicle at any CTPT location",
+				price: "from ₦650,000 per vehicle at any Car Tracker Plus Telematics location",
 				idealFor: [
 					"Executive, CSO and diplomatic vehicles across Abuja, Lagos and PH",
 					"High-net-worth private owners and family vehicle protection",
@@ -6663,7 +6663,7 @@ export const seoPages: SeoLandingPage[] = [
 				],
 				features: [
 					"Principal Security / Executive Protection hardware specification",
-					"Concierge fitting at any listed CTPT location",
+					"Concierge fitting at any listed Car Tracker Plus Telematics location",
 					"Watch-desk pairing and security-response escalation pathways",
 					"AI dashcam + remote immobilisation + hardened telemetry",
 					"Classified retention windows and audit-ready export formats",
@@ -6673,7 +6673,7 @@ export const seoPages: SeoLandingPage[] = [
 		],
 		calloutGroups: [
 			{
-				title: "Why operators covering multiple Nigerian cities centralise with CTPT locations",
+				title: "Why operators covering multiple Nigerian cities centralise with Car Tracker Plus Telematics locations",
 				items: [
 					{
 						title: "One hardware standard across every city and zone",
@@ -6688,7 +6688,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "Named account coordination across regions",
 						description:
-							"Regional and national accounts get a single named CTPT account team plus regional coordinators per geopolitical zone, so there is one accountable point of contact rather than four disconnected regional vendors.",
+							"Regional and national accounts get a single named Car Tracker Plus Telematics account team plus regional coordinators per geopolitical zone, so there is one accountable point of contact rather than four disconnected regional vendors.",
 					},
 					{
 						title: "Transparent pricing and written SLAs before rollout",
@@ -6704,7 +6704,7 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "'Nationwide coverage' from most vendors means Lagos + Abuja only",
 						description:
-							"'Nationwide coverage' on a competitor's website often means 'Lagos plus Abuja and a contact we subcontract to in Port Harcourt'. CTPT publishes exact cities, district coverage, zone specialisations and package variants on every dedicated location page.",
+							"'Nationwide coverage' on a competitor's website often means 'Lagos plus Abuja and a contact we subcontract to in Port Harcourt'. Car Tracker Plus Telematics publishes exact cities, district coverage, zone specialisations and package variants on every dedicated location page.",
 					},
 					{
 						title: "'Same tracking product' does not mean same console or SLA",
@@ -6714,18 +6714,18 @@ export const seoPages: SeoLandingPage[] = [
 					{
 						title: "Cross-zone incidents need one accountable operator",
 						description:
-							"When a Lagos-to-Kano haulage vehicle has an incident on the Okene-Lokoja corridor, having three separate regional providers means finger-pointing rather than resolution. CTPT single-account structure eliminates that split.",
+							"When a Lagos-to-Kano haulage vehicle has an incident on the Okene-Lokoja corridor, having three separate regional providers means finger-pointing rather than resolution. Car Tracker Plus Telematics single-account structure eliminates that split.",
 					},
 					{
 						title: "Pilot phases avoid costly nationwide over-commitment",
 						description:
-							"Multi-city programmes should always run pilots in 1–2 representative cities before full rollout. CTPT pilot-on-pilot structure validates coverage, tuning and internal workflow before any national-scale commitment is made.",
+							"Multi-city programmes should always run pilots in 1–2 representative cities before full rollout. Car Tracker Plus Telematics pilot-on-pilot structure validates coverage, tuning and internal workflow before any national-scale commitment is made.",
 					},
 				],
 			},
 		],
 		audiences: [
-			"Private saloon, SUV and family vehicle owners in any listed CTPT city",
+			"Private saloon, SUV and family vehicle owners in any listed Car Tracker Plus Telematics city",
 			"SME operators with small vehicle pools concentrated in one location",
 			"Regional fleet operators spanning two or more cities in a single zone",
 			"National commercial, FMCG and logistics operators covering all six zones",
@@ -6743,64 +6743,64 @@ export const seoPages: SeoLandingPage[] = [
 			"30/90/180-day calibration reviews plus ongoing cross-zone aftercare",
 		],
 		bestPractices: {
-			title: "Maximising value from multi-city or nationwide CTPT deployments",
+			title: "Maximising value from multi-city or nationwide Car Tracker Plus Telematics deployments",
 			intro:
-				"The highest-return CTPT location programmes — whether single-city, multi-city or national scope — share six recurring habits drawn from hundreds of accounts across the six geopolitical zones of Nigeria.",
+				"The highest-return Car Tracker Plus Telematics location programmes — whether single-city, multi-city or national scope — share six recurring habits drawn from hundreds of accounts across the six geopolitical zones of Nigeria.",
 			items: [
 				"Open the dedicated city page for any single location to see district-level coverage and local FAQs",
-				"Combine multi-city scopes into one CTPT account for unified console and consolidated pricing",
+				"Combine multi-city scopes into one Car Tracker Plus Telematics account for unified console and consolidated pricing",
 				"Run a pilot installation in 1–2 representative cities before a full national rollout",
-				"Request zone-level SLAs and rollout timelines in writing from CTPT before payment",
+				"Request zone-level SLAs and rollout timelines in writing from Car Tracker Plus Telematics before payment",
 				"Tailor package variants to each zone's dominant vehicle category and operating conditions",
 				"Schedule calibration reviews 30/90/180 days post-install across all covered locations",
 			],
 		},
 		faqs: [
 			{
-				question: "Which cities does CTPT list as installation locations?",
+				question: "Which cities does Car Tracker Plus Telematics list as installation locations?",
 				answer:
-					"CTPT publishes dedicated location pages for Lagos, Abuja, Port Harcourt, Ibadan, Benin City, Abeokuta, Enugu, Asaba, Warri, Kano, Kaduna, Ilorin, Owerri, Uyo and Calabar — plus coverage of every state capital and major regional corridor within all six geopolitical zones via scheduled installation pop-ups for qualifying accounts. This locations index lists every zone, its covered state capitals and the zone-level specialisations available.",
+					"Car Tracker Plus Telematics publishes dedicated location pages for Lagos, Abuja, Port Harcourt, Ibadan, Benin City, Abeokuta, Enugu, Asaba, Warri, Kano, Kaduna, Ilorin, Owerri, Uyo and Calabar — plus coverage of every state capital and major regional corridor within all six geopolitical zones via scheduled installation pop-ups for qualifying accounts. This locations index lists every zone, its covered state capitals and the zone-level specialisations available.",
 			},
 			{
 				question: "Is hardware pricing the same across every listed location?",
 				answer:
-					"Yes. CTPT hardware tier pricing is standardised nationwide, so a given package costs the same regardless of whether it is installed in Lagos, Kano, Enugu, Warri or Abuja. Account-level programmes may receive volume or multi-city package pricing, but base tier prices are identical across every listed location to keep quotations transparent and predictable.",
+					"Yes. Car Tracker Plus Telematics hardware tier pricing is standardised nationwide, so a given package costs the same regardless of whether it is installed in Lagos, Kano, Enugu, Warri or Abuja. Account-level programmes may receive volume or multi-city package pricing, but base tier prices are identical across every listed location to keep quotations transparent and predictable.",
 			},
 			{
 				question: "Can you fit vehicles at my home, office or port yard within a listed city?",
 				answer:
-					"Absolutely. Every dedicated city page lists the districts and installation points CTPT covers — residential estates, office parks, port loading yards, haulage terminals, market car parks, government compounds, barracks premises, university campuses and industrial estates. Installation appointments are scheduled at the customer's chosen location within the covered district footprint.",
+					"Absolutely. Every dedicated city page lists the districts and installation points Car Tracker Plus Telematics covers — residential estates, office parks, port loading yards, haulage terminals, market car parks, government compounds, barracks premises, university campuses and industrial estates. Installation appointments are scheduled at the customer's chosen location within the covered district footprint.",
 			},
 			{
 				question: "How do cross-city or nationwide fleet rollouts work?",
 				answer:
-					"CTPT regional or national fleet programmes begin with a vehicle register listing vehicle counts, categories and operating geography, followed by a written quotation, a pilot installation phase in 1–2 representative cities, a 30-day calibration review, then a staggered phased rollout across the remaining locations. A named account team coordinates installers, SLAs and reviews across every covered zone.",
+					"Car Tracker Plus Telematics regional or national fleet programmes begin with a vehicle register listing vehicle counts, categories and operating geography, followed by a written quotation, a pilot installation phase in 1–2 representative cities, a 30-day calibration review, then a staggered phased rollout across the remaining locations. A named account team coordinates installers, SLAs and reviews across every covered zone.",
 			},
 			{
 				question: "Do you cover towns that are not listed as dedicated location pages?",
 				answer:
-					"Yes. CTPT operates scheduled installation pop-up days and regional account installation visits for state capitals, satellite towns and corridor locations that do not yet have a dedicated page — including Minna, Lafia, Jos, Makurdi, Sokoto, Katsina, Maiduguri, Yola, Bauchi, Yenagoa, Aba, Onitsha, Nnewi, Abakaliki and Umuahia. Accounts of 10 or more vehicles qualify for dedicated installation pop-ups in any Nigerian town.",
+					"Yes. Car Tracker Plus Telematics operates scheduled installation pop-up days and regional account installation visits for state capitals, satellite towns and corridor locations that do not yet have a dedicated page — including Minna, Lafia, Jos, Makurdi, Sokoto, Katsina, Maiduguri, Yola, Bauchi, Yenagoa, Aba, Onitsha, Nnewi, Abakaliki and Umuahia. Accounts of 10 or more vehicles qualify for dedicated installation pop-ups in any Nigerian town.",
 			},
 			{
-				question: "Is the telematics console the same for every CTPT location?",
+				question: "Is the telematics console the same for every Car Tracker Plus Telematics location?",
 				answer:
-					"It is. Every CTPT vehicle — regardless of installation city or zone — binds to the same unified nationwide telematics console. Regional or national operators can log in once and see vehicles in Lagos, Abuja, Kano, Port Harcourt, Warri and every other listed location together, with zone-level filters, cross-city aggregate reports and role-based access for regional managers.",
+					"It is. Every Car Tracker Plus Telematics vehicle — regardless of installation city or zone — binds to the same unified nationwide telematics console. Regional or national operators can log in once and see vehicles in Lagos, Abuja, Kano, Port Harcourt, Warri and every other listed location together, with zone-level filters, cross-city aggregate reports and role-based access for regional managers.",
 			},
 			{
 				question: "Which location should I choose for a vehicle that moves between zones?",
 				answer:
-					"Select the city or zone page matching where the vehicle is physically based most of the time. CTPT cross-zone support programmes cover vehicles that routinely travel between listed locations — e.g. haulage from Kano to Lagos, petroleum runs from Warri to Enugu, or agency pools between Abuja and Kaduna — so a single account covers the vehicle regardless of which CTPT city it is in.",
+					"Select the city or zone page matching where the vehicle is physically based most of the time. Car Tracker Plus Telematics cross-zone support programmes cover vehicles that routinely travel between listed locations — e.g. haulage from Kano to Lagos, petroleum runs from Warri to Enugu, or agency pools between Abuja and Kaduna — so a single account covers the vehicle regardless of which Car Tracker Plus Telematics city it is in.",
 			},
 			{
 				question: "How do I request a scoping visit or quotation for my chosen locations?",
 				answer:
-					"Private and single-location buyers should open the dedicated city page for their location and follow the call-to-action. Regional or national accounts should contact CTPT directly with their vehicle register and coverage geography, and a named account manager will confirm coverage, recommend the correct tier(s) and deliver a fully itemised multi-city written quotation with rollout timeline and zone-level SLAs.",
+					"Private and single-location buyers should open the dedicated city page for their location and follow the call-to-action. Regional or national accounts should contact Car Tracker Plus Telematics directly with their vehicle register and coverage geography, and a named account manager will confirm coverage, recommend the correct tier(s) and deliver a fully itemised multi-city written quotation with rollout timeline and zone-level SLAs.",
 			},
 		],
 		relatedServiceNames: {
-			title: "CTPT services available across every listed installation location",
+			title: "Car Tracker Plus Telematics services available across every listed installation location",
 			intro:
-				"Every CTPT location delivers the full suite of CTPT systems — the three below are the most frequently combined across single-location and multi-location deployments for Nigerian private, commercial and government operators.",
+				"Every Car Tracker Plus Telematics location delivers the full suite of Car Tracker Plus Telematics systems — the three below are the most frequently combined across single-location and multi-location deployments for Nigerian private, commercial and government operators.",
 			items: [
 				"Vehicle tracker nationwide hardware and supervision console",
 				"Fleet management, driver behaviour and fuel intelligence modules",
@@ -6810,10 +6810,10 @@ export const seoPages: SeoLandingPage[] = [
 			],
 		},
 		closing: {
-			title: "Select a CTPT Location or Request a Multi-City Nationwide Scoping Proposal",
+			title: "Select a Car Tracker Plus Telematics Location or Request a Multi-City Nationwide Scoping Proposal",
 			paragraphs: [
-				"Every CTPT location listed in this index delivers the same hardware standard, workmanship quality, unified telematics console and aftercare programme — with regional specialisations layered on top where operating conditions demand them. Operators running vehicles in a single city get a dedicated local page with district-level coverage and city-specific FAQs. Operators spanning two or more cities, or covering entire geopolitical zones, get one account, one login, one named team and one transparent pricing structure instead of stitching together fragmented providers across Nigeria.",
-				"Private and SME buyers: open the dedicated city page that matches your location, review district coverage and package variants, then follow the call-to-action for a direct quotation. Account-level customers: submit a vehicle register with counts, categories and operating geography, and CTPT will confirm coverage, recommend the correct tier mix and deliver a multi-city or nationwide written quotation with rollout plan, zone SLAs and calibration review cadence.",
+				"Every Car Tracker Plus Telematics location listed in this index delivers the same hardware standard, workmanship quality, unified telematics console and aftercare programme — with regional specialisations layered on top where operating conditions demand them. Operators running vehicles in a single city get a dedicated local page with district-level coverage and city-specific FAQs. Operators spanning two or more cities, or covering entire geopolitical zones, get one account, one login, one named team and one transparent pricing structure instead of stitching together fragmented providers across Nigeria.",
+				"Private and SME buyers: open the dedicated city page that matches your location, review district coverage and package variants, then follow the call-to-action for a direct quotation. Account-level customers: submit a vehicle register with counts, categories and operating geography, and Car Tracker Plus Telematics will confirm coverage, recommend the correct tier mix and deliver a multi-city or nationwide written quotation with rollout plan, zone SLAs and calibration review cadence.",
 			],
 		},
 		relatedSlugs: [

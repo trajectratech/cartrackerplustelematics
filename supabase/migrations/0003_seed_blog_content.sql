@@ -14,7 +14,7 @@
 -- explicit existence guard, so running it twice (or after the admin has
 -- already edited rows) is safe.
 --
--- Run it against the CTPT Supabase project:
+-- Run it against the Car Tracker Plus Telematics Supabase project:
 --     * SQL Editor: paste the whole file > Run
 --     * CLI:        supabase db push
 --     * psql:       psql $DATABASE_URL -f supabase/migrations/0003_seed_blog_content.sql
@@ -30,7 +30,7 @@ insert into authors (name, slug, bio)
 values
 (
     'Car Tracker Plus Telematics Editorial Team',
-    'ctpt-editorial',
+    'Car Tracker Plus Telematics-editorial',
     'Down-to-earth advice on GPS security, fleet expense control, and dashboard camera systems, curated specifically for Nigerian business owners and luxury vehicle managers.'
 )
 on conflict (slug) do nothing;
@@ -100,7 +100,7 @@ on conflict (slug) do nothing;
 -- ---------------------------------------------------------------------------
 
 with author_id_cte(author_id) as (
-    select id from authors where slug = 'ctpt-editorial' limit 1
+    select id from authors where slug = 'Car Tracker Plus Telematics-editorial' limit 1
 ),
 article_1(cat_slug) as (values ('telematics-premium-tracking')),
 article_2(cat_slug) as (values ('fleet-management-economics')),

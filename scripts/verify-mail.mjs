@@ -1,5 +1,5 @@
 /**
- * SMTP configuration check for CTPT contact/quote form.
+ * SMTP configuration check for Car Tracker Plus Telematics contact/quote form.
  *
  *   npm run verify:mail
  */
@@ -53,7 +53,7 @@ const pass = env.ZOHO_SMTP_PASSWORD?.trim();
 const to = env.ZOHO_MAIL_TO?.trim();
 const from = env.ZOHO_MAIL_FROM?.trim() || user;
 
-console.log("\nCTPT Quote form mail check\n" + "=".repeat(50));
+console.log("\nCar Tracker Plus Telematics Quote form mail check\n" + "=".repeat(50));
 console.log(`  host      ${host}`);
 console.log(`  port      ${port} (${port === 465 ? "implicit TLS" : "STARTTLS"})`);
 console.log(`  user      ${mask(user)}`);
@@ -105,7 +105,7 @@ const transporter = nodemailer.createTransport({
 
 try {
 	await transporter.verify();
-	console.log("\nPASS: SMTP authentication succeeded. The CTPT quote form can deliver mail.\n");
+	console.log("\nPASS: SMTP authentication succeeded. The Car Tracker Plus Telematics quote form can deliver mail.\n");
 	process.exit(0);
 } catch (error) {
 	console.error("\nFAIL: SMTP authentication failed.");
