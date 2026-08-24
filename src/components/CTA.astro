@@ -11,7 +11,7 @@ const whatsappUrl = Astro.props.data.content.heroSection?.ctaUrl ?? "#";
 
 {
 	cta && (
-		<section id="get-a-quote" class="scrolling-section section-shell text-[var(--color-text)]" aria-labelledby="get-a-quote-heading">
+		<section id="get-a-quote" class="scrolling-section section-shell text-(--color-text)" aria-labelledby="get-a-quote-heading">
 			<div class="container-shell">
 				<div class="cta-shell p-8 sm:p-10 lg:p-14">
 					<div class="grid items-start gap-10 lg:grid-cols-[0.9fr_1.1fr]">
@@ -21,7 +21,7 @@ const whatsappUrl = Astro.props.data.content.heroSection?.ctaUrl ?? "#";
 								{cta.heading}
 							</h2>
 							{cta.subheading && (
-								<p class="mt-5 max-w-2xl text-lg leading-8 text-[var(--color-text-muted)]">
+								<p class="mt-5 max-w-2xl text-lg leading-8 text-(--color-text-muted)">
 									{cta.subheading}
 								</p>
 							)}
@@ -43,7 +43,7 @@ const whatsappUrl = Astro.props.data.content.heroSection?.ctaUrl ?? "#";
 						<div class="premium-panel p-6 sm:p-8">
 							<div class="mb-6">
 								<p class="eyebrow-label">Online Quote Form</p>
-								<p class="mt-4 text-2xl font-bold tracking-[-0.03em] text-[var(--color-heading)]">
+								<p class="mt-4 text-2xl font-bold tracking-[-0.03em] text-(--color-heading)">
 									Share the job details once and let the team follow up with the right recommendation.
 								</p>
 							</div>

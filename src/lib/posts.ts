@@ -95,6 +95,8 @@ export interface AdjacentPosts {
 
 export { isSupabaseConfigured } from "./supabase";
 
+export const POSTS_PER_PAGE = 9;
+
 const POST_COLUMNS = `
 	id, slug, title, excerpt, body, status, published_at, updated_at, created_at,
 	featured_image_path, featured_image_alt, featured_image_width, featured_image_height,
