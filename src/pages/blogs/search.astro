@@ -52,12 +52,12 @@ const seo = getBlogIndexSeo(data, 1, 1);
 const metaTitle = didSearch
 	? searchResult.status === "ok" || searchResult.status === "empty"
 		? posts.length
-			? `“${query}” — ${posts.length} result${posts.length === 1 ? "" : "s"} | CTPT Blog`
-			: `No results for “${query}” | CTPT Blog`
+			? `“${query}” — ${posts.length} result${posts.length === 1 ? "" : "s"} | Car Tracker Plus Telematics`
+			: `No results for “${query}” | Car Tracker Plus Telematics`
 		: searchResult.status === "unconfigured"
-			? "Blog search unavailable | CTPT Blog"
-			: "Blog search error | CTPT Blog"
-	: "Search the CTPT Blog | Car Tracker Plus Telematics";
+			? "Blog search unavailable | Car Tracker Plus Telematics"
+			: "Blog search error | Car Tracker Plus Telematics"
+	: "Search the Car Tracker Plus Telematics | Car Tracker Plus Telematics";
 const metaDescription = didSearch
 	? searchResult.status === "ok" || searchResult.status === "empty"
 		? posts.length
@@ -93,7 +93,7 @@ const metaDescription = didSearch
 				<div>
 					<p class="section-kicker">Blog search</p>
 					<h1 id="search-heading" class="display-title--compact mt-7 tracking-tight">
-						Search the CTPT Blog
+						Search the Car Tracker Plus Telematics
 					</h1>
 					<p class="section-copy max-w-2xl mt-5">
 						Look up guides on telematics setup, dashcam ROI, fleet fuel economics, executive vehicle
