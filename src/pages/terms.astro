@@ -1,0 +1,322 @@
+---
+import { Icon } from "astro-icon/components";
+import type { ThemeConfig } from "../types/theme";
+import dataJson from "../data/car-tracker-plus-telematics.json";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import { toAbsoluteUrl } from "../utils/seo";
+
+const data = dataJson as ThemeConfig;
+export const prerender = true;
+
+const siteName = data.seo?.siteName || data.brand.businessName;
+const pageUrl = toAbsoluteUrl(data.brand.url, "/terms/");
+const homepageUrl = toAbsoluteUrl(data.brand.url, "/");
+
+const breadcrumbs = [
+	{ name: "Home", path: "/" },
+	{ name: "Terms of Service", path: "/terms/" },
+];
+
+const metadata = {
+	title: "Terms of Service | Car Tracker Plus Telematics",
+	description:
+		"Terms of Service governing use of the Car Tracker Plus Telematics website, GPS tracking installations, dashcam deployments, fleet telematics platforms and after-sales support available across Nigeria.",
+	canonicalUrl: pageUrl,
+	keywords: [
+		"terms of service",
+		"terms and conditions nigeria",
+		"ctpt service terms",
+		...(data.seo?.targetKeywords?.slice(0, 10) ?? data.brand.keywords),
+	],
+	siteName,
+	ogImage: toAbsoluteUrl(data.brand.url, data.seo?.defaultOgImage || data.brand.logoImage),
+	ogImageAlt: data.seo?.ogImageAlt || `${siteName} logo`,
+	ogImageWidth: data.seo?.defaultOgImageWidth,
+	ogImageHeight: data.seo?.defaultOgImageHeight,
+	locale: data.seo?.siteLocale || "en_NG",
+	twitterHandle: data.seo?.twitterHandle,
+	type: "website",
+	robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+};
+
+const serviceAreas =
+	data.seo?.serviceAreas?.map((name) => ({
+		"@type": name.trim().toLowerCase() === "nigeria" ? "Country" : "City",
+		name,
+	})) || [];
+
+const structuredData = [
+	{
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"@id": `${homepageUrl}#organization`,
+		name: data.brand.businessName,
+		url: homepageUrl,
+		areaServed: { "@type": "Country", name: "Nigeria" },
+		serviceArea: serviceAreas.length
+			? serviceAreas
+			: [{ "@type": "Country", name: "Nigeria" }],
+		logo: toAbsoluteUrl(data.brand.url, data.brand.logoImage),
+		contactPoint: {
+			"@type": "ContactPoint",
+			telephone: data.contact.phone,
+			contactType: "customer support",
+			email: data.contact.email,
+			areaServed: data.contact.addressCountry,
+			availableLanguage: ["en"],
+		},
+	},
+	{
+		"@context": "https://schema.org",
+		"@type": "LocalBusiness",
+		"@id": `${homepageUrl}#localbusiness`,
+		name: data.brand.businessName,
+		description: data.brand.description,
+		url: homepageUrl,
+		telephone: data.contact.phone,
+		email: data.contact.email,
+		address: {
+			"@type": "PostalAddress",
+			streetAddress: data.contact.address,
+			addressLocality: data.contact.addressLocality,
+			addressRegion: data.contact.addressRegion,
+			addressCountry: data.contact.addressCountry,
+		},
+		areaServed: serviceAreas.length
+			? serviceAreas
+			: [{ "@type": "Country", name: "Nigeria" }],
+	},
+	{
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"@id": `${pageUrl}#webpage`,
+		name: metadata.title,
+		url: pageUrl,
+		description: metadata.description,
+		isPartOf: { "@id": `${homepageUrl}#website` },
+		about: { "@id": `${homepageUrl}#organization` },
+		breadcrumb: { "@id": `${pageUrl}#breadcrumb` },
+		primaryImageOfPage: metadata.ogImage,
+		inLanguage: "en-NG",
+	},
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"@id": `${pageUrl}#breadcrumb`,
+		itemListElement: breadcrumbs.map((item, index) => ({
+			"@type": "ListItem",
+			position: index + 1,
+			name: item.name,
+			item: toAbsoluteUrl(data.brand.url, item.path),
+		})),
+	},
+];
+
+const sections = [
+	{
+		title: "Acceptance of terms",
+		paragraphs: [
+			"These Terms of Service apply whenever you visit our website, submit a quotation, book a service, attend installations, access telematics platforms, and engage in all written or verbal business exchanges related to our services.",
+			"Car Tracker Plus Telematics renders GPS tracking, dashcam deployment, fuel monitoring, fleet telematics and related after-sales support throughout Nigeria.",
+			"By engaging with us, you represent that any information you supply is accurate and that you hold full legal authority to enter into the arrangement regarding the vehicle or fleet concerned.",
+		],
+	},
+	{
+		title: "Availability and limitations of service",
+		paragraphs: [
+			"Tracking and telematics performance depends on mobile network availability, device power, GPS satellite visibility, installation workmanship, hardware condition and the service package selected. Available features vary by device class and tier chosen by the customer.",
+			"Car Tracker Plus Telematics cannot absolutely guarantee every device will prevent vehicle loss or theft, or guarantee vehicle recovery. Our services are engineered to improve visibility, alert response and recovery coordination where applicable.",
+		],
+	},
+	{
+		title: "Obligations of the customer",
+		paragraphs: [
+			"It remains the responsibility of the customer to confirm that they hold the legal right and authority to install and operate tracking hardware on any vehicle or fleet being monitored.",
+			"Payment terms, fitment scheduling, renewals, warranty scopes and guarantees may vary depending on the selected service tier, product or project, or as otherwise explicitly agreed in writing between the parties.",
+		],
+	},
+	{
+		title: "Acceptable and proper usage",
+		paragraphs: [
+			"Users agree not to abuse, damage, reverse engineer, decompile or attempt unauthorised access to our systems, devices, dash cameras, applications, or the account credentials of other customers.",
+			"All website content, brand assets, logos and creative materials are the intellectual property of Car Tracker Plus Telematics or their respective owners and cannot be copied or reproduced without prior authorisation.",
+		],
+	},
+	{
+		title: "Amendments to these terms",
+		paragraphs: [
+			"We may revise these Terms from time to time. Any updated version will be posted on this page with a revised review date. Continued use of the website or services after the date of any posting constitutes acceptance of the amended Terms.",
+		],
+	},
+];
+
+const colorVars = {
+	"--color-primary": data.colors.primary,
+	"--color-secondary": data.colors.secondary,
+	"--color-accent": data.colors.accent,
+	"--color-background": data.colors.background,
+	"--color-text": data.colors.text,
+	"--color-heading": data.colors.heading,
+	"--color-link": data.colors.link,
+	"--color-hover": data.colors.hover,
+	"--color-active": data.colors.active,
+	"--color-error": data.colors.error,
+	"--color-success": data.colors.success,
+	"--color-muted": data.colors.muted,
+};
+---
+
+<BaseLayout data={data} layout={[]} colorVars={colorVars} metadata={metadata} structuredData={structuredData}>
+	<section
+		class="scrolling-section section-shell pt-8"
+		data-reveal="off"
+		aria-labelledby="page-heading"
+	>
+		<div class="container-shell">
+			<Breadcrumbs items={breadcrumbs} />
+
+			<div class="mt-8 grid items-start gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
+				<div>
+					<p class="section-kicker">Service and usage framework</p>
+					<h1
+						id="page-heading"
+						class="display-title--compact mt-7 max-w-3xl"
+					>
+						Terms of Service
+					</h1>
+					<p class="section-copy max-w-2xl">
+						These Terms outline how our working relationship operates, what you can reasonably expect from installations and fleet support, and the responsibilities on both sides regarding Car Tracker Plus Telematics platforms, customer rights and service obligations.
+					</p>
+
+					<ul class="mt-9 grid list-none gap-3 p-0 sm:grid-cols-3">
+						<li class="chip items-start justify-start gap-2.5 px-4 py-3 text-left text-sm leading-6">
+							<Icon
+								name="heroicons-solid:document-check"
+								class="mt-0.5 h-4 w-4 flex-shrink-0 text-[var(--color-primary)]"
+								aria-hidden="true"
+							/>
+							<span>Fair and transparent terms</span>
+						</li>
+						<li class="chip items-start justify-start gap-2.5 px-4 py-3 text-left text-sm leading-6">
+							<Icon
+								name="heroicons-solid:clipboard-document-check"
+								class="mt-0.5 h-4 w-4 flex-shrink-0 text-[var(--color-primary)]"
+								aria-hidden="true"
+							/>
+							<span>Clearly defined service scope</span>
+						</li>
+						<li class="chip items-start justify-start gap-2.5 px-4 py-3 text-left text-sm leading-6">
+							<Icon
+								name="heroicons-solid:calendar-days"
+								class="mt-0.5 h-4 w-4 flex-shrink-0 text-[var(--color-primary)]"
+								aria-hidden="true"
+							/>
+							<span>Reviewed August 2026</span>
+						</li>
+					</ul>
+				</div>
+
+				<aside class="dark-panel p-8 sm:p-10">
+					<p class="eyebrow-label">Important headline points</p>
+					<ul class="mt-6 grid list-none gap-4 p-0 text-sm leading-7 text-[var(--color-on-dark-muted)]">
+						<li class="flex items-start gap-3">
+							<span class="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold" style="background: var(--color-primary); color: var(--color-on-primary);">1</span>
+							<span>Installations and monitoring require that you own or hold the legal right to track the vehicle.</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold" style="background: var(--color-primary); color: var(--color-on-primary);">2</span>
+							<span>Telematics performance depends on mobile network, GPS satellite and service tier conditions.</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold" style="background: var(--color-primary); color: var(--color-on-primary);">3</span>
+							<span>Terms may be updated periodically. Continued service use means you accept any revisions.</span>
+						</li>
+					</ul>
+				</aside>
+			</div>
+		</div>
+	</section>
+
+	<section
+		class="scrolling-section section-shell"
+		data-surface="muted"
+		aria-label="Terms overview"
+	>
+		<div class="container-shell grid gap-5 lg:grid-cols-2">
+			{
+				sections.map((section, index) => (
+					<article class="premium-panel p-8 sm:p-9">
+						<div class="flex items-start gap-4">
+							<span
+								class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold"
+								style="background: var(--color-primary); color: var(--color-on-primary);"
+								aria-hidden="true"
+							>
+								{index + 1}
+							</span>
+							<div class="min-w-0 flex-1">
+								<h2 class="text-2xl font-bold tracking-[-0.035em] text-[var(--color-heading)]">
+									{section.title}
+								</h2>
+								{section.paragraphs.map((paragraph) => (
+									<p class="mt-4 text-base leading-8 text-[var(--color-text-muted)]">{paragraph}</p>
+								))}
+							</div>
+						</div>
+					</article>
+				))
+			}
+		</div>
+	</section>
+
+	<section
+		class="scrolling-section section-shell"
+		aria-labelledby="contact-heading"
+	>
+		<div class="container-shell">
+			<div class="cta-shell p-8 sm:p-11">
+				<div class="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+					<div>
+						<p class="section-kicker">Clause clarification</p>
+						<h2
+							id="contact-heading"
+							class="mt-6 text-[clamp(1.9rem,3vw,2.6rem)] font-bold leading-tight tracking-[-0.04em] text-[var(--color-heading)]"
+						>
+							Need clarity on a specific clause?
+						</h2>
+						<p class="mt-4 text-base leading-8 text-[var(--color-text-muted)]">
+							If anything is unclear or you wish to confirm how a particular clause applies to a specific installation or fleet arrangement, our team can reach out to walk you through the details before proceeding.
+						</p>
+					</div>
+					<div class="grid gap-5 sm:grid-cols-2">
+						<article class="step-card p-6">
+							<p class="eyebrow-label">Office location</p>
+							<p class="mt-3 text-base font-semibold leading-7 text-[var(--color-heading)]">
+								Car Tracker Plus Telematics
+							</p>
+							<p class="mt-2 text-sm leading-7 text-[var(--color-text-muted)]">
+								{data.contact.address}
+							</p>
+						</article>
+						<article class="step-card p-6">
+							<p class="eyebrow-label">Contact details</p>
+							<p class="mt-3 text-base font-semibold leading-7 text-[var(--color-heading)]">
+								{data.contact.email}
+							</p>
+							<p class="mt-2 text-sm leading-7 text-[var(--color-text-muted)]">
+								{data.contact.phone}
+							</p>
+							<p class="mt-1 text-sm leading-7 text-[var(--color-text-muted)]">
+								{data.brand.url}
+							</p>
+						</article>
+					</div>
+				</div>
+				<p class="mt-10 text-sm leading-7 text-[var(--color-text-muted)]">
+					Last reviewed: August 2026
+				</p>
+			</div>
+		</div>
+	</section>
+</BaseLayout>

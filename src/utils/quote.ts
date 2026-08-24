@@ -1,54 +1,54 @@
 import { z } from "zod";
 
 export const quoteServiceOptions = [
-	"Premium Vehicle Tracking",
-	"Fleet Tracking",
-	"Fleet Management",
-	"Corporate Vehicle Tracking",
-	"Executive Vehicle Security",
-	"Telematics Bundle",
-	"Dashcam Installation",
-	"Fuel Monitoring",
-	"School & Staff Bus Tracking",
-	"Speed Limiter",
+	"High-End Vehicle GPS Tracking",
+	"Fleet Location Monitoring",
+	"Fleet Operations Oversight",
+	"Company Fleet Vehicle Tracking",
+	"Luxury Vehicle Anti-Theft",
+	"Complete Telematics Package",
+	"Dashboard Camera Setup",
+	"Fuel Usage Tracking",
+	"School Bus & Staff Transport Monitoring",
+	"Speed Restriction Device",
 ] as const;
 
-export const vehicleTypeOptions = ["Car", "SUV", "Bus", "Van", "Pickup", "Truck"] as const;
+export const vehicleTypeOptions = ["Sedan", "SUV", "Minibus", "Van", "Pickup Truck", "Heavy Truck"] as const;
 
 export const vehicleCountOptions = [
-	"1 Vehicle",
-	"2–5",
-	"6–10",
-	"11–20",
-	"21–50",
-	"51–100",
-	"100+",
+	"Single Vehicle",
+	"2 to 5",
+	"6 to 10",
+	"11 to 20",
+	"21 to 50",
+	"51 to 100",
+	"Over 100",
 ] as const;
 
 const selection = <T extends readonly string[]>(values: T, label: string) =>
 	z
 		.string()
 		.trim()
-		.refine((value) => values.includes(value as T[number]), `Select a valid ${label}.`);
+		.refine((value) => values.includes(value as T[number]), `Please choose a valid ${label}.`);
 
 const quoteSchema = z.object({
-	fullName: z.string().trim().min(2, "Enter your full name.").max(120, "Name is too long."),
+	fullName: z.string().trim().min(2, "Please provide your full name.").max(120, "Full name exceeds character limit."),
 	phoneNumber: z
 		.string()
 		.trim()
-		.min(7, "Enter a valid phone number.")
-		.max(40, "Phone number is too long.")
-		.regex(/^[0-9+().\-\s]+$/, "Enter a valid phone number."),
+		.min(7, "Please enter a working phone number.")
+		.max(40, "Phone number exceeds character limit.")
+		.regex(/^[0-9+().\-\s]+$/, "Please enter a properly formatted phone number."),
 	emailAddress: z
 		.string()
 		.trim()
-		.email("Enter a valid email address.")
-		.max(160, "Email address is too long."),
-	companyName: z.string().trim().max(160, "Company name is too long.").optional().default(""),
-	location: z.string().trim().min(2, "Enter your state and city.").max(160, "Location is too long."),
+		.email("Please provide a valid email address.")
+		.max(160, "Email address exceeds character limit."),
+	companyName: z.string().trim().max(160, "Company name exceeds character limit.").optional().default(""),
+	location: z.string().trim().min(2, "Please specify your state and city.").max(160, "Location exceeds character limit."),
 	serviceRequired: selection(quoteServiceOptions, "service"),
-	vehicleType: selection(vehicleTypeOptions, "vehicle type"),
-	numberOfVehicles: selection(vehicleCountOptions, "vehicle count"),
+	vehicleType: selection(vehicleTypeOptions, "vehicle category"),
+	numberOfVehicles: selection(vehicleCountOptions, "fleet size bracket"),
 	sourcePage: z.string().trim().max(240).optional().default("website"),
 	website: z.string().trim().max(240).optional().default(""),
 	formStartedAt: z.string().trim().optional().default(""),
@@ -102,7 +102,7 @@ export function validateQuoteSubmission(
 		return {
 			ok: false,
 			fieldErrors: getFieldErrors(parsed.error),
-			message: "Please review the highlighted fields and try again.",
+			message: "Kindly check the flagged entries and submit again.",
 		};
 	}
 
@@ -125,25 +125,25 @@ export function validateQuoteSubmission(
 }
 
 export function getQuoteEmailParts(payload: QuoteSubmission) {
-	const subject = `[CTPT Quote] ${payload.serviceRequired} • ${payload.fullName} • ${payload.location}`;
+	const subject = `[CTPT Estimate] ${payload.serviceRequired} • ${payload.fullName} • ${payload.location}`;
 	const structuredPayload = JSON.stringify(payload, null, 2);
 
 	const text = [
-		"New Car Tracker Plus Telematics quote request",
+		"Incoming estimate request from Car Tracker Plus Telematics website",
 		"",
-		`Full Name: ${payload.fullName}`,
-		`Phone Number: ${payload.phoneNumber}`,
-		`Email Address: ${payload.emailAddress}`,
-		`Company Name: ${payload.companyName || "Not provided"}`,
-		`Location: ${payload.location}`,
-		`Service Required: ${payload.serviceRequired}`,
-		`Vehicle Type: ${payload.vehicleType}`,
-		`Number of Vehicles: ${payload.numberOfVehicles}`,
-		`Source Page: ${payload.sourcePage || "website"}`,
-		`Referral Context: ${payload.referralContext || "Not provided"}`,
-		`Submitted At: ${payload.submittedAt}`,
-		`Client IP: ${payload.clientIp || "Unavailable"}`,
-		`User Agent: ${payload.userAgent || "Unavailable"}`,
+		`Customer Name: ${payload.fullName}`,
+		`Contact Phone: ${payload.phoneNumber}`,
+		`Email: ${payload.emailAddress}`,
+		`Business Name: ${payload.companyName || "Not supplied"}`,
+		`Service Area: ${payload.location}`,
+		`Requested Service: ${payload.serviceRequired}`,
+		`Vehicle Category: ${payload.vehicleType}`,
+		`Fleet Size: ${payload.numberOfVehicles}`,
+		`Origin Page: ${payload.sourcePage || "website"}`,
+		`Referral Note: ${payload.referralContext || "Not supplied"}`,
+		`Timestamp: ${payload.submittedAt}`,
+		`Visitor IP: ${payload.clientIp || "Not captured"}`,
+		`Browser Info: ${payload.userAgent || "Not captured"}`,
 		"",
 		"--- JSON PAYLOAD START ---",
 		structuredPayload,
@@ -151,23 +151,23 @@ export function getQuoteEmailParts(payload: QuoteSubmission) {
 	].join("\n");
 
 	const html = `
-		<h1>New Car Tracker Plus Telematics quote request</h1>
-		<p>This email includes a structured JSON block for future AI workflow processing.</p>
+		<h1>Incoming estimate request from Car Tracker Plus Telematics website</h1>
+		<p>This message contains a structured JSON block for upcoming automated workflow handling.</p>
 		<dl>
-			<dt><strong>Full Name</strong></dt><dd>${escapeHtml(payload.fullName)}</dd>
-			<dt><strong>Phone Number</strong></dt><dd>${escapeHtml(payload.phoneNumber)}</dd>
-			<dt><strong>Email Address</strong></dt><dd>${escapeHtml(payload.emailAddress)}</dd>
-			<dt><strong>Company Name</strong></dt><dd>${escapeHtml(payload.companyName || "Not provided")}</dd>
-			<dt><strong>Location</strong></dt><dd>${escapeHtml(payload.location)}</dd>
-			<dt><strong>Service Required</strong></dt><dd>${escapeHtml(payload.serviceRequired)}</dd>
-			<dt><strong>Vehicle Type</strong></dt><dd>${escapeHtml(payload.vehicleType)}</dd>
-			<dt><strong>Number of Vehicles</strong></dt><dd>${escapeHtml(payload.numberOfVehicles)}</dd>
-			<dt><strong>Source Page</strong></dt><dd>${escapeHtml(payload.sourcePage || "website")}</dd>
-			<dt><strong>Referral Context</strong></dt><dd>${escapeHtml(payload.referralContext || "Not provided")}</dd>
-			<dt><strong>Submitted At</strong></dt><dd>${escapeHtml(payload.submittedAt)}</dd>
-			<dt><strong>Client IP</strong></dt><dd>${escapeHtml(payload.clientIp || "Unavailable")}</dd>
+			<dt><strong>Customer Name</strong></dt><dd>${escapeHtml(payload.fullName)}</dd>
+			<dt><strong>Contact Phone</strong></dt><dd>${escapeHtml(payload.phoneNumber)}</dd>
+			<dt><strong>Email</strong></dt><dd>${escapeHtml(payload.emailAddress)}</dd>
+			<dt><strong>Business Name</strong></dt><dd>${escapeHtml(payload.companyName || "Not supplied")}</dd>
+			<dt><strong>Service Area</strong></dt><dd>${escapeHtml(payload.location)}</dd>
+			<dt><strong>Requested Service</strong></dt><dd>${escapeHtml(payload.serviceRequired)}</dd>
+			<dt><strong>Vehicle Category</strong></dt><dd>${escapeHtml(payload.vehicleType)}</dd>
+			<dt><strong>Fleet Size</strong></dt><dd>${escapeHtml(payload.numberOfVehicles)}</dd>
+			<dt><strong>Origin Page</strong></dt><dd>${escapeHtml(payload.sourcePage || "website")}</dd>
+			<dt><strong>Referral Note</strong></dt><dd>${escapeHtml(payload.referralContext || "Not supplied")}</dd>
+			<dt><strong>Timestamp</strong></dt><dd>${escapeHtml(payload.submittedAt)}</dd>
+			<dt><strong>Visitor IP</strong></dt><dd>${escapeHtml(payload.clientIp || "Not captured")}</dd>
 		</dl>
-		<h2>Structured Payload</h2>
+		<h2>Structured Data Payload</h2>
 		<pre>${escapeHtml(structuredPayload)}</pre>
 	`;
 

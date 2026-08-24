@@ -69,12 +69,12 @@ const iconMap: Record<SocialKey, string> = {
 				)
 			}
 			<p class="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--color-accent)]">
-				Vehicle security and telematics support for private vehicles and fleets.
+				Automotive protection and fleet telematics solutions for personal vehicles and commercial operations.
 			</p>
 		</div>
 
 		<div class="grid gap-4 text-center md:text-left">
-			<h2 class="font-extrabold text-white">Contact Details</h2>
+			<h2 class="font-extrabold text-white">Get In Touch</h2>
 			<div class="grid gap-4 sm:grid-cols-2">
 				<a
 					href={`mailto:${data.contact.email}`}
@@ -103,7 +103,7 @@ const iconMap: Record<SocialKey, string> = {
 			</div>
 			<div class="rounded-[1.5rem] border border-[color:rgba(255,255,255,0.08)] bg-[color:rgba(255,255,255,0.04)] px-5 py-4 text-[color:rgba(255,255,255,0.74)]">
 				<p class="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-accent)]">
-					Address
+					Physical Location
 				</p>
 				<p class="mt-2 text-sm leading-7">{data.contact.address}</p>
 				{
@@ -113,10 +113,10 @@ const iconMap: Record<SocialKey, string> = {
 							target="_blank"
 							rel="noopener noreferrer"
 							class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-[var(--color-accent)]"
-							aria-label="Open Google Business Profile"
+							aria-label="View Google Business Listing"
 						>
 							<Icon name="heroicons-outline:map" class="h-5 w-5" aria-hidden="true" />
-							<span>Open Google Business Profile</span>
+							<span>View Google Business Listing</span>
 						</a>
 					)
 				}
@@ -151,6 +151,27 @@ const iconMap: Record<SocialKey, string> = {
 	</div>
 
 	<hr class="w-full border-t border-[var(--color-background)]/30 my-6 mt-10" />
+
+	<nav aria-label="Legal links" class="mb-6">
+		<ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs">
+			<li>
+				<a
+					href="/privacy-policy/"
+					class="text-[color:rgba(255,255,255,0.74)] no-underline transition-colors hover:text-[var(--color-accent)]"
+				>
+					Privacy Policy
+				</a>
+			</li>
+			<li>
+				<a
+					href="/terms/"
+					class="text-[color:rgba(255,255,255,0.74)] no-underline transition-colors hover:text-[var(--color-accent)]"
+				>
+					Terms of Service
+				</a>
+			</li>
+		</ul>
+	</nav>
 
 	<p class="text-center text-xs text-[color:rgba(255,255,255,0.74)]">
 		&copy; {new Date().getFullYear()}

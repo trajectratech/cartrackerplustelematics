@@ -16,21 +16,21 @@ const primaryHeading = headingParts?.[1] ?? content.heading;
 const secondaryHeading = headingParts?.[2] ?? "";
 const formattedPhone = formatPhoneNumber(data.contact.phone);
 const assurancePoints = [
-	"Never lose sight of your vehicle with real-time GPS visibility",
-	"Remote response features",
-	"Support for private vehicles and fleets",
+	"Keep constant eyes on your car with live GPS positioning around the clock",
+	"Remote intervention capabilities built in",
+	"Works seamlessly for personal cars and commercial fleets",
 ];
 const appHighlights = [
-	{ label: "Live visibility", value: "24/7" },
-	{ label: "Ignition status", value: "Secure" },
-	{ label: "Alert delivery", value: "Instant" },
+	{ label: "Active monitoring", value: "Round-the-clock" },
+	{ label: "Engine state", value: "Protected" },
+	{ label: "Notification speed", value: "Immediate" },
 ];
 const responseSteps = [
-	"Movement alert reaches you immediately",
-	"Location updates stay visible in the app",
-	"Response support starts from one contact point",
+	"Unauthorized movement triggers an instant alert",
+	"Real-time location streams stay accessible in the dashboard",
+	"Dedicated recovery support activates from a single point of contact",
 ];
-const protectionBands = ["Essential Tracking", "Plus Security", "Fleet Telematics"];
+const protectionBands = ["Essential Tracking", "Enhanced Protection", "Fleet Operations Suite"];
 ---
 
 {
@@ -59,7 +59,7 @@ const protectionBands = ["Essential Tracking", "Plus Security", "Fleet Telematic
 				<div class="max-w-3xl">
 					<div class="flex flex-wrap gap-3">
 						<p class="inline-flex rounded-full border border-[color:rgba(255,255,255,0.12)] bg-[color:rgba(255,255,255,0.04)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[color:rgba(255,255,255,0.82)]">
-							Personal Vehicle Tracking
+							Private Vehicle Protection
 						</p>
 						<p class="inline-flex rounded-full border border-[color:rgba(181,18,27,0.32)] bg-[color:rgba(181,18,27,0.14)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[color:rgba(255,255,255,0.92)]">
 							{data.brand.tagline}
@@ -85,7 +85,7 @@ const protectionBands = ["Essential Tracking", "Plus Security", "Fleet Telematic
 							</div>
 						))}
 						<div class="rounded-[1.5rem] border border-[color:rgba(181,18,27,0.55)] bg-[color:rgba(181,18,27,0.14)] px-4 py-4 text-sm text-[color:rgba(255,255,255,0.88)]">
-							Designed for private vehicles, executive cars, and business fleets.
+							Built for private cars, luxury vehicles, and company fleets of any size.
 						</div>
 					</div>
 					<div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -94,7 +94,7 @@ const protectionBands = ["Essential Tracking", "Plus Security", "Fleet Telematic
 							href="#pricing"
 							class="inline-flex items-center justify-center rounded-full border border-[color:rgba(255,255,255,0.16)] px-6 py-3 text-sm font-semibold tracking-[0.02em] text-white transition hover:border-[color:var(--color-primary)] hover:text-[color:var(--color-accent)]"
 						>
-							See Protection Plans
+							Explore Coverage Plans
 						</a>
 					</div>
 					{
@@ -115,42 +115,42 @@ const protectionBands = ["Essential Tracking", "Plus Security", "Fleet Telematic
 						<div class="flex items-center justify-between gap-4">
 							<div>
 								<p class="text-sm font-semibold uppercase tracking-[0.22em] text-[color:var(--color-accent)]">
-									Live App View
+									Real-Time Dashboard
 								</p>
 								<p class="mt-2 text-sm text-[color:rgba(255,255,255,0.68)]">
-									One login. Full movement visibility.
+									Single sign-on. Complete trip transparency.
 								</p>
 							</div>
 							<div class="rounded-full border border-[color:rgba(181,18,27,0.42)] bg-[color:rgba(181,18,27,0.18)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-white">
-								4G Protected
+								4G LTE Enabled
 							</div>
 						</div>
 						<div class="mt-5 rounded-[1.75rem] border border-[color:rgba(255,255,255,0.08)] bg-[color:rgba(6,6,8,0.68)] p-5">
 							<div class="flex items-start justify-between gap-4">
 								<div>
 									<p class="text-xs font-semibold uppercase tracking-[0.18em] text-[color:rgba(255,255,255,0.54)]">
-										Vehicle Status
+										Current Condition
 									</p>
 									<h2 class="mt-2 text-2xl font-bold text-white">
-										Car secured and reporting live
+										Vehicle locked and transmitting live data
 									</h2>
 								</div>
 								<div class="rounded-full border border-[color:rgba(255,255,255,0.08)] bg-[color:rgba(255,255,255,0.05)] px-3 py-1 text-xs font-semibold text-[color:rgba(255,255,255,0.82)]">
-									12 sec ago
+									8 seconds ago
 								</div>
 							</div>
 							<div class="mt-5 rounded-[1.5rem] border border-[color:rgba(255,255,255,0.06)] bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.01))] p-5">
 								<div class="flex items-center justify-between gap-4">
 									<div>
 										<p class="text-xs font-semibold uppercase tracking-[0.16em] text-[color:rgba(255,255,255,0.54)]">
-											Live Location
+											Current Position
 										</p>
 										<p class="mt-2 text-sm font-medium text-[color:rgba(255,255,255,0.88)]">
 											{data.contact.address}
 										</p>
 									</div>
 									<p class="text-xs text-[color:rgba(255,255,255,0.54)]">
-										Engine safe
+										Ignition off
 									</p>
 								</div>
 								<div class="relative mt-5 h-32 overflow-hidden rounded-[1.25rem] border border-[color:rgba(255,255,255,0.06)] bg-[linear-gradient(180deg,rgba(181,18,27,0.14),rgba(255,255,255,0.02))]">
@@ -183,7 +183,7 @@ const protectionBands = ["Essential Tracking", "Plus Security", "Fleet Telematic
 					<div class="grid gap-5 md:grid-cols-2">
 						<div class="rounded-[2rem] border border-[color:rgba(255,255,255,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-5">
 							<p class="text-sm font-semibold uppercase tracking-[0.22em] text-[color:var(--color-accent)]">
-								Response Path
+								Incident Response Flow
 							</p>
 							<div class="mt-5 grid gap-3">
 								{responseSteps.map((step, index) => (
@@ -204,7 +204,7 @@ const protectionBands = ["Essential Tracking", "Plus Security", "Fleet Telematic
 							</div>
 							<div class="mt-4 rounded-[1.5rem] border border-[color:rgba(255,255,255,0.06)] bg-[color:rgba(6,6,8,0.54)] px-4 py-4 text-sm text-[color:rgba(255,255,255,0.82)]">
 								<p class="text-xs font-semibold uppercase tracking-[0.16em] text-[color:rgba(255,255,255,0.54)]">
-									Protection Bands
+									Coverage Tiers
 								</p>
 								<div class="mt-3 flex flex-wrap gap-2">
 									{protectionBands.map((band) => (
@@ -214,7 +214,7 @@ const protectionBands = ["Essential Tracking", "Plus Security", "Fleet Telematic
 									))}
 								</div>
 								<p class="mt-4 text-sm text-[color:rgba(255,255,255,0.72)]">
-									Quick line: {formattedPhone}
+									Urgent line: {formattedPhone}
 								</p>
 							</div>
 						</div>

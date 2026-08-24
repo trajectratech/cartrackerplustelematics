@@ -31,7 +31,7 @@ const sourcePage = Astro.props.sourcePage ?? "website";
 	<input type="hidden" name="referralContext" value={prefillService} />
 
 	<div style="position: absolute; left: -9999px;" aria-hidden="true">
-		<label for={`${formId}-website`}>Website</label>
+		<label for={`${formId}-website`}>Webpage</label>
 		<input id={`${formId}-website`} type="text" name="website" tabindex="-1" autocomplete="off" />
 	</div>
 
@@ -135,7 +135,7 @@ const sourcePage = Astro.props.sourcePage ?? "website";
 			id={`${formId}-serviceRequired`}
 			name="serviceRequired"
 			label="Service Required *"
-			placeholder="Select a service"
+			placeholder="Choose a service option"
 			describedBy={`${formId}-serviceRequired-error`}
 			required={true}
 			selectedValue={prefillService}
@@ -146,7 +146,7 @@ const sourcePage = Astro.props.sourcePage ?? "website";
 			id={`${formId}-vehicleType`}
 			name="vehicleType"
 			label="Vehicle Type *"
-			placeholder="Select vehicle type"
+			placeholder="Choose your vehicle category"
 			describedBy={`${formId}-vehicleType-error`}
 			required={true}
 			options={vehicleTypeOptions.map((option) => ({ value: option, label: option }))}
@@ -156,7 +156,7 @@ const sourcePage = Astro.props.sourcePage ?? "website";
 			id={`${formId}-numberOfVehicles`}
 			name="numberOfVehicles"
 			label="Number of Vehicles *"
-			placeholder="Select a range"
+			placeholder="Choose fleet size range"
 			describedBy={`${formId}-numberOfVehicles-error`}
 			required={true}
 			options={vehicleCountOptions.map((option) => ({ value: option, label: option }))}
@@ -165,7 +165,7 @@ const sourcePage = Astro.props.sourcePage ?? "website";
 
 	<div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
 		<p class="text-sm leading-7 text-[var(--color-text-muted)]">
-			Prefer a faster conversation? You can also continue on WhatsApp after submitting.
+			Looking for a quicker back-and-forth? You can switch to WhatsApp chat right after sending this form.
 		</p>
 		<button
 			type="submit"
@@ -173,7 +173,7 @@ const sourcePage = Astro.props.sourcePage ?? "website";
 			data-button
 			class="primary-button cursor-pointer"
 		>
-			Submit Quote Request
+			Send Estimate Request
 		</button>
 	</div>
 </form>
@@ -236,9 +236,9 @@ const sourcePage = Astro.props.sourcePage ?? "website";
 				return "";
 			}
 			if (field.checkValidity()) return "";
-			if (field.validity.valueMissing) return "This field is required.";
-			if (field.validity.typeMismatch) return "Please enter a valid value.";
-			return field.validationMessage || "Please check this field.";
+			if (field.validity.valueMissing) return "Please complete this field.";
+			if (field.validity.typeMismatch) return "Please provide a properly formatted entry.";
+			return field.validationMessage || "Kindly review this entry.";
 		};
 
 		const validateForm = () => {
@@ -279,13 +279,13 @@ const sourcePage = Astro.props.sourcePage ?? "website";
 			clearStatus();
 
 			if (!validateForm()) {
-				showStatus("Please correct the highlighted fields and try again.", "error");
+				showStatus("Please address the flagged entries below and resubmit.", "error");
 				return;
 			}
 
 			if (submitButton instanceof HTMLButtonElement) {
 				submitButton.disabled = true;
-				submitButton.textContent = "Sending...";
+				submitButton.textContent = "Delivering...";
 			}
 
 			try {
@@ -305,7 +305,7 @@ const sourcePage = Astro.props.sourcePage ?? "website";
 						setFieldError(name, String(message));
 					});
 					const fallback =
-						"We could not submit your request right now. Please try again, or continue on WhatsApp.";
+						"Unable to process your submission at the moment. Please retry, or reach out via WhatsApp instead.";
 					showStatus(payload?.message || fallback, "error", true);
 					return;
 				}
@@ -324,20 +324,20 @@ const sourcePage = Astro.props.sourcePage ?? "website";
 
 				showStatus(
 					payload?.message ||
-						"Thanks, your quote request has been sent. We will be in touch shortly.",
+						"Great, your estimate request has been delivered. Our team will reach out without delay.",
 					"success",
 					true,
 				);
 			} catch (error) {
 				showStatus(
-					"We could not reach our server. Check your connection and try again, or continue on WhatsApp.",
+					"Cannot connect to our service right now. Verify your internet and resubmit, or use WhatsApp.",
 					"error",
 					true,
 				);
 			} finally {
 				if (submitButton instanceof HTMLButtonElement) {
 					submitButton.disabled = false;
-					submitButton.textContent = "Submit Quote Request";
+					submitButton.textContent = "Send Estimate Request";
 				}
 			}
 		});

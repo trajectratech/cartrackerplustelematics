@@ -14,13 +14,13 @@ const trust = Astro.props.data?.content?.trustSection;
 			<div class="mx-auto grid max-w-7xl gap-10 px-2 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start">
 				<div class="rounded-[2rem] px-8 py-10 text-white" style="background: var(--color-secondary); box-shadow: var(--shadow-strong);">
 					<p class="text-sm font-semibold uppercase tracking-[0.28em] text-[var(--color-accent)]">
-						The Reality
+						What's At Stake
 					</p>
 					<h2 class="mt-4 text-3xl font-bold leading-tight md:text-4xl">
 						{trust.heading}
 					</h2>
 					<p class="mt-5 text-base leading-8 text-[color:rgba(255,255,255,0.72)]">
-						A vehicle can be gone before the first phone call is even finished. Good protection starts with seeing movement early, getting alerts fast, and having a response path that is more useful than guesswork.
+						Your vehicle could disappear in the time it takes to make a single phone call. Effective security begins with early movement detection, rapid notifications, and a clear action plan that goes beyond speculation.
 					</p>
 					{Array.isArray(trust.guarantees) && trust.guarantees.length > 0 && (
 						<div class="mt-8 grid gap-3">
@@ -36,12 +36,12 @@ const trust = Astro.props.data?.content?.trustSection;
 				<div class="grid gap-5 sm:grid-cols-2">
 					<div class="rounded-[2rem] border px-6 py-7 sm:col-span-2" style="border-color: var(--border-soft); background: var(--card-bg-elevated); box-shadow: var(--shadow-soft);">
 						<p class="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--color-primary)]">
-							What This Solves
+							Key Pain Points Addressed
 						</p>
 						<div class="mt-5 grid gap-3 text-sm md:grid-cols-3" style="color: var(--text-soft);">
-							<div class="rounded-2xl px-4 py-4" style="background: var(--surface-2);">Delayed theft response</div>
-							<div class="rounded-2xl px-4 py-4" style="background: var(--surface-2);">Poor visibility across vehicles</div>
-							<div class="rounded-2xl px-4 py-4" style="background: var(--surface-2);">Weak after-installation support</div>
+							<div class="rounded-2xl px-4 py-4" style="background: var(--surface-2);">Slow reaction to suspicious activity</div>
+							<div class="rounded-2xl px-4 py-4" style="background: var(--surface-2);">Lack of transparency across your fleet</div>
+							<div class="rounded-2xl px-4 py-4" style="background: var(--surface-2);">Inadequate support post-installation</div>
 						</div>
 					</div>
 					{Array.isArray(trust.stats) && trust.stats.length > 0 && trust.stats.map((stat) => (

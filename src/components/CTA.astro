@@ -16,7 +16,7 @@ const whatsappUrl = Astro.props.data.content.heroSection?.ctaUrl ?? "#";
 				<div class="cta-shell p-8 sm:p-10 lg:p-14">
 					<div class="grid items-start gap-10 lg:grid-cols-[0.9fr_1.1fr]">
 						<div>
-							<p class="section-kicker">Get A Quote</p>
+							<p class="section-kicker">Request Pricing</p>
 							<h2 id="get-a-quote-heading" class="mt-7 max-w-4xl text-[clamp(2rem,3.4vw,3.4rem)] font-bold leading-[0.98] tracking-[-0.04em] text-[var(--color-heading)]">
 								{cta.heading}
 							</h2>
@@ -34,7 +34,7 @@ const whatsappUrl = Astro.props.data.content.heroSection?.ctaUrl ?? "#";
 									data-button
 									class="primary-button inline-flex cursor-pointer items-center justify-center gap-2"
 								>
-									Continue on WhatsApp
+									Chat Now on WhatsApp
 									<Icon name="heroicons-solid:external-link" class="h-4 w-4" aria-hidden="true" />
 								</a>
 							</div>
@@ -42,9 +42,9 @@ const whatsappUrl = Astro.props.data.content.heroSection?.ctaUrl ?? "#";
 
 						<div class="premium-panel p-6 sm:p-8">
 							<div class="mb-6">
-								<p class="eyebrow-label">Online Quote Form</p>
+								<p class="eyebrow-label">Web Estimate Request</p>
 								<p class="mt-4 text-2xl font-bold tracking-[-0.03em] text-(--color-heading)">
-									Share the job details once and let the team follow up with the right recommendation.
+									Tell us about your requirements once and our team will respond with a tailored proposal.
 								</p>
 							</div>
 							<QuoteRequestForm formId="home-quote-form" sourcePage="/#get-a-quote" />
