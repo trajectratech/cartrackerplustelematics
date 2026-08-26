@@ -245,6 +245,18 @@ function getBaseSchemas(data: ThemeConfig) {
 		url: homepageUrl,
 		description: data.brand.description,
 		inLanguage: "en-NG",
+		publisher: { "@id": `${homepageUrl}#organization` },
+		image: getOgImage(data),
+		potentialAction: [
+			{
+				"@type": "SearchAction",
+				target: {
+					"@type": "EntryPoint",
+					urlTemplate: `${homepageUrl}?s={search_term_string}`,
+				},
+				"query-input": "required name=search_term_string",
+			},
+		],
 	};
 
 	const offerCatalogSchema = {

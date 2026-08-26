@@ -410,6 +410,7 @@
   },
   "seo": {
     "siteName": "Car Tracker Plus Telematics",
+    "siteAlternateName": "Car Tracker Plus Telematics",
     "aiSummary": [
       "Car Tracker Plus Telematics is a Lagos-based vehicle protection and telematics company providing GPS tracker installation, fleet monitoring, dash camera deployment, fuel-level visibility, and security-grade tracking services nationwide.",
       "The business serves private vehicle owners, executive protection teams, school transport departments, and logistics fleet operators that need stronger accountability, faster alerting, and dependable post-installation support.",
@@ -446,6 +447,8 @@
     ],
     "defaultOgImage": "/cartracker-plus-telematics-logo.webp",
     "ogImageAlt": "Car Tracker Plus Telematics protection dashboard with live vehicle visibility and response controls",
+    "defaultOgImageWidth": 1200,
+    "defaultOgImageHeight": 630,
     "siteLocale": "en_NG",
     "manifest": {
       "name": "Car Tracker Plus Telematics",
