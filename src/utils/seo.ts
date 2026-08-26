@@ -73,8 +73,8 @@ function getOgImageMeta(data: ThemeConfig) {
 	return {
 		ogImage: toAbsoluteUrl(data.brand.url, path),
 		ogImageAlt: getOgImageAlt(data),
-		ogImageWidth: data.seo?.defaultOgImageWidth,
-		ogImageHeight: data.seo?.defaultOgImageHeight,
+		ogImageWidth: data.seo?.defaultOgImageWidth ?? 1200,
+		ogImageHeight: data.seo?.defaultOgImageHeight ?? 630,
 		ogImageType: getImageMimeType(path),
 	};
 }
@@ -88,16 +88,18 @@ function getLandingPageOgImageMeta(data: ThemeConfig, page: SeoLandingPage) {
 	return {
 		ogImage: toAbsoluteUrl(data.brand.url, path),
 		ogImageAlt: page.ogImageAlt || getOgImageAlt(data),
-		ogImageWidth: matchesLeadImage
-			? leadImage?.width
-			: usesPageImage
-				? page.ogImageWidth
-				: data.seo?.defaultOgImageWidth,
-		ogImageHeight: matchesLeadImage
-			? leadImage?.height
-			: usesPageImage
-				? page.ogImageHeight
-				: data.seo?.defaultOgImageHeight,
+		ogImageWidth:
+			(matchesLeadImage
+				? leadImage?.width
+				: usesPageImage
+					? page.ogImageWidth
+					: data.seo?.defaultOgImageWidth) ?? 1200,
+		ogImageHeight:
+			(matchesLeadImage
+				? leadImage?.height
+				: usesPageImage
+					? page.ogImageHeight
+					: data.seo?.defaultOgImageHeight) ?? 630,
 		ogImageType: getImageMimeType(path),
 	};
 }

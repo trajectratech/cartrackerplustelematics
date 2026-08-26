@@ -3,9 +3,9 @@ import type { SeoLandingPage } from "../types/theme";
 export const seoPages: SeoLandingPage[] = [
 	{
 		slug: "vehicle-tracking-abuja",
-		pageTitle: "Vehicle Tracking in Abuja | GPS & Fleet Telematics by Car Tracker Plus Telematics",
+		pageTitle: "Vehicle Tracking in Abuja | Car Tracker Plus Telematics",
 		metaDescription:
-			"Top-tier vehicle tracking and telematics installations across Abuja. Car Tracker Plus Telematics delivers discreet GPS fitting, fleet dashboards, dashcam pairing and on-site setup for private cars, VIP convoys, corporate fleets and logistics operators in the FCT.",
+			"Vehicle tracking and telematics installations across Abuja FCT. Discreet GPS fitting, fleet dashboards, dashcam pairing, and on-site setup for private cars, VIP.",
 		headline: "Discreet Vehicle Tracking and Telematics Built for Abuja Roads",
 		intro:
 			"Car Tracker Plus Telematics installs GPS tracking hardware and telematics platforms for family cars, executive security details, corporate vehicle pools, campus buses and logistics operators moving through the Federal Capital Territory and surrounding states.",
@@ -373,9 +373,9 @@ export const seoPages: SeoLandingPage[] = [
 	},
 	{
 		slug: "vehicle-tracking-port-harcourt",
-		pageTitle: "Vehicle Tracking in Port Harcourt | GPS & Fleet Telematics",
+		pageTitle: "Vehicle Tracking in Port Harcourt | Car Tracker Plus Telematics",
 		metaDescription:
-			"Premium vehicle tracking and telematics across Port Harcourt and Rivers State by Car Tracker Plus Telematics. GPS visibility for oil-service fleets, logistics haulage, dashcam pairing and discreet on-site fitting throughout Rivers.",
+			"Vehicle tracking in Port Harcourt and Rivers State. GPS visibility for oil-service fleets, logistics haulage, dashcam pairing, and discreet on-site fitting.",
 		headline: "Port Harcourt Vehicle Tracking Tuned for Coastal Industrial and Oil-Service Movement",
 		intro:
 			"Port Harcourt operates as a coastal logistics, industrial and oil-service centre characterised by lengthy intercity corridors, port access roads, heavy haulage lanes and a dense commercial fleet ecosystem. Car Tracker Plus Telematics builds every PH tracking deployment around the specific movement patterns of Rivers State.",
@@ -712,9 +712,9 @@ export const seoPages: SeoLandingPage[] = [
 	},
 	{
 		slug: "vehicle-tracking-ibadan",
-		pageTitle: "Vehicle Tracking in Ibadan | GPS & Telematics Installations",
+		pageTitle: "Vehicle Tracking in Ibadan | Car Tracker Plus Telematics",
 		metaDescription:
-			"Professional vehicle tracking and telematics installations across Ibadan and Oyo State. Car Tracker Plus Telematics delivers discreet GPS fitting, fleet supervision, dashcam integration and on-site setup for private cars, commercial fleets and campus transport in Ibadan.",
+			"Vehicle tracking and telematics installations in Ibadan and Oyo State. Discreet GPS fitting, fleet dashboards, dashcam pairing, and on-site setup for private.",
 		headline: "Ibadan Vehicle Tracking Calibrated for Urban Sprawl and Intercity Corridors",
 		intro:
 			"Ibadan sits at the crossroads of southwestern Nigeria — a sprawling ancient city of residential estates, commercial hubs, university campuses and long-distance terminals connecting Lagos, Ile-Ife, Oshogbo, Ilorin and Abuja. Car Tracker Plus Telematics designs every Ibadan tracking deployment around the city's unique commute patterns and intercity travel corridors.",
@@ -1069,9 +1069,9 @@ export const seoPages: SeoLandingPage[] = [
 	},
 	{
 		slug: "vehicle-tracking-benin-city",
-		pageTitle: "Vehicle Tracking in Benin City | GPS & Telematics Fitting",
+		pageTitle: "Vehicle Tracking in Benin City | Car Tracker Plus Telematics",
 		metaDescription:
-			"Certified vehicle tracking and telematics across Benin City and Edo State. Car Tracker Plus Telematics provides discreet GPS installation, fleet supervision, dashcam pairing and on-site setup for private owners, haulage operators and campus transport in Benin.",
+			"Vehicle tracking installations in Benin City and Edo State. Discreet GPS fitting, immobilisation support, dashcam pairing, and fleet telematics for private and.",
 		headline: "Benin City Vehicle Tracking Tuned for Midwestern Urban and Intercity Movement",
 		intro:
 			"Benin City operates as the commercial and administrative heartbeat of Edo State — a dense urban centre ringed by residential estates, industrial layouts, university campuses and highway connectors reaching Warri, Asaba, Onitsha, Lagos and Abuja. Car Tracker Plus Telematics builds every Benin tracking deployment around the city's distinctive commuting and haulage patterns.",
@@ -1426,9 +1426,9 @@ export const seoPages: SeoLandingPage[] = [
 	},
 	{
 		slug: "vehicle-tracking-abeokuta",
-		pageTitle: "Vehicle Tracking in Abeokuta | GPS & Telematics Installers",
+		pageTitle: "Vehicle Tracking in Abeokuta | Car Tracker Plus Telematics",
 		metaDescription:
-			"Qualified vehicle tracking and telematics installations across Abeokuta and Ogun State. Car Tracker Plus Telematics delivers discreet GPS fitting, fleet supervision, dashcam integration and on-site setup for private cars, commercial fleets and campus transport in Abeokuta.",
+			"Vehicle tracking and telematics installations across Abeokuta and Ogun State. Discreet GPS fitting, fleet dashboards, and dashcam pairing for private cars.",
 		headline: "Abeokuta Vehicle Tracking Configured for Southwest Urban and Quarry Corridors",
 		intro:
 			"Abeokuta functions as the administrative and commercial nucleus of Ogun State — a city of historic residential layouts, expanding estates, university campuses and industrial corridors linking Lagos via the Abeokuta–Lagos expressway, plus quarry and cement-plant truck routes radiating outward. Car Tracker Plus Telematics designs every Abeokuta tracking deployment around the city's distinctive commuting and haulage patterns.",
@@ -1783,9 +1783,9 @@ export const seoPages: SeoLandingPage[] = [
 	},
 	{
 		slug: "vehicle-tracking-enugu",
-		pageTitle: "Vehicle Tracking in Enugu | GPS & Telematics Installation",
+		pageTitle: "Vehicle Tracking in Enugu | Car Tracker Plus Telematics",
 		metaDescription:
-			"Expert vehicle tracking and telematics installations across Enugu and Enugu State. Car Tracker Plus Telematics delivers discreet GPS fitting, fleet supervision, dashcam pairing and on-site setup for private owners, haulage operators and campus transport in Enugu.",
+			"Vehicle tracking installations across Enugu State. Discreet GPS fitting, fleet supervision, dashcam integration, and on-site setup for private, corporate, and.",
 		headline: "Enugu Vehicle Tracking Calibrated for Southeast Urban and Coal-Corridor Movement",
 		intro:
 			"Enugu operates as the administrative and commercial anchor of southeast Nigeria — a densely built urban centre ringed by residential layouts, university campuses, market clusters and highway connectors reaching Onitsha, Awka, Abakaliki, Owerri, Makurdi and the national north–south arterial. Car Tracker Plus Telematics builds every Enugu tracking deployment around the city's characteristic commuting and haulage rhythms.",
@@ -2140,9 +2140,9 @@ export const seoPages: SeoLandingPage[] = [
 	},
 	{
 		slug: "vehicle-tracking-asaba",
-		pageTitle: "Vehicle Tracking in Asaba | GPS & Telematics Installers",
+		pageTitle: "Vehicle Tracking in Asaba | Car Tracker Plus Telematics",
 		metaDescription:
-			"Certified vehicle tracking and telematics installations across Asaba and Delta State. Car Tracker Plus Telematics delivers discreet GPS fitting, fleet supervision, dashcam integration and on-site setup for private cars, commercial fleets and campus transport in Asaba.",
+			"Vehicle tracking and telematics installations in Asaba and Delta State. Discreet GPS fitting, immobilisation support, dashcam pairing, and fleet dashboards for.",
 		headline: "Asaba Vehicle Tracking Configured for Niger-Bridge Urban and Intercity Movement",
 		intro:
 			"Asaba functions as the administrative and commercial anchor of Delta State — a riverfront capital of residential layouts, government districts, university campuses and the strategic Niger-Bridge interchange linking the southeast to the western states via the Onitsha–Asaba dual-carriageway. Car Tracker Plus Telematics designs every Asaba tracking deployment around the city's distinctive commuting and haulage patterns.",
@@ -2497,9 +2497,9 @@ export const seoPages: SeoLandingPage[] = [
 	},
 	{
 		slug: "vehicle-tracking-warri",
-		pageTitle: "Vehicle Tracking in Warri | GPS & Telematics Installations",
+		pageTitle: "Vehicle Tracking in Warri | Car Tracker Plus Telematics",
 		metaDescription:
-			"Professional vehicle tracking and telematics across Warri and Delta State. Car Tracker Plus Telematics delivers discreet GPS fitting, petroleum-fleet supervision, dashcam pairing and on-site setup for private owners, haulage operators and campus transport in Warri.",
+			"Vehicle tracking installations in Warri and Delta State. GPS visibility for oil-service fleets, petroleum haulage, private cars, and discreet on-site fitting.",
 		headline: "Warri Vehicle Tracking Tuned for Petroleum-Coastal and Industrial Haulage",
 		intro:
 			"Warri operates as the petroleum-industry and coastal logistics nerve-centre of Delta State — a sprawling commercial city of residential estates, oil-company compounds, industrial layouts and the highway corridors linking Warri to Port Harcourt, Benin, Asaba and Ughelli. Car Tracker Plus Telematics builds every Warri tracking deployment around the city's distinctive petroleum-fleet and haulage rhythms.",
@@ -2854,9 +2854,9 @@ export const seoPages: SeoLandingPage[] = [
 	},
 	{
 		slug: "vehicle-tracking-kano",
-		pageTitle: "Vehicle Tracking in Kano | GPS & Telematics Installation",
+		pageTitle: "Vehicle Tracking in Kano | Car Tracker Plus Telematics",
 		metaDescription:
-			"Reliable vehicle tracking and telematics across Kano and northern Nigeria. Car Tracker Plus Telematics delivers discreet GPS fitting, fleet supervision, dashcam pairing and on-site setup for private owners, commercial haulage and campus transport in Kano.",
+			"Vehicle tracking and telematics across Kano and the North-West. Discreet GPS fitting, fleet supervision, dashcam pairing, and on-site setup for private cars.",
 		headline: "Kano Vehicle Tracking Calibrated for Northern Commercial and Intercity Corridors",
 		intro:
 			"Kano functions as the commercial and logistics heartbeat of northern Nigeria — a densely populated ancient city of historic residential quarters, modern layouts, university campuses, industrial estates and the strategic highway corridors linking the entire northwest, northeast and north-central regions. Car Tracker Plus Telematics builds every Kano tracking deployment around the city's distinctive intercity haulage and commercial rhythms.",
@@ -3211,9 +3211,9 @@ export const seoPages: SeoLandingPage[] = [
 	},
 	{
 		slug: "vehicle-tracking-kaduna",
-		pageTitle: "Vehicle Tracking in Kaduna | GPS & Telematics Installations",
+		pageTitle: "Vehicle Tracking in Kaduna | Car Tracker Plus Telematics",
 		metaDescription:
-			"Trusted vehicle tracking and telematics across Kaduna and the north-central corridor. Car Tracker Plus Telematics delivers discreet GPS fitting, military-base logistics, fleet supervision and on-site setup for private owners, haulage operators and campus transport in Kaduna.",
+			"Vehicle tracking installations across Kaduna and North-Central Nigeria. Discreet GPS fitting, fleet dashboards, dashcam pairing, and on-site setup for private.",
 		headline: "Kaduna Vehicle Tracking Tuned for North-Central Commercial and Government Fleets",
 		intro:
 			"Kaduna operates as the strategic gateway linking the north, FCT Abuja and the south — a major transit city of historic residential districts, modern estates, military and airforce bases, university campuses, industrial layouts and the highway interchange connecting Kano, Abuja, Jos and Birnin Kebbi. Car Tracker Plus Telematics builds every Kaduna tracking deployment around the city's distinctive transit-hub and government-agency rhythms.",
@@ -3568,9 +3568,9 @@ export const seoPages: SeoLandingPage[] = [
 	},
 	{
 		slug: "vehicle-tracking-ilorin",
-		pageTitle: "Vehicle Tracking in Ilorin | GPS & Telematics Installations",
+		pageTitle: "Vehicle Tracking in Ilorin | Car Tracker Plus Telematics",
 		metaDescription:
-			"Reliable vehicle tracking and telematics across Ilorin and Kwara State. Car Tracker Plus Telematics delivers discreet GPS fitting, agricultural-fleet supervision, dashcam pairing and on-site setup for private owners, haulage operators and campus transport in Ilorin.",
+			"Vehicle tracking and telematics installations in Ilorin and Kwara State. Discreet GPS fitting, fleet supervision, dashcam pairing, and on-site setup for private.",
 		headline: "Ilorin Vehicle Tracking Calibrated for Agricultural-Haulage and North-Central Corridors",
 		intro:
 			"Ilorin operates as the administrative and agricultural-haulage nerve-centre of Kwara State — a north-central capital city of historic residential quarters, modern layouts, university campuses, industrial estates and the strategic highway interchange connecting Abuja, Ilorin, Ogbomoso and Ibadan. Car Tracker Plus Telematics builds every Ilorin tracking deployment around the city's distinctive agricultural-fleet and educational-institution rhythms.",
@@ -3925,9 +3925,9 @@ export const seoPages: SeoLandingPage[] = [
 	},
 	{
 		slug: "vehicle-tracking-owerri",
-		pageTitle: "Vehicle Tracking in Owerri | GPS & Telematics Installations",
+		pageTitle: "Vehicle Tracking in Owerri | Car Tracker Plus Telematics",
 		metaDescription:
-			"Trusted vehicle tracking and telematics across Owerri and Imo State. Car Tracker Plus Telematics delivers discreet GPS fitting, industrial-district fleet supervision, dashcam pairing and on-site setup for private owners, haulage operators and campus transport in Owerri.",
+			"Vehicle tracking installations across Owerri and Imo State. Discreet GPS fitting, immobilisation support, fleet dashboards, and dashcam pairing for private and.",
 		headline: "Owerri Vehicle Tracking Tuned for Imo State Commercial and Industrial Corridors",
 		intro:
 			"Owerri operates as the commercial and administrative nerve-centre of Imo State — a southeast capital city of expanding residential layouts, modern estates, university campuses, industrial districts and the strategic highway interchange linking Onitsha, Port Harcourt, Enugu and Aba. Car Tracker Plus Telematics builds every Owerri tracking deployment around the city's distinctive market-hub and industrial-district rhythms.",
@@ -4282,9 +4282,9 @@ export const seoPages: SeoLandingPage[] = [
 	},
 	{
 		slug: "vehicle-tracking-uyo",
-		pageTitle: "Vehicle Tracking in Uyo | GPS & Telematics Installations",
+		pageTitle: "Vehicle Tracking in Uyo | Car Tracker Plus Telematics",
 		metaDescription:
-			"Professional vehicle tracking and telematics across Uyo and Akwa Ibom State. Car Tracker Plus Telematics delivers discreet GPS fitting, oil-service fleet supervision, dashcam pairing and on-site setup for private owners, haulage operators and campus transport in Uyo.",
+			"Vehicle tracking and telematics installations in Uyo and Akwa Ibom State. Discreet GPS fitting, oil-service fleet support, dashcam pairing, and on-site setup.",
 		headline: "Uyo Vehicle Tracking Calibrated for Oil-Service and Coastal Corridors",
 		intro:
 			"Uyo operates as the administrative and commercial nerve-centre of Akwa Ibom State — a south-south capital city of expanding residential estates, modern layouts, university campuses, industrial layouts and the strategic highway interchange linking Port Harcourt, Calabar, Aba and the eastern Niger Delta oil-service corridors. Car Tracker Plus Telematics builds every Uyo tracking deployment around the city's distinctive oil-service and coastal-hinterland rhythms.",
@@ -4639,9 +4639,9 @@ export const seoPages: SeoLandingPage[] = [
 	},
 	{
 		slug: "vehicle-tracking-calabar",
-		pageTitle: "Vehicle Tracking in Calabar | GPS & Telematics Installations",
+		pageTitle: "Vehicle Tracking in Calabar | Car Tracker Plus Telematics",
 		metaDescription:
-			"Reliable vehicle tracking and telematics across Calabar and Cross River State. Car Tracker Plus Telematics delivers discreet GPS fitting, port-logistics fleet supervision, dashcam pairing and on-site setup for private owners, haulage operators and campus transport in Calabar.",
+			"Vehicle tracking installations across Calabar and Cross River State. Discreet GPS fitting, fleet supervision, dashcam pairing, and on-site setup for private.",
 		headline: "Calabar Vehicle Tracking Tuned for Coastal Port-Logistics and Tourist Corridors",
 		intro:
 			"Calabar operates as the administrative and coastal port nerve-centre of Cross River State — a south-south capital city of historic residential quarters, expanding estates, university campuses, port-industrial layouts and the strategic highway interchange linking the eastern seaboard to Uyo, Aba, Port Harcourt and the interior north. Car Tracker Plus Telematics builds every Calabar tracking deployment around the city's distinctive port-logistics and tourist-economy rhythms.",
@@ -4996,9 +4996,9 @@ export const seoPages: SeoLandingPage[] = [
 	},
 	{
 		slug: "vehicle-tracking-lagos",
-		pageTitle: "Vehicle Tracking in Lagos | GPS & Telematics Installations",
+		pageTitle: "Vehicle Tracking in Lagos | Car Tracker Plus Telematics",
 		metaDescription:
-			"Leading vehicle tracking and telematics across Lagos and Nigeria's southwest. Car Tracker Plus Telematics delivers discreet GPS fitting, Apapa port-logistics fleet supervision, dashcam pairing and on-site setup for private owners, haulage operators and campus transport in Lagos.",
+			"Vehicle tracking and telematics installations across Lagos State. Discreet GPS fitting, immobilisation, fleet dashboards, dashcam pairing, and on-site setup for.",
 		headline: "Lagos Vehicle Tracking Calibrated for Port-Logistics, Island Districts and Megacity Corridors",
 		intro:
 			"Lagos operates as the commercial heart of Nigeria and the largest port and logistics hub on the Gulf of Guinea — a megacity of island financial districts, sprawling mainland residential layouts, Apapa and Tin Can Island port precincts, university campuses, industrial estates and the coastal highway interchange linking the entire southwest. Car Tracker Plus Telematics builds every Lagos tracking deployment around the city's distinctive port-logistics and megacity-commuter rhythms.",
@@ -5353,9 +5353,9 @@ export const seoPages: SeoLandingPage[] = [
 	},
 	{
 		slug: "car-tracker-nigeria",
-		pageTitle: "Car Tracker Nigeria | Nationwide GPS Vehicle Tracking by Car Tracker Plus Telematics",
+		pageTitle: "Car Tracker Nigeria | Car Tracker Plus Telematics",
 		metaDescription:
-			"Car Tracker Plus Telematics delivers nationwide car tracker installation across Nigeria. Discreet GPS fitting, immobilisation, app monitoring, fleet supervision and dashcam integration available in every major city from Lagos to Abuja, Kano, Port Harcourt and beyond.",
+			"Nationwide car tracker installation across Nigeria. Discreet GPS fitting, immobilisation, app monitoring, fleet supervision and dashcam integration in Lagos.",
 		headline: "Car Tracker Nigeria — Nationwide GPS Fitting and Telematics Coverage for Every Vehicle Category",
 		intro:
 			"Car Tracker Plus Telematics operates a nationwide car tracker installation network spanning every geopolitical zone of Nigeria — from the Apapa port precincts of Lagos through the FCT Abuja and its ministerial districts to the northern commercial hubs of Kano and Kaduna, the eastern manufacturing corridors around Onitsha and Aba, and the petroleum-coastal cities of Port Harcourt, Warri and Calabar. Whether you operate a single family sedan or a mixed national pool of hundreds of cars, vans, trucks and buses, Car Tracker Plus Telematics delivers a tracker specification, fitting service and ongoing after-sales support calibrated to Nigerian road and operational realities rather than generic overseas defaults.",
@@ -5694,9 +5694,9 @@ export const seoPages: SeoLandingPage[] = [
 	},
 	{
 		slug: "fleet-management-nigeria",
-		pageTitle: "Fleet Management Nigeria | Car Tracker Plus Telematics Nationwide Fleet Supervision",
+		pageTitle: "Fleet Management Nigeria | Car Tracker Plus Telematics",
 		metaDescription:
-			"Car Tracker Plus Telematics delivers nationwide fleet management across Nigeria. Pool visibility, driver behaviour, fuel sensing, stop-SLA capture, dashcam binding and on-site installation in Lagos, Abuja, PH, Kano, Enugu, Warri and every major city.",
+			"Nationwide fleet management across Nigeria. Pool visibility, driver behaviour, fuel sensing, stop-SLA capture and dashcam binding with on-site installation in.",
 		headline: "Fleet Management Nigeria — Nationwide Multi-City Pool Visibility for Haulage, Petroleum, FMCG and Government Operations",
 		intro:
 			"Car Tracker Plus Telematics operates a nationwide fleet management network built for Nigerian operational realities rather than imported overseas manuals. A typical Car Tracker Plus Telematics commercial account may operate petroleum tankers from Port Harcourt, container trucks from Apapa Lagos, university buses in Enugu, petroleum Hilux utilities in Warri and government-agency vehicles in Abuja — all under a single parent login with role-scoped sub-credentials per city, department or transport supervisor. Whether your fleet numbers six commercial vans in a single city or six hundred vehicles spread across the six geopolitical zones, Car Tracker Plus Telematics delivers a console specification, fitting workflow, alert template and reporting cadence drawn from thousands of hours of Nigerian haulage, petroleum, port, education and government on-site experience.",
@@ -6040,10 +6040,9 @@ export const seoPages: SeoLandingPage[] = [
 	{
 		pageCategory: "service",
 		slug: "dashcam-installation-nigeria",
-		pageTitle:
-			"AI Dashcam Installation Nigeria | Car Tracker Plus Telematics Professional On-Site Fitting Nationwide",
+		pageTitle: "Dashcam Installation Nigeria | Car Tracker Plus Telematics",
 		metaDescription:
-			"Car Tracker Plus Telematics dashcam installation Nigeria services. Professional on-site fitting of single-lens, dual road-plus-cabin and AI-enabled ADAS dashcams for private cars, commercial fleets, petroleum haulage and executive vehicles across every geopolitical zone.",
+			"Professional dashcam installation across Nigeria. Single-lens, dual road-plus-cabin and AI-enabled ADAS dashcams, concealed wiring and telematics binding for.",
 		headline:
 			"AI Dashcam Installation Across Nigeria — Professionally Fitted, Telematics-Bound, Covering Every Geopolitical Zone",
 		intro:
@@ -6424,10 +6423,9 @@ export const seoPages: SeoLandingPage[] = [
 	},
 	{
 		slug: "locations",
-		pageTitle:
-			"All Locations | Car Tracker Plus Telematics Vehicle Tracking and Dashcam Installation Coverage Across Nigeria",
+		pageTitle: "Installation Locations | Car Tracker Plus Telematics",
 		metaDescription:
-			"Car Tracker Plus Telematics vehicle tracking and dashcam installation locations across all six Nigerian geopolitical zones. Find installation coverage in Lagos, Abuja, Port Harcourt, Kano, Enugu, Warri, Ibadan, Kaduna, Benin City and every regional city served by Car Tracker Plus Telematics.",
+			"Vehicle tracking, fleet telematics and dashcam installation locations across Nigeria. Find your city and book on-site fitting in Lagos, Abuja, Port Harcourt.",
 		headline:
 			"Car Tracker Plus Telematics Coverage Locations — Vehicle Tracking, Fleet Management and Dashcam Installation Across All Six Geopolitical Zones of Nigeria",
 		intro:
