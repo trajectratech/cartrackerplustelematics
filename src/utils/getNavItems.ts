@@ -19,6 +19,7 @@ export function getNavItemsFromTheme(theme: ThemeConfig) {
 		});
 	if (theme.content.faqsSection?.faqs?.length)
 		items.push({ label: "FAQs", href: "/#faqs" });
+	items.push({ label: "Blog", href: "/blogs/" });
 	if (theme.contact) items.push({ label: "Contact", href: "/#contact" });
 	if (theme.content.heroSection.ctaText) {
 		items.push({

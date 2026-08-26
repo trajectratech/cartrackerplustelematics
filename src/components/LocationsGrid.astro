@@ -1,0 +1,170 @@
+---
+import { Icon } from "astro-icon/components";
+import type { ThemeConfig } from "../types/theme";
+import { getAllLandingPages } from "../utils/landingPages";
+
+export interface Props {
+	data: ThemeConfig;
+}
+
+const { data } = Astro.props;
+
+const allLanding = getAllLandingPages(data);
+const locationPages = allLanding
+	.filter((p) => p.pageCategory === "location")
+	.sort((a, b) => (a.location > b.location ? 1 : -1));
+const servicePages = allLanding.filter(
+	(p) => p.pageCategory === "service" && p.slug !== "locations",
+);
+
+const CITY_GROUPS: Array<{
+	eyebrow: string;
+	title: string;
+	pages: typeof locationPages;
+}> = [
+	{
+		eyebrow: "Group 1",
+		title: "Lagos &amp; South-West",
+		pages: locationPages.filter((p) => ["Lagos", "Ibadan", "Abeokuta"].includes(p.location)),
+	},
+	{
+		eyebrow: "Group 2",
+		title: "South-South &amp; South-East",
+		pages: locationPages.filter((p) =>
+			[
+				"Port Harcourt",
+				"Benin City",
+				"Warri",
+				"Asaba",
+				"Enugu",
+				"Owerri",
+				"Uyo",
+				"Calabar",
+			].includes(p.location),
+		),
+	},
+	{
+		eyebrow: "Group 3",
+		title: "Abuja &amp; Northern Nigeria",
+		pages: locationPages.filter((p) =>
+			["Abuja", "Kano", "Kaduna", "Ilorin"].includes(p.location),
+		),
+	},
+];
+---
+
+<section
+	class="scrolling-section section-shell"
+	data-surface="muted"
+	aria-labelledby="locations-grid-heading"
+	id="locations-hub"
+>
+	<div class="container-shell">
+		<div class="section-heading-center">
+			<p class="section-kicker">Coverage Map</p>
+			<h2 id="locations-grid-heading" class="section-title measure-14">
+				Installation support in {locationPages.length} cities across Nigeria
+			</h2>
+			<p class="section-copy mt-6 max-w-2xl mx-auto">
+				Select a city below to see the full breakdown of vehicle types,
+				fleet configurations and on-site fitting options available in that
+				region. Every location page includes local setup expectations,
+				service-area coverage details, and a dedicated estimate request.
+			</p>
+		</div>
+
+		{
+			servicePages.length > 0 && (
+				<div class="mt-10">
+					<div class="flex items-end justify-between gap-6 flex-wrap mb-5">
+						<div>
+							<p class="eyebrow-label">Nationwide Service Pages</p>
+							<h3 class="text-xl font-extrabold tracking-[-0.03em] text-[var(--color-heading)] mt-2">
+								High-intent national keyword pages
+							</h3>
+						</div>
+						<a
+							href="/locations/"
+							class="text-sm font-semibold text-[var(--color-primary)] transition-colors hover:text-[var(--color-hover)] inline-flex items-center gap-2"
+						>
+							Browse every location page
+							<span aria-hidden="true">→</span>
+						</a>
+					</div>
+					<ul class="grid list-none gap-4 p-0 md:grid-cols-2 xl:grid-cols-3">
+						{servicePages.map((p) => (
+							<li>
+								<a
+									href={`/${p.slug}/`}
+									class="step-card flex h-full flex-col p-6 transition-all duration-200 hover:border-[color:var(--color-primary)] hover:-translate-y-1"
+								>
+									<div class="flex items-start justify-between gap-4">
+										<div>
+											<p class="eyebrow-label">{p.serviceType}</p>
+											<p class="mt-3 text-lg font-bold tracking-[-0.025em] text-[var(--color-heading)]">
+												{p.cardTitle ?? p.headline}
+											</p>
+										</div>
+										<Icon
+											name="heroicons-outline:arrow-top-right-on-square"
+											class="h-5 w-5 flex-shrink-0 text-[var(--color-primary)]"
+											aria-hidden="true"
+										/>
+									</div>
+									<p class="mt-4 text-sm leading-7 text-[var(--color-text-muted)] flex-1">
+										{p.cardDescription ?? p.intro}
+									</p>
+									<span
+										class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)]"
+										aria-hidden="true"
+									>
+										Open page
+										<span aria-hidden="true">→</span>
+									</span>
+								</a>
+							</li>
+						))}
+					</ul>
+				</div>
+			)
+		}
+
+		<div class="mt-14 space-y-10">
+			{CITY_GROUPS.filter((g) => g.pages.length > 0).map((group) => (
+				<div>
+					<div class="mb-5">
+						<p class="eyebrow-label">{group.title}</p>
+						<h3 class="text-xl font-extrabold tracking-[-0.03em] text-[var(--color-heading)] mt-2">
+							{group.pages.length} local installation markets
+						</h3>
+					</div>
+					<ul class="grid list-none gap-3 p-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+						{group.pages.map((p) => (
+							<li>
+								<a
+									href={`/${p.slug}/`}
+									class="premium-panel flex h-full items-center justify-between gap-4 px-5 py-4 transition-all duration-150 hover:-translate-y-0.5"
+									aria-label={`${p.cardTitle ?? p.location} vehicle tracking page`}
+								>
+									<div class="min-w-0">
+										<p class="text-[0.72rem] font-bold uppercase tracking-[0.18em] text-[var(--color-primary)]">
+											{p.serviceType}
+										</p>
+										<p class="mt-1 truncate text-base font-bold tracking-[-0.02em] text-[var(--color-heading)]">
+											{p.cardTitle ?? p.location}
+										</p>
+									</div>
+									<Icon
+										name="heroicons-outline:chevron-right"
+										class="h-5 w-5 flex-shrink-0 text-[var(--color-text-muted)]"
+										aria-hidden="true"
+									/>
+								</a>
+							</li>
+						))}
+					</ul>
+				</div>
+			))}
+		</div>
+	</div>
+</section>

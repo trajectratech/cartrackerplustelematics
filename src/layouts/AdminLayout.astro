@@ -1,0 +1,123 @@
+---
+import type { ThemeConfig } from "../types/theme";
+import dataJson from "../data/car-tracker-plus-telematics.json";
+import { getColorVarsCss } from "../utils/theme";
+import { CSRF_FIELD } from "../lib/csrf";
+
+import "../styles/global.css";
+
+export interface Props {
+	title: string;
+	user?: { email?: string } | null;
+	csrfToken?: string;
+}
+
+const { title, user, csrfToken } = Astro.props;
+const data = dataJson as ThemeConfig;
+const colorVarsCss = getColorVarsCss(data);
+
+const navItems = [
+	{ label: "Dashboard", href: "/admin/" },
+	{ label: "Posts", href: "/admin/posts/" },
+	{ label: "Comments", href: "/admin/comments/" },
+];
+const currentPath = Astro.url.pathname;
+---
+
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="color-scheme" content="light dark" />
+		<style is:inline set:html={colorVarsCss}></style>
+		<title>{title} | Car Tracker Plus Telematics admin</title>
+		<meta name="robots" content="noindex, nofollow" />
+		<link rel="icon" href="/favicon.ico" />
+		<script is:inline>
+			document.documentElement.classList.remove("no-js");
+		</script>
+	</head>
+	<body class="bg-[var(--color-background)] text-[var(--color-text)] font-sans leading-relaxed min-h-screen">
+		<header class="border-b" style="border-color: var(--border-subtle);">
+			<div class="container-shell flex flex-wrap items-center justify-between gap-4 px-4 py-4">
+				<div class="flex items-center gap-4">
+					<a href="/admin/" class="text-lg font-black tracking-[-0.04em] text-[var(--color-heading)] no-underline">
+						Car Tracker Plus Telematics
+						<span class="ml-2 rounded-full px-2 py-1 text-[11px] font-bold uppercase tracking-[0.14em]"
+							style="background: color-mix(in srgb, var(--color-primary) 12%, transparent); color: var(--color-primary);">
+							Admin
+						</span>
+					</a>
+				</div>
+
+				<nav aria-label="Admin sections" class="flex flex-wrap items-center gap-1">
+					{
+						navItems.map((item) => {
+							const isCurrent = currentPath === item.href;
+							return (
+								<a
+									href={item.href}
+									aria-current={isCurrent ? "page" : undefined}
+									class="rounded-full px-4 py-2 text-sm font-semibold no-underline"
+									style={
+										isCurrent
+											? "background: color-mix(in srgb, var(--color-primary) 12%, transparent); color: var(--color-primary);"
+											: "color: var(--color-heading);"
+									}
+								>
+									{item.label}
+								</a>
+							);
+						})
+					}
+					<a href="/" class="rounded-full px-4 py-2 text-sm font-semibold no-underline" style="color: var(--color-heading);">
+						View site
+					</a>
+				</nav>
+
+				{
+					user && (
+						<div class="flex items-center gap-3 text-sm">
+							<span class="text-[var(--color-text-muted)]">{user.email}</span>
+							<form method="post" action="/admin/logout/">
+								<input type="hidden" name={CSRF_FIELD} value={csrfToken} />
+								<button type="submit" class="secondary-button cursor-pointer px-4 py-2 text-sm">
+									Sign out
+								</button>
+							</form>
+						</div>
+					)
+				}
+			</div>
+		</header>
+
+		<main id="admin-main" tabindex="-1" class="container-shell px-4 py-10">
+			<slot />
+		</main>
+		<script is:inline>
+			document.addEventListener("submit", (event) => {
+				const form = event.target;
+				if (!(form instanceof HTMLFormElement) || form.method.toLowerCase() !== "post") return;
+
+				const button = form.querySelector("button[type=submit]:focus") ||
+					event.submitter ||
+					form.querySelector("button[type=submit]");
+
+				if (button instanceof HTMLButtonElement) {
+					const label = button.textContent.trim();
+					button.dataset.label = label;
+					button.innerHTML = '<span class="spinner" aria-hidden="true"></span> ' + label + "\u2026";
+				}
+				form.setAttribute("data-busy", "");
+			});
+
+			window.addEventListener("pageshow", () => {
+				document.querySelectorAll("[data-busy]").forEach((el) => el.removeAttribute("data-busy"));
+				document.querySelectorAll("button[data-label]").forEach((el) => {
+					el.textContent = el.dataset.label;
+					delete el.dataset.label;
+				});
+			});
+		</script>
+	</body>
+</html>

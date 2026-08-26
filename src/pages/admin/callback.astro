@@ -1,0 +1,59 @@
+---
+import AdminLayout from "../../layouts/AdminLayout.astro";
+import { getSessionClient, isSupabaseConfigured } from "../../lib/supabase";
+
+export const prerender = false;
+
+const code = Astro.url.searchParams.get("code");
+const rawNext = Astro.url.searchParams.get("next") || "/admin/";
+const next = rawNext.startsWith("/") && !rawNext.startsWith("//") ? rawNext : "/admin/";
+
+let errorMessage: string | null = null;
+
+if (!code) {
+	errorMessage = "That sign-in link is missing its code. Request a new one.";
+} else if (!isSupabaseConfigured()) {
+	errorMessage = "Supabase is not configured. Set PUBLIC_SUPABASE_URL and PUBLIC_SUPABASE_ANON_KEY.";
+} else {
+	const supabase = getSessionClient(Astro.cookies);
+	try {
+		const { error } = await supabase!.auth.exchangeCodeForSession(code);
+		if (error) {
+			console.log(
+				JSON.stringify({
+					scope: "admin-auth",
+					event: "exchange_failed",
+					code: error.status,
+					message: error.message,
+				}),
+			);
+			errorMessage =
+				"That sign-in link has expired or has already been used. Request a new one.";
+		} else {
+			return Astro.redirect(next, 302);
+		}
+	} catch (error) {
+		console.log(
+			JSON.stringify({
+				scope: "admin-auth",
+				event: "exchange_failed",
+				message: error instanceof Error ? error.message : String(error),
+			}),
+		);
+		errorMessage =
+			"That sign-in link has expired or has already been used. Request a new one.";
+	}
+}
+---
+
+<AdminLayout title="Sign in">
+	<div class="mx-auto max-w-md">
+		<h1 class="text-3xl font-black tracking-[-0.05em] text-[var(--color-heading)]">
+			Could not sign you in
+		</h1>
+		<p class="mt-4 text-sm leading-7 text-[var(--color-text-muted)]">{errorMessage}</p>
+		<a href="/admin/login/" data-button class="primary-button mt-8 cursor-pointer">
+			Request a new link
+		</a>
+	</div>
+</AdminLayout>

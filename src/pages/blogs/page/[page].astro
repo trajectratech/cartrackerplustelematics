@@ -1,0 +1,191 @@
+---
+import type { ThemeConfig } from "../../../types/theme";
+import mainJson from "../../../data/car-tracker-plus-telematics.json";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import PostCard from "../../../components/blog/PostCard.astro";
+import { getBlogIndexSeo } from "../../../utils/seo";
+import { getColorVars } from "../../../utils/theme";
+import {
+	POSTS_PER_PAGE,
+	getLivePosts,
+	type BlogFeedResult,
+	type BlogPost,
+} from "../../../lib/posts";
+
+export const prerender = false;
+
+const data = mainJson as ThemeConfig;
+const colorVars = getColorVars(data);
+
+const rawPage = Astro.params.page;
+const pageNumber = Math.max(1, Math.floor(Number(rawPage) || 1));
+
+if (pageNumber === 1) return Astro.redirect("/blogs/");
+
+Astro.response.headers.set(
+	"Cache-Control",
+	"public, max-age=0, s-maxage=120, stale-while-revalidate=3600, stale-if-error=2592000"
+);
+
+const feed: BlogFeedResult = await getLivePosts(undefined, {
+	page: pageNumber,
+	perPage: POSTS_PER_PAGE,
+});
+
+const posts: BlogPost[] = feed.status === "ok" ? feed.data : [];
+const totalCount = feed.status === "ok" ? feed.count : 0;
+const totalPages = feed.status === "ok" ? feed.totalPages : 1;
+
+/* For anything that isn't "ok" with rendered posts, bounce back to
+ * /blogs/ so the user sees the appropriate status banner there instead
+ * of a paginated empty shell (or deceptively empty cards grid). */
+if (feed.status !== "ok" || posts.length === 0) {
+	return Astro.redirect("/blogs/");
+}
+
+const seo = getBlogIndexSeo(data, pageNumber, totalPages);
+const breadcrumbs = [
+	{ label: "Home", href: "/" },
+	{ label: "Blog", href: "/blogs/" },
+	{ label: `Page ${pageNumber}`, href: `/blogs/page/${pageNumber}/` },
+];
+---
+
+<BaseLayout
+	data={data}
+	layout={[]}
+	colorVars={colorVars}
+	metadata={{ ...seo.metadata, title: seo.metadata?.ogTitle?.replace(" | Car Tracker Plus Telematics", "") + " | Car Tracker Plus Telematics" }}
+	structuredData={seo.structuredData}
+	sameAsUrls={seo.sameAsUrls}
+>
+	<section class="scrolling-section section-shell pt-8" data-reveal="off" aria-labelledby="blog-heading">
+		<div class="container-shell">
+			<Breadcrumbs items={breadcrumbs} />
+
+			<div class="mt-8 grid items-start gap-10">
+				<div>
+					<p class="section-kicker">Car Tracker Plus Telematics — Page {pageNumber}</p>
+					<h1 id="blog-heading" class="display-title--compact mt-7 max-w-3xl">
+						More telematics and fleet management insights
+					</h1>
+					<p class="section-copy max-w-2xl mt-5">
+						Page {pageNumber} of {totalPages}.
+						{totalCount === 1
+							? " One article total."
+							: ` ${totalCount} published articles on premium vehicle tracking, dashcam ROI, and fleet cost reduction.`}
+					</p>
+
+					<div class="hero-actions mt-9 flex flex-wrap gap-4">
+						<a href="/blogs/" data-button class="secondary-button cursor-pointer">
+							← Back to page one
+						</a>
+						<a href="/blogs/search/" data-button class="secondary-button cursor-pointer">
+							Search the blog
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="scrolling-section section-shell" data-surface="muted">
+		<div class="container-shell">
+			{
+				feed.status === "unconfigured" && (
+					<div class="premium-panel p-9 max-w-3xl">
+						<div class="flex items-start gap-4">
+							<div class="mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full"
+								style="background: color-mix(in srgb, var(--color-primary) 12%, transparent); color: var(--color-primary);">
+								!
+							</div>
+							<div>
+								<h2 class="text-xl font-bold tracking-[-0.03em] text-[var(--color-heading)]">
+									Blog CMS is not connected yet
+								</h2>
+								<p class="mt-3 text-sm leading-7 text-[var(--color-text-muted)]">
+									Paginated blog pages are only available once Supabase credentials are set and at least one
+									article has been published.
+								</p>
+								<div class="mt-6 flex flex-wrap gap-3">
+									<a href="/blogs/" class="primary-button cursor-pointer">Back to the blog index</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				)
+			}
+
+			{
+				feed.status === "error" && (
+					<div class="premium-panel p-9 max-w-3xl">
+						<div class="flex items-start gap-4">
+							<div class="mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full"
+								style="background: color-mix(in srgb, var(--color-error) 18%, transparent); color: var(--color-error);">
+								!
+							</div>
+							<div>
+								<h2 class="text-xl font-bold tracking-[-0.03em] text-[var(--color-heading)]">
+									Unable to load this blog page
+								</h2>
+								<p class="mt-3 text-sm leading-7 text-[var(--color-text-muted)]">
+									The blog database could not be reached right now. Please try again shortly.
+								</p>
+								<p class="mt-4 rounded-xl border p-4 text-xs font-mono"
+									style="border-color: var(--border-subtle); background: color-mix(in srgb, var(--surface-base) 94%, transparent); color: var(--color-text);">
+									{feed.errorMessage}
+								</p>
+							</div>
+						</div>
+					</div>
+				)
+			}
+
+			{
+				feed.status === "ok" && posts.length > 0 && (
+					<>
+						<ul class="grid list-none gap-5 p-0 sm:grid-cols-2 lg:grid-cols-3">
+							{posts.map((post) => <PostCard post={post} />)}
+						</ul>
+
+						<nav aria-label="Blog pages" class="mt-12 flex flex-wrap items-center justify-center gap-3">
+							<a
+								href={pageNumber === 2 ? "/blogs/" : `/blogs/page/${pageNumber - 1}/`}
+								class="rounded-full px-4 py-2 text-sm font-semibold no-underline"
+								style="color: var(--color-heading);"
+							>
+								← Previous
+							</a>
+							{
+								Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) =>
+									pageNum === pageNumber ? (
+										<span aria-current="page" class="rounded-full px-4 py-2 text-sm font-semibold"
+											style="background: color-mix(in srgb, var(--color-primary) 12%, transparent); color: var(--color-primary);">
+											{pageNum}
+										</span>
+									) : (
+										<a href={pageNum === 1 ? "/blogs/" : `/blogs/page/${pageNum}/`}
+											class="rounded-full px-4 py-2 text-sm font-semibold no-underline"
+											style="color: var(--color-heading);">
+											{pageNum}
+										</a>
+									)
+								)
+							}
+							{pageNumber < totalPages && (
+								<a
+									href={`/blogs/page/${pageNumber + 1}/`}
+									class="rounded-full px-4 py-2 text-sm font-semibold no-underline"
+									style="color: var(--color-heading);"
+								>
+									Next →
+								</a>
+							)}
+						</nav>
+					</>
+				)
+			}
+		</div>
+	</section>
+</BaseLayout>

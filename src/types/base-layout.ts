@@ -8,10 +8,18 @@ export type PageMetadata = {
 	siteName: string;
 	ogImage: string;
 	ogImageAlt: string;
+	ogImageWidth?: number;
+	ogImageHeight?: number;
+	ogImageType?: string;
 	locale: string;
 	twitterHandle?: string;
-	type: "website" | "article";
-	robots: string;
+	type?: "website" | "article";
+	robots?: string;
+	publishedTime?: string;
+	modifiedTime?: string;
+	articleAuthor?: string;
+	articleSection?: string;
+	articleTags?: string[];
 };
 
 export type BaseLayoutProps = {

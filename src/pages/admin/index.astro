@@ -1,0 +1,98 @@
+---
+import AdminLayout from "../../layouts/AdminLayout.astro";
+import { getAdminClient, isAdminConfigured } from "../../lib/supabase";
+import { ensureCsrfToken } from "../../lib/csrf";
+
+export const prerender = false;
+
+const csrfToken = ensureCsrfToken(Astro.cookies);
+const user = Astro.locals.user;
+const configured = isAdminConfigured();
+
+let counts = { draft: 0, published: 0, archived: 0, pendingComments: 0, placeholderImages: 0 };
+
+if (configured) {
+	const supabase = getAdminClient()!;
+	const countOf = async (status: string) =>
+		(await supabase.from("posts").select("id", { count: "exact", head: true }).eq("status", status))
+			.count ?? 0;
+
+	const [draft, published, archived, pendingComments, placeholders] = await Promise.all([
+		countOf("draft"),
+		countOf("published"),
+		countOf("archived"),
+		supabase
+			.from("comments")
+			.select("id", { count: "exact", head: true })
+			.eq("status", "pending")
+			.then((r) => r.count ?? 0),
+		supabase
+			.from("posts")
+			.select("id", { count: "exact", head: true })
+			.eq("featured_image_is_placeholder", true)
+			.then((r) => r.count ?? 0),
+	]);
+
+	counts = { draft, published, archived, pendingComments, placeholderImages: placeholders };
+}
+
+const cards = [
+	{ label: "Published", value: counts.published, href: "/admin/posts/?status=published" },
+	{ label: "Drafts", value: counts.draft, href: "/admin/posts/?status=draft" },
+	{ label: "Archived", value: counts.archived, href: "/admin/posts/?status=archived" },
+	{ label: "Comments awaiting review", value: counts.pendingComments, href: "/admin/comments/" },
+];
+---
+
+<AdminLayout title="Dashboard" user={user} csrfToken={csrfToken}>
+	<h1 class="text-3xl font-black tracking-[-0.05em] text-[var(--color-heading)]">Dashboard</h1>
+
+	{
+		!configured && (
+			<div
+				class="mt-6 rounded-[1.2rem] border px-5 py-4 text-sm leading-7"
+				style="border-color: color-mix(in srgb, var(--color-error) 28%, transparent); background: color-mix(in srgb, var(--color-error) 9%, transparent);"
+			>
+				<strong>Supabase is not fully configured.</strong> Set
+				<code>SUPABASE_SERVICE_ROLE_KEY</code> so the admin can read and write content.
+			</div>
+		)
+	}
+
+	<ul class="mt-8 grid list-none gap-4 p-0 sm:grid-cols-2 xl:grid-cols-4">
+		{
+			cards.map((card) => (
+				<li class="step-card">
+					<a href={card.href} class="no-underline">
+						<span class="eyebrow-label block">{card.label}</span>
+						<span class="metric-value block">{card.value}</span>
+					</a>
+				</li>
+			))
+		}
+	</ul>
+
+	{
+		counts.placeholderImages > 0 && (
+			<div class="premium-panel mt-6 p-6">
+				<h2 class="eyebrow-label">Needs attention</h2>
+				<p class="mt-3 text-base leading-8 text-[var(--color-heading)]">
+					{counts.placeholderImages} post{counts.placeholderImages === 1 ? " is" : "s are"} still
+					using a stand-in featured image.
+				</p>
+				<a
+					href="/admin/posts/?placeholder=1"
+					class="mt-4 inline-flex items-center gap-2 text-sm font-semibold no-underline"
+				>
+					Review them
+					<span aria-hidden="true">→</span>
+				</a>
+			</div>
+		)
+	}
+
+	<div class="mt-8 flex flex-wrap gap-3">
+		<a href="/admin/posts/new/" data-button class="primary-button cursor-pointer">Write a new post</a>
+		<a href="/admin/posts/" data-button class="secondary-button cursor-pointer">Manage posts</a>
+	</div>
+</AdminLayout>

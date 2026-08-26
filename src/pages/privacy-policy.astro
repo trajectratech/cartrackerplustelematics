@@ -1,0 +1,549 @@
+---
+import { Icon } from "astro-icon/components";
+import type { ThemeConfig } from "../types/theme";
+import dataJson from "../data/car-tracker-plus-telematics.json";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import { toAbsoluteUrl } from "../utils/seo";
+
+const data = dataJson as ThemeConfig;
+export const prerender = true;
+
+const siteName = data.seo?.siteName || data.brand.businessName;
+const pageUrl = toAbsoluteUrl(data.brand.url, "/privacy-policy/");
+const homepageUrl = toAbsoluteUrl(data.brand.url, "/");
+
+const breadcrumbs = [
+	{ name: "Home", path: "/" },
+	{ name: "Privacy Policy", path: "/privacy-policy/" },
+];
+
+const metadata = {
+	title: "Privacy Policy | Car Tracker Plus Telematics",
+	description:
+		"Car Tracker Plus Telematics Privacy Policy — what data we capture, why we capture it, how long we keep it, your rights, and the safeguards we maintain across our GPS, telematics and fleet installations in Nigeria.",
+	canonicalUrl: pageUrl,
+	keywords: [
+		"privacy policy",
+		"data protection nigeria",
+		"personal information",
+		"car tracker plus telematics privacy",
+		...(data.seo?.targetKeywords?.slice(0, 10) ?? data.brand.keywords),
+	],
+	siteName,
+	ogImage: toAbsoluteUrl(data.brand.url, data.seo?.defaultOgImage || data.brand.logoImage),
+	ogImageAlt: data.seo?.ogImageAlt || `${siteName} logo`,
+	ogImageWidth: data.seo?.defaultOgImageWidth,
+	ogImageHeight: data.seo?.defaultOgImageHeight,
+	locale: data.seo?.siteLocale || "en_NG",
+	twitterHandle: data.seo?.twitterHandle,
+	type: "website",
+	robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+};
+
+const serviceAreas =
+	data.seo?.serviceAreas?.map((name) => ({
+		"@type": name.trim().toLowerCase() === "nigeria" ? "Country" : "City",
+		name,
+	})) || [];
+
+const structuredData = [
+	{
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"@id": `${homepageUrl}#organization`,
+		name: data.brand.businessName,
+		url: homepageUrl,
+		areaServed: { "@type": "Country", name: "Nigeria" },
+		serviceArea: serviceAreas.length
+			? serviceAreas
+			: [{ "@type": "Country", name: "Nigeria" }],
+		logo: toAbsoluteUrl(data.brand.url, data.brand.logoImage),
+		contactPoint: {
+			"@type": "ContactPoint",
+			telephone: data.contact.phone,
+			contactType: "customer support",
+			email: data.contact.email,
+			areaServed: data.contact.addressCountry,
+			availableLanguage: ["en"],
+		},
+	},
+	{
+		"@context": "https://schema.org",
+		"@type": "LocalBusiness",
+		"@id": `${homepageUrl}#localbusiness`,
+		name: data.brand.businessName,
+		description: data.brand.description,
+		url: homepageUrl,
+		telephone: data.contact.phone,
+		email: data.contact.email,
+		address: {
+			"@type": "PostalAddress",
+			streetAddress: data.contact.address,
+			addressLocality: data.contact.addressLocality,
+			addressRegion: data.contact.addressRegion,
+			addressCountry: data.contact.addressCountry,
+		},
+		areaServed: serviceAreas.length
+			? serviceAreas
+			: [{ "@type": "Country", name: "Nigeria" }],
+	},
+	{
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"@id": `${pageUrl}#webpage`,
+		name: metadata.title,
+		url: pageUrl,
+		description: metadata.description,
+		isPartOf: { "@id": `${homepageUrl}#website` },
+		about: { "@id": `${homepageUrl}#organization` },
+		breadcrumb: { "@id": `${pageUrl}#breadcrumb` },
+		primaryImageOfPage: metadata.ogImage,
+		inLanguage: "en-NG",
+	},
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"@id": `${pageUrl}#breadcrumb`,
+		itemListElement: breadcrumbs.map((item, index) => ({
+			"@type": "ListItem",
+			position: index + 1,
+			name: item.name,
+			item: toAbsoluteUrl(data.brand.url, item.path),
+		})),
+	},
+];
+
+const collectedItems = [
+	"Full name",
+	"Email account",
+	"Direct contact number",
+	"Vehicle specifications",
+	"Fitment details",
+	"Quote request history",
+	"Renewal and warranty records",
+	"Website engagement signals",
+	"Performance insights where applicable",
+];
+
+const usageItems = [
+	"Answer quote and service enquiries",
+	"Deliver GPS and telematics installations",
+	"Coordinate fitment appointments",
+	"Maintain customer and fleet accounts",
+	"Dispatch technical and aftercare support",
+	"Track renewals and warranty windows",
+	"Refine website and product experiences",
+	"Measure outreach and marketing performance",
+	"Satisfy regulatory or contractual record-keeping obligations",
+];
+
+const integrationItems = [
+	"Public business profile metadata",
+	"Account and follower statistics",
+	"Engagement metrics for approved content",
+	"Traffic attribution and referral signals",
+];
+
+const colorVars = {
+	"--color-primary": data.colors.primary,
+	"--color-secondary": data.colors.secondary,
+	"--color-accent": data.colors.accent,
+	"--color-background": data.colors.background,
+	"--color-text": data.colors.text,
+	"--color-heading": data.colors.heading,
+	"--color-link": data.colors.link,
+	"--color-hover": data.colors.hover,
+	"--color-active": data.colors.active,
+	"--color-error": data.colors.error,
+	"--color-success": data.colors.success,
+	"--color-muted": data.colors.muted,
+};
+---
+
+<BaseLayout data={data} layout={[]} colorVars={colorVars} metadata={metadata} structuredData={structuredData}>
+	<section
+		class="scrolling-section section-shell pt-8"
+		data-reveal="off"
+		aria-labelledby="page-heading"
+	>
+		<div class="container-shell">
+			<Breadcrumbs items={breadcrumbs} />
+
+			<div class="mt-8 grid items-start gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
+				<div>
+					<p class="section-kicker">Privacy Data Handling</p>
+					<h1
+						id="page-heading"
+						class="display-title--compact mt-7 max-w-3xl"
+					>
+						Privacy Policy
+					</h1>
+					<p class="section-copy max-w-2xl">
+						Car Tracker Plus Telematics values the trust you place in us when you share personal details, request a fitment, or manage vehicles through our platforms. This policy sets out our information practices for data we receive, what we do with it, and the choices available to you.
+					</p>
+
+					<ul class="mt-9 grid list-none gap-3 p-0 sm:grid-cols-3">
+						<li class="chip items-start justify-start gap-2.5 px-4 py-3 text-left text-sm leading-6">
+							<Icon
+								name="heroicons-solid:shield-check"
+								class="mt-0.5 h-4 w-4 flex-shrink-0 text-[var(--color-primary)]"
+								aria-hidden="true"
+							/>
+							<span>Securely retained, responsibly handled</span>
+						</li>
+						<li class="chip items-start justify-start gap-2.5 px-4 py-3 text-left text-sm leading-6">
+							<Icon
+								name="heroicons-solid:ban"
+								class="mt-0.5 h-4 w-4 flex-shrink-0 text-[var(--color-primary)]"
+								aria-hidden="true"
+							/>
+							<span>No personal data is ever sold</span>
+						</li>
+						<li class="chip items-start justify-start gap-2.5 px-4 py-3 text-left text-sm leading-6">
+							<Icon
+								name="heroicons-solid:calendar-days"
+								class="mt-0.5 h-4 w-4 flex-shrink-0 text-[var(--color-primary)]"
+								aria-hidden="true"
+							/>
+							<span>Reviewed August 2026</span>
+						</li>
+					</ul>
+				</div>
+
+				<aside class="dark-panel p-8 sm:p-10">
+					<p class="eyebrow-label">Sections inside this document</p>
+					<ol class="mt-6 grid list-none gap-3 p-0 text-sm leading-7 text-[var(--color-on-dark-muted)]" start="1">
+						<li class="flex items-start gap-3">
+							<span class="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold" style="background: var(--color-primary); color: var(--color-on-primary);">1</span>
+							<span>Data categories collected and purpose of processing</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold" style="background: var(--color-primary); color: var(--color-on-primary);">2</span>
+							<span>Platform, analytics and social integrations</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold" style="background: var(--color-primary); color: var(--color-on-primary);">3</span>
+							<span>Disclosures, safeguards, retention and your rights</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold" style="background: var(--color-primary); color: var(--color-on-primary);">4</span>
+							<span>Reaching us regarding privacy questions</span>
+						</li>
+					</ol>
+				</aside>
+			</div>
+		</div>
+	</section>
+
+	<section
+		class="scrolling-section section-shell"
+		data-surface="muted"
+		aria-labelledby="collect-heading"
+	>
+		<div class="container-shell">
+			<div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+				<div>
+					<p class="section-kicker">Captured categories</p>
+					<h2
+						id="collect-heading"
+						class="mt-6 text-[clamp(1.9rem,3vw,2.6rem)] font-bold leading-tight tracking-[-0.04em] text-[var(--color-heading)]"
+					>
+						Information Categories We May Hold
+					</h2>
+					<p class="mt-4 text-base leading-8 text-[var(--color-text-muted)]">
+						We limit collection to items that directly support fitment, fleet support, and account administration — from your first quotation through to ongoing service delivery.
+					</p>
+				</div>
+				<article class="premium-panel p-8 sm:p-9">
+					<ul class="grid list-none gap-3 p-0 sm:grid-cols-2">
+						{
+							collectedItems.map((item) => (
+								<li class="flex items-start gap-3 rounded-[1.2rem] p-4" style="background: color-mix(in srgb, var(--surface-subtle) 55%, transparent);">
+									<Icon
+										name="heroicons-solid:check-circle"
+										class="mt-0.5 h-4 w-4 flex-shrink-0 text-[var(--color-primary)]"
+										aria-hidden="true"
+									/>
+									<span class="text-sm font-semibold leading-7 text-[var(--color-heading)]">{item}</span>
+								</li>
+							))
+						}
+					</ul>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section
+		class="scrolling-section section-shell"
+		aria-labelledby="usage-heading"
+	>
+		<div class="container-shell">
+			<div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+				<article class="premium-panel p-8 sm:p-9">
+					<h3 class="eyebrow-label">Processing purpose</h3>
+					<ul class="check-list mt-5 text-base">
+						{usageItems.map((item) => (
+							<li class="list-check">{item}</li>
+						))}
+					</ul>
+				</article>
+				<div>
+					<p class="section-kicker">Use of data</p>
+					<h2
+						id="usage-heading"
+						class="mt-6 text-[clamp(1.9rem,3vw,2.6rem)] font-bold leading-tight tracking-[-0.04em] text-[var(--color-heading)]"
+					>
+						How Information Supports Your Service Delivery
+					</h2>
+					<p class="mt-4 text-base leading-8 text-[var(--color-text-muted)]">
+						Each captured category maps to a specific stage of engagement — from replying to a quotation, scheduling a fitment visit, providing technical support, and maintaining active accounts for ongoing renewals or addressing issues.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section
+		class="scrolling-section section-shell"
+		data-surface="muted"
+		aria-labelledby="integrations-heading"
+	>
+		<div class="container-shell">
+			<div class="section-heading-center">
+				<p class="section-kicker">Platform integrations</p>
+				<h2
+					id="integrations-heading"
+					class="section-title measure-14"
+				>
+					Analytics and Connected Platforms
+				</h2>
+				<p class="section-copy measure-14">
+					Car Tracker Plus Telematics may rely on approved third-party tools, analytics and social platforms where we use authorised access for performance insight and approved account analytics. Access is always bounded to the permissions the account holder grants us.
+				</p>
+			</div>
+
+			<ul class="mt-14 grid list-none gap-4 p-0 md:grid-cols-2 xl:grid-cols-3">
+				<li class="step-card p-7">
+					<h3 class="text-lg font-bold tracking-[-0.025em] text-[var(--color-heading)]">
+						Internal performance analytics
+					</h3>
+					<p class="mt-3 text-sm leading-7 text-[var(--color-text-muted)]">
+						Where analytics integrations remain enabled, we use approved access to surface account-level, content and journey performance insights for improvement.
+					</p>
+				</li>
+				<li class="step-card p-7">
+					<h3 class="text-lg font-bold tracking-[-0.025em] text-[var(--color-heading)]">
+						Data is never sold
+					</h3>
+					<p class="mt-3 text-sm leading-7 text-[var(--color-text-muted)]">
+						We do not trade or rent any personal information obtained through these channels or any other channel of our services.
+					</p>
+				</li>
+				<li class="step-card p-7">
+					<h3 class="text-lg font-bold tracking-[-0.025em] text-[var(--color-heading)]">
+						Actions require consent
+					</h3>
+					<p class="mt-3 text-sm leading-7 text-[var(--color-text-muted)]">
+						We do not post content, issue private messages or run paid posts on your behalf unless separate express prior authorisation has been granted.
+					</p>
+				</li>
+			</ul>
+
+			<div class="mt-10 premium-panel p-8 sm:p-9">
+				<h3 class="eyebrow-label">Insight access categories</h3>
+				<ul class="check-list mt-5 sm:grid-cols-2">
+					{integrationItems.map((item) => (
+						<li class="list-check">{item}</li>
+					))}
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section
+		class="scrolling-section section-shell"
+		aria-label="Disclosures safeguards retention rights"
+	>
+		<div class="container-shell grid gap-5 lg:grid-cols-2">
+			<article class="premium-panel p-8 sm:p-9">
+				<div class="flex items-start gap-4">
+					<span
+						class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold"
+						style="background: var(--color-primary); color: var(--color-on-primary);"
+						aria-hidden="true"
+					>
+						1
+					</span>
+					<div class="min-w-0 flex-1">
+						<h2 class="text-2xl font-bold tracking-[-0.035em] text-[var(--color-heading)]">
+							Disclosures and sharing
+						</h2>
+						<p class="mt-4 text-base leading-8 text-[var(--color-text-muted)]">
+							Personal information is not traded in commercial exchange.
+						</p>
+						<p class="mt-4 text-base leading-8 text-[var(--color-text-muted)]">
+							Sharing only takes place where necessary with trusted installation technicians, infrastructure providers, platform hosts, regulatory bodies or professional advisors where required by applicable law, regulatory requirements or legitimate operational purpose.
+						</p>
+						<p class="mt-4 text-base leading-8 text-[var(--color-text-muted)]">
+							Trusted providers are bound to confidentiality and security requirements aligned with the purpose for which they were granted access.
+						</p>
+					</div>
+				</div>
+			</article>
+
+			<article class="premium-panel p-8 sm:p-9">
+				<div class="flex items-start gap-4">
+					<span
+						class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold"
+						style="background: var(--color-primary); color: var(--color-on-primary);"
+						aria-hidden="true"
+					>
+						2
+					</span>
+					<div class="min-w-0 flex-1">
+						<h2 class="text-2xl font-bold tracking-[-0.035em] text-[var(--color-heading)]">
+							Security of information
+						</h2>
+						<p class="mt-4 text-base leading-8 text-[var(--color-text-muted)]">
+							We apply reasonable administrative, technical and organisational measures to protect information against unauthorised access, disclosure, alteration, loss or misuse.
+						</p>
+						<p class="mt-4 text-base leading-8 text-[var(--color-text-muted)]">
+							While no method of online transmission or storage can be guaranteed completely secure, we maintain and regularly review appropriate safeguards for the categories of data we hold.
+						</p>
+					</div>
+				</div>
+			</article>
+
+			<article class="premium-panel p-8 sm:p-9">
+				<div class="flex items-start gap-4">
+					<span
+						class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold"
+						style="background: var(--color-primary); color: var(--color-on-primary);"
+						aria-hidden="true"
+					>
+						3
+					</span>
+					<div class="min-w-0 flex-1">
+						<h2 class="text-2xl font-bold tracking-[-0.035em] text-[var(--color-heading)]">
+							How long we retain information
+						</h2>
+						<p class="mt-4 text-base leading-8 text-[var(--color-text-muted)]">
+							We retain personal data only for the duration reasonably required by our legitimate business requirements, applicable legal obligations, warranty administration, contractual retention periods or regulatory record-keeping purposes.
+						</p>
+					</div>
+				</div>
+			</article>
+
+			<article class="premium-panel p-8 sm:p-9">
+				<div class="flex items-start gap-4">
+					<span
+						class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold"
+						style="background: var(--color-primary); color: var(--color-on-primary);"
+						aria-hidden="true"
+					>
+						4
+					</span>
+					<div class="min-w-0 flex-1">
+						<h2 class="text-2xl font-bold tracking-[-0.035em] text-[var(--color-heading)]">
+							Rights available to you
+						</h2>
+						<p class="mt-4 text-base leading-8 text-[var(--color-text-muted)]">
+							You have the right to contact us to request access to, rectification of, or erasure of personal information we hold about you, subject to applicable lawful basis for processing and any legitimate retention requirements.
+						</p>
+					</div>
+				</div>
+			</article>
+		</div>
+	</section>
+
+	<section
+		class="scrolling-section section-shell"
+		data-surface="muted"
+		aria-labelledby="cookies-heading"
+	>
+		<div class="container-shell">
+			<div class="cta-shell p-8 sm:p-11">
+				<div class="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+					<div>
+						<p class="section-kicker">Cookies and analytics</p>
+						<h2
+							id="cookies-heading"
+							class="mt-6 text-[clamp(1.9rem,3vw,2.6rem)] font-bold leading-tight tracking-[-0.04em] text-[var(--color-heading)]"
+						>
+							Cookies and Site Analytics
+						</h2>
+						<p class="mt-4 text-base leading-8 text-[var(--color-text-muted)]">
+							Our website may make use of cookies, local storage and analytics to help us understand how visitors interact with our site and to deliver better experiences on future visits.
+						</p>
+					</div>
+					<div class="grid gap-5 sm:grid-cols-2">
+						<article class="step-card p-6">
+							<p class="eyebrow-label">Revisions</p>
+							<p class="mt-3 text-sm font-semibold leading-7 text-[var(--color-heading)]">
+								This policy may be updated from time to time. Any amendments will be published on this page with a revised review date.
+							</p>
+						</article>
+						<article class="step-card p-6">
+							<p class="eyebrow-label">Most recent review</p>
+							<p class="mt-3 text-base font-semibold leading-7 text-[var(--color-heading)]">
+								August 2026
+							</p>
+							<p class="mt-2 text-sm leading-7 text-[var(--color-text-muted)]">
+								Current scope covers GPS installations, telematics and dashcam services.
+							</p>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section
+		class="scrolling-section section-shell"
+		aria-labelledby="contact-heading"
+	>
+		<div class="container-shell">
+			<div class="cta-shell p-8 sm:p-11">
+				<div class="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+					<div>
+						<p class="section-kicker">Contact privacy team</p>
+						<h2
+							id="contact-heading"
+							class="mt-6 text-[clamp(1.9rem,3vw,2.6rem)] font-bold leading-tight tracking-[-0.04em] text-[var(--color-heading)]"
+						>
+							Questions about our Privacy Policy?
+						</h2>
+						<p class="mt-4 text-base leading-8 text-[var(--color-text-muted)]">
+							For any privacy concerns, corrections or questions about how we process your personal data, please reach out via any channel below and our team will respond.
+						</p>
+					</div>
+					<div class="grid gap-5 sm:grid-cols-2">
+						<article class="step-card p-6">
+							<p class="eyebrow-label">Business address</p>
+							<p class="mt-3 text-base font-semibold leading-7 text-[var(--color-heading)]">
+								Car Tracker Plus Telematics
+							</p>
+							<p class="mt-2 text-sm leading-7 text-[var(--color-text-muted)]">
+								{data.contact.address}
+							</p>
+						</article>
+						<article class="step-card p-6">
+							<p class="eyebrow-label">Direct channels</p>
+							<p class="mt-3 text-base font-semibold leading-7 text-[var(--color-heading)]">
+								{data.contact.email}
+							</p>
+							<p class="mt-2 text-sm leading-7 text-[var(--color-text-muted)]">
+								{data.contact.phone}
+							</p>
+							<p class="mt-1 text-sm leading-7 text-[var(--color-text-muted)]">
+								{data.brand.url}
+							</p>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</BaseLayout>

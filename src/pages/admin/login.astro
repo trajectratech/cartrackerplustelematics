@@ -1,0 +1,103 @@
+---
+import AdminLayout from "../../layouts/AdminLayout.astro";
+import { getSessionClient, isSupabaseConfigured } from "../../lib/supabase";
+import { CSRF_FIELD, ensureCsrfToken, verifyCsrf } from "../../lib/csrf";
+
+export const prerender = false;
+
+const csrfToken = ensureCsrfToken(Astro.cookies);
+const nextParam = Astro.url.searchParams.get("next") || "/admin/";
+
+let status: { tone: "success" | "error"; message: string } | null = null;
+let submittedEmail = "";
+
+if (Astro.request.method === "POST" && isSupabaseConfigured()) {
+	const form = await Astro.request.formData();
+	submittedEmail = String(form.get("email") ?? "").trim();
+
+	if (!verifyCsrf(Astro.cookies, form.get(CSRF_FIELD))) {
+		status = {
+			tone: "error",
+			message: "Your session expired. Please try again.",
+		};
+	} else if (!submittedEmail || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(submittedEmail)) {
+		status = { tone: "error", message: "Enter a valid email address." };
+	} else {
+		const supabase = getSessionClient(Astro.cookies);
+		const origin = (import.meta.env.PUBLIC_SITE_URL || Astro.url.origin).replace(/\/$/, "");
+		const redirectTo = new URL("/admin/callback/", origin);
+		redirectTo.searchParams.set("next", nextParam);
+
+		try {
+			await supabase!.auth.signInWithOtp({
+				email: submittedEmail,
+				options: { emailRedirectTo: redirectTo.toString(), shouldCreateUser: false },
+			});
+		} catch (error) {
+			console.log(
+				JSON.stringify({
+					scope: "admin-auth",
+					event: "otp_failed",
+					code: error instanceof Error ? error.message : String(error),
+				}),
+			);
+		}
+
+		status = {
+			tone: "success",
+			message:
+				"If that address has admin access, a sign-in link is on its way. The link expires shortly, so use it soon.",
+		};
+	}
+}
+---
+
+<AdminLayout title="Sign in">
+	<div class="mx-auto max-w-md">
+		<h1 class="text-3xl font-black tracking-[-0.05em] text-[var(--color-heading)]">Admin sign in</h1>
+		<p class="mt-4 text-sm leading-7 text-[var(--color-text-muted)]">
+			Enter your email and we will send a one-time sign-in link. There is no password to remember.
+		</p>
+
+		{
+			status && (
+				<div
+					role="status"
+					aria-live="polite"
+					class="mt-6 rounded-[1.2rem] border px-4 py-3 text-sm leading-7"
+					style={
+						status.tone === "success"
+							? "border-color: color-mix(in srgb, var(--color-success) 30%, transparent); background: color-mix(in srgb, var(--color-success) 10%, transparent); color: var(--color-heading);"
+							: "border-color: color-mix(in srgb, var(--color-error) 28%, transparent); background: color-mix(in srgb, var(--color-error) 9%, transparent); color: var(--color-heading);"
+					}
+				>
+					{status.message}
+				</div>
+			)
+		}
+
+		<form method="post" class="mt-8 grid gap-5">
+			<input type="hidden" name={CSRF_FIELD} value={csrfToken} />
+
+			<div class="grid gap-2">
+				<label class="text-sm font-semibold text-[var(--color-heading)]" for="admin-email">
+					Email address
+				</label>
+				<input
+					id="admin-email"
+					name="email"
+					type="email"
+					autocomplete="email"
+					required
+					value={submittedEmail}
+					class="min-h-13 rounded-[1rem] border px-4 py-3 text-sm"
+					style="border-color: var(--border-subtle); background: color-mix(in srgb, var(--surface-base) 98%, transparent);"
+				/>
+			</div>
+
+			<button type="submit" data-button class="primary-button cursor-pointer">
+				Email me a sign-in link
+			</button>
+		</form>
+	</div>
+</AdminLayout>

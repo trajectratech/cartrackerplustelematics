@@ -1,0 +1,158 @@
+---
+import { renderCommentBody } from "../../lib/markdown";
+import { CSRF_FIELD, ensureCsrfToken } from "../../lib/csrf";
+
+export interface Props {
+	postId: string;
+	postSlug: string;
+	comments: { id: string; display_name: string; body: string; created_at: string }[];
+}
+
+const { postId, postSlug, comments } = Astro.props;
+const csrfToken = ensureCsrfToken(Astro.cookies);
+
+const commentStatus = Astro.url.searchParams.get("comment");
+const statusMessage =
+	commentStatus === "received"
+		? "Thanks. Your comment has been submitted and will appear once it has been reviewed."
+		: commentStatus === "invalid"
+			? "Please check the highlighted fields and try again."
+			: commentStatus === "throttled"
+				? "You have posted recently. Please wait a moment before commenting again."
+				: commentStatus === "error"
+					? "We could not save your comment just now. Please try again shortly."
+					: null;
+const isError = commentStatus !== null && commentStatus !== "received";
+
+function formatDate(value: string) {
+	return new Date(value).toLocaleDateString("en-NG", {
+		year: "numeric",
+		month: "long",
+		day: "numeric",
+	});
+}
+---
+
+<section class="scrolling-section section-shell" data-surface="muted" aria-labelledby="comments-heading">
+	<div class="container-shell">
+		<h2 id="comments-heading" class="text-2xl font-bold tracking-[-0.04em] text-[var(--color-heading)]">
+			{comments.length === 0
+				? "Comments"
+				: `${comments.length} ${comments.length === 1 ? "comment" : "comments"}`}
+		</h2>
+
+		{
+			comments.length > 0 && (
+				<ul class="mt-8 grid list-none gap-4 p-0">
+					{comments.map((comment) => (
+						<li class="step-card">
+							<article>
+								<div class="flex flex-wrap items-baseline justify-between gap-3">
+									<h3 class="text-base font-bold tracking-[-0.02em] text-[var(--color-heading)]">
+										{comment.display_name}
+									</h3>
+									<time
+										datetime={comment.created_at}
+										class="text-sm text-[var(--color-text-muted)]"
+									>
+										{formatDate(comment.created_at)}
+									</time>
+								</div>
+								<p
+									class="mt-4 text-base leading-8 text-[var(--color-text-muted)]"
+									set:html={renderCommentBody(comment.body)}
+								/>
+							</article>
+						</li>
+					))}
+				</ul>
+			)
+		}
+
+		<div class="premium-panel mt-10 p-8 sm:p-9">
+			<h3 class="text-xl font-bold tracking-[-0.03em] text-[var(--color-heading)]">
+				Leave a comment
+			</h3>
+			<p class="mt-3 text-sm leading-7 text-[var(--color-text-muted)]">
+				Just a display name and your comment — no account, no email address needed. Comments are
+				reviewed before they appear.
+			</p>
+
+			{
+				statusMessage && (
+					<div
+						role="status"
+						aria-live="polite"
+						class="mt-6 rounded-[1.2rem] border px-4 py-3 text-sm leading-7"
+						style={
+							isError
+								? "border-color: color-mix(in srgb, var(--color-error) 28%, transparent); background: color-mix(in srgb, var(--color-error) 9%, transparent); color: var(--color-heading);"
+								: "border-color: color-mix(in srgb, var(--color-success) 30%, transparent); background: color-mix(in srgb, var(--color-success) 10%, transparent); color: var(--color-heading);"
+						}
+					>
+						{statusMessage}
+					</div>
+				)
+			}
+
+			<form method="post" action="/api/comment/" class="mt-6 grid gap-5">
+				<input type="hidden" name={CSRF_FIELD} value={csrfToken} />
+				<input type="hidden" name="postId" value={postId} />
+				<input type="hidden" name="postSlug" value={postSlug} />
+				<input type="hidden" name="formStartedAt" value={Date.now()} />
+
+				<div style="position: absolute; left: -9999px;" aria-hidden="true">
+					<label for={`website-${postId}`}>Website</label>
+					<input id={`website-${postId}`} type="text" name="website" tabindex="-1" autocomplete="off" />
+				</div>
+
+				<div class="grid gap-2">
+					<label class="text-sm font-semibold text-[var(--color-heading)]" for={`name-${postId}`}>
+						Display name *
+					</label>
+					<input
+						id={`name-${postId}`}
+						name="displayName"
+						type="text"
+						required
+						minlength="2"
+						maxlength="60"
+						autocomplete="nickname"
+						class="min-h-13 rounded-[1rem] border px-4 py-3 text-sm"
+						style="border-color: var(--border-subtle); background: color-mix(in srgb, var(--surface-base) 98%, transparent);"
+					/>
+				</div>
+
+				<div class="grid gap-2">
+					<label class="text-sm font-semibold text-[var(--color-heading)]" for={`body-${postId}`}>
+						Comment *
+					</label>
+					<textarea
+						id={`body-${postId}`}
+						name="body"
+						required
+						minlength="2"
+						maxlength="4000"
+						rows="5"
+						class="rounded-[1rem] border px-4 py-3 text-sm"
+						style="border-color: var(--border-subtle); background: color-mix(in srgb, var(--surface-base) 98%, transparent);"
+					></textarea>
+				</div>
+
+				<button type="submit" data-button data-comment-submit class="primary-button w-fit cursor-pointer">
+					Post comment
+				</button>
+			</form>
+
+			<script is:inline>
+				document.currentScript?.previousElementSibling?.addEventListener("submit", (event) => {
+					const button = event.currentTarget.querySelector("[data-comment-submit]");
+					if (button) {
+						button.disabled = true;
+						button.innerHTML = '<span class="spinner" aria-hidden="true"></span> Posting\u2026';
+					}
+				});
+			</script>
+		</div>
+	</div>
+</section>
