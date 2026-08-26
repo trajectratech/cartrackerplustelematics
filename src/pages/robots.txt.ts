@@ -37,8 +37,7 @@ export function GET() {
 			"Disallow: /admin/",
 			"",
 		]),
-		`Sitemap: ${toAbsoluteUrl(data.brand.url, "/sitemap-index.xml")}`,
-		`Sitemap: ${toAbsoluteUrl(data.brand.url, "/sitemap-blog.xml")}`,
+		`Sitemap: ${toAbsoluteUrl(data.brand.url, "/sitemap.xml")}`,
 	].join("\n");
 
 	return new Response(body, {

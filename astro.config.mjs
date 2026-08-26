@@ -9,14 +9,9 @@ import solidJs from "@astrojs/solid-js";
 
 const SITE = "https://www.cartrackerplustelematics.com";
 
-/**
- * Relative priority. A hint only, but leaving every URL at the 0.5 default gave
- * crawlers nothing to distinguish the homepage and commercial landing pages
- * from a deep article.
- */
 function getPriority(/** @type {string} */ url) {
 	if (url === `${SITE}/`) return 1.0;
-	return 0.8; // service and location landing pages
+	return 0.8;
 }
 
 function getChangeFreq(/** @type {string} */ url) {
@@ -32,7 +27,6 @@ export default defineConfig({
 	integrations: [
 		icon(),
 		sitemap({
-			// The 404 route is noindex; it must not be advertised in the sitemap.
 			filter: (page) => !page.includes("/404") && !page.includes("/blogs") && !page.includes("/admin"),
 			serialize(item) {
 				item.priority = getPriority(item.url);

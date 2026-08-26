@@ -1,0 +1,198 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import QuoteRequestForm from "../components/QuoteRequestForm.astro";
+import { formatPhoneNumber } from "../utils/formatPhoneNumber";
+import { getServiceLandingPages, getLocationLandingPages } from "../utils/landingPages";
+import dataJson from "../data/car-tracker-plus-telematics.json";
+import type { ThemeConfig } from "../types/theme";
+
+const data = dataJson as ThemeConfig;
+
+const metadata = {
+	title: "404 — Page not found",
+	pageTitle: "404 Not Found | Car Tracker Plus Telematics",
+	description:
+		"We couldn't find the page you're looking for. Explore Car Tracker Plus Telematics services, locations, and pricing, or contact us for vehicle tracking installation in Nigeria.",
+	robots: "noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+	type: "website" as const,
+};
+
+const colorVars: Record<string, string> = {
+	"--color-primary": "#B5121B",
+	"--color-accent": "#B5121B",
+	"--color-heading": "#0B1220",
+	"--color-text": "#1B2336",
+	"--color-text-muted": "#5B6478",
+	"--color-background": "#FBFBFD",
+	"--color-surface": "#FFFFFF",
+	"--color-border": "#E6E8EF",
+	"--color-hover": "#9B1019",
+	"--color-success": "#1E7F59",
+};
+
+const displayPhone = formatPhoneNumber(data.contact.phone);
+
+const services = getServiceLandingPages(data).slice(0, 4);
+const locations = getLocationLandingPages(data).slice(0, 6);
+---
+
+<BaseLayout data={data} metadata={metadata} colorVars={colorVars} layout={[]}>
+	<main class="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
+		<section class="grid items-center gap-14 lg:grid-cols-[0.95fr_1.05fr]">
+			<div>
+				<div class="inline-flex items-center gap-2 rounded-full border border-[color:var(--color-border)] bg-white px-4 py-2 text-xs font-semibold tracking-[0.14em] uppercase text-[color:var(--color-accent)] shadow-sm">
+					Error 404
+				</div>
+				<h1 id="main-content" class="mt-6 text-[2.7rem] font-semibold leading-[1.04] tracking-[-0.03em] text-[color:var(--color-heading)] md:text-[3.45rem]">
+					The page you're looking for doesn't exist on this site.
+				</h1>
+				<p class="mt-6 max-w-xl text-[1.07rem] leading-[1.75] text-[color:var(--color-text-muted)]">
+					It might have moved, been renamed, or the URL may have a small typo. Use the shortcuts below to jump to our most popular installation guides, services, and location pages, or return to the homepage.
+				</p>
+				<div class="mt-9 flex flex-wrap items-center gap-3">
+					<a
+						href="/"
+						class="group inline-flex items-center justify-center gap-2 rounded-full bg-[color:var(--color-primary)] px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_30px_-10px_rgba(181,18,27,0.55)] transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-[color:var(--color-hover)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-accent)] focus-visible:ring-offset-2"
+					>
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="relative -left-0.5">
+							<path d="M3 9.5 12 3l9 6.5V21a1 1 0 0 1-1 1h-5v-7h-6v7H4a1 1 0 0 1-1-1V9.5Z" />
+						</svg>
+						Back to homepage
+					</a>
+					<a
+						href="/locations/"
+						class="inline-flex items-center justify-center gap-2 rounded-full border border-[color:var(--color-border)] bg-white px-6 py-3 text-sm font-semibold text-[color:var(--color-heading)] transition duration-200 hover:-translate-y-0.5 hover:border-[color:var(--color-accent)] hover:text-[color:var(--color-accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-accent)] focus-visible:ring-offset-2"
+					>
+						Browse installation locations
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+					</a>
+				</div>
+				<div class="mt-10 grid gap-6 sm:grid-cols-3">
+					<div class="rounded-2xl border border-(--color-border) bg-white p-5 shadow-sm">
+						<p class="text-xs font-semibold uppercase tracking-[0.15em] text-(--color-accent)">Fastest path</p>
+						<a href={`tel:${data.contact.phone}`} class="mt-2 block text-[1.02rem] font-semibold text-[color:var(--color-heading)] hover:text-[color:var(--color-accent)]">{displayPhone}</a>
+						<p class="mt-1 text-sm text-(--color-text-muted)">For installation bookings</p>
+					</div>
+					<div class="rounded-2xl border border-(--color-border) bg-white p-5 shadow-sm">
+						<p class="text-xs font-semibold uppercase tracking-[0.15em] text-(--color-accent)">Email</p>
+						<a href={`mailto:${data.contact.email}`} class="mt-2 break-all block text-[1.02rem] font-semibold text-[color:var(--color-heading)] hover:text-[color:var(--color-accent)]">{data.contact.email}</a>
+						<p class="mt-1 text-sm text-(--color-text-muted)">Estimates &amp; quotations</p>
+					</div>
+					<div class="rounded-2xl border border-(--color-border) bg-white p-5 shadow-sm">
+						<p class="text-xs font-semibold uppercase tracking-[0.15em] text-(--color-accent)">WhatsApp</p>
+						<a
+							href={`https://wa.me/${data.contact.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent("Hello Car Tracker Plus Telematics, I got a 404 on your website and would like help finding the right installation service.")}`}
+							class="mt-2 block text-[1.02rem] font-semibold text-(--color-heading) hover:text-(--color-accent)"
+						>
+							Chat with a human
+						</a>
+						<p class="mt-1 text-sm text-(--color-text-muted)">Live support during hours</p>
+					</div>
+				</div>
+			</div>
+			<div class="relative">
+				<div class="relative overflow-hidden rounded-3xl border border-(--color-border) bg-white p-10 shadow-[0_30px_80px_-40px_rgba(11,18,32,0.25)]">
+					<div class="inline-flex items-center gap-3 rounded-full bg-[color:rgba(181,18,27,0.06)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-[color:var(--color-accent)]">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>
+						Link shortcuts
+					</div>
+					<h2 class="mt-6 text-[1.55rem] font-semibold leading-[1.15] tracking-[-0.02em] text-(--color-heading)">
+						Start from these pages instead.
+					</h2>
+					<p class="mt-3 text-[0.98rem] leading-[1.7] text-[color:var(--color-text-muted)]">
+						Every installation location and service is 2 clicks away below.
+					</p>
+					<div class="mt-8 space-y-7">
+						<div>
+							<h3 class="text-xs font-semibold uppercase tracking-[0.15em] text-(--color-text-muted)">Popular services</h3>
+							<ul class="mt-3 grid gap-3 sm:grid-cols-2">
+								{services.map((s) => (
+									<li>
+										<a
+											href={`/${s.slug}/`}
+											class="group flex h-full items-center justify-between gap-3 rounded-2xl border border-[color:var(--color-border)] bg-[color:rgba(11,18,32,0.015)] px-5 py-4 transition duration-200 hover:-translate-y-0.5 hover:border-[color:var(--color-accent)] hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--color-accent)] focus-visible:ring-offset-2"
+										>
+											<div class="min-w-0">
+												<p class="text-[0.76rem] font-semibold uppercase tracking-[0.12em] text-[color:var(--color-accent)]">
+													{s.pageCategory === "service" ? "Nationwide service" : s.pageCategory ?? "Nationwide"}
+												</p>
+												<p class="truncate text-[0.98rem] font-semibold text-[color:var(--color-heading)]">
+													{s.cardTitle ?? s.serviceType ?? s.slug}
+												</p>
+											</div>
+											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 text-[color:var(--color-text-muted)] transition group-hover:translate-x-1 group-hover:text-[color:var(--color-accent)]"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+										</a>
+									</li>
+								))}
+							</ul>
+						</div>
+						<div>
+							<h3 class="text-xs font-semibold uppercase tracking-[0.15em] text-[color:var(--color-text-muted)]">Cities we install in</h3>
+							<ul class="mt-3 grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
+								{locations.map((l) => (
+									<li>
+										<a
+											href={`/${l.slug}/`}
+											class="group inline-flex items-center gap-2 rounded-xl border border-transparent px-3 py-2 text-[0.95rem] font-medium text-[color:var(--color-heading)] transition hover:border-[color:rgba(181,18,27,0.15)] hover:bg-[color:rgba(181,18,27,0.04)] hover:text-[color:var(--color-accent)]"
+										>
+											<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 text-[color:var(--color-accent)]"><path d="M20 10.5c0 6.5-8 10.5-8 10.5s-8-4-8-10.5a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10.5" r="3"/></svg>
+											<span>{l.location ?? l.cardTitle ?? l.slug}</span>
+										</a>
+									</li>
+								))}
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="pointer-events-none absolute -left-6 -top-6 -z-10 h-28 w-28 rounded-full bg-[color:rgba(181,18,27,0.12)] blur-2xl"></div>
+				<div class="pointer-events-none absolute -bottom-8 -right-4 -z-10 h-32 w-32 rounded-full bg-[color:rgba(11,18,32,0.08)] blur-2xl"></div>
+			</div>
+		</section>
+
+		<section id="estimate-request" class="cta-shell mt-24 grid gap-8 overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#0B1220] via-[#0F1729] to-[#111933] px-7 py-10 shadow-2xl shadow-[rgba(11,18,32,0.35)] ring-1 ring-[color:rgba(255,255,255,0.05)] md:grid-cols-[0.9fr_1.1fr] md:gap-10 md:px-12 md:py-14 lg:mt-28">
+			<div class="relative flex flex-col justify-center">
+				<p class="eyebrow inline-flex w-max items-center gap-2 rounded-full bg-[color:rgba(255,255,255,0.08)] px-4 py-1.5 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-[#FF737C] ring-1 ring-[rgba(255,255,255,0.1)]">
+					Wrong page, right support team
+				</p>
+				<h2 class="mt-5 text-[1.9rem] font-semibold leading-[1.1] tracking-[-0.02em] text-(--color-heading) md:text-[2.2rem]">
+					Request a transparent installation estimate instead.
+				</h2>
+				<p class="mt-4 max-w-md text-[1rem] leading-[1.75] text-(--color-text-muted)">
+					Tell us your vehicle type, what you need protected, and where installation should happen. We reply on the same business day with a clear plan, price, and available dates.
+				</p>
+				<a
+					href={`https://wa.me/${data.contact.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent("Hello Car Tracker Plus Telematics, I got a 404 on your website and would like a transparent tracking installation estimate.")}`}
+					class="mt-7 inline-flex w-max items-center justify-center gap-2.5 rounded-full bg-[color:var(--color-primary)] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_34px_-10px_rgba(181,18,27,0.6)] transition duration-200 hover:-translate-y-0.5 hover:bg-[color:var(--color-hover)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:#FF737C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F1729]"
+					rel="noopener noreferrer"
+					target="_blank"
+				>
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><path d="M3 21l1.65-3.8a9 9 0 1 1 2.81 2.81L3 21z"/><path d="M7.9 14.2c.2.5-.1 1.1-.7 1.3-.7.2-1.1.9-1.9.9"/><path d="M15.3 9.1c.5-.5 1.1-.7 1.3.1l.1.8c.1.5-.1 1-.6 1.3l-.5.3c-.2.1-.5.4-.4.7l.3.5c.2.5 0 1.1-.6 1.4-.9.5-2.1.1-3.3-.7S9.6 12.6 9.1 11.7c-.3-.7-.1-1.6.4-2.1l.5-.5c.3-.3.5-.5.5-.8l-.1-.6c-.2-.5.4-1.1.9-1.1l.8.1c.6.1 1 0 1.2.6"/></svg>
+					Get the same-day estimate on WhatsApp
+				</a>
+				<div class="step-card mt-8 grid gap-4 rounded-2xl border border-[color:rgba(255,255,255,0.09)] bg-[color:rgba(255,255,255,0.03)] p-5 sm:grid-cols-2">
+					<a href={`mailto:${data.contact.email}`} class="flex items-start gap-3 rounded-2xl border border-[color:rgba(255,255,255,0.06)] bg-[color:rgba(255,255,255,0.02)] p-4 transition hover:border-[color:rgba(181,18,27,0.35)]">
+						<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[color:rgba(181,18,27,0.18)] text-[color:#FF737C]">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 7 9-7"/></svg>
+						</div>
+						<div class="min-w-0">
+							<p class="text-[0.76rem] font-semibold uppercase tracking-[0.16em] text-[color:rgba(255,255,255,0.5)]">Estimates</p>
+							<p class="mt-1 truncate text-[0.98rem] font-semibold text-(--color-heading)">{data.contact.email}</p>
+						</div>
+					</a>
+					<a href={`tel:${data.contact.phone}`} class="flex items-start gap-3 rounded-2xl border border-[color:rgba(255,255,255,0.06)] bg-[color:rgba(255,255,255,0.02)] p-4 transition hover:border-[color:rgba(181,18,27,0.35)]">
+						<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[color:rgba(181,18,27,0.18)] text-[color:#FF737C]">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6A2 2 0 0 1 22 16.9z"/></svg>
+						</div>
+						<div class="min-w-0">
+							<p class="text-[0.76rem] font-semibold uppercase tracking-[0.16em] text-[color:rgba(255,255,255,0.5)]">Booking line</p>
+							<p class="mt-1 truncate text-[0.98rem] font-semibold text-(--color-heading)">{displayPhone}</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="premium-panel relative overflow-hidden rounded-[1.5rem] border border-[color:rgba(255,255,255,0.08)] bg-[color:rgba(255,255,255,0.02)] p-6 shadow-2xl shadow-[rgba(11,18,32,0.35)] backdrop-blur-xl ring-1 ring-[color:rgba(255,255,255,0.05)] md:p-8">
+				<QuoteRequestForm formId="not-found-quote-form" sourcePage="/404/" />
+			</div>
+		</section>
+	</main>
+</BaseLayout>
