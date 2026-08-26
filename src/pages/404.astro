@@ -155,10 +155,10 @@ const locations = getLocationLandingPages(data).slice(0, 6);
 				<p class="eyebrow inline-flex w-max items-center gap-2 rounded-full bg-[color:rgba(255,255,255,0.08)] px-4 py-1.5 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-[#FF737C] ring-1 ring-[rgba(255,255,255,0.1)]">
 					Wrong page, right support team
 				</p>
-				<h2 class="mt-5 text-[1.9rem] font-semibold leading-[1.1] tracking-[-0.02em] text-white md:text-[2.2rem]">
+				<h2 class="mt-5 text-[1.9rem] font-semibold leading-[1.1] tracking-[-0.02em] text-[color:var(--color-heading)] md:text-[2.2rem]">
 					Request a transparent installation estimate instead.
 				</h2>
-				<p class="mt-4 max-w-md text-[1rem] leading-[1.75] text-[color:rgba(255,255,255,0.72)]">
+				<p class="mt-4 max-w-md text-[1rem] leading-[1.75] text-[color:var(--color-heading)]">
 					Tell us your vehicle type, what you need protected, and where installation should happen. We reply on the same business day with a clear plan, price, and available dates.
 				</p>
 				<a
@@ -177,7 +177,7 @@ const locations = getLocationLandingPages(data).slice(0, 6);
 						</div>
 						<div class="min-w-0">
 							<p class="text-[0.76rem] font-semibold uppercase tracking-[0.16em] text-[color:rgba(255,255,255,0.5)]">Estimates</p>
-							<p class="mt-1 truncate text-[0.98rem] font-semibold text-white">{data.contact.email}</p>
+							<p class="mt-1 truncate text-[0.98rem] font-semibold text-[color:var(--color-heading)]">{data.contact.email}</p>
 						</div>
 					</a>
 					<a href={`tel:${data.contact.phone}`} class="flex items-start gap-3 rounded-2xl border border-[color:rgba(255,255,255,0.06)] bg-[color:rgba(255,255,255,0.02)] p-4 transition hover:border-[color:rgba(181,18,27,0.35)]">
@@ -186,7 +186,7 @@ const locations = getLocationLandingPages(data).slice(0, 6);
 						</div>
 						<div class="min-w-0">
 							<p class="text-[0.76rem] font-semibold uppercase tracking-[0.16em] text-[color:rgba(255,255,255,0.5)]">Booking line</p>
-							<p class="mt-1 truncate text-[0.98rem] font-semibold text-white">{displayPhone}</p>
+							<p class="mt-1 truncate text-[0.98rem] font-semibold text-[color:var(--color-heading)]">{displayPhone}</p>
 						</div>
 					</a>
 				</div>
