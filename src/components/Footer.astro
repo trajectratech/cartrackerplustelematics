@@ -3,6 +3,7 @@ import { Icon } from "astro-icon/components";
 
 import type { ThemeConfig } from "../types/theme";
 import { formatPhoneNumber } from "../utils/formatPhoneNumber";
+import { getLocationLandingPages, getServiceLandingPages } from "../utils/landingPages";
 
 export interface Props {
 	data: ThemeConfig;
@@ -37,6 +38,9 @@ const iconMap: Record<SocialKey, string> = {
 	pinterest: "mdi:pinterest",
 	youtube: "mdi:youtube",
 };
+
+const servicePages = getServiceLandingPages(data);
+const locationPages = getLocationLandingPages(data);
 ---
 
 <footer
@@ -149,6 +153,73 @@ const iconMap: Record<SocialKey, string> = {
 			}
 		</div>
 	</div>
+
+	{(servicePages.length > 0 || locationPages.length > 0) && (
+		<div class="mx-auto mt-12 grid max-w-7xl gap-10 md:grid-cols-2 md:items-start">
+			{servicePages.length > 0 && (
+				<div>
+					<p class="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-accent)]">
+						Nationwide Services
+					</p>
+					<ul class="mt-4 grid gap-3 sm:grid-cols-2">
+						{servicePages.map((page) => (
+							<li>
+								<a
+									href={`/${page.slug}/`}
+									class="inline-flex items-center gap-2 text-sm text-[color:rgba(255,255,255,0.8)] transition-colors hover:text-[var(--color-accent)]"
+								>
+									<Icon
+										name="heroicons-outline:arrow-right"
+										class="h-4 w-4 shrink-0 opacity-70"
+										aria-hidden="true"
+									/>
+									<span>{page.cardTitle ?? page.serviceType}</span>
+								</a>
+							</li>
+						))}
+						<li>
+							<a
+								href="/locations/"
+								class="inline-flex items-center gap-2 text-sm font-semibold text-[color:rgba(255,255,255,0.92)] transition-colors hover:text-[var(--color-accent)]"
+							>
+								<Icon
+									name="heroicons-outline:map-pin"
+									class="h-4 w-4 shrink-0 opacity-80"
+									aria-hidden="true"
+								/>
+								<span>All Installation Locations</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			)}
+
+			{locationPages.length > 0 && (
+				<div>
+					<p class="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-accent)]">
+						Locations We Serve
+					</p>
+					<ul class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+						{locationPages.map((page) => (
+							<li>
+								<a
+									href={`/${page.slug}/`}
+									class="inline-flex items-center gap-2 text-sm text-[color:rgba(255,255,255,0.8)] transition-colors hover:text-[var(--color-accent)]"
+								>
+									<Icon
+										name="heroicons-outline:location-marker"
+										class="h-4 w-4 shrink-0 opacity-70"
+										aria-hidden="true"
+									/>
+									<span>{page.location ?? page.cardTitle}</span>
+								</a>
+							</li>
+						))}
+					</ul>
+				</div>
+			)}
+		</div>
+	)}
 
 	<hr class="w-full border-t border-[var(--color-background)]/30 my-6 mt-10" />
 

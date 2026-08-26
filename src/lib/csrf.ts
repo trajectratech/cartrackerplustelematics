@@ -1,6 +1,6 @@
 import type { AstroCookies } from "astro";
 
-const COOKIE_NAME = "Car Tracker Plus Telematics_csrf";
+const COOKIE_NAME = "CTPT_csrf";
 const FIELD_NAME = "_csrf";
 
 export { FIELD_NAME as CSRF_FIELD };
